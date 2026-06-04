@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日市場簡報｜歷史總覽</title>
+<style>
+  :root {
+    --bg: #0e1116; --panel: #161b22; --panel-2: #1c2230;
+    --border: #2a313c; --text: #d8dee9; --text-dim: #8b95a5;
+    --accent: #e8b339; --up: #ff5b5b; --down: #3dd68c;
+    --mono: "SFMono-Regular","Roboto Mono","Noto Sans Mono",ui-monospace,monospace;
+    --serif: "Noto Serif TC","Songti TC",serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg); color: var(--text);
+    font-family: "Noto Sans TC",-apple-system,"PingFang TC","Microsoft JhengHei",sans-serif;
+    line-height: 1.65; padding: 3rem 1.2rem 4rem;
+    max-width: 760px; margin: 0 auto;
+  }
+  .kicker {
+    font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.25em;
+    color: var(--accent); text-transform: uppercase;
+  }
+  h1 {
+    font-family: var(--serif); font-size: 2.4rem; font-weight: 700;
+    margin: 0.3rem 0 0.4rem; letter-spacing: 0.02em;
+  }
+  .sub { color: var(--text-dim); margin-bottom: 2.5rem; font-size: 0.95rem; }
+  .latest {
+    display: block; background: var(--panel-2);
+    border: 1px solid var(--accent); border-radius: 8px;
+    padding: 1.3rem 1.5rem; margin-bottom: 2rem;
+    text-decoration: none; color: var(--text);
+    transition: transform 0.15s ease;
+  }
+  .latest:hover { transform: translateY(-2px); }
+  .latest .label {
+    font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.2em;
+    color: var(--accent); text-transform: uppercase;
+  }
+  .latest .date { font-family: var(--serif); font-size: 1.5rem; margin: 0.2rem 0; }
+  .latest .mood { color: var(--text-dim); font-size: 0.9rem; }
+  .section-label {
+    font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.15em;
+    color: var(--text-dim); text-transform: uppercase;
+    margin: 2rem 0 0.8rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem;
+  }
+  ul.archive-list { list-style: none; }
+  ul.archive-list li { border-bottom: 1px solid var(--border); }
+  ul.archive-list a {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0.85rem 0.3rem; text-decoration: none; color: var(--text);
+    transition: background 0.12s ease;
+  }
+  ul.archive-list a:hover { background: var(--panel); padding-left: 0.7rem; }
+  ul.archive-list .d { font-family: var(--mono); font-size: 0.95rem; }
+  ul.archive-list .m { color: var(--text-dim); font-size: 0.82rem; }
+  .empty { color: var(--text-dim); padding: 2rem 0; text-align: center; }
+  footer {
+    margin-top: 3rem; padding-top: 1.2rem; border-top: 1px solid var(--border);
+    color: var(--text-dim); font-size: 0.78rem;
+  }
+</style>
+</head>
+<body>
+  <div class="kicker">Daily Market Brief</div>
+  <h1>每日市場簡報</h1>
+  <div class="sub">台股導向 ｜ 每日 UTC+8 自動更新 ｜ 歷史存檔</div>
+
+  <div id="latest-slot"></div>
+  <div class="section-label">歷史存檔</div>
+  <ul class="archive-list" id="archive-list">
+    <li class="empty">載入中…</li>
+  </ul>
+
+  <footer>資訊整理，非投資建議。</footer>
+
+<script>
+fetch('manifest.json?t=' + Date.now())
+  .then(r => r.json())
+  .then(data => {
+    const entries = (data.entries || []).sort((a,b) => b.date.localeCompare(a.date));
+    const list = document.getElementById('archive-list');
+    const latestSlot = document.getElementById('latest-slot');
+    if (entries.length === 0) {
+      list.innerHTML = '<li class="empty">尚無存檔</li>';
+      return;
+    }
+    const latest = entries[0];
+    latestSlot.innerHTML =
+      '<a class="latest" href="archive/' + latest.date + '.html">' +
+      '<div class="label">最新一期</div>' +
+      '<div class="date">' + latest.date + '</div>' +
+      '<div class="mood">' + (latest.mood || '') + '</div></a>';
+    list.innerHTML = entries.map(e =>
+      '<li><a href="archive/' + e.date + '.html">' +
+      '<span class="d">' + e.date + '</span>' +
+      '<span class="m">' + (e.mood || '') + '</span></a></li>'
+    ).join('');
+  })
+  .catch(() => {
+    document.getElementById('archive-list').innerHTML =
+      '<li class="empty">尚無存檔（manifest.json 未建立）</li>';
+  });
+</script>
+</body>
+</html>
