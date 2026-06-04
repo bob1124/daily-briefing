@@ -114,6 +114,12 @@
   .tag.neutral { color: var(--neutral); }
   .num.up { color: var(--up); }
   .num.down { color: var(--down); }
+  .index-table td.num, .index-table th:not(:first-child) { text-align: right; }
+  .index-table th:not(:first-child) { padding-right: 0.9rem; }
+  .index-table td.num { padding-right: 0.9rem; }
+  td.pct { font-family: var(--mono); text-align: right; white-space: nowrap; padding-right: 0.9rem; }
+  td.pct.up { color: var(--up); }
+  td.pct.down { color: var(--down); }
   .law-list { list-style: none; padding: 0; }
   .law-list li {
     padding: 0.45rem 0 0.45rem 1.2rem;
@@ -194,6 +200,24 @@
       <!-- US_NEWS_ROWS -->
     </tbody>
   </table>
+
+  <!-- ============ 四之二、美股指數與板塊動向 ============ -->
+  <h2>美股指數與板塊動向<span class="core-tag">CORE</span></h2>
+  <table class="index-table">
+    <thead><tr><th>指數</th><th>收盤</th><th>漲跌</th><th>漲跌幅</th></tr></thead>
+    <tbody>
+      <!-- US_INDEX_ROWS -->
+    </tbody>
+  </table>
+  <table>
+    <thead><tr><th>板塊（GICS）</th><th>漲跌幅</th><th>表現</th><th>當日驅動/備註</th></tr></thead>
+    <tbody>
+      <!-- US_SECTOR_ROWS -->
+    </tbody>
+  </table>
+  <ul class="law-list">
+    <!-- US_SECTOR_NOTES -->
+  </ul>
 
   <!-- ============ 五、日本（參考） ============ -->
   <h2>五、日本（參考）</h2>
