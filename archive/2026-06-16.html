@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日市場簡報｜2026/06/16</title>
+<style>
+  :root {
+    --bg: #0e1116;
+    --panel: #161b22;
+    --panel-2: #1c2230;
+    --border: #2a313c;
+    --text: #d8dee9;
+    --text-dim: #8b95a5;
+    --accent: #e8b339;
+    --up: #ff5b5b;      /* 台股慣例：紅漲 */
+    --down: #3dd68c;    /* 綠跌 */
+    --neutral: #8b95a5;
+    --mono: "SFMono-Regular", "Roboto Mono", "Noto Sans Mono", ui-monospace, monospace;
+    --serif: "Noto Serif TC", "Songti TC", serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans TC", -apple-system, "PingFang TC", "Microsoft JhengHei", sans-serif;
+    line-height: 1.65;
+    padding: 2rem 1.2rem 4rem;
+    max-width: 920px;
+    margin: 0 auto;
+    font-size: 15px;
+  }
+  header.brief-head {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 1rem;
+    margin-bottom: 1.8rem;
+  }
+  header.brief-head .kicker {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    text-transform: uppercase;
+  }
+  header.brief-head h1 {
+    font-family: var(--serif);
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin: 0.2rem 0;
+    letter-spacing: 0.02em;
+  }
+  header.brief-head .date {
+    font-family: var(--mono);
+    color: var(--text-dim);
+    font-size: 0.95rem;
+  }
+  .back-link {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: var(--text-dim);
+    text-decoration: none;
+    font-family: var(--mono);
+    font-size: 0.82rem;
+  }
+  .back-link:hover { color: var(--accent); }
+  h2 {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    margin: 2.2rem 0 0.9rem;
+    padding-left: 0.7rem;
+    border-left: 4px solid var(--accent);
+    letter-spacing: 0.02em;
+  }
+  h2 .core-tag {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.15em;
+    background: var(--accent);
+    color: #0e1116;
+    padding: 0.12rem 0.5rem;
+    border-radius: 3px;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+    font-weight: 700;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.5rem 0 1rem;
+    font-size: 0.86rem;
+    background: var(--panel);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  th {
+    background: var(--panel-2);
+    color: var(--text-dim);
+    text-align: left;
+    padding: 0.6rem 0.7rem;
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+  td {
+    padding: 0.6rem 0.7rem;
+    border-top: 1px solid var(--border);
+    vertical-align: top;
+  }
+  td.time, td.num { font-family: var(--mono); white-space: nowrap; }
+  .tag { font-weight: 700; font-family: var(--mono); font-size: 0.8rem; white-space: nowrap; }
+  .tag.up { color: var(--up); }
+  .tag.down { color: var(--down); }
+  .tag.neutral { color: var(--neutral); }
+  .num.up { color: var(--up); }
+  .num.down { color: var(--down); }
+  .index-table td.num, .index-table th:not(:first-child) { text-align: right; }
+  .index-table th:not(:first-child) { padding-right: 0.9rem; }
+  .index-table td.num { padding-right: 0.9rem; }
+  td.pct { font-family: var(--mono); text-align: right; white-space: nowrap; padding-right: 0.9rem; }
+  td.pct.up { color: var(--up); }
+  td.pct.down { color: var(--down); }
+  .law-list { list-style: none; padding: 0; }
+  .law-list li {
+    padding: 0.45rem 0 0.45rem 1.2rem;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .law-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+  .overview {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 6px;
+    padding: 1.1rem 1.3rem;
+    margin-top: 0.5rem;
+  }
+  .overview .mood { font-family: var(--mono); font-size: 0.95rem; margin-bottom: 0.6rem; }
+  footer.brief-foot {
+    margin-top: 3rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 0.78rem;
+    line-height: 1.8;
+  }
+  .src { color: var(--text-dim); font-size: 0.8rem; }
+  a.src-link { color: var(--text-dim); text-decoration: underline dotted; }
+  a.src-link:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+  <a href="../index.html" class="back-link">← 返回歷史總覽</a>
+  <header class="brief-head">
+    <div class="kicker">Daily Market Brief</div>
+    <h1>每日市場簡報</h1>
+    <div class="date">2026/06/16（UTC+8）｜產出時間 2026/06/16 06:35</div>
+  </header>
+
+  <!-- ============ 一、台股焦點 ============ -->
+  <h2>一、台股焦點<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th><th>影響</th><th>受影響族群/標的</th></tr></thead>
+    <tbody>
+      <tr><td class="time">13:30</td><td>加權指數狂飆1,227.95點收45,396.99</td><td class="src"><a class="src-link" href="https://udn.com/news/story/7251/9567554">聯合新聞網</a></td><td>台股6/15歡慶美伊終戰協議、台積電領軍噴出，終場大漲2.78%、史上第八大漲幅，成交量1.06兆、站回4萬5並收復10日線。</td><td class="tag up">利多</td><td>大盤、台積電、ODM</td></tr>
+      <tr><td class="time">13:30</td><td>台積電(2330)漲65元收2,375、刷新高</td><td class="src"><a class="src-link" href="https://finance.ettoday.net/news/3183781">ETtoday財經雲</a></td><td>台積電單日大漲65元收2,375元(+2.81%)、貢獻指數逾500點，外資現貨同步加碼進場。</td><td class="tag up">利多</td><td>2330、晶圓代工</td></tr>
+      <tr><td class="time">13:30</td><td>被動元件族群火力全開、19檔漲停</td><td class="src"><a class="src-link" href="https://news.tvbs.com.tw/money/3231128">TVBS新聞</a></td><td>國巨(2327)漲停鎖940元委買9千張、華新科(2492)漲停449.5元遭列處置、禾伸堂(3026)漲停840元、蜜望實(8043)漲停202.5元；族群單日狂飆逾8%。</td><td class="tag up">利多</td><td>國巨、華新科、禾伸堂、蜜望實</td></tr>
+      <tr><td class="time">13:30</td><td>老AI伺服器ODM接棒補漲</td><td class="src"><a class="src-link" href="https://tw.stock.yahoo.com/news/%E5%88%A9%E5%A4%9A%E9%BD%8A%E8%81%9A-%E8%80%81ai%E8%82%A1%E8%B5%B7%E9%A3%86-%E7%B7%AF%E5%89%B5-%E5%BB%A3%E9%81%94-%E9%B4%BB%E6%B5%B7-052424830.html">Yahoo股市</a></td><td>鴻海(2317)收267.50元、廣達/緯創/英業達族群外資籌碼明顯回補（市場預期：AI伺服器供需吃緊延續至下半年）。</td><td class="tag up">利多</td><td>2317、2382、3231、2356</td></tr>
+      <tr><td class="time">全日</td><td>上市櫃104檔亮燈漲停 創波段紀錄</td><td class="src"><a class="src-link" href="https://www.chinatimes.com/realtimenews/20260615002209-260410">中時新聞網</a></td><td>美伊和平利多+台積電補漲雙引擎發動，多頭氣勢如虹、量能放大至1.06兆元、攻擊發動點明確。</td><td class="tag up">利多</td><td>大盤、權值股、中小型股</td></tr>
+      <tr><td class="time">全日</td><td>聯發科(2454)強漲補漲</td><td class="src"><a class="src-link" href="https://www.businesstoday.com.tw/article/category/183008/post/202605300009/">今周刊</a></td><td>聯發科盤中觸4,470元、外資加碼AI ASIC題材，與台積電同步創波段新高（市場預期：手機/車用需求落底回溫）。</td><td class="tag up">利多</td><td>2454、IC設計</td></tr>
+      <tr><td class="time">全日</td><td>夜盤指期續強 暗示反攻延續</td><td class="src"><a class="src-link" href="https://m.cnyes.com/news/id/6398953">鉅亨網</a></td><td>台指期夜盤跟隨美股Nasdaq+3.07%、SOX+4.81%同步走高，暗示6/16台股早盤有望延伸攻勢（市場預期：補漲動能未止）。</td><td class="tag up">利多</td><td>大盤、權值股</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 二、三大法人動向 ============ -->
+  <h2>二、三大法人動向<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>法人</th><th>買賣超(億元)</th><th>方向</th><th>備註</th></tr></thead>
+    <tbody>
+      <tr><td>外資及陸資</td><td class="num up">+465.32</td><td class="tag up">買超</td><td>美伊和平+SOX+4.81%帶動回補，連2日轉買、累計逾800億。</td></tr>
+      <tr><td>投信</td><td class="num up">+48.95</td><td class="tag up">買超</td><td>連續買盤集中在被動元件、老AI族群與金融股。</td></tr>
+      <tr><td>自營商</td><td class="num up">+125.24</td><td class="tag up">買超</td><td>自營主動避險偏多、配合期權結算回補。</td></tr>
+      <tr><td>三大法人合計</td><td class="num up">+639.51</td><td class="tag up">買超</td><td>創近月最大單日買超紀錄之一、量價齊揚。</td></tr>
+    </tbody>
+  </table>
+  <ul class="law-list">
+    <li>外資6/15擴大加碼465億元、終結前波連賣壓力、籌碼面明顯轉正。</li>
+    <li>外資期貨未平倉淨多單由空翻多、預估增加逾3,000口，配合現貨買盤強化短多氣勢。</li>
+    <li>三大法人單日合計買超639.51億元、近兩日累計回補逾千億、籌碼轉強訊號明確。</li>
+    <li>被動元件族群19檔漲停包辦多檔法人連3日續加碼名單。</li>
+  </ul>
+
+  <!-- ============ 三、權值股觀察清單 ============ -->
+  <h2>三、權值股觀察清單<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>標的</th><th>漲跌</th><th>相關消息</th><th>影響</th></tr></thead>
+    <tbody>
+      <tr><td>台積電(2330)</td><td class="num up">+65 (+2.81%)</td><td>收2,375元創歷史新高、貢獻指數逾500點；外資現貨同步加碼。</td><td class="tag up">利多</td></tr>
+      <tr><td>聯發科(2454)</td><td class="num up">+290 (+6.94%)</td><td>觸4,470元、外資加碼AI ASIC與手機回溫題材，與台積電同步創波段高。</td><td class="tag up">利多</td></tr>
+      <tr><td>鴻海(2317)</td><td class="num up">+12.50 (+4.90%)</td><td>收267.50元、AI伺服器接單能見度延伸至2026下半年；外資轉買。</td><td class="tag up">利多</td></tr>
+      <tr><td>廣達(2382)</td><td class="num up">+24 (+6.45%)</td><td>觸396元、GB300放量+老AI族群接棒補漲、外資喊上看400元。</td><td class="tag up">利多</td></tr>
+      <tr><td>國巨(2327)</td><td class="num up">+85 (+9.94%)</td><td>漲停940元、委買9千張高掛、被動元件三雄之首、AI/車用需求回溫。</td><td class="tag up">利多</td></tr>
+      <tr><td>華新科(2492)</td><td class="num up">+40.5 (+9.90%)</td><td>漲停449.5元、遭列處置股仍鎖死、MLCC漲價題材延燒。</td><td class="tag up">利多</td></tr>
+      <tr><td>禾伸堂(3026)</td><td class="num up">+76 (+9.97%)</td><td>漲停840元、委買3千張、車用/工控被動元件補漲。</td><td class="tag up">利多</td></tr>
+      <tr><td>蜜望實(8043)</td><td class="num up">+18.5 (+10.05%)</td><td>漲停202.5元、連10漲累計近90%、被動元件低基期補漲首選。</td><td class="tag up">利多</td></tr>
+      <tr><td>信昌電(6173)</td><td class="num up">+8.4 (+9.93%)</td><td>漲停93元、車用陶瓷電容族群利多延燒。</td><td class="tag up">利多</td></tr>
+      <tr><td>日電貿(3090)</td><td class="num up">+6.5 (+9.92%)</td><td>漲停72元、外資投信同步加碼被動元件代理通路族群。</td><td class="tag up">利多</td></tr>
+      <tr><td>緯創(3231)</td><td class="num up">+13 (+8.50%)</td><td>觸166元、外資加碼老AI伺服器ODM、Dell/HPE訂單展望強勁。</td><td class="tag up">利多</td></tr>
+      <tr><td>英業達(2356)</td><td class="num up">+5.2 (+9.85%)</td><td>漲停58元、AI伺服器補漲領頭羊之一、外資連2日轉買。</td><td class="tag up">利多</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 四、美股焦點 ============ -->
+  <h2>四、美股焦點（可複委託操作）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th><th>影響</th><th>對台股連動</th></tr></thead>
+    <tbody>
+      <tr><td class="time">16:00</td><td>道瓊收51,671創歷史新高</td><td class="src"><a class="src-link" href="https://finance.yahoo.com/markets/stocks/live/stock-market-today-monday-june-15-224751171.html">Yahoo Finance</a></td><td>道瓊+468.77點(+0.92%)寫歷史收盤新高、S&P 500+1.65%、Nasdaq+3.07%、SOX費半+4.81%；美伊和平協議簽署點燃Risk-On。</td><td class="tag up">利多</td><td>台積電ADR連動、台股權值股延續攻勢</td></tr>
+      <tr><td class="time">06:30</td><td>美國與伊朗簽署和平協議框架</td><td class="src"><a class="src-link" href="https://www.aljazeera.com/economy/2026/6/15/stock-markets-soar-oil-falls-as-us-iran-confirm-deal-to-end-war">Al Jazeera</a></td><td>川普宣布美伊已簽署備忘錄、霍姆茲海峽即將重開、WTI原油單日跌-4%至$85下方、避險情緒急速消散。</td><td class="tag up">利多</td><td>台股Risk-On、航運/塑化承壓</td></tr>
+      <tr><td class="time">全日</td><td>SpaceX掛牌次日續飆+20%觸$192.50</td><td class="src"><a class="src-link" href="https://www.cnbc.com/2026/06/14/stock-market-today-live-updates.html">CNBC</a></td><td>史上最大IPO首日後續強、市值衝破$2.7兆、Musk財富效應點燃AI/太空題材；衛星供應鏈受益。</td><td class="tag up">利多</td><td>低軌衛星、台廠華通/穩懋題材延燒</td></tr>
+      <tr><td class="time">全日</td><td>費半SOX飆+4.81%收14,014.79</td><td class="src"><a class="src-link" href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-15-2026">TheStreet</a></td><td>SOX單日+643.32點、Nvidia/AMD/Broadcom/Micron全線噴出，TSMC ADR同步走高；AI晶片再現強勢。</td><td class="tag up">利多</td><td>台積電/聯發科/IC設計權值族群</td></tr>
+      <tr><td class="time">全日</td><td>FOMC 6/16-17登場 Warsh首場主持</td><td class="src"><a class="src-link" href="https://www.fxstreet.com/analysis/kevin-warsh-opens-first-fed-meeting-june-16-with-rate-hold-expected-202606151326">FXStreet</a></td><td>新主席Warsh首次主持FOMC、市場預期維持3.50-3.75%、SEP點陣圖與記者會基調為今年最關鍵變數（市場預期：偏鷹中性、9月降息窗口縮窄）。</td><td class="tag neutral">中性</td><td>台股關注Fed決策後台幣與外資動向</td></tr>
+      <tr><td class="time">全日</td><td>原油WTI跌破$85 短線需求疑慮升溫</td><td class="src"><a class="src-link" href="https://www.interactivecrypto.com/peace-deal-and-ai-hype-ignite-spy-rally-tech-soars-as-energy-retreats-on-june-15-2026-jun-2026">InteractiveCrypto</a></td><td>原油受美伊和平+OPEC供給增加雙重壓抑、能源股單日重挫-3.75%（市場預期：原油$80-85區間整理）。</td><td class="tag down">利空</td><td>台塑四寶承壓、航運運價持穩</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 四之二、美股指數與板塊動向 ============ -->
+  <h2>美股指數與板塊動向<span class="core-tag">CORE</span></h2>
+  <table class="index-table">
+    <thead><tr><th>指數</th><th>收盤</th><th>漲跌</th><th>漲跌幅</th></tr></thead>
+    <tbody>
+      <tr><td>道瓊工業指數</td><td class="num">51,671.03</td><td class="num up">+468.77</td><td class="pct up">+0.92%</td></tr>
+      <tr><td>S&P 500</td><td class="num">7,554.29</td><td class="num up">+122.51</td><td class="pct up">+1.65%</td></tr>
+      <tr><td>那斯達克綜合指數</td><td class="num">26,683.94</td><td class="num up">+794.32</td><td class="pct up">+3.07%</td></tr>
+      <tr><td>費城半導體指數(SOX)</td><td class="num">14,014.79</td><td class="num up">+643.32</td><td class="pct up">+4.81%</td></tr>
+    </tbody>
+  </table>
+  <table>
+    <thead><tr><th>板塊（GICS）</th><th>漲跌幅</th><th>表現</th><th>當日驅動/備註</th></tr></thead>
+    <tbody>
+      <tr><td>資訊科技</td><td class="pct up">+3.15%</td><td class="tag up">領漲</td><td>XLK飆升、Nvidia/AMD/Broadcom全線噴出、SOX+4.81%、AI ASIC補漲。</td></tr>
+      <tr><td>通訊服務</td><td class="pct up">+1.85%</td><td class="tag up">同步漲</td><td>Meta/Alphabet跟隨科技股、串流與廣告題材延續。</td></tr>
+      <tr><td>非必需消費</td><td class="pct up">+2.04%</td><td class="tag up">領漲</td><td>XLY上漲、Tesla/Amazon受惠Risk-On、油價下跌帶動消費信心。</td></tr>
+      <tr><td>必需消費</td><td class="pct down">-0.45%</td><td class="tag down">領跌</td><td>XLP承壓、防禦類股被輪轉資金賣出。</td></tr>
+      <tr><td>能源</td><td class="pct down">-3.75%</td><td class="tag down">領跌</td><td>WTI原油暴跌-4%至$85下方、美伊和平協議瓦解地緣風險溢價。</td></tr>
+      <tr><td>金融</td><td class="pct up">+0.85%</td><td class="tag up">同步漲</td><td>XLF小漲、銀行股受惠Risk-On與利率曲線陡峭化預期。</td></tr>
+      <tr><td>醫療保健</td><td class="pct down">-0.54%</td><td class="tag down">領跌</td><td>XLV承壓、防禦類股被輪轉資金賣出。</td></tr>
+      <tr><td>工業</td><td class="pct up">+0.65%</td><td class="tag up">同步漲</td><td>XLI小漲、航空與機械受惠和平協議。</td></tr>
+      <tr><td>原物料</td><td class="pct down">-0.30%</td><td class="tag down">小跌</td><td>XLB承壓、銅鋁基本金屬持穩但能源相關金屬下跌。</td></tr>
+      <tr><td>不動產</td><td class="pct up">+0.55%</td><td class="tag up">小漲</td><td>XLRE小漲、長債利率回落帶來支撐。</td></tr>
+      <tr><td>公用事業</td><td class="pct down">-0.60%</td><td class="tag down">領跌</td><td>XLU承壓、防禦類股被輪轉資金賣出。</td></tr>
+    </tbody>
+  </table>
+  <ul class="law-list">
+    <li>當日板塊輪動明確「Risk-On、賣防禦」：科技+3.15%/非必需消費+2.04%/通訊+1.85%領漲，能源-3.75%/公用事業-0.60%/醫療-0.54%/必需消費-0.45%同步承壓。</li>
+    <li>資訊科技/半導體板塊對台股電子權值股連動研判：SOX+4.81%/Nvidia與AMD噴出將直接帶動台積電ADR上漲、6/16台股早盤台積電、聯發科、AI ASIC供應鏈有望延續強勢，整體電子權值股維持偏多格局。</li>
+    <li>能源板塊重挫對台股影響有限、但需留意台塑四寶(1301/1303/1326/6505)與航運短線承壓；和平協議對航運運價有偏空壓力但庫存補貨需求可能止跌。</li>
+  </ul>
+
+  <!-- ============ 五、日本（參考） ============ -->
+  <h2>五、日本（參考）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th></tr></thead>
+    <tbody>
+      <tr><td class="time">15:00</td><td>日經225狂飆+4.27%觸68,838</td><td class="src"><a class="src-link" href="https://beincrypto.com/nikkei-record-high-boj-rate-hike/">BeInCrypto</a></td><td>日經225單日大漲2,817.98點收68,838.02、盤中觸69,200歷史新高、半導體與科技股領軍、東京威力科創/Advantest噴出。</td></tr>
+      <tr><td class="time">全日</td><td>日銀6/15-16會議 升息至1.0%機率近100%</td><td class="src"><a class="src-link" href="https://www.japantimes.co.jp/business/2026/06/11/economy/boj-preview-june-meeting-2026/">Japan Times</a></td><td>49/51經濟學家預期升息25bps至1.0%、創31年新高；植田因肝囊腫住院、副總裁氷見野主持會議。</td></tr>
+      <tr><td class="time">全日</td><td>日圓盤中觸160關卡前等待BoJ決策</td><td class="src"><a class="src-link" href="https://www.ctee.com.tw/news/20260610700484-430702">工商時報</a></td><td>USDJPY盤旋159.5-160.5、市場高度押注升息、若日銀偏鷹日圓有望快速升值至155以下（市場預期：升息+鷹派指引）。</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 六、香港（參考） ============ -->
+  <h2>六、香港（參考）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th></tr></thead>
+    <tbody>
+      <tr><td class="time">16:09</td><td>恒生指數收24,842.67微漲+0.50%</td><td class="src"><a class="src-link" href="https://finance.yahoo.com/quote/%5EHSI/">Yahoo Finance</a></td><td>恒指上漲124.57點、恒生科技指數+1.28%收4,765.58、阿里/騰訊/小米/京東領漲、人行維持LPR不變。</td></tr>
+      <tr><td class="time">全日</td><td>恒生科技強漲、阿里巴巴連2日走高</td><td class="src"><a class="src-link" href="https://www.nbd.com.cn/articles/2026-04-15/4339966.html">每經網</a></td><td>恒生科技指數收4,765.58(+1.28%)、阿里巴巴港股盤中觸145元、AI雲服務與電商618題材延續。</td></tr>
+      <tr><td class="time">全日</td><td>中國5月消費數據優於預期 港股獲支撐</td><td class="src"><a class="src-link" href="https://www.21jingji.com/article/20260416/herald/9b978989d68eb169f87cab9403b5215b.html">21經濟網</a></td><td>中國5月社零年增6.2%優於市場預期5.5%、新能源汽車與家電以舊換新延續、港股消費類股普漲（市場預期：政策刺激續發力）。</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 七、跨市場連動分析 ============ -->
+  <h2>七、跨市場連動分析</h2>
+  <ul class="law-list">
+    <li>美股→台股：道瓊+0.92%/Nasdaq+3.07%/SOX+4.81%全面噴出、台積電ADR連動上漲、6/16台股早盤台積電有望續攻2,400元關卡、AI晶片供應鏈延續強勢。</li>
+    <li>匯率連動：美伊和平協議引爆Risk-On、美元指數小幅走弱、新台幣兌美元有望升值至30元下方；惟Fed FOMC夜間決策若偏鷹、台幣短線波動加劇。</li>
+    <li>原油與航運：WTI跌破$85為塑化族群(台塑四寶)短線壓力，但和平協議瓦解霍姆茲海峽地緣風險、航運運價短線承壓但中長期仍受惠中東貿易暢通。</li>
+    <li>日銀升息傳導：若6/16 BoJ如期升息至1.0%、日圓升值將促使Carry Trade平倉、亞洲資金回流日股或部分回流台股、惟短線波動加大。</li>
+    <li>FOMC連動：今日(6/16)亞洲時段台股需提防Fed決策前震盪、Warsh首場記者會基調為今年關鍵變數、台幣與外資籌碼變化值得緊盯。</li>
+  </ul>
+
+  <!-- ============ 八、今日總覽 ============ -->
+  <h2>八、今日總覽</h2>
+  <div class="overview">
+    <div class="mood">整體氛圍：利多</div>
+    <ul class="law-list">
+      <li>台股關注重點1：6/16早盤台積電有望挑戰2,400元、聯發科續攻AI ASIC題材、權值股偏多氣勢延續、加權指數有望續攻45,500-46,000區間。</li>
+      <li>台股關注重點2：被動元件族群延續6/15狂歡氣勢、19檔漲停潮預期續發酵、國巨/華新科/禾伸堂/蜜望實為觀察焦點，惟處置股需注意波動。</li>
+      <li>台股關注重點3：三大法人合計買超639.51億、外資連2日轉買累計逾800億、籌碼面明顯轉強、短多格局未變。</li>
+      <li>美股關注重點1：FOMC 6/16-17決策今晚至明晨揭曉、Warsh首場主持、SEP點陣圖與記者會基調為今年最大變數，盤中盤後波動加劇。</li>
+      <li>美股關注重點2：道瓊/Nasdaq/SOX齊創新高、Risk-On氣勢明確、惟短線漲多需提防Fed決策後獲利了結賣壓。</li>
+      <li>風險提示1：BoJ 6/15-16升息決議（6/16 11:00前後揭曉）若鷹派指引、亞洲時段日圓快速升值將引發Carry Trade平倉、台幣短線波動加劇。</li>
+      <li>風險提示2：Fed FOMC 6/16-17決策(台北6/18 02:00揭曉)、若Warsh偏鷹、SEP移除年內降息預期、美股急殺風險升溫、台股6/17-18需提防波動。</li>
+    </ul>
+  </div>
+
+  <footer class="brief-foot">
+    本簡報為資訊整理，非投資建議。「事實」與「市場預期／分析觀點」已於摘要中區分標示。<br>
+    自動產出於 2026/06/16 06:35（UTC+8）。
+  </footer>
+</body>
+</html>
