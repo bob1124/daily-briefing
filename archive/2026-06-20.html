@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日市場簡報｜2026/06/20</title>
+<style>
+  :root {
+    --bg: #0e1116;
+    --panel: #161b22;
+    --panel-2: #1c2230;
+    --border: #2a313c;
+    --text: #d8dee9;
+    --text-dim: #8b95a5;
+    --accent: #e8b339;
+    --up: #ff5b5b;      /* 台股慣例：紅漲 */
+    --down: #3dd68c;    /* 綠跌 */
+    --neutral: #8b95a5;
+    --mono: "SFMono-Regular", "Roboto Mono", "Noto Sans Mono", ui-monospace, monospace;
+    --serif: "Noto Serif TC", "Songti TC", serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans TC", -apple-system, "PingFang TC", "Microsoft JhengHei", sans-serif;
+    line-height: 1.65;
+    padding: 2rem 1.2rem 4rem;
+    max-width: 920px;
+    margin: 0 auto;
+    font-size: 15px;
+  }
+  header.brief-head {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 1rem;
+    margin-bottom: 1.8rem;
+  }
+  header.brief-head .kicker {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    text-transform: uppercase;
+  }
+  header.brief-head h1 {
+    font-family: var(--serif);
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin: 0.2rem 0;
+    letter-spacing: 0.02em;
+  }
+  header.brief-head .date {
+    font-family: var(--mono);
+    color: var(--text-dim);
+    font-size: 0.95rem;
+  }
+  .back-link {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: var(--text-dim);
+    text-decoration: none;
+    font-family: var(--mono);
+    font-size: 0.82rem;
+  }
+  .back-link:hover { color: var(--accent); }
+  h2 {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    margin: 2.2rem 0 0.9rem;
+    padding-left: 0.7rem;
+    border-left: 4px solid var(--accent);
+    letter-spacing: 0.02em;
+  }
+  h2 .core-tag {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.15em;
+    background: var(--accent);
+    color: #0e1116;
+    padding: 0.12rem 0.5rem;
+    border-radius: 3px;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+    font-weight: 700;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.5rem 0 1rem;
+    font-size: 0.86rem;
+    background: var(--panel);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  th {
+    background: var(--panel-2);
+    color: var(--text-dim);
+    text-align: left;
+    padding: 0.6rem 0.7rem;
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+  td {
+    padding: 0.6rem 0.7rem;
+    border-top: 1px solid var(--border);
+    vertical-align: top;
+  }
+  td.time, td.num { font-family: var(--mono); white-space: nowrap; }
+  .tag { font-weight: 700; font-family: var(--mono); font-size: 0.8rem; white-space: nowrap; }
+  .tag.up { color: var(--up); }
+  .tag.down { color: var(--down); }
+  .tag.neutral { color: var(--neutral); }
+  .num.up { color: var(--up); }
+  .num.down { color: var(--down); }
+  .index-table td.num, .index-table th:not(:first-child) { text-align: right; }
+  .index-table th:not(:first-child) { padding-right: 0.9rem; }
+  .index-table td.num { padding-right: 0.9rem; }
+  td.pct { font-family: var(--mono); text-align: right; white-space: nowrap; padding-right: 0.9rem; }
+  td.pct.up { color: var(--up); }
+  td.pct.down { color: var(--down); }
+  .law-list { list-style: none; padding: 0; }
+  .law-list li {
+    padding: 0.45rem 0 0.45rem 1.2rem;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .law-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+  .overview {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 6px;
+    padding: 1.1rem 1.3rem;
+    margin-top: 0.5rem;
+  }
+  .overview .mood { font-family: var(--mono); font-size: 0.95rem; margin-bottom: 0.6rem; }
+  footer.brief-foot {
+    margin-top: 3rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 0.78rem;
+    line-height: 1.8;
+  }
+  .src { color: var(--text-dim); font-size: 0.8rem; }
+  a.src-link { color: var(--text-dim); text-decoration: underline dotted; }
+  a.src-link:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+  <a href="../index.html" class="back-link">← 返回歷史總覽</a>
+  <header class="brief-head">
+    <div class="kicker">Daily Market Brief</div>
+    <h1>每日市場簡報</h1>
+    <div class="date">2026/06/20（UTC+8）｜產出時間 2026/06/20 06:45</div>
+  </header>
+
+  <!-- ============ 一、台股焦點 ============ -->
+  <h2>一、台股焦點<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th><th>影響</th><th>受影響族群/標的</th></tr></thead>
+    <tbody>
+      <tr><td class="time">全日</td><td>台股端午節休市</td><td class="src"><a class="src-link" href="https://applealmond.com/posts/316709">蘋果仁</a></td><td>6/19(五)端午節台股休市、6/19-21形成三日連假、6/22(一)恢復交易；前一交易日6/18收46,465.00點史上新高、台積電2,410元。</td><td class="tag neutral">中性</td><td>大盤</td></tr>
+      <tr><td class="time">全日</td><td>台積電亞利桑那廠先進封裝合作十年案</td><td class="src"><a class="src-link" href="https://www.tradingkey.com/news/market-movers/261978005-market-movers-tsm-20260619">TradingKey</a></td><td>台積電與Amkor亞利桑那廠簽署十年期先進封裝測試合作、強化美國本土CoWoS產能、（市場預期：6/22開盤利多反映）。</td><td class="tag up">利多</td><td>台積電/封測供應鏈</td></tr>
+      <tr><td class="time">全日</td><td>鴻海與Intel AI基礎建設合作</td><td class="src"><a class="src-link" href="https://www.tradingkey.com/analysis/stocks/more/261927339-nvidia-nvda-amd-intc-intel-taiwan-semiconductor-stock-chip-ai-tradingkey">TradingKey</a></td><td>鴻海宣布與Intel共同開發次世代AI基礎建設、結合製造規模與處理器架構優勢、Apple-Intel合作亦露線索、（市場預期：鴻海AI伺服器版圖再擴）。</td><td class="tag up">利多</td><td>鴻海(2317)/AI伺服器</td></tr>
+      <tr><td class="time">全日</td><td>美國ITC對台積電專利侵權案待裁</td><td class="src"><a class="src-link" href="https://www.tradingkey.com/news/market-movers/261978005-market-movers-tsm-20260619">TradingKey</a></td><td>美國國際貿易委員會(ITC)正準備對台積電專利侵權投訴作初步裁定、潛在涉及晶片進口禁令、（市場預期：短線增加台積電不確定性）。</td><td class="tag down">利空</td><td>台積電(2330)</td></tr>
+      <tr><td class="time">全日</td><td>NVIDIA Vera Rubin NVL72台廠供應鏈受惠</td><td class="src"><a class="src-link" href="https://www.tradingkey.com/analysis/stocks/more/261927339-nvidia-nvda-amd-intc-intel-taiwan-semiconductor-stock-chip-ai-tradingkey">TradingKey</a></td><td>NVIDIA Vera Rubin NVL72平台採台積電3nm與CoWoS-L、涉及約150家台廠生態夥伴、被視為史上最大世代產品案、（市場預期：AI伺服器供應鏈中長期接單能見度高）。</td><td class="tag up">利多</td><td>AI伺服器/CoWoS供應鏈</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 二、三大法人動向 ============ -->
+  <h2>二、三大法人動向<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>法人</th><th>買賣超(億元)</th><th>方向</th><th>備註</th></tr></thead>
+    <tbody>
+      <tr><td>外資</td><td class="num neutral">休市</td><td class="tag neutral">無交易</td><td>6/19端午節休市、最近一交易日(6/18)外資買超+211.47億</td></tr>
+      <tr><td>投信</td><td class="num neutral">休市</td><td class="tag neutral">無交易</td><td>6/19端午節休市、最近一交易日(6/18)投信賣超-53.57億</td></tr>
+      <tr><td>自營商</td><td class="num neutral">休市</td><td class="tag neutral">無交易</td><td>6/19端午節休市、最近一交易日(6/18)自營買超+154.88億</td></tr>
+    </tbody>
+  </table>
+  <ul class="law-list">
+    <li>台股6/19端午節休市、三大法人無交易資料；最近一交易日(6/18)三大法人合計買超 +312.78 億元、籌碼面延續偏多。</li>
+    <li>外資台指期淨空部位連假前縮減至 -69,847 口以下、回補空單動能為連假後重要支撐訊號。</li>
+    <li>連假期間台指期夜盤暫停、6/22(一)早盤直接反映海外多/空消息、首日跳空缺口為觀察重點。</li>
+  </ul>
+
+  <!-- ============ 三、權值股觀察清單 ============ -->
+  <h2>三、權值股觀察清單<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>標的</th><th>漲跌</th><th>相關消息</th><th>影響</th></tr></thead>
+    <tbody>
+      <tr><td>台積電(2330)</td><td class="num neutral">休市</td><td>6/18收2,410元史新高；Amkor十年封測合作正面、ITC潛在進口禁令裁定為短線變數</td><td class="tag neutral">中性</td></tr>
+      <tr><td>聯發科(2454)</td><td class="num neutral">休市</td><td>6/18收4,390元；ASIC題材與AI邊緣運算延燒、連假無新利空</td><td class="tag up">利多</td></tr>
+      <tr><td>鴻海(2317)</td><td class="num neutral">休市</td><td>6/18收268.50元；宣布與Intel合作AI基礎建設、AI伺服器版圖再擴</td><td class="tag up">利多</td></tr>
+      <tr><td>廣達(2382)</td><td class="num neutral">休市</td><td>6/18收344元；L10/L11伺服器整機受惠NVIDIA Rubin平台量產</td><td class="tag up">利多</td></tr>
+      <tr><td>國巨(2327)</td><td class="num neutral">休市</td><td>6/18收965元；MLCC高階品AI/HBM驅動、連假無重大消息</td><td class="tag neutral">中性</td></tr>
+      <tr><td>華新科(2492)</td><td class="num neutral">休市</td><td>6/18收422.5元；漲多後高檔整理、車用MLCC續穩</td><td class="tag neutral">中性</td></tr>
+      <tr><td>禾伸堂(3026)</td><td class="num neutral">休市</td><td>6/18收810元；高階MLCC放量出貨、被動元件分化</td><td class="tag neutral">中性</td></tr>
+      <tr><td>信昌電(6173)</td><td class="num neutral">休市</td><td>6/18漲停80元；玻璃基板TGV題材延燒、連假無新進展</td><td class="tag neutral">中性</td></tr>
+      <tr><td>鈺鎧(2375)</td><td class="num neutral">休市</td><td>6/18漲停31.5元；利基型MLCC供需吃緊、短線過熱風險</td><td class="tag neutral">中性</td></tr>
+      <tr><td>蜜望實(8043)</td><td class="num neutral">休市</td><td>6/18收191元；被列警示股、連假無新消息</td><td class="tag neutral">中性</td></tr>
+      <tr><td>九豪(6127)</td><td class="num neutral">休市</td><td>6/18收135元；高頻陶瓷基板出貨擴增題材續燒</td><td class="tag neutral">中性</td></tr>
+      <tr><td>凱美(5317)</td><td class="num neutral">休市</td><td>6/18收137.5元；薄膜電容車用需求穩、連假無變動</td><td class="tag neutral">中性</td></tr>
+      <tr><td>奇力新(2456)</td><td class="num neutral">休市</td><td>6/18收99.85元；電感AI應用比重提升、無新消息</td><td class="tag neutral">中性</td></tr>
+      <tr><td>日電貿(3090)</td><td class="num neutral">休市</td><td>6/18收134.5元；被動元件通路商受惠族群輪動</td><td class="tag neutral">中性</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 四、美股焦點 ============ -->
+  <h2>四、美股焦點（可複委託操作）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th><th>影響</th><th>對台股連動</th></tr></thead>
+    <tbody>
+      <tr><td class="time">全日</td><td>美股六月節(Juneteenth)休市</td><td class="src"><a class="src-link" href="https://sundayguardianlive.com/business/us-stock-market-open-or-closed-today-why-dow-jones-sp-500-nyse-nasdaq-are-shut-on-june-19-2026-juneteenth-what-investors-must-know-209782/">Sunday Guardian</a></td><td>NYSE、Nasdaq、債市6/19全日休市、6/22(一)恢復交易；前一交易日(6/18)三大指數全面大漲、SOX費半暴漲+6.67%。</td><td class="tag neutral">中性</td><td>休市無連動、留意 6/22 開盤跳空</td></tr>
+      <tr><td class="time">14:30</td><td>美伊和平協議於日內瓦正式簽署</td><td class="src"><a class="src-link" href="https://www.cnbc.com/amp/2026/06/19/oil-prices-wti-brent-crude-us-iran-deal-strait-hormuz-shipping-recovery.html">CNBC</a></td><td>川普宣布美伊和平框架已簽、荷莫茲海峽全面開放並免徵伊朗通行費；惟美伊瑞士後續會談被臨時取消、Risk-On與不確定性並存。</td><td class="tag up">利多</td><td>地緣風險溢價回落、油價維持低檔利多台股</td></tr>
+      <tr><td class="time">14:30</td><td>WTI原油$78、Brent $79一線盤整</td><td class="src"><a class="src-link" href="https://www.cnbc.com/amp/2026/06/19/oil-prices-wti-brent-crude-us-iran-deal-strait-hormuz-shipping-recovery.html">CNBC</a></td><td>Brent八月期貨$79.59、WTI七月期貨$78.15、本週累跌約8%；Brent較衝突高點回落約36%、區間預期$75-$82。</td><td class="tag up">利多</td><td>輸入物價壓力續降、有利台灣電子業毛利率</td></tr>
+      <tr><td class="time">全日</td><td>TSMC ADR連假最後交易日$462.12</td><td class="src"><a class="src-link" href="https://www.tradingkey.com/news/market-movers/261978005-market-movers-tsm-20260619">TradingKey</a></td><td>TSM ADR 6/18收$462.12、技術面MACD買進訊號、（市場預期：6/22復盤後台積電2,400-2,450續挑戰新高）。</td><td class="tag up">利多</td><td>ADR走勢為台積電復盤多空指引</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 四之二、美股指數與板塊動向 ============ -->
+  <h2>美股指數與板塊動向<span class="core-tag">CORE</span></h2>
+  <table class="index-table">
+    <thead><tr><th>指數</th><th>收盤</th><th>漲跌</th><th>漲跌幅</th></tr></thead>
+    <tbody>
+      <tr><td>道瓊工業指數</td><td class="num">51,564.70</td><td class="num up">+72.15</td><td class="pct up">+0.14%</td></tr>
+      <tr><td>S&amp;P 500</td><td class="num">7,537.79</td><td class="num up">+80.52</td><td class="pct up">+1.08%</td></tr>
+      <tr><td>那斯達克綜合指數</td><td class="num">26,517.93</td><td class="num up">+496.27</td><td class="pct up">+1.91%</td></tr>
+      <tr><td>費城半導體(SOX)</td><td class="num">14,376.34</td><td class="num up">+899.27</td><td class="pct up">+6.67%</td></tr>
+    </tbody>
+  </table>
+  <table>
+    <thead><tr><th>板塊（GICS）</th><th>漲跌幅</th><th>表現</th><th>當日驅動/備註</th></tr></thead>
+    <tbody>
+      <tr><td>資訊科技</td><td class="pct up">+2.85%</td><td class="tag up">領漲</td><td>6/18 SOX費半暴漲+6.67%帶動、6/19美股休市；資訊科技連假前為Risk-On主軸</td></tr>
+      <tr><td>通訊服務</td><td class="pct up">+1.42%</td><td class="tag up">領漲</td><td>Alphabet/Meta 6/18上漲、廣告與AI題材延燒；6/19休市</td></tr>
+      <tr><td>非必需消費</td><td class="pct up">+1.65%</td><td class="tag up">領漲</td><td>Tesla+3%、Amazon+1.8%、Russell 2000領漲帶動消費族群；6/19休市</td></tr>
+      <tr><td>必需消費</td><td class="pct down">-0.32%</td><td class="tag down">領跌</td><td>防禦性資金外流、Costco/Walmart小跌；6/19休市</td></tr>
+      <tr><td>能源</td><td class="pct down">-2.45%</td><td class="tag down">領跌</td><td>6/18美伊MOU簽署、WTI跌破$81、Exxon/Chevron下挫；6/19休市</td></tr>
+      <tr><td>金融</td><td class="pct up">+0.65%</td><td class="tag up">領漲</td><td>銀行股小漲、高利率環境利差預期、JPM/BAC穩定上揚；6/19休市</td></tr>
+      <tr><td>醫療保健</td><td class="pct down">-0.18%</td><td class="tag down">領跌</td><td>防禦性類股輪動、UNH/JNJ小跌；6/19休市</td></tr>
+      <tr><td>工業</td><td class="pct up">+0.78%</td><td class="tag up">領漲</td><td>航空與機械股表現平穩、油價下跌利空運輸成本；6/19休市</td></tr>
+      <tr><td>原物料</td><td class="pct down">-0.55%</td><td class="tag down">領跌</td><td>金屬與化學股回檔、跟隨油價走弱；6/19休市</td></tr>
+      <tr><td>不動產</td><td class="pct up">+0.92%</td><td class="tag up">領漲</td><td>10Y美債殖利率小幅回落、REITs受惠；6/19休市</td></tr>
+      <tr><td>公用事業</td><td class="pct neutral">+0.05%</td><td class="tag neutral">持平</td><td>防禦性類股震盪、資金外流至成長股；6/19休市</td></tr>
+    </tbody>
+  </table>
+  <ul class="law-list">
+    <li>連假前最後一日(6/18)輪動方向：「能源/防禦 → 科技/小型股」明確、Iran和平協議與殖利率回落雙引擎驅動Risk-On；6/19美股全日休市、SOX費半維持14,376.34高檔。</li>
+    <li>資訊科技/半導體對台股電子權值股研判：6/22(一)台股復盤直接消化6/18美股大漲與TSM ADR $462.12正面訊號、預期台積電有機會挑戰2,400-2,450區間新高；惟ITC潛在裁定為單一變數需嚴密追蹤。</li>
+    <li>連假期間美股期貨夜盤(週日21:00開盤)為6/22台股開盤跳空方向之領先指標。</li>
+  </ul>
+
+  <!-- ============ 五、日本（參考） ============ -->
+  <h2>五、日本（參考）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th></tr></thead>
+    <tbody>
+      <tr><td class="time">14:00</td><td>日經盤中觸71,000後跌勢擴大</td><td class="src"><a class="src-link" href="https://www.xtb.com/int/market-analysis/news-and-research/morning-wrap-asia-pulls-back-on-peace-skepticism-tokyo-flags-yen-intervention-19-06-2026">XTB</a></td><td>日經225 6/19早盤觸71,000點後因和平協議疑慮、亞股全面回檔、期貨日內走低約1.3%、結束週線連紅。</td></tr>
+      <tr><td class="time">10:00</td><td>日本財相片山宣示對日圓投機行動</td><td class="src"><a class="src-link" href="https://www.cnbc.com/amp/2026/06/19/japan-yen-intervention-boj-rate-hike.html">CNBC</a></td><td>財相片山皋月於G7會議發表強硬聲明、宣稱東京準備對投機性日圓貶值採取「果斷行動」、（市場預期：USD/JPY 160以上加速干預機率提高）。</td></tr>
+      <tr><td class="time">全日</td><td>日銀5月干預超$700億未撐住日圓</td><td class="src"><a class="src-link" href="https://www.cnbc.com/amp/2026/06/19/japan-yen-intervention-boj-rate-hike.html">CNBC</a></td><td>分析報導指日銀6月升息1碼至1.0%(31年新高)加上5月超$700億干預仍未能扭轉日圓走勢、結構性弱日圓壓力延續。</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 六、香港（參考） ============ -->
+  <h2>六、香港（參考）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th></tr></thead>
+    <tbody>
+      <tr><td class="time">全日</td><td>港股端午節休市</td><td class="src"><a class="src-link" href="https://finance.yahoo.com/quote/%5EHSI/history/">Yahoo Finance</a></td><td>港股6/19端午節休市、6/22(一)恢復交易；前一交易日(6/18)恒生指數收23,924.81(-1.59%)、中港監管疑慮壓盤。</td></tr>
+      <tr><td class="time">全日</td><td>陸股(滬深)端午節休市</td><td class="src"><a class="src-link" href="https://www.threads.com/@quantpass/post/DYzRPzbCNp0/">Quantpass</a></td><td>中國A股6/19端午節休市、6/22(一)恢復交易；連假期間無內地監管或政策面新增變數。</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 七、跨市場連動分析 ============ -->
+  <h2>七、跨市場連動分析</h2>
+  <ul class="law-list">
+    <li>美股→台股：6/19美股Juneteenth休市與台股端午節休市重疊、罕見「雙市場同步暫停」、6/22(一)台股將一次消化6/18美股大漲(SOX +6.67%)與TSM ADR $462.12之正面訊號、預期跳空高開機率高。</li>
+    <li>匯率→台股：日圓USD/JPY續逼近160、台幣連動承壓但出口電子股相對受惠；美元指數(DXY)若連假期間因和平協議走弱則對新台幣與電子股估值雙重利多。</li>
+    <li>原物料→台股：WTI $78、Brent $79一線盤整、較6月初衝突高點累跌約36%、輸入物價壓力顯著減輕、有利台灣電子業與航運業6月毛利率。</li>
+    <li>其他：日經6/19盤中觸71,000後因美伊後續會談取消而回落、亞股Risk-On情緒短線需重新評估；ITC對台積電專利初裁為單一公司事件、影響範圍有限但需嚴密追蹤。</li>
+  </ul>
+
+  <!-- ============ 八、今日總覽 ============ -->
+  <h2>八、今日總覽</h2>
+  <div class="overview">
+    <div class="mood">整體氛圍：中性</div>
+    <ul class="law-list">
+      <li>台股6/19端午節休市、6/20-21週末暫停、6/22(一)恢復交易；前一交易日6/18收46,465.00點史上新高、台積電2,410元、外資買超+211.47億，籌碼面延續偏多。</li>
+      <li>連假期間正面變數：美伊和平協議6/19正式簽署、SOX費半6/18暴漲+6.67%、台積電-Amkor十年封測合作、鴻海-Intel AI基礎建設合作、油價維持$78-79區間有利輸入物價。</li>
+      <li>連假期間負面變數：美伊瑞士後續會談被取消、和平協議執行力存疑、日經盤中觸頂回落、美國ITC潛在對台積電進口禁令裁定。</li>
+      <li>美股關注重點：6/22(一)美股開盤將反映連假累積消息、留意SOX費半14,376高檔能否守住、TSM ADR能否續攻$465關卡。</li>
+      <li>美股關注重點：本週後續經濟數據包括6/22 PMI初值、6/24耐久財訂單、6/25 GDP終值與Fed官員談話、為Fed鷹派轉向後首次數據驗證。</li>
+      <li>風險提示：6/22復盤首日跳空缺口風險、ITC裁定時點不確定、日圓干預時點與規模、和平協議若反覆地緣風險溢價回升。</li>
+    </ul>
+  </div>
+
+  <footer class="brief-foot">
+    本簡報為資訊整理，非投資建議。「事實」與「市場預期／分析觀點」已於摘要中區分標示。<br>
+    自動產出於 2026/06/20 06:45（UTC+8）。
+  </footer>
+</body>
+</html>
