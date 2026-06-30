@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日市場簡報｜2026/07/01</title>
+<style>
+  :root {
+    --bg: #0e1116;
+    --panel: #161b22;
+    --panel-2: #1c2230;
+    --border: #2a313c;
+    --text: #d8dee9;
+    --text-dim: #8b95a5;
+    --accent: #e8b339;
+    --up: #ff5b5b;      /* 台股慣例：紅漲 */
+    --down: #3dd68c;    /* 綠跌 */
+    --neutral: #8b95a5;
+    --mono: "SFMono-Regular", "Roboto Mono", "Noto Sans Mono", ui-monospace, monospace;
+    --serif: "Noto Serif TC", "Songti TC", serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans TC", -apple-system, "PingFang TC", "Microsoft JhengHei", sans-serif;
+    line-height: 1.65;
+    padding: 2rem 1.2rem 4rem;
+    max-width: 920px;
+    margin: 0 auto;
+    font-size: 15px;
+  }
+  header.brief-head {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 1rem;
+    margin-bottom: 1.8rem;
+  }
+  header.brief-head .kicker {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    text-transform: uppercase;
+  }
+  header.brief-head h1 {
+    font-family: var(--serif);
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin: 0.2rem 0;
+    letter-spacing: 0.02em;
+  }
+  header.brief-head .date {
+    font-family: var(--mono);
+    color: var(--text-dim);
+    font-size: 0.95rem;
+  }
+  .back-link {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: var(--text-dim);
+    text-decoration: none;
+    font-family: var(--mono);
+    font-size: 0.82rem;
+  }
+  .back-link:hover { color: var(--accent); }
+  h2 {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    margin: 2.2rem 0 0.9rem;
+    padding-left: 0.7rem;
+    border-left: 4px solid var(--accent);
+    letter-spacing: 0.02em;
+  }
+  h2 .core-tag {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.15em;
+    background: var(--accent);
+    color: #0e1116;
+    padding: 0.12rem 0.5rem;
+    border-radius: 3px;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+    font-weight: 700;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.5rem 0 1rem;
+    font-size: 0.86rem;
+    background: var(--panel);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  th {
+    background: var(--panel-2);
+    color: var(--text-dim);
+    text-align: left;
+    padding: 0.6rem 0.7rem;
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+  td {
+    padding: 0.6rem 0.7rem;
+    border-top: 1px solid var(--border);
+    vertical-align: top;
+  }
+  td.time, td.num { font-family: var(--mono); white-space: nowrap; }
+  .tag { font-weight: 700; font-family: var(--mono); font-size: 0.8rem; white-space: nowrap; }
+  .tag.up { color: var(--up); }
+  .tag.down { color: var(--down); }
+  .tag.neutral { color: var(--neutral); }
+  .num.up { color: var(--up); }
+  .num.down { color: var(--down); }
+  .index-table td.num, .index-table th:not(:first-child) { text-align: right; }
+  .index-table th:not(:first-child) { padding-right: 0.9rem; }
+  .index-table td.num { padding-right: 0.9rem; }
+  td.pct { font-family: var(--mono); text-align: right; white-space: nowrap; padding-right: 0.9rem; }
+  td.pct.up { color: var(--up); }
+  td.pct.down { color: var(--down); }
+  .law-list { list-style: none; padding: 0; }
+  .law-list li {
+    padding: 0.45rem 0 0.45rem 1.2rem;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .law-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+  .overview {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 6px;
+    padding: 1.1rem 1.3rem;
+    margin-top: 0.5rem;
+  }
+  .overview .mood { font-family: var(--mono); font-size: 0.95rem; margin-bottom: 0.6rem; }
+  footer.brief-foot {
+    margin-top: 3rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 0.78rem;
+    line-height: 1.8;
+  }
+  .src { color: var(--text-dim); font-size: 0.8rem; }
+  a.src-link { color: var(--text-dim); text-decoration: underline dotted; }
+  a.src-link:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+  <a href="../index.html" class="back-link">← 返回歷史總覽</a>
+  <header class="brief-head">
+    <div class="kicker">Daily Market Brief</div>
+    <h1>每日市場簡報</h1>
+    <div class="date">2026/07/01（UTC+8）｜產出時間 2026/07/01 07:00</div>
+  </header>
+
+  <!-- ============ 一、台股焦點 ============ -->
+  <h2>一、台股焦點<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th><th>影響</th><th>受影響族群/標的</th></tr></thead>
+    <tbody>
+      <tr><td class="time">13:30</td><td>台股6/30狂飆1,126.01點(+2.50%)收46,125.91點、寫6月最終交易日千點奇蹟</td><td class="src"><a class="src-link" href="https://www.tradingkey.com/analysis/stocks/more/262000110-tsm-tsml-taiwan-6285-2454-tradingkey">TradingKey</a></td><td>加權指數6/30收46,125.91點(+1,126.01/+2.50%)、成交1.2兆元、為6月最終交易日同時為第二季最後一天；末跌段大賣1,120億壓低指數約393點仍守千點漲幅、月線+1,392點(+3.11%)連3月紅、季線+14,402點(+45.4%)強勢上揚、上半年累漲17,162點史上最強寫近60% YTD（市場預期：7/1有望續攻47K關卡、挑戰50K心理大關開始醞釀）。</td><td class="tag up">利多</td><td>大盤、權值股</td></tr>
+      <tr><td class="time">13:30</td><td>台積電(2330)6/30收2,410元(+40/+1.69%)、上半年累漲約55%</td><td class="src"><a class="src-link" href="https://tw.stock.yahoo.com/quote/2330.TW">Yahoo股市</a></td><td>台積電6/30開盤強勢盤中觸2,455元(+85/+3.59%)、末跌段18,700張賣壓出籠終收2,410元、富時指數調整權重季底結帳因素為個別事件；上半年累漲約55%為帶動加權指數寫史上最強上半年的核心引擎；ADR(TSM)同步反彈呼應美股費半+3%以上強勢（市場預期：7/1台積電有望挑戰2,450-2,500壓力區、ITC初裁仍為短線最大不確定變數）。</td><td class="tag up">利多</td><td>台積電(2330)、晶圓代工</td></tr>
+      <tr><td class="time">13:30</td><td>聯發科(2454)6/30盤中觸4,245元、上半年累漲逾192%奪IC設計王</td><td class="src"><a class="src-link" href="https://finance.yahoo.com/quote/2454.TW/">Yahoo Finance</a></td><td>聯發科6/30盤中高4,245元、低3,910元、單日波動率近8%、收高（4,170-4,200元區間）；上半年累漲逾192%表現遠勝台積電55%漲幅、為2026上半年IC設計類股之王、AI ASIC題材+Dimensity 9500手機晶片量產雙引擎（市場預期：7/1有望挑戰4,300元新高、留意末跌段獲利了結賣壓）。</td><td class="tag up">利多</td><td>聯發科(2454)、IC設計</td></tr>
+      <tr><td class="time">全日</td><td>記憶體族群延續大摩超級循環題材、南亞科/華邦電維持強勢</td><td class="src"><a class="src-link" href="https://money.udn.com/money/story/12040/9518265">經濟日報</a></td><td>大摩記憶體報告續發酵、南亞科目標370-380元、華邦電200-222元、DDR4下半年供給缺口擴大至19-20%、HBM佔DRAM晶圓比重升至25%結構性題材未改、傳統DRAM買主恐慌性採購通路庫存低於2週（市場預期：7/1記憶體族群有望續扮主升族群之一）。</td><td class="tag up">利多</td><td>南亞科(2408)、華邦電(2344)、旺宏(2337)、力積電(6770)、群聯(8299)</td></tr>
+      <tr><td class="time">全日</td><td>被動元件SP-Cap 7/1漲價20-30%生效、Panasonic缺貨延伸至2027</td><td class="src"><a class="src-link" href="https://www.sinotrade.com.tw/richclub/hotstock/%E5%9C%8B%E5%B7%A8--2327-%E8%82%A1%E6%9D%B1%E6%9C%83%E9%87%8B%E4%B8%8B%E5%8D%8A%E5%B9%B4%E5%BC%B7%E5%8B%81%E4%BF%A1%E8%99%9F-AI%E9%9C%80%E6%B1%82%E8%B6%85%E9%A0%90%E6%9C%9F-%E6%8E%A5%E5%96%AE%E5%87%BA%E8%B2%A8%E6%AF%94%E8%A1%9D1-3-%E8%82%A1%E5%B8%82%E8%A9%B1%E9%A1%8C-6a178f3511fc24195f9d3de2">豐雲學堂</a></td><td>Panasonic SP-Cap第二度漲價20-30%自7/1正式生效、AI伺服器電源需求穩定支撐被動元件多頭格局延伸至2027、國巨5月營收150.58億+47.5%基本面強勁、外資維持目標價1,355元（市場預期：7/1被動元件族群題材續燒、立隆電/鈺邦/信昌電/鈺鎧/華新科續看反彈）。</td><td class="tag up">利多</td><td>國巨(2327)、華新科(2492)、禾伸堂(3026)、信昌電(6173)、立隆電(2472)、鈺邦(6449)、鈺鎧(6238)</td></tr>
+      <tr><td class="time">全日</td><td>台積電ITC初裁(337-TA-1443案)截至6/30仍未公佈、最終裁定10月</td><td class="src"><a class="src-link" href="https://www.tomshardware.com/tech-industry/republican-lawmakers-urge-itc-to-block-imports-of-infringing-tsmc-chips-as-patent-ruling-imminent">Tom's Hardware</a></td><td>Longitude Licensing+Marlin Semiconductor(IPValue子公司)對台積電7nm及以下製程提起337-TA-1443案、行政法法官初裁原預計6月底前公佈但截至7/1早盤仍未揭曉、最終裁定排定10月（市場預期：7/1台積電股價仍受此短線不確定性影響、法人多視為專利蟑螂案實質禁令需10月最終裁定）。</td><td class="tag down">利空</td><td>台積電(2330)、晶圓代工</td></tr>
+      <tr><td class="time">全日</td><td>第三季開始、外資補強回補與AI伺服器拉貨潮七月旺季啟動</td><td class="src"><a class="src-link" href="https://www.taipeitimes.com/News/front/archives/2026/05/05/2003856767">Taipei Times</a></td><td>7/1進入第三季AI伺服器拉貨旺季、Vera Rubin NVL72 Q3起量產涉及約150家台廠生態夥伴、Google TPU供應鏈Alphabet入道指效應延燒；分析師普遍預期Q3為AI伺服器供應鏈出貨高峰、廣達/緯創/鴻海/技嘉接單能見度延伸至2027（市場預期：7/1 AI伺服器供應鏈有望接棒被動元件成主升族群）。</td><td class="tag up">利多</td><td>廣達(2382)、緯創(3231)、鴻海(2317)、技嘉(2376)</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 二、三大法人動向 ============ -->
+  <h2>二、三大法人動向<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>法人</th><th>買賣超(億元)</th><th>方向</th><th>備註</th></tr></thead>
+    <tbody>
+      <tr><td>外資</td><td class="num up">+450 (估)</td><td class="tag up">買超</td><td>6/30初步估計；延續6/29回補近685億的反手加碼動能、為大盤千點長紅核心動能；最終數據待TWSE盤後公佈</td></tr>
+      <tr><td>投信</td><td class="num up">+30 (估)</td><td class="tag up">買超</td><td>6/30初步估計；終止上週連3賣超、季底集中作帳買盤回籠</td></tr>
+      <tr><td>自營商</td><td class="num up">+150 (估)</td><td class="tag up">買超</td><td>6/30初步估計；避險回補+部位加碼雙重支撐、季底結帳行情活絡</td></tr>
+    </tbody>
+  </table>
+  <ul class="law-list">
+    <li>6/30三大法人合計預估買超約+630億元、為連2日大幅回補、續寫上週「歷史最大週賣超」後的反彈軌跡；外資延續6/29回補684.58億的強勢動能、為大盤狂飆千點的籌碼面核心。</li>
+    <li>外資台指期未平倉細節待TAIFEX盤後公佈、惟期現貨同步買超為6/30千點長紅之背景；本週外資已實質完成「先賣後買」的Pre-FOMC籌碼重整、為7月開盤多頭氛圍奠基。</li>
+    <li>外資回補集中於電子權值（台積電/聯發科/鴻海/廣達）+記憶體（南亞科/華邦電）+被動元件（國巨/華新科/禾伸堂）三大主軸、與美股6/30 SOXX+3.6%/AMD+7%創高/Tesla+8.49%全球科技股反彈相互輝映。</li>
+    <li>第三季AI伺服器拉貨旺季啟動為基本面支撐、外資季底結帳+季初再配置的雙重壓力有望緩解、7月若無黑天鵝事件外資延續買超機率高。</li>
+  </ul>
+
+  <!-- ============ 三、權值股觀察清單 ============ -->
+  <h2>三、權值股觀察清單<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>標的</th><th>漲跌</th><th>相關消息</th><th>影響</th></tr></thead>
+    <tbody>
+      <tr><td>台積電(2330)</td><td class="num up">6/30收2,410元 (+40/+1.69%)</td><td>盤中觸2,455元(+3.59%)後末跌段18,700張賣壓收斂；上半年累漲約55%；ITC初裁仍為短線最大變數；7/1有望挑戰2,450-2,500壓力區</td><td class="tag up">利多</td></tr>
+      <tr><td>聯發科(2454)</td><td class="num up">6/30盤中觸4,245元 (~+7%)</td><td>上半年累漲逾192%奪IC設計王、AI ASIC+Dimensity 9500雙引擎；4,200守穩有望挑戰4,300新高；末跌段獲利了結賣壓觀察</td><td class="tag up">利多</td></tr>
+      <tr><td>鴻海(2317)</td><td class="num up">6/30約255元 +3%估</td><td>跟漲AI伺服器供應鏈、Apple漲價對下游OEM成本傳導疑慮緩解；250-260為支撐區、Q3拉貨旺季啟動有望挑戰270</td><td class="tag up">利多</td></tr>
+      <tr><td>廣達(2382)</td><td class="num up">6/30約372元 +3%估</td><td>AI伺服器訂單延伸至2028基本面未變、Alphabet入道指效應延燒對Google TPU供應鏈正面；370守穩有望挑戰380新高</td><td class="tag up">利多</td></tr>
+      <tr><td>國巨(2327)</td><td class="num up">6/30約+2%估</td><td>5月營收150.58億+47.5%、SP-Cap 7/1漲價20-30%生效；接單出貨比衝1.3、外資維持目標1,355元；7/1有望挑戰千元關卡</td><td class="tag up">利多</td></tr>
+      <tr><td>華新科(2492)</td><td class="num up">6/30約+3%估</td><td>被動元件三雄之一、SP-Cap漲價題材延燒；跌深反彈持續、處置股賣壓觀察中</td><td class="tag up">利多</td></tr>
+      <tr><td>禾伸堂(3026)</td><td class="num up">6/30約+2.5%估</td><td>MLCC新三雄、產品交期已拉長至20多週、年內累漲逾5倍；跌深反彈動能延續</td><td class="tag up">利多</td></tr>
+      <tr><td>信昌電(6173)</td><td class="num up">6/30約+3%估</td><td>SP-Cap族群、Panasonic 7/1正式漲價20-30%生效為直接受惠；長線題材未斷</td><td class="tag up">利多</td></tr>
+      <tr><td>鈺鎧(6238)</td><td class="num up">6/30約+2.5%估</td><td>被動元件次族群、缺貨潮延伸至2027；跌深反彈持續</td><td class="tag up">利多</td></tr>
+      <tr><td>立隆電(2472)</td><td class="num up">6/30約+2%估</td><td>鋁電容族群、AI伺服器電源需求穩定、6/25亮燈漲停題材續燒；7/1留意是否再度發動</td><td class="tag up">利多</td></tr>
+      <tr><td>鈺邦(6449)</td><td class="num up">6/30約+3%估</td><td>固態電容族群、車用與AI雙引擎；技術反彈延續</td><td class="tag up">利多</td></tr>
+      <tr><td>蜜望實(8043)</td><td class="num up">6/30約+2%估</td><td>被動元件通路商、跟漲大盤情緒；7/1有望挑戰前高</td><td class="tag up">利多</td></tr>
+      <tr><td>南亞科(2408)</td><td class="num up">6/30約+4%估</td><td>大摩升評目標370-380元、傳統DRAM超級循環、買主恐慌性採購；7/1記憶體主升族群首選</td><td class="tag up">利多</td></tr>
+      <tr><td>華邦電(2344)</td><td class="num up">6/30約+4%估</td><td>大摩升評目標200-222元、NOR Flash吃緊台廠地位提升；7/1記憶體主升族群首選</td><td class="tag up">利多</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 四、美股焦點 ============ -->
+  <h2>四、美股焦點（可複委託操作）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th><th>影響</th><th>對台股連動</th></tr></thead>
+    <tbody>
+      <tr><td class="time">04:00</td><td>美股6/30收紅、Nasdaq Q2 best since 2020、Dow best since 2022</td><td class="src"><a class="src-link" href="https://www.fool.com/investing/2026/06/30/market-indexes-close-out-june-with-a-tech-rally/">Motley Fool</a></td><td>美股6/30收紅、Dow 52,319.20(+0.26%)、S&amp;P 500 7,499.36(+0.79%)、Nasdaq 26,213.72(+1.52%)、SOXX+3.6%；Q2 2026為S&amp;P 500與Nasdaq近6年來最強單季、Dow為2022年來最強單季、儘管伊朗戰爭仍締造此佳績；上半年SOX費城半導體指數累漲約94%為歷史第2強上半年（市場預期：對台股電子權值股有強烈正面情緒延燒效應）。</td><td class="tag up">利多</td><td>台積電/聯發科/廣達/鴻海等電子權值股情緒大幅修復、AI供應鏈拉抬</td></tr>
+      <tr><td class="time">04:00</td><td>AMD飆+7%創歷史新高、Venice CPU出貨將超越NVDA Vera</td><td class="src"><a class="src-link" href="https://www.tradingkey.com/analysis/stocks/us-stocks/262001747-amd-cpu-venice-surpassed-nvidia-vera-gpu-ai-tradingkey">TradingKey</a></td><td>AMD 6/30飆漲超過7%創歷史新高、摩根士丹利預期第六代CPU「Venice」出貨將完全超越Nvidia Vera GPU、AI伺服器CPU市占率重定價、為SOX費半+3.6%核心驅動（市場預期：對台積電N3製程訂單、聯發科ASIC共同設計題材正面）。</td><td class="tag up">利多</td><td>台積電(N3製程訂單)、聯發科(ASIC題材)、AI伺服器供應鏈</td></tr>
+      <tr><td class="time">04:00</td><td>Tesla單日飆+8.49%、Mag7全面反彈、僅AAPL/MSFT小跌</td><td class="src"><a class="src-link" href="https://www.fool.com/research/magnificent-seven-sp-500/">Motley Fool</a></td><td>Mag7 6/30：Tesla+8.49%領漲、GOOG+4.94%/GOOGL+4.79%(入道指效應延燒)、AMZN+3.23%、META+2.27%、NVDA+1.30%、AAPL-0.76%/MSFT-1.13%小跌；GOOGL/GOOG連2日強勢顯示道指納入帶動指數型基金被動買盤（市場預期：對Google TPU供應鏈（廣達/緯創/技嘉）、Tesla供應鏈、NVDA/AMD相關台廠正面）。</td><td class="tag up">利多</td><td>Tesla供應鏈(和大/貿聯-KY/智伸科)、Google TPU供應鏈(廣達/緯創/技嘉)、AI伺服器供應鏈</td></tr>
+      <tr><td class="time">22:00</td><td>5月JOLTS職位空缺7.6M創2年新高、遠超預期6.975M</td><td class="src"><a class="src-link" href="https://www.cnn.com/2026/06/30/economy/us-jolts-job-openings-layoffs-may">CNN Business</a></td><td>美國5月JOLTS職位空缺7.6M(前值7.59M)、創2年新高、遠超預期6.975M、勞動市場展現強韌韌性、無視伊朗戰爭不確定性；市場「Goldilocks」雙重訊號：勞動市場熱絡但消費信心轉弱（市場預期：強化Fed延後降息預期、惟整體就業面健康支撐消費信心）。</td><td class="tag neutral">中性</td><td>觀察Fed 7/22-23 FOMC會議降息預期變化、美元偏強對台幣有壓</td></tr>
+      <tr><td class="time">22:00</td><td>6月Consumer Confidence Index 91.2、低於預期94.4、就業前景顯軟</td><td class="src"><a class="src-link" href="https://www.conference-board.org/topics/consumer-confidence/">Conference Board</a></td><td>Conference Board 6月消費者信心指數91.2、低於預期94.4、儘管油價回落帶來支撐但「目前勞動市場感受軟化」、回答「工作難找」比例升至22.5%為2021年1月以來最高；展現「Goldilocks拉鋸」格局（市場預期：與JOLTS強勁形成背離、Fed政策走向更為複雜）。</td><td class="tag down">利空</td><td>消費端轉弱對非必需消費類股有壓、但對Fed降息預期有助</td></tr>
+      <tr><td class="time">全日</td><td>美伊6/30於杜哈和談、地緣風險溢價持續回落、WTI $69.7</td><td class="src"><a class="src-link" href="https://www.cnbc.com/2026/05/29/oil-prices-iran-ceasefire-us-trump-strait-hormuz-energy-costs.html">CNBC</a></td><td>川普政府宣布美伊6/30於卡達杜哈舉行和談、雙方延續暫停相互攻擊、油價在每桶$69.7附近震盪、地緣風險溢價有望進一步回落（市場預期：對航運海運通行恢復、亞股risk-on情緒升溫、輸入物價壓力減輕）。</td><td class="tag up">利多</td><td>航運/海運回穩、整體亞股風險偏好回升、通膨壓力減輕利好估值</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 四之二、美股指數與板塊動向 ============ -->
+  <h2>美股指數與板塊動向<span class="core-tag">CORE</span></h2>
+  <table class="index-table">
+    <thead><tr><th>指數</th><th>收盤</th><th>漲跌</th><th>漲跌幅</th></tr></thead>
+    <tbody>
+      <tr><td>道瓊工業指數</td><td class="num">52,319.20</td><td class="num up">+136.46</td><td class="pct up">+0.26%</td></tr>
+      <tr><td>S&amp;P 500</td><td class="num">7,499.36</td><td class="num up">+58.93</td><td class="pct up">+0.79%</td></tr>
+      <tr><td>那斯達克綜合指數</td><td class="num">26,213.72</td><td class="num up">+393.58</td><td class="pct up">+1.52%</td></tr>
+      <tr><td>費城半導體指數(SOX)</td><td class="num">13,525.00</td><td class="num up">+393.20</td><td class="pct up">+3.00%</td></tr>
+    </tbody>
+  </table>
+  <table>
+    <thead><tr><th>板塊（GICS）</th><th>漲跌幅</th><th>表現</th><th>當日驅動/備註</th></tr></thead>
+    <tbody>
+      <tr><td>資訊科技</td><td class="pct up">+1.70%</td><td class="tag up">領漲</td><td>AMD飆+7%創歷史新高(Venice CPU超越NVDA Vera題材)、NVDA+1.30%、SOXX+3.6%、AI基建樂觀情緒延燒</td></tr>
+      <tr><td>通訊服務</td><td class="pct up">+3.10%</td><td class="tag up">領漲</td><td>GOOG+4.94%/GOOGL+4.79%(入道指效應延燒)、META+2.27%、最大領漲板塊</td></tr>
+      <tr><td>非必需消費</td><td class="pct up">+2.70%</td><td class="tag up">領漲</td><td>Tesla+8.49%領漲(自駕車里程碑題材)、Amazon+3.23%；雖Consumer Confidence走弱但個股表現強勢</td></tr>
+      <tr><td>必需消費</td><td class="pct neutral">+0.20%</td><td class="tag neutral">持平</td><td>防禦類股小幅跟漲、風險偏好回升使資金部分流出</td></tr>
+      <tr><td>能源</td><td class="pct up">+0.40%</td><td class="tag up">微漲</td><td>WTI油價於$69.7附近震盪、美伊和談降低地緣風險溢價、能源類股表現溫和</td></tr>
+      <tr><td>金融</td><td class="pct up">+0.30%</td><td class="tag up">微漲</td><td>JOLTS強勁支撐景氣信心、降息預期被推延對淨利差有利</td></tr>
+      <tr><td>醫療保健</td><td class="pct up">+0.15%</td><td class="tag up">微漲</td><td>防禦資金部分流出、跟漲格局</td></tr>
+      <tr><td>工業</td><td class="pct up">+0.40%</td><td class="tag up">微漲</td><td>整體景氣信心回升、Q2 best quarter since 2022基礎下穩步上行</td></tr>
+      <tr><td>原物料</td><td class="pct down">-0.60%</td><td class="tag down">領跌</td><td>美元延續強勢、大宗商品價格壓力、資金切割明確</td></tr>
+      <tr><td>不動產</td><td class="pct down">-0.85%</td><td class="tag down">領跌</td><td>JOLTS強勁推升10Y殖利率、利率敏感資產承壓</td></tr>
+      <tr><td>公用事業</td><td class="pct down">-0.40%</td><td class="tag down">領跌</td><td>防禦資金大幅流出科技股、利率敏感資產承壓</td></tr>
+    </tbody>
+  </table>
+  <ul class="law-list">
+    <li>當日輪動方向「買科技/通訊/消費賣防禦/REITs/公用事業」180度延續6/29的Risk-On格局；通訊服務+3.1%（Alphabet入道指效應延燒）、非必需消費+2.7%（Tesla+8.49%）、資訊科技+1.7%（AMD+7%創高）共構三大領漲板塊；不動產-0.85%、原物料-0.6%、公用事業-0.4%領跌反映「賣防禦買進攻」資金流向。</li>
+    <li>資訊科技/半導體板塊對台股電子權值股連動研判：6/30 SOXX+3.6%/AMD+7%創歷史新高/NVDA+1.30%為台積電/聯發科/廣達/緯創/技嘉等台廠估值面提供強力支撐；AMD Venice CPU題材對台積電N3製程訂單具長線正面影響、聯發科ASIC共同設計題材延燒；台積電ADR(TSM) 6/30同步反彈估+2-3%；7/1台股電子權值股有望開高走高、AI伺服器供應鏈接棒被動元件成主升族群、台積電有望挑戰2,450-2,500元。</li>
+    <li>Q2 2026為S&amp;P 500與Nasdaq近6年來最強單季、Dow為2022年來最強單季、上半年SOX費城半導體指數累漲約94%為歷史第2強上半年；惟Consumer Confidence 91.2低於預期94.4與JOLTS 7.6M高於預期形成「Goldilocks拉鋸」、Fed 7/22-23 FOMC會議前美元偏強格局延續、需留意7/3非農就業數據與下週ISM PMI為關鍵驗證點。</li>
+  </ul>
+
+  <!-- ============ 五、日本（參考） ============ -->
+  <h2>五、日本（參考）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th></tr></thead>
+    <tbody>
+      <tr><td class="time">14:00</td><td>日經225 6/30收70,498點(+1,030/+1.48%)、重返70K關卡、月線+5.3%連3紅</td><td class="src"><a class="src-link" href="https://tradingeconomics.com/japan/stock-market">Trading Economics</a></td><td>日經225 6/30大漲1,030點(+1.48%)收70,498點、重新站回70K整數關卡、終結上週恐慌賣壓、月線+5.3%連3月紅、TOPIX月+1.0%同步收漲；日圓貶值至USD/JPY 160附近持續支撐出口股獲利預期。</td></tr>
+      <tr><td class="time">全日</td><td>日銀(BoJ) 6月升息至1.0% 31年新高效應延燒、USD/JPY續逼近160</td><td class="src"><a class="src-link" href="https://www.cnbc.com/2026/06/16/boj-rate-hike-historic-inflation.html">CNBC</a></td><td>BoJ 6/16升息1碼至1.0%為31年新高首次、惟USD/JPY 6月期間多數時間落於160附近、Carry Trade續壓日圓、財相片山口頭干預升溫、165為實質干預門檻；出口企業受惠日圓貶值利潤展望提升。</td></tr>
+      <tr><td class="time">全日</td><td>SoftBank/Kioxia 6/30跟漲反彈、記憶體類股全面回穩</td><td class="src"><a class="src-link" href="https://finance.yahoo.com/quote/%5EN225/">Yahoo Finance</a></td><td>SoftBank/Kioxia等記憶體類股6/30跟漲日經反彈動能、上週(6/24-26)恐慌賣壓告一段落、Kioxia成全球記憶體類股反彈指標；對台廠記憶體（南亞科/華邦電）情緒正面連動。</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 六、香港（參考） ============ -->
+  <h2>六、香港（參考）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th></tr></thead>
+    <tbody>
+      <tr><td class="time">16:00</td><td>恒生指數 6/30收跌-0.63%、惟恒生科技+1.80%分歧</td><td class="src"><a class="src-link" href="https://news.fx168news.com/cooperate/2606/7467911.shtml">FX168財經網</a></td><td>港股6/30三大指數漲跌不一、恒生指數收跌-0.63%(估收約22,880-22,900點)、恒生科技指數+1.80%、恒生中國企業指數-0.62%；全日成交3,080億港元縮量、南向資金淨流入58.95億港元支撐科技股。</td></tr>
+      <tr><td class="time">全日</td><td>聯想+8.18%/中芯+5.42%/百度+5.08%領漲恒生指數</td><td class="src"><a class="src-link" href="https://news.fx168news.com/cooperate/2606/7467911.shtml">FX168財經網</a></td><td>恒生指數15漲78跌、聯想集團+8.18%(PC回溫題材)、中芯國際+5.42%(中國半導體自主化)、百度集團+5.08%(AI晶片自主化續燒)領漲；跌幅方面農夫山泉-8.41%、老鋪黃金-5.30%、蒙牛乳業-4.34%。</td></tr>
+      <tr><td class="time">全日</td><td>恒生科技智譜+7.29%/小鵬+6.86%/華虹宏力+5.39%領漲</td><td class="src"><a class="src-link" href="https://news.fx168news.com/cooperate/2606/7467911.shtml">FX168財經網</a></td><td>恒生科技指數15漲12跌、智譜+7.29%(AI大模型題材)、小鵬集團+6.86%(電動車補貼利多)、華虹宏力+5.39%(中國半導體自主化)領漲；同程旅行-4.39%、攜程-3.59%、京東健康-3.18%領跌反映消費端壓力。</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 七、跨市場連動分析 ============ -->
+  <h2>七、跨市場連動分析</h2>
+  <ul class="law-list">
+    <li>美股→台股：6/30美股Nasdaq +1.52%/SOXX +3.6%/AMD飆+7%創高/Tesla +8.49%/GOOGL +4.79%/NVDA +1.30%全面強勢、台股7/1開盤有望延續6/30千點長紅動能、台積電有望挑戰2,450-2,500元、聯發科有望挑戰4,300新高、AI伺服器供應鏈（廣達/緯創/技嘉/鴻海）接棒被動元件成主升族群。</li>
+    <li>匯率：USD/JPY 160附近震盪、財相片山口頭干預升溫、實質干預門檻165；新台幣兌美元預期跟隨日圓走勢偏弱、外資匯入持續性受美國JOLTS+Consumer Confidence Goldilocks數據影響、Fed 7/22-23 FOMC會議前美元偏強格局延續；新台幣偏弱有利電子出口報價、惟需留意4Q匯率損失對Q3財報的潛在影響。</li>
+    <li>地緣政治：美伊6/30於杜哈和談延續、雙方暫停互攻、WTI油價在$69.7附近震盪、地緣風險溢價持續回落支撐亞股風險偏好；惟需留意和談執行力與後續結果、若反覆地緣風險溢價恐回升、油價反彈將直接衝擊輸入物價與通膨預期。</li>
+    <li>港股分歧：恒生-0.63%/恒生科技+1.80%反映「賣傳統買科技」內部輪動、中國半導體自主化（中芯+5.42%/華虹+5.39%/智譜+7.29%）為長期主題；對台廠半導體影響中性偏正面、台積電7nm先進製程地位短期難以撼動。</li>
+    <li>第三季展望：Q3進入AI伺服器拉貨旺季、Vera Rubin NVL72 Q3量產涉約150家台廠、Apple/Microsoft漲價對下游成本傳導壓力延續但邊際緩解、7/3非農就業數據+下週ISM PMI為Fed政策關鍵驗證點；50K心理大關有望於7月開始醞釀挑戰。</li>
+  </ul>
+
+  <!-- ============ 八、今日總覽 ============ -->
+  <h2>八、今日總覽</h2>
+  <div class="overview">
+    <div class="mood">整體氛圍：利多</div>
+    <ul class="law-list">
+      <li>台股關注重點1：6/30加權指數狂飆1,126.01點(+2.50%)收46,125.91點、月線+1,392(+3.11%)連3紅、季線+14,402(+45.4%)、上半年累漲17,162點史上最強；7/1有望續攻47K關卡、50K心理大關醞釀挑戰。</li>
+      <li>台股關注重點2：台積電(2330)收2,410元(+1.69%)上半年累漲約55%、聯發科(2454)盤中觸4,245元上半年累漲逾192%奪IC設計王、AI伺服器供應鏈+被動元件SP-Cap 7/1漲價20-30%生效雙引擎；7/1主升族群續看AI伺服器（廣達/緯創/鴻海/技嘉）+記憶體（南亞科/華邦電）+被動元件（國巨/華新科）。</li>
+      <li>台股關注重點3：三大法人6/30預估合計買超約+630億元為連2日大幅回補、外資延續6/29回補684.58億的反手加碼動能、第三季AI伺服器拉貨旺季啟動為基本面支撐。</li>
+      <li>美股關注重點1：6/30美股全面收紅、Dow 52,319.20(+0.26%)/S&amp;P 500 7,499.36(+0.79%)/Nasdaq 26,213.72(+1.52%)/SOXX+3.6%、Nasdaq Q2 best since 2020、Dow best since 2022、上半年SOX累漲約94%歷史第2強；AMD+7%創高(Venice CPU超越NVDA Vera)、Tesla+8.49%、GOOGL+4.79%(入道指效應延燒)為三大動能。</li>
+      <li>美股關注重點2：5月JOLTS職位空缺7.6M創2年新高遠超預期6.975M、6月Consumer Confidence 91.2低於預期94.4、Goldilocks拉鋸格局形成；對Fed 7/22-23 FOMC會議降息預期形成複雜影響、美元偏強格局延續。</li>
+      <li>風險提示1：台積電ITC初裁(337-TA-1443案)截至7/1早盤仍未公佈、為短線最大不確定變數、實質禁令需10月最終裁定但短期情緒衝擊仍在；建議2,400-2,450為短線情緒關卡。</li>
+      <li>風險提示2：USD/JPY 160附近持續徘徊、財相片山口頭干預升溫、165為實質干預門檻；7/3非農就業數據+下週ISM PMI為Fed政策關鍵驗證點、Apple/Microsoft漲價對下游OEM成本傳導壓力延續、6/30千點長紅後短線過熱風險與技術面回測月線可能。</li>
+    </ul>
+  </div>
+
+  <footer class="brief-foot">
+    本簡報為資訊整理，非投資建議。「事實」與「市場預期／分析觀點」已於摘要中區分標示。<br>
+    自動產出於 2026/07/01 07:00（UTC+8）。
+  </footer>
+</body>
+</html>
