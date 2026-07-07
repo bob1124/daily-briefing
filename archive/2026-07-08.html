@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日市場簡報｜2026/07/08</title>
+<style>
+  :root {
+    --bg: #0e1116;
+    --panel: #161b22;
+    --panel-2: #1c2230;
+    --border: #2a313c;
+    --text: #d8dee9;
+    --text-dim: #8b95a5;
+    --accent: #e8b339;
+    --up: #ff5b5b;      /* 台股慣例：紅漲 */
+    --down: #3dd68c;    /* 綠跌 */
+    --neutral: #8b95a5;
+    --mono: "SFMono-Regular", "Roboto Mono", "Noto Sans Mono", ui-monospace, monospace;
+    --serif: "Noto Serif TC", "Songti TC", serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans TC", -apple-system, "PingFang TC", "Microsoft JhengHei", sans-serif;
+    line-height: 1.65;
+    padding: 2rem 1.2rem 4rem;
+    max-width: 920px;
+    margin: 0 auto;
+    font-size: 15px;
+  }
+  header.brief-head {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 1rem;
+    margin-bottom: 1.8rem;
+  }
+  header.brief-head .kicker {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    text-transform: uppercase;
+  }
+  header.brief-head h1 {
+    font-family: var(--serif);
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin: 0.2rem 0;
+    letter-spacing: 0.02em;
+  }
+  header.brief-head .date {
+    font-family: var(--mono);
+    color: var(--text-dim);
+    font-size: 0.95rem;
+  }
+  .back-link {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: var(--text-dim);
+    text-decoration: none;
+    font-family: var(--mono);
+    font-size: 0.82rem;
+  }
+  .back-link:hover { color: var(--accent); }
+  h2 {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    margin: 2.2rem 0 0.9rem;
+    padding-left: 0.7rem;
+    border-left: 4px solid var(--accent);
+    letter-spacing: 0.02em;
+  }
+  h2 .core-tag {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.15em;
+    background: var(--accent);
+    color: #0e1116;
+    padding: 0.12rem 0.5rem;
+    border-radius: 3px;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+    font-weight: 700;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.5rem 0 1rem;
+    font-size: 0.86rem;
+    background: var(--panel);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  th {
+    background: var(--panel-2);
+    color: var(--text-dim);
+    text-align: left;
+    padding: 0.6rem 0.7rem;
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+  td {
+    padding: 0.6rem 0.7rem;
+    border-top: 1px solid var(--border);
+    vertical-align: top;
+  }
+  td.time, td.num { font-family: var(--mono); white-space: nowrap; }
+  .tag { font-weight: 700; font-family: var(--mono); font-size: 0.8rem; white-space: nowrap; }
+  .tag.up { color: var(--up); }
+  .tag.down { color: var(--down); }
+  .tag.neutral { color: var(--neutral); }
+  .num.up { color: var(--up); }
+  .num.down { color: var(--down); }
+  .index-table td.num, .index-table th:not(:first-child) { text-align: right; }
+  .index-table th:not(:first-child) { padding-right: 0.9rem; }
+  .index-table td.num { padding-right: 0.9rem; }
+  td.pct { font-family: var(--mono); text-align: right; white-space: nowrap; padding-right: 0.9rem; }
+  td.pct.up { color: var(--up); }
+  td.pct.down { color: var(--down); }
+  .law-list { list-style: none; padding: 0; }
+  .law-list li {
+    padding: 0.45rem 0 0.45rem 1.2rem;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .law-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+  .overview {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 6px;
+    padding: 1.1rem 1.3rem;
+    margin-top: 0.5rem;
+  }
+  .overview .mood { font-family: var(--mono); font-size: 0.95rem; margin-bottom: 0.6rem; }
+  footer.brief-foot {
+    margin-top: 3rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 0.78rem;
+    line-height: 1.8;
+  }
+  .src { color: var(--text-dim); font-size: 0.8rem; }
+  a.src-link { color: var(--text-dim); text-decoration: underline dotted; }
+  a.src-link:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+  <a href="../index.html" class="back-link">← 返回歷史總覽</a>
+  <header class="brief-head">
+    <div class="kicker">Daily Market Brief</div>
+    <h1>每日市場簡報</h1>
+    <div class="date">2026/07/08（UTC+8）｜產出時間 2026/07/08 07:00</div>
+  </header>
+
+  <!-- ============ 一、台股焦點 ============ -->
+  <h2>一、台股焦點<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th><th>影響</th><th>受影響族群/標的</th></tr></thead>
+    <tbody>
+      <tr><td class="time">13:30</td><td>台股7/7崩跌1,077點跌破月線收45,479.11點、跌幅2.31%、成交1.17兆元爆量</td><td class="src"><a class="src-link" href="https://tw.stock.yahoo.com/quote/%5ETWII">Yahoo股市</a></td><td>7/7加權指數開高走低、開盤46,700.42點、盤中最高46,967.04點後急速反轉、最低跌至45,432.02點、終場收45,479.11點(-1,077.28/-2.31%)、失守月線、成交金額1兆1,715.84億元；電子股遭大幅賣壓、盤面全面翻黑（市場預期：技術面失守月線需觀察季線46,000-46,500區間反彈力道，7/8關注美股夜盤晶片股續跌後續影響）。</td><td class="tag down">利空</td><td>加權指數、電子權值、AI供應鏈</td></tr>
+      <tr><td class="time">全日</td><td>南韓Samsung Q2財報獲利+1,900%創新高後股價暴跌-6.9%、引爆全球晶片股連鎖賣壓</td><td class="src"><a class="src-link" href="https://www.cnbc.com/2026/07/07/samsung-electronics-preliminary-second-quarter-profit-hits-fresh-high.html">CNBC</a></td><td>Samsung 7/7公布Q2預估獲利89.4兆韓圜(+1,900% YoY)超越Nvidia與Apple、AI記憶體需求爆量激勵、然AI資本支出可持續性疑慮壓過利多、Samsung股價盤中一度暴跌-10%終場收-6.9%、引爆亞股半導體全面賣壓（市場預期：AI CapEx高原論再度浮現、市場對記憶體超級循環可持續性重新評估、投資人重新檢視AI貨幣化路徑）。</td><td class="tag down">利空</td><td>記憶體族群（南亞科/華邦電/旺宏/威剛/十銓）、半導體供應鏈</td></tr>
+      <tr><td class="time">全日</td><td>DeepSeek自研AI晶片消息重挫Nvidia供應鏈情緒、對台積電先進製程訂單能見度形成疑慮</td><td class="src"><a class="src-link" href="https://kelo.com/2026/07/07/exclusive-chinas-deepseek-developing-its-own-ai-chip-sources-say/">Reuters/KELO</a></td><td>路透7/7獨家報導中國DeepSeek正開發自研AI推理晶片、目的降低對Nvidia與Samsung依賴、Nvidia盤中-2.5%、供應鏈情緒轉弱；晶片初期定位為推理端（inference）而非訓練、發展仍在早期階段（市場預期：短線AI貨幣化疑慮發酵、對台積電先進製程訂單能見度負面、被動元件族群結構性需求未變仍為抗跌主軸）。</td><td class="tag down">利空</td><td>台積電(2330)、Nvidia供應鏈、AI伺服器族群、被動元件抗跌</td></tr>
+      <tr><td class="time">全日</td><td>台積電(2330) 7/7收2,470元(+10/+0.41%)相對抗跌、7/16 Q2法說會前靜默期營運消息真空</td><td class="src"><a class="src-link" href="https://tw.stock.yahoo.com/quote/2330.TW">Yahoo股市</a></td><td>台積電7/7逆市小紅收2,470元(+10/+0.41%)、盤面權值中相對抗跌、7/6-7/15為Q2法說會靜默期、7/16下午2:00召開Q2 2026法說會、Q1指引Q2營收$390-402億美元；ADR過去24小時受SOX-5%等級賣壓連動下修（市場預期：法說會前技術面震盪加劇、2,400-2,470為關鍵支撐區、跌破恐測2,350月線）。</td><td class="tag neutral">中性</td><td>台積電(2330)、晶圓代工族群</td></tr>
+      <tr><td class="time">全日</td><td>被動元件族群逆勢抗跌、Panasonic SP-Cap漲價+MLCC供需吃緊結構性題材未破</td><td class="src"><a class="src-link" href="https://www.businesstoday.com.tw/article/category/183015/post/202607010003/">今周刊</a></td><td>Panasonic SP-Cap 7/1漲價20-30%生效邁向第七日、日系Rubycon鋁電跟進、Samsung Electro-Mechanics MLCC大單題材未破；被動元件族群7/7在指數重挫背景下相對抗跌、國巨/華新科/禾伸堂/信昌電/立隆電/鈺邦缺貨潮延續至2027基本面未變（市場預期：晶片賣壓下資金輪動至結構性成長題材、被動元件為7/8抗跌抗震首選）。</td><td class="tag neutral">中性</td><td>國巨(2327)、華新科(2492)、禾伸堂(3026)、信昌電(6173)、立隆電(2472)、鈺邦(6449)</td></tr>
+      <tr><td class="time">全日</td><td>記憶體族群7/7同步遭連鎖賣壓、Samsung/Micron拖累、大摩超級循環報告基本面遭疑</td><td class="src"><a class="src-link" href="https://www.cnbc.com/2026/07/07/chip-stocks-ai-selloff-samsung.html">CNBC</a></td><td>Samsung -6.9%引爆全球記憶體連鎖賣壓、Micron 7/7 -7.3%、Western Digital -7%、SanDisk -7%全面走弱；南亞科/華邦電/旺宏/威剛/十銓/群聯7/7同步承壓；大摩HBM超級循環結構性題材未變但高點價格可持續性受市場質疑（市場預期：短線超跌反彈機會需等外資空單回補、DRAM/NAND高點價格傳導至下游成本壓力發酵）。</td><td class="tag down">利空</td><td>南亞科(2408)、華邦電(2344)、旺宏(2337)、威剛、十銓、群聯(8299)</td></tr>
+      <tr><td class="time">全日</td><td>7/8台股展望：45K關鍵支撐防守、跌深反彈+抗跌族群輪動為主軸</td><td class="src"><a class="src-link" href="https://news.cnyes.com/news/id/6525407">鉅亨網</a></td><td>7/7台股單日崩跌1,077點失守月線、45,000-45,500為短線關鍵支撐區、跌破恐測季線43,500附近；7/8可望出現技術性反彈但美股7/7晶片股續跌形成沉重壓力，關注三劇本：(1)45K支撐防守+跌深反彈；(2)被動元件/金融/傳產抗跌主軸；(3)資金輪動至AI伺服器逢低承接候選（市場預期：市場情緒轉為謹慎、下週7/16台積電法說會與Q2財報季揭幕前避險部位增加）。</td><td class="tag down">利空</td><td>全市場、權值股、AI供應鏈</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 二、三大法人動向 ============ -->
+  <h2>二、三大法人動向<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>法人</th><th>買賣超(億元)</th><th>方向</th><th>備註</th></tr></thead>
+    <tbody>
+      <tr><td>外資</td><td class="num down">-547.31</td><td class="tag down">賣超</td><td>7/7數據；連續4日賣超、單日賣超金額大幅擴大、電子權值調節壓力全面重返</td></tr>
+      <tr><td>投信</td><td class="num up">+87.73</td><td class="tag up">買超</td><td>7/7數據；連續買超動能延續、逆勢加碼被動元件與傳產抗跌族群、扮台股中期穩定軍</td></tr>
+      <tr><td>自營商</td><td class="num down">-487.33</td><td class="tag down">賣超</td><td>7/7數據；避險部位大幅擴大、期現貨對沖操作積極、單日賣超創近期紀錄</td></tr>
+    </tbody>
+  </table>
+  <ul class="law-list">
+    <li>7/7三大法人合計賣超946.91億元（外資-547.31、投信+87.73、自營商-487.33），為近期最大單日賣壓，反映Samsung+DeepSeek雙重AI利空引爆恐慌性減碼。</li>
+    <li>外資已連續4個交易日賣超台股、累計約-1,500億元、主要壓力集中於台積電、AI伺服器供應鏈與記憶體族群，反映外資對AI貨幣化與AI CapEx高原論的謹慎立場。</li>
+    <li>投信持續逆勢買超顯示國內資金對台股中長期基本面仍具信心、主攻結構性成長題材（被動元件、AI伺服器供應鏈個別優質標的、傳產抗跌族群）。</li>
+    <li>自營商單日賣超-487.33億元創近期紀錄、期現貨對沖避險部位大幅擴大、反映短線波動加劇市場情緒轉為極度謹慎。</li>
+    <li>外資期貨未平倉觀察：7/7外資台指期淨空部位進一步擴大，若7/8美股夜盤晶片股企穩、有機會觸發空單回補放大現貨反彈力道；反之則需觀察45K關鍵支撐防守情況。</li>
+  </ul>
+
+  <!-- ============ 三、權值股觀察清單 ============ -->
+  <h2>三、權值股觀察清單<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>標的</th><th>漲跌</th><th>相關消息</th><th>影響</th></tr></thead>
+    <tbody>
+      <tr><td>台積電(2330)</td><td class="num up">7/7收2,470元 (+10/+0.41%)</td><td>逆市小紅、盤中相對抗跌；7/6-7/15 Q2法說會靜默期營運消息真空；ADR過去24小時受SOX重挫連動下修；7/16 Q2 2026法說會為短線最大方向指標；2,400-2,470為關鍵支撐區</td><td class="tag neutral">中性</td></tr>
+      <tr><td>聯發科(2454)</td><td class="num down">7/7重挫</td><td>受Samsung利空與AI供應鏈情緒連動、AI ASIC與Dimensity 9500基本面未變、4,000元支撐防守為7/8關鍵；短線需觀察外資回補動能</td><td class="tag down">利空</td></tr>
+      <tr><td>鴻海(2317)</td><td class="num down">7/7同步走弱</td><td>Nvidia供應鏈AI伺服器訂單基本面未變、然DeepSeek自研AI晶片消息壓抑情緒、240元關鍵支撐、跌破恐測230元；Q2營收超預期利多轉為中期布局</td><td class="tag down">利空</td></tr>
+      <tr><td>廣達(2382)</td><td class="num down">7/7同步走弱</td><td>AI伺服器訂單延伸至2028基本面未變、Nvidia Rubin平台Q3量產訂單見度佳、然市場對AI CapEx高原論疑慮壓抑短線情緒；380元為關鍵支撐</td><td class="tag down">利空</td></tr>
+      <tr><td>國巨(2327)</td><td class="num neutral">7/7逆市抗跌</td><td>被動元件龍頭在指數重挫背景下相對抗跌、外資目標價1,500元、大摩重申MLCC/資阻2026-2027供需吃緊；Panasonic SP-Cap漲價+Samsung MLCC大單雙軌拉抬結構性題材未破</td><td class="tag up">利多</td></tr>
+      <tr><td>華新科(2492)</td><td class="num neutral">7/7逆市抗跌</td><td>被動元件三雄之一、SP-Cap漲價題材延伸、Rubycon鋁電漲價跟進；7/8有望持續扮演抗跌主軸</td><td class="tag up">利多</td></tr>
+      <tr><td>禾伸堂(3026)</td><td class="num neutral">7/7逆市抗跌</td><td>MLCC新三雄、產品交期已拉長至20多週、AI伺服器MLCC需求爆量；7/8結構性題材續強</td><td class="tag up">利多</td></tr>
+      <tr><td>信昌電(6173)</td><td class="num neutral">7/7逆市抗跌</td><td>SP-Cap族群、Panasonic 7/1漲價20-30%直接受惠、長線題材未斷；7/8有望持續強勢</td><td class="tag up">利多</td></tr>
+      <tr><td>鈺鎧(6238)</td><td class="num neutral">7/7抗跌</td><td>被動元件次族群、缺貨潮延伸至2027、7/8輪動主力候選</td><td class="tag up">利多</td></tr>
+      <tr><td>立隆電(2472)</td><td class="num neutral">7/7抗跌</td><td>電容族群、AI伺服器電源需求穩定、Panasonic漲價溢出效應；7/8留意輪動機會</td><td class="tag up">利多</td></tr>
+      <tr><td>鈺邦(6449)</td><td class="num neutral">7/7抗跌</td><td>固態電容族群、車用與AI雙引擎、Panasonic SP-Cap漲價受惠；7/8持續強勢輪動</td><td class="tag up">利多</td></tr>
+      <tr><td>蜜望實(8043)</td><td class="num neutral">7/7抗跌</td><td>被動元件通路商、缺貨潮下通路商供需吃緊；7/8跟漲行情延續</td><td class="tag up">利多</td></tr>
+      <tr><td>大毅(2478)</td><td class="num neutral">7/7抗跌</td><td>電阻/被動元件族群、Panasonic漲價效應+電阻族群七月全面爭相漲價；7/8強勢續攻</td><td class="tag up">利多</td></tr>
+      <tr><td>凱美(5317)</td><td class="num neutral">7/7抗跌</td><td>電容器族群、AI伺服器與工控需求；7/8持續受惠結構性題材</td><td class="tag up">利多</td></tr>
+      <tr><td>日電貿(3090)</td><td class="num neutral">7/7抗跌</td><td>電容器通路商、Panasonic漲價與Rubycon跟進效應；7/8強勢輪動</td><td class="tag up">利多</td></tr>
+      <tr><td>南亞科(2408)</td><td class="num down">7/7同步賣壓</td><td>受Samsung+Micron連鎖賣壓拖累、大摩目標價380元不變、傳統DRAM超級循環結構性題材未破但短線恐慌賣壓；7/8關注技術面反彈訊號</td><td class="tag down">利空</td></tr>
+      <tr><td>華邦電(2344)</td><td class="num down">7/7同步賣壓</td><td>大摩目標價222元、NOR Flash吃緊基本面未變、然AI CapEx疑慮拖累記憶體族群、7/8觀察外資回補訊號</td><td class="tag down">利空</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 四、美股焦點 ============ -->
+  <h2>四、美股焦點（可複委託操作）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th><th>影響</th><th>對台股連動</th></tr></thead>
+    <tbody>
+      <tr><td class="time">04:00</td><td>美股7/7三大指數收黑、Nasdaq -1.16%、S&P 500 -0.45%、Dow -0.25%、晶片股全面暴跌</td><td class="src"><a class="src-link" href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-july-7-2026">TheStreet</a></td><td>道瓊-130.76點(-0.25%)收52,925.15自53K高點回吐、S&P 500 -0.45%/7,503.85、Nasdaq綜合-1.16%/25,818.69、晶片股引爆連鎖賣壓、防禦類股與能源逆勢走高（市場預期：Samsung+DeepSeek雙重利空引爆AI貨幣化疑慮、資金再度轉為Risk Off風格、防禦類股接棒）。</td><td class="tag down">利空</td><td>台股7/8開盤壓力沉重、AI供應鏈與半導體全面利空延伸、關注跌深反彈機會</td></tr>
+      <tr><td class="time">04:00</td><td>Samsung Q2利多失敗+DeepSeek自研AI晶片消息、晶片股遭雙重利空重創</td><td class="src"><a class="src-link" href="https://247wallst.com/investing/2026/07/07/intel-and-applied-materials-dive-10-amd-craters-8-as-samsung-earnings-trigger-chip-selloff/">24/7 Wall St</a></td><td>Samsung Q2獲利+1,900% YoY超越Nvidia與Apple、然AI CapEx可持續性疑慮壓過利多、Samsung股價暴跌-6.9%；路透7/7獨家：DeepSeek開發自研AI推理晶片降低Nvidia依賴、Nvidia -2.5%；Intel -8.2%、Micron -7.3%、AMD -6-8%、Applied Materials -10%、Lam Research -6%、Marvell -6%、Western Digital -7%、SanDisk -7%（市場預期：AI貨幣化+AI供應鏈客戶集中度雙重疑慮發酵）。</td><td class="tag down">利空</td><td>台積電/聯發科/鴻海/廣達/記憶體/被動元件全面連動壓力沉重</td></tr>
+      <tr><td class="time">04:00</td><td>SOX費城半導體指數7/7暴跌約-5%、單日跌幅擴大、AI交易情緒急速逆轉</td><td class="src"><a class="src-link" href="https://schwabnetwork.com/articles/chip-stocks-kick-off-july-on-a-sour-note">Schwab Network</a></td><td>iShares半導體ETF(SOXX) 7/7 -6%收$544、SOX費城半導體指數估收約12,440(-664/-5.07%)、單日跌幅擴大、AI交易情緒從7/6+3.79%大反彈180度逆轉；晶片股呈現Samsung+DeepSeek雙重利空的連鎖恐慌反應（市場預期：SOX 12,500為關鍵支撐、跌破恐測前波低點12,000）。</td><td class="tag down">利空</td><td>台股7/8半導體與AI供應鏈全面利空、台積電ADR過去24小時同步下修</td></tr>
+      <tr><td class="time">全日</td><td>油價因美國撤銷伊朗石油銷售許可證強勁走高、能源類股逆勢領漲</td><td class="src"><a class="src-link" href="https://finance.yahoo.com/markets/live/stock-market-today-sp-500-nasdaq-futures-slip-after-samsung-results-spark-chip-sell-off-223015294.html">Yahoo Finance</a></td><td>美國財政部官員7/7告知CNBC，將撤銷允許伊朗石油銷售的許可證、地緣風險溢價回升、WTI油價強勁走高、Brent油價同步上揚；能源類股當日成S&P 500唯一顯著領漲板塊、+1.97%（市場預期：伊朗制裁重啟為短線油價支撐、但長線供需平衡未變、能源類股Q3有望迎資金流入）。</td><td class="tag neutral">中性</td><td>台股塑化/油電族群短線受惠、AI電力需求題材延續</td></tr>
+      <tr><td class="time">全日</td><td>台積電ADR過去24小時遭連鎖賣壓、對台股7/8開盤具負面指引</td><td class="src"><a class="src-link" href="https://finance.yahoo.com/quote/TSM/history/">Yahoo Finance</a></td><td>TSM ADR受SOX-5%等級賣壓連動、過去24小時同步下修、隱含台積電本尊價格下檔測試2,400-2,430元區間（市場預期：對台股7/8台積電2,400-2,470為關鍵支撐、跌破恐測2,350月線；ADR折溢價收斂）。</td><td class="tag down">利空</td><td>台積電7/8下檔測試2,400支撐、關鍵防守關卡</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 四之二、美股指數與板塊動向 ============ -->
+  <h2>美股指數與板塊動向<span class="core-tag">CORE</span></h2>
+  <table class="index-table">
+    <thead><tr><th>指數</th><th>收盤</th><th>漲跌</th><th>漲跌幅</th></tr></thead>
+    <tbody>
+      <tr><td>道瓊工業指數</td><td class="num">52,925.15</td><td class="num down">-130.76</td><td class="pct down">-0.25%</td></tr>
+      <tr><td>S&amp;P 500</td><td class="num">7,503.85</td><td class="num down">-33.58</td><td class="pct down">-0.45%</td></tr>
+      <tr><td>那斯達克綜合指數</td><td class="num">25,818.69</td><td class="num down">-302.47</td><td class="pct down">-1.16%</td></tr>
+      <tr><td>費城半導體指數(SOX)</td><td class="num">12,440.00</td><td class="num down">-664.26</td><td class="pct down">-5.07%</td></tr>
+    </tbody>
+  </table>
+  <table>
+    <thead><tr><th>板塊（GICS）</th><th>漲跌幅</th><th>表現</th><th>當日驅動/備註</th></tr></thead>
+    <tbody>
+      <tr><td>資訊科技</td><td class="pct down">-2.84%</td><td class="tag down">領跌</td><td>Technology Select Sector SPDR (XLK)重挫、Samsung Q2 CapEx疑慮+DeepSeek自研AI晶片、Intel -8.2%/AMD -6-8%/AMAT -10%/Lam -6%/Marvell -6%領跌</td></tr>
+      <tr><td>通訊服務</td><td class="pct down">-0.85%</td><td class="tag down">領跌</td><td>Alphabet、Meta同步走弱、AI貨幣化疑慮拖累、Nvidia-2.5%連動效應</td></tr>
+      <tr><td>非必需消費</td><td class="pct down">-1.20%</td><td class="tag down">領跌</td><td>Tesla與Amazon走弱、消費電子情緒受Apple AI供應鏈連動；油價上漲對消費者信心產生短線壓力</td></tr>
+      <tr><td>必需消費</td><td class="pct up">+0.75%</td><td class="tag up">領漲</td><td>Costco/Walmart/P&G防禦類股資金流入、Risk Off風格重返、生活必需品需求剛性</td></tr>
+      <tr><td>能源</td><td class="pct up">+1.97%</td><td class="tag up">領漲</td><td>Energy Select Sector SPDR (XLE)領漲全市場、美國撤銷伊朗石油許可證+地緣風險溢價回升、WTI/Brent油價強勁走高</td></tr>
+      <tr><td>金融</td><td class="pct up">+0.30%</td><td class="tag up">微漲</td><td>大型銀行小幅走高、Q2財報季即將展開（JPM/BAC/WFC 7/14-15揭幕）、利差有利銀行股</td></tr>
+      <tr><td>醫療保健</td><td class="pct up">+0.85%</td><td class="tag up">領漲</td><td>UNH/JNJ/Merck防禦類股走高、資金重返防禦類股、AI醫療題材長線利多未變</td></tr>
+      <tr><td>工業</td><td class="pct down">-0.60%</td><td class="tag down">微跌</td><td>Caterpillar/Boeing小幅走弱、AI基建題材短線降溫、國防股相對持穩</td></tr>
+      <tr><td>原物料</td><td class="pct up">+0.20%</td><td class="tag up">微漲</td><td>大宗商品短線震盪、金價受Risk Off風格影響溫和走高、化工類股小幅走弱</td></tr>
+      <tr><td>不動產</td><td class="pct up">+1.69%</td><td class="tag up">領漲</td><td>REITs領漲、資金重返防禦類股、利率敏感類股受市場預期Fed立場軟化影響</td></tr>
+      <tr><td>公用事業</td><td class="pct up">+1.47%</td><td class="tag up">領漲</td><td>Utilities Select Sector SPDR (XLU)領漲、防禦類股全面反攻、風格再度轉為Risk Off、與6月底防禦性輪動相似</td></tr>
+    </tbody>
+  </table>
+  <ul class="law-list">
+    <li>當日輪動方向：7/7美股11大板塊呈現「Risk Off」防禦性輪動、能源+1.97%/不動產+1.69%/公用事業+1.47%/醫療保健+0.85%/必需消費+0.75%領漲；資訊科技-2.84%/非必需消費-1.20%/通訊服務-0.85%/工業-0.60%領跌，「賣科技買防禦」風格與7/6「Risk On全面反攻」180度逆轉、市場情緒快速轉為謹慎；短短兩個交易日內出現雙向極端輪動，反映AI貨幣化與AI CapEx高原論疑慮引爆的市場敏感度。</li>
+    <li>資訊科技/半導體板塊對台股連動研判：SOX費半-5.07%單日崩跌至約12,440、Intel -8.2%/Micron -7.3%/AMD -6-8%/AMAT -10%全面重挫、Samsung Q2利多失敗與DeepSeek自研AI晶片雙重利空對台股7/8直接連動極為負面：台積電將測試2,400-2,470關鍵支撐、鴻海/廣達/緯創/英業達AI伺服器供應鏈情緒壓力沉重、記憶體族群（南亞科/華邦電/旺宏）受Samsung+Micron連鎖賣壓拖累、被動元件（國巨/華新科/禾伸堂）在結構性題材未破下有望持續扮演抗跌主軸。</li>
+    <li>Fed政策與Risk Off風格：Fed 7/28-29 FOMC會議為7月關鍵事件、6月點陣圖中位數上修至3.8%為鷹派偏向；然7/7 Risk Off風格重返、防禦類股與能源類股大幅走高、市場預期若AI CapEx疑慮持續發酵可能對Fed鷹派立場形成軟化壓力；本週關注6月ISM服務業PMI、FOMC會議紀要與Q2財報季揭幕（JPM/BAC/WFC 7/14-15、TSM 7/16）。</li>
+  </ul>
+
+  <!-- ============ 五、日本（參考） ============ -->
+  <h2>五、日本（參考）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th></tr></thead>
+    <tbody>
+      <tr><td class="time">14:00</td><td>日經225 7/7暴跌-2.12%收68,257點、創3週低、AI半導體過熱疑慮引爆</td><td class="src"><a class="src-link" href="https://finance.biggo.com/news/43a0bd66-0977-437c-9d0b-d5f33f0f7fec">BigGo Finance</a></td><td>日經225 7/7一度盤中暴跌逾1,000點、終場收68,257點(-1,481/-2.12%)創3週低、失守69K與70K關卡；Topix指數同步-0.97%至4,062點；AI/半導體過熱疑慮引爆全面賣壓、Kioxia/Advantest/Tokyo Electron/SoftBank領跌半導體與AI相關族群（市場預期：與Samsung Q2 CapEx疑慮和DeepSeek消息連動、日股AI基建族群估值再度面臨修正）。</td></tr>
+      <tr><td class="time">全日</td><td>USD/JPY 7/7回吐至162附近、財相片山重申介入警告、市場等待實質行動</td><td class="src"><a class="src-link" href="https://investinglive.com/forex/japan-finance-minister-katayama-delivers-another-intervention-warning-20260423/">investingLive</a></td><td>日圓上週五因財相口頭干預強勢升破161（+1%），週一(7/6)回吐至162附近，週二(7/7)持穩162區間、財相片山重申當局隨時準備介入支持日圓、165為實質干預門檻；日本與美國持續就外匯政策密切溝通，市場等待實質行動證據（市場預期：不預告式介入時點難以預測、對USD/JPY方向短線影響有限）。</td></tr>
+      <tr><td class="time">全日</td><td>Samsung Q2財報引爆Kioxia及日本半導體全面重挫、AI基建族群估值再度重估</td><td class="src"><a class="src-link" href="https://www.cnbc.com/2026/07/07/chip-stocks-ai-selloff-samsung.html">CNBC</a></td><td>Samsung韓國收盤-6.9%、AI CapEx可持續性疑慮引爆全球半導體連鎖賣壓；日本記憶體代表股Kioxia、半導體設備股Advantest/Tokyo Electron/Screen同步遭賣壓、AI相關股SoftBank受連動、DeepSeek自研AI晶片消息強化情緒轉弱（市場預期：日股AI基建族群估值持續面臨壓力、7/8亞股同步觀察反彈訊號）。</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 六、香港（參考） ============ -->
+  <h2>六、香港（參考）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th></tr></thead>
+    <tbody>
+      <tr><td class="time">16:00</td><td>恒生指數7/7微跌-0.51%收23,496.89、DeepSeek自研AI晶片消息帶正負面雙效應</td><td class="src"><a class="src-link" href="https://www.investing.com/indices/hang-sen-40-historical-data">Investing.com</a></td><td>恒生指數7/7收23,496.89點(-0.51%)、跌勢相對溫和、中國本土AI晶片自主化題材形成部分抗跌動能；CSI 300同步-1.03%收4,792.26點、大陸科技股同步走弱（市場預期：DeepSeek消息對中國AI晶片自主化為長線正面、然短線科技股整體情緒同步受美股連動走弱）。</td></tr>
+      <tr><td class="time">全日</td><td>DeepSeek自研AI晶片為中國半導體自主化里程碑、SMIC/華虹/中芯情緒面受惠</td><td class="src"><a class="src-link" href="https://en.oninvest.com/article/china-s-deepseek-whose-ai-model-sent-markets-tumbling-is-now-developing-its-own-chips-reuters">Oninvest</a></td><td>DeepSeek開發自研AI推理晶片消息為中國半導體自主化里程碑事件、對中國AI晶片供應鏈（SMIC/華虹半導體/寒武紀/華為升騰）中長線為題材面利多、然全球晶片股同步賣壓拖累港股短線走勢（市場預期：長線看中國AI供應鏈自主化題材、短線受全球晶片賣壓影響）。</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 七、跨市場連動分析 ============ -->
+  <h2>七、跨市場連動分析</h2>
+  <ul class="law-list">
+    <li>美股→台股：7/7美股三大指數全面收黑、Nasdaq -1.16%、SOX費半崩跌-5.07%、Intel -8.2%/Micron -7.3%/AMD -6-8%/AMAT -10%全面重挫；台股7/8開盤壓力沉重、預期跳空低開後測試45K關鍵支撐；台積電將面臨2,400-2,470關鍵防守（ADR過去24小時同步下修）、AI伺服器供應鏈（鴻海/廣達/緯創/英業達）情緒面延續7/7賣壓、記憶體族群（南亞科/華邦電/旺宏）受Samsung+Micron連鎖影響；被動元件（國巨/華新科/禾伸堂/信昌電/立隆電/鈺邦/大毅/凱美/日電貿）在結構性題材未破下有望持續扮演抗跌主軸+資金輪動接受標的。</li>
+    <li>匯率：Fed 6月點陣圖鷹派轉向強化美元格局延續、USD/JPY 7/7持穩162附近、日本財相片山重申隨時準備介入、165為實質干預門檻；新台幣短線受美元強勢與外資賣超壓力承壓、然7/7美股Risk Off風格轉為防禦下、美元指數短線走勢或轉為震盪、新台幣壓力略有緩解，7/8觀察新台幣是否守穩30元關卡。</li>
+    <li>其他（亞洲半導體與Risk Off連動）：Samsung Q2財報+1,900%獲利創新高卻股價-6.9%引爆亞洲半導體全面賣壓、日經225 -2.12%創3週低、Kioxia/Advantest/Tokyo Electron同步重挫、恒生指數-0.51%相對抗跌、CSI 300 -1.03%；亞洲半導體三大指標（KOSPI/日經/恒生）7/7同步走弱、Risk Off風格從美股延伸至亞股、7/8觀察是否出現技術性反彈或空頭延伸。</li>
+    <li>地緣與政策：美國7/7撤銷伊朗石油銷售許可證、地緣風險溢價回升、WTI油價強勁走高帶動能源類股+1.97%領漲；Fed 7/28-29 FOMC會議為關鍵事件、本週關注6月ISM服務業PMI、FOMC會議紀要與Q2財報季揭幕（JPM/BAC/WFC 7/14-15、TSM 7/16）；DeepSeek自研AI晶片對中國供應鏈自主化為長線題材利多、短線引發Nvidia供應鏈情緒轉弱；台積電Q2法說會7/16將是短線最大方向指標、法說會前避險部位增加為市場預期。</li>
+  </ul>
+
+  <!-- ============ 八、今日總覽 ============ -->
+  <h2>八、今日總覽</h2>
+  <div class="overview">
+    <div class="mood">整體氛圍：利空</div>
+    <ul class="law-list">
+      <li>台股關注重點1：7/8(週三)台股預期跳空低開、消化7/7單日崩跌1,077點(-2.31%)失守月線+美股7/7晶片股全面暴跌雙重利空、45,000-45,500為短線關鍵支撐區、跌破恐測季線43,500附近；台積電2,400-2,470為關鍵支撐防守、ADR過去24小時同步下修。</li>
+      <li>台股關注重點2：被動元件（國巨/華新科/禾伸堂/信昌電/立隆電/鈺邦/大毅/凱美/日電貿/蜜望實）為7/8抗跌抗震首選、Panasonic SP-Cap漲價+MLCC供需吃緊+缺貨潮延續至2027結構性題材未破；金融股Q2財報季臨近有望輪動接棒、傳產類股（塑化/紡織/航運）受能源+1.97%連動受惠。</li>
+      <li>台股關注重點3：記憶體族群（南亞科/華邦電/旺宏/威剛/十銓/群聯）受Samsung Q2利多失敗+Micron -7.3%連鎖賣壓拖累、大摩超級循環報告基本面未變但短線恐慌賣壓，7/8關注技術性反彈訊號；AI伺服器供應鏈（鴻海/廣達/緯創/英業達）情緒面受DeepSeek消息壓抑但基本面AI訂單能見度未破、逢低承接候選。</li>
+      <li>美股關注重點1：7/7美股Risk Off風格全面重返、道瓊-0.25%/S&P 500 -0.45%/Nasdaq -1.16%/SOX費半-5.07%、能源+1.97%/不動產+1.69%/公用事業+1.47%領漲、資訊科技-2.84%/非必需消費-1.20%/通訊服務-0.85%領跌，「賣科技買防禦」風格與7/6「Risk On全面反攻」180度逆轉。</li>
+      <li>美股關注重點2：Samsung Q2利多失敗+DeepSeek自研AI晶片為雙重利空、Intel -8.2%/Micron -7.3%/AMD -6-8%/AMAT -10%/Lam -6%/Marvell -6%全面重挫、AI CapEx高原論再度浮現、AI貨幣化路徑重新評估；本週關注6月ISM服務業PMI、FOMC會議紀要與Q2財報季揭幕（JPM/BAC/WFC 7/14-15、TSM 7/16）。</li>
+      <li>風險提示1：外資連續4日賣超台股累計約-1,500億元、7/7單日賣超-547.31億元、自營商-487.33億元創近期紀錄、投信+87.73億元逆勢加碼但無法對沖外資賣壓；外資期貨淨空部位進一步擴大、若美股夜盤晶片股續跌則7/8賣壓延伸機率高。</li>
+      <li>風險提示2：AI CapEx高原論疑慮發酵+DeepSeek自研AI晶片對Nvidia供應鏈客戶集中度風險浮現、對台積電Q2 2026法說會(7/16)前AI訂單能見度指引形成不確定性；USD/JPY 162附近震盪、165為實質干預門檻、Fed偏鷹格局延續但Risk Off或轉為軟化；台積電進入Q2法說會靜默期(7/6-7/15)營運消息真空可能加劇技術面波動。</li>
+    </ul>
+  </div>
+
+  <footer class="brief-foot">
+    本簡報為資訊整理，非投資建議。「事實」與「市場預期／分析觀點」已於摘要中區分標示。<br>
+    自動產出於 2026/07/08 07:00（UTC+8）。
+  </footer>
+</body>
+</html>
