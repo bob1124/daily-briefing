@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日市場簡報｜2026/07/18</title>
+<style>
+  :root {
+    --bg: #0e1116;
+    --panel: #161b22;
+    --panel-2: #1c2230;
+    --border: #2a313c;
+    --text: #d8dee9;
+    --text-dim: #8b95a5;
+    --accent: #e8b339;
+    --up: #ff5b5b;      /* 台股慣例：紅漲 */
+    --down: #3dd68c;    /* 綠跌 */
+    --neutral: #8b95a5;
+    --mono: "SFMono-Regular", "Roboto Mono", "Noto Sans Mono", ui-monospace, monospace;
+    --serif: "Noto Serif TC", "Songti TC", serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans TC", -apple-system, "PingFang TC", "Microsoft JhengHei", sans-serif;
+    line-height: 1.65;
+    padding: 2rem 1.2rem 4rem;
+    max-width: 920px;
+    margin: 0 auto;
+    font-size: 15px;
+  }
+  header.brief-head {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 1rem;
+    margin-bottom: 1.8rem;
+  }
+  header.brief-head .kicker {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    text-transform: uppercase;
+  }
+  header.brief-head h1 {
+    font-family: var(--serif);
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin: 0.2rem 0;
+    letter-spacing: 0.02em;
+  }
+  header.brief-head .date {
+    font-family: var(--mono);
+    color: var(--text-dim);
+    font-size: 0.95rem;
+  }
+  .back-link {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: var(--text-dim);
+    text-decoration: none;
+    font-family: var(--mono);
+    font-size: 0.82rem;
+  }
+  .back-link:hover { color: var(--accent); }
+  h2 {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    margin: 2.2rem 0 0.9rem;
+    padding-left: 0.7rem;
+    border-left: 4px solid var(--accent);
+    letter-spacing: 0.02em;
+  }
+  h2 .core-tag {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.15em;
+    background: var(--accent);
+    color: #0e1116;
+    padding: 0.12rem 0.5rem;
+    border-radius: 3px;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+    font-weight: 700;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.5rem 0 1rem;
+    font-size: 0.86rem;
+    background: var(--panel);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  th {
+    background: var(--panel-2);
+    color: var(--text-dim);
+    text-align: left;
+    padding: 0.6rem 0.7rem;
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+  td {
+    padding: 0.6rem 0.7rem;
+    border-top: 1px solid var(--border);
+    vertical-align: top;
+  }
+  td.time, td.num { font-family: var(--mono); white-space: nowrap; }
+  .tag { font-weight: 700; font-family: var(--mono); font-size: 0.8rem; white-space: nowrap; }
+  .tag.up { color: var(--up); }
+  .tag.down { color: var(--down); }
+  .tag.neutral { color: var(--neutral); }
+  .num.up { color: var(--up); }
+  .num.down { color: var(--down); }
+  .index-table td.num, .index-table th:not(:first-child) { text-align: right; }
+  .index-table th:not(:first-child) { padding-right: 0.9rem; }
+  .index-table td.num { padding-right: 0.9rem; }
+  td.pct { font-family: var(--mono); text-align: right; white-space: nowrap; padding-right: 0.9rem; }
+  td.pct.up { color: var(--up); }
+  td.pct.down { color: var(--down); }
+  .law-list { list-style: none; padding: 0; }
+  .law-list li {
+    padding: 0.45rem 0 0.45rem 1.2rem;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .law-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+  .overview {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 6px;
+    padding: 1.1rem 1.3rem;
+    margin-top: 0.5rem;
+  }
+  .overview .mood { font-family: var(--mono); font-size: 0.95rem; margin-bottom: 0.6rem; }
+  footer.brief-foot {
+    margin-top: 3rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 0.78rem;
+    line-height: 1.8;
+  }
+  .src { color: var(--text-dim); font-size: 0.8rem; }
+  a.src-link { color: var(--text-dim); text-decoration: underline dotted; }
+  a.src-link:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+  <a href="../index.html" class="back-link">← 返回歷史總覽</a>
+  <header class="brief-head">
+    <div class="kicker">Daily Market Brief</div>
+    <h1>每日市場簡報</h1>
+    <div class="date">2026/07/18（UTC+8）｜產出時間 2026/07/18 06:37｜週六休市｜覆盤前一交易日(7/17)歷史性重挫</div>
+  </header>
+
+  <!-- ============ 一、台股焦點 ============ -->
+  <h2>一、台股焦點<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th><th>影響</th><th>受影響族群/標的</th></tr></thead>
+    <tbody>
+      <tr><td class="time">13:30</td><td>加權指數崩跌 -2,953.71 點寫史上單日最大跌點 收 42,671.27(-6.47%)</td><td class="src"><a class="src-link" href="https://udn.com/news/story/7251/9634161">聯合新聞網</a></td><td>加權指數 7/17 收 42,671.27 點單日重挫 -2,953.71 點(-6.47%)、寫下史上單日最大跌點紀錄、成交金額約 1.21 兆元、盤中連破 45K/44K/43K 三大關、跌停家數逾 135 檔、三大利空齊發：台積電資本支出上修引發 AI 投資回收期疑慮 + 美晶片股夜盤重挫 + 中東美伊衝突升溫（市場預期：外資恐慌賣壓延續、下週一 7/20 觀察 42,671 支撐位）。</td><td class="tag down">利空</td><td>加權指數/半導體/被動元件/電子權值全面</td></tr>
+      <tr><td class="time">09:00</td><td>台積電法說：2026 資本支出上修至 $60-64B 亞利桑那再加碼 $100B</td><td class="src"><a class="src-link" href="https://news.cnyes.com/news/id/6536791">鉅亨網</a></td><td>台積電 7/16 法說後 7/17 開盤直接反應、2026 全年 CapEx 由原估 $52-56B 大幅上調至 $60-64B（+15%）、亞利桑那州加碼投資 $100B 累計美國投資達 $265B 預計再蓋約 4 座廠、全年營收年增預估上修至 40%+、然市場擔憂 Q3 毛利率承壓（2nm 量產稀釋 3-4pp）與 AI 投資回收期拉長（市場預期：基本面長線利多但短線盤面利空反應主導）。</td><td class="tag down">利空</td><td>台積電(2330)/半導體設備/AI 供應鏈</td></tr>
+      <tr><td class="time">13:30</td><td>外資單日賣超 -1,890.39 億元寫史上新高 三大法人合計賣超 -2,617.15 億</td><td class="src"><a class="src-link" href="https://newtalk.tw/news/view/2026-07-17/1047794">Newtalk 新聞</a></td><td>外資 7/17 單日賣超 -1,890.39 億元改寫歷史新高、超越先前紀錄、佔三大法人賣超逾 7 成、六檔 ETF 進外資賣超前十、主動元大臺灣科技 50(00403A)賣超逾 46.87 萬張居冠、台積電(2330)/聯電(2303)同步遭大量賣壓、投信 +95.03 億唯一站在買方（市場預期：外資恐慌性撤退+ETF 贖回潮同步引爆）。</td><td class="tag down">利空</td><td>加權指數/權值股/ETF</td></tr>
+      <tr><td class="time">全日</td><td>被動元件散戶逃難潮 國巨/華新科/禾伸堂/信昌電多檔跌停</td><td class="src"><a class="src-link" href="https://finance.ettoday.net/news/3202737">ETtoday 財經雲</a></td><td>國巨(2327)7/17 收 699 元跌停(-9.92%)一度失守 700 元、華新科(2492)跌停收 307.5 元由 6/23 高點 645 元短期腰斬逾 50%、禾伸堂(3026)/信昌電(6173)同步觸跌停、日韓被動元件指標股同步暴跌拖累類股（市場預期：散戶認賠潮+外資調節壓力雙重殺盤、結構性題材測試點）。</td><td class="tag down">利空</td><td>被動元件族群全面</td></tr>
+      <tr><td class="time">16:30</td><td>央行進場防守 新台幣爆量貶 3.9 分收 32.288 匯市成交 41.51 億美元史上第 9 大量</td><td class="src"><a class="src-link" href="https://news.cnyes.com/news/id/6538719">鉅亨網</a></td><td>新台幣 7/17 尾盤央行進場防守、收貶 3.9 分收 32.288 元、北市匯市成交 41.51 億美元寫史上第 9 大量、AI 泡沫化疑慮+美伊衝突拉高風險趨避需求、外資實際匯出估不到 30 億美元尚有部份資金滯留待觀察（市場預期：下週外資匯出動能為關鍵、央行守勢延續）。</td><td class="tag down">利空</td><td>匯市/金融股/出口電子</td></tr>
+      <tr><td class="time">全日</td><td>135 檔跌停 台積電單股爆 1,752 億元天量 元大台灣 50 成交值躍居第二</td><td class="src"><a class="src-link" href="https://www.chinatimes.com/realtimenews/20260717002506-260410">中時新聞網</a></td><td>7/17 跌停家數達 135 檔、成交值前十大有 5 檔以跌停作收、台積電(2330)單股爆 1,752 億元成交天量、元大台灣 50(0050)成交值躍居第二、聯電/南亞科/聯發科多權值股齊倒、市場恐慌情緒全面擴散（市場預期：週末效應下觀察 7/20 能否止穩）。</td><td class="tag down">利空</td><td>半導體/記憶體/ETF/大型權值</td></tr>
+      <tr><td class="time">全日</td><td>韓國央行升息並管制單一個股槓桿型 ETF 加深亞股恐慌</td><td class="src"><a class="src-link" href="https://newtalk.tw/news/view/2026-07-17/1047676">Newtalk 新聞</a></td><td>韓國央行 7/17 意外升息並宣布管制單一個股槓桿型 ETF、KOSPI 重挫拖累亞股、SK Hynix-11%+Samsung-9% 領跌亞洲晶片股、台股與日韓被動元件族群同步殺盤形成連鎖反應（市場預期：亞股 Risk Off 延續、下週關注韓國央行政策動向）。</td><td class="tag down">利空</td><td>亞股連動/被動元件/科技股</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 二、三大法人動向 ============ -->
+  <h2>二、三大法人動向<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>法人</th><th>買賣超(億元)</th><th>方向</th><th>備註</th></tr></thead>
+    <tbody>
+      <tr><td>外資及陸資</td><td class="num down">-1,890.39</td><td class="tag down">賣超</td><td>史上單日最大賣超、超越先前紀錄、主賣主動元大臺灣科技 50(00403A)、台積電(2330)、聯電(2303)、六檔 ETF 進外資賣超前十</td></tr>
+      <tr><td>投信</td><td class="num up">+95.03</td><td class="tag up">買超</td><td>唯一站在買方、市場恐慌中承接內資角色、規模相對外資賣壓為杯水車薪</td></tr>
+      <tr><td>自營商</td><td class="num down">-821.80</td><td class="tag down">賣超</td><td>含避險部位、盤中崩跌激發避險大單、自營自行與避險同步賣壓</td></tr>
+    </tbody>
+  </table>
+  <ul class="law-list">
+    <li>三大法人 7/17 合計賣超 -2,617.15 億元史上單日最大合計賣壓、外資單日賣超 -1,890.39 億改寫歷史新高、投信+95.03 億唯一站在買方、自營商-821.80 億含避險賣壓、市場全面 Risk Off 情緒主導。</li>
+    <li>外資淨空單增加約 7,103 口至 83,605 口區間（部分報導口徑、以 TAIFEX 官方 7/17 統計為準）、三大法人淨空單合計約增 4,179 口至 19,571 口、反映法人短線偏空定位加深、期貨市場先於現貨反應賣壓。</li>
+    <li>台指期 7/16 夜盤已暴跌逾 1,000 點反映 TSMC 法說負面反應與美股半導體殺盤、7/17 現貨開盤直接補跌、盤中破 45K/44K/43K 三大關卡、關鍵支撐位 42,671 短線觀察。</li>
+    <li>週末效應下觀察 7/20（週一）能否止穩、核心觀察外資是否延續 1,890 億賣壓與是否加碼期貨空單、投信 95.03 億買超能否擴大、若外資空單持續增加且現貨賣壓不收斂則短線續探底風險升高。</li>
+  </ul>
+
+  <!-- ============ 三、權值股觀察清單 ============ -->
+  <h2>三、權值股觀察清單<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>標的</th><th>漲跌</th><th>相關消息</th><th>影響</th></tr></thead>
+    <tbody>
+      <tr><td>台積電(2330)</td><td class="num down">-180(-7.29%)</td><td>7/17 收 2,290 元、史上單日最大跌金額、單股影響指數逾 1,300 點、成交爆 1,752 億元天量、法說會 Q2 財報三大指標創新高但 2026 CapEx 上修至 $60-64B（+15%）加碼美國 $100B 引發市場對 AI 投資回收期拉長之疑慮、TSM ADR 同步-2.77%</td><td class="tag down">利空</td></tr>
+      <tr><td>聯發科(2454)</td><td class="num down">-330(-8.92%)</td><td>7/17 收 3,370 元、隨半導體族群同步殺盤、AI ASIC+Dimensity 題材遭殺、尾盤傳有神秘買盤護盤縮小跌幅、外資調節壓力延續</td><td class="tag down">利空</td></tr>
+      <tr><td>鴻海(2317)</td><td class="num down">-8.50(-3.51%)</td><td>7/17 約收 234 元、相對抗跌跌幅低於大盤與其他權值股、AI 伺服器供應鏈本業續強撐住估值、Vera Rubin/GB300 Q3 量產訂單能見度未變</td><td class="tag down">利空</td></tr>
+      <tr><td>廣達(2382)</td><td class="num down">-26.50(-7.53%)</td><td>7/17 收 325.5 元、AI 伺服器概念股同步重挫、GB300/Vera Rubin NVL72 訂單能見度未變但估值遭殺、由 7/16 主升動能大幅回吐</td><td class="tag down">利空</td></tr>
+      <tr><td>國巨(2327)</td><td class="num down">-77(-9.92%)跌停</td><td>7/17 收 699 元跌停、一度失守 700 元大關、散戶逃難潮引爆賣壓、自 7/1 歷史高 1,220 元起短短 12 個交易日跌逾 40%、日韓被動元件指標股同步暴跌拖累類股、結構性題材（Panasonic 漲價+MLCC 供需吃緊）測試點</td><td class="tag down">利空</td></tr>
+      <tr><td>華新科(2492)</td><td class="num down">跌停(-9.90%)</td><td>7/17 收 307.5 元跌停、由 6/23 高點 645 元短期腰斬逾 50%、外資調節壓力持續加深、MLCC 漲價效應題材短線失守</td><td class="tag down">利空</td></tr>
+      <tr><td>禾伸堂(3026)</td><td class="num down">跌停(-9.90%)</td><td>曾失守千元大關、與國巨/華新科同步觸跌停、MLCC 庫存吃緊漲價受惠題材短線失守、族群同步殺盤</td><td class="tag down">利空</td></tr>
+      <tr><td>信昌電(6173)</td><td class="num down">跌停(-9.90%)</td><td>與族群同步跌停、高壓 MLCC 訂單暴量題材遭殺、SP-Cap 缺貨延續至 2027 結構性題材未變</td><td class="tag down">利空</td></tr>
+      <tr><td>立隆電(2472)</td><td class="num down">重挫（跌幅同族群）</td><td>鋁電解電容漲價概念股、日系 Rubycon 漲價轉單效應、AI 伺服器電源供應鏈受惠題材短線失守、被動元件跌停潮波及</td><td class="tag down">利空</td></tr>
+      <tr><td>鈺邦(6449)</td><td class="num down">重挫（跌幅同族群）</td><td>導電高分子電容漲價股、AI 伺服器散熱模組間接受惠題材遭殺、日商漲價傳導、與被動元件族群同步下殺</td><td class="tag down">利空</td></tr>
+      <tr><td>大毅(2478)</td><td class="num down">重挫（跌幅同族群）</td><td>電阻族群七月漲價全面啟動題材短線失守、AI 伺服器 chip resistor 需求延續、族群連動跟跌</td><td class="tag down">利空</td></tr>
+      <tr><td>蜜望實(8043)</td><td class="num down">重挫（跌幅同族群）</td><td>被動元件通路商、SP-Cap 漲價傳導受惠題材遭殺、庫存增值題材短線失守、族群連動</td><td class="tag down">利空</td></tr>
+      <tr><td>日電貿(3090)</td><td class="num down">重挫（跌幅同族群）</td><td>被動元件通路商龍頭、代理 Panasonic 漲價直接受惠題材遭殺、Q3 展望樂觀但短線同族群修正</td><td class="tag down">利空</td></tr>
+      <tr><td>凱美(5317)</td><td class="num down">重挫（跌幅同族群）</td><td>鋁電容+超級電容雙軌、AI 伺服器備援電源題材遭殺、被動元件輪動候選、族群連動走弱</td><td class="tag down">利空</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 四、美股焦點 ============ -->
+  <h2>四、美股焦點（可複委託操作）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th><th>影響</th><th>對台股連動</th></tr></thead>
+    <tbody>
+      <tr><td class="time">收盤</td><td>費半熊市確立 SOX 自 6/22 峰值跌逾 20% 結束 105 天 AI 狂歡</td><td class="src"><a class="src-link" href="https://www.bloomberg.com/news/articles/2026-07-17/chips-stocks-tumble-into-bear-market-as-105-ai-rally-fizzles">Bloomberg</a></td><td>費城半導體指數 7/17 盤中一度重挫 -5.7% 尾盤收在 -1.63%、自 6/22 高點 14,655.29 點回落逾 20% 正式進入技術性熊市、全球晶片股市值自 6/22 蒸發約 $3.3 兆美元、AI 狂歡結束(市場預期：AI 資本支出放緩+估值頂點壓力延續)。</td><td class="tag down">利空</td><td>對台股半導體板塊 7/20 直接構成壓力延續</td></tr>
+      <tr><td class="time">盤中</td><td>半導體股全面重挫 AMD -5% Micron -5.7% NVDA -2.7% AVGO -2~6% INTC -4%</td><td class="src"><a class="src-link" href="https://247wallst.com/investing/2026/07/17/amd-falls-5-intel-drops-4-nvidia-slides-3-before-recovering-as-rotation-hits-semiconductor-stocks/">247 Wall Street</a></td><td>AMD 7/17 收 $477.81 跌 -5% 領跌 AI 晶片股、Micron 跌 -5.7% 記憶體殺、Intel-4% 過去 20 天累跌 30%+、NVDA 收 $202.66 跌 -2.7%（Apple 市值 $4.9T 超越 NVDA $4.86T）、AVGO-2~6% 自訂 AI 晶片疑慮、Marvell 前一日 -8% 後 buy-the-dip 持平（市場預期：估值頂點+CXMT $8.55B IPO 供給壓力+DeepSeek 自研 AI 晶片傳言三重殺盤）。</td><td class="tag down">利空</td><td>台股記憶體族群（南亞科/華邦電/旺宏）與 IC 設計族群 7/20 短線續承壓</td></tr>
+      <tr><td class="time">盤前</td><td>Netflix Q3 展望不如預期 盤後重挫 -8~-12%</td><td class="src"><a class="src-link" href="https://www.cnbc.com/2026/07/16/netflix-nflx-earnings-q2-2026.html">CNBC</a></td><td>Netflix Q2 營收 $12.56B 符合預期、EPS $0.80 略超預期、然 Q3 營收指引 $12.86B 低於預期 $13.0B、Q3 EPS $0.82 低於預期 $0.84、宣布削減「What We Watched」報告頻率、股價 -8~-12% 拖累通訊服務板塊 -1.4~-2.9%（市場預期：串流廣告成長放緩+Q2 財報季首個大型科技股警訊）。</td><td class="tag down">利空</td><td>對台股 OTT/串流生態圈影響有限、但增添全球科技估值壓力</td></tr>
+      <tr><td class="time">盤前</td><td>TSMC Q2 破紀錄+CapEx 上修引發市場疑慮 TSM ADR -2.77%</td><td class="src"><a class="src-link" href="https://www.investing.com/news/earnings/tsmc-q2-profit-blows-past-estimates-on-robust-aifueled-demand-4794650">Investing.com</a></td><td>台積電 Q2 營收 $40.2B(+36% YoY)、淨利 +77.4%、2026 年營收展望上修至 &gt;40%、CapEx 上修至 $60-64B（原 $52-56B）、加碼美國 $100B、然 TSM ADR 收 $398.37 跌 -2.77% 盤中一度 -7%（市場預期：本業續強但 CapEx 上修引發 AI 投資回收期疑慮）。</td><td class="tag down">利空</td><td>TSM ADR 大跌拖累加權指數、7/20 台積電(2330)2,290 元支撐位受考驗</td></tr>
+      <tr><td class="time">10:00</td><td>密西根消費者信心 7 月初值 54.4 大幅超預期 創 2 月來新高</td><td class="src"><a class="src-link" href="https://www.fxstreet.com/news/uom-consumer-sentiment-index-set-to-improve-further-but-remain-at-historically-low-levels-in-july-202607171230">FXStreet</a></td><td>密西根消費者信心指數 7 月初值 54.4（前值 49.5、預期 51.0）創 2 月來新高、1 年通膨預期回落至 4.2%（前 4.6%）、5 年通膨預期持平 3.3%、油價回落為主因（市場預期：支撐 soft landing 敘事、Fed 7/22-23 FOMC 按兵不動機率延續 95%+）。</td><td class="tag up">利多</td><td>消費電子終端需求敘事對台股筆電/手機/AIoT 供應鏈中性偏正面</td></tr>
+      <tr><td class="time">盤中</td><td>美對伊朗石油制裁豁免 7/17 到期 WTI 油價漲逾 1% 至 $80</td><td class="src"><a class="src-link" href="https://www.gurufocus.com/news/8948312/oil-prices-surge-amid-us-sanctions-on-iran-wti">GuruFocus</a></td><td>美財政部 60 天豁免正式到期、WTI 8 月期貨 $80.09(+1.32%)、Brent $85.35(+1.33%)、能源類股 XLE +0.9% 為當日唯一領漲板塊、Valero/COP/XOM 盤前 +2%（市場預期：中東地緣風險升溫+能源類股獲防禦性資金流入）。</td><td class="tag neutral">中性</td><td>對台股航空（長榮航/華航）與塑化（台塑化）成本壓力增</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 四之二、美股指數與板塊動向 ============ -->
+  <h2>美股指數與板塊動向<span class="core-tag">CORE</span></h2>
+  <table class="index-table">
+    <thead><tr><th>指數</th><th>收盤</th><th>漲跌</th><th>漲跌幅</th></tr></thead>
+    <tbody>
+      <tr><td>道瓊工業指數</td><td class="num">52,146.42</td><td class="num down">-406.55</td><td class="pct down">-0.77%</td></tr>
+      <tr><td>S&amp;P 500</td><td class="num">7,457.69</td><td class="num down">-76.00</td><td class="pct down">-1.01%</td></tr>
+      <tr><td>那斯達克綜合</td><td class="num">25,520.24</td><td class="num down">-362.00</td><td class="pct down">-1.40%</td></tr>
+      <tr><td>費城半導體(SOX)</td><td class="num">~11,517</td><td class="num down">-190.00</td><td class="pct down">-1.63%</td></tr>
+    </tbody>
+  </table>
+  <table>
+    <thead><tr><th>板塊（GICS）</th><th>漲跌幅</th><th>表現</th><th>當日驅動/備註</th></tr></thead>
+    <tbody>
+      <tr><td>資訊科技</td><td class="pct down">-2.24%</td><td class="tag down">領跌</td><td>XLK -2.24%、AMD -5%/Micron -5.7%/NVDA -2.7%/Intel -4%/AVGO -2~6%/TSM ADR -2.77% 全面走弱、SOX 進入熊市確立 AI 狂歡結束、AAPL 市值 $4.9T 超越 NVDA $4.86T</td></tr>
+      <tr><td>通訊服務</td><td class="pct down">-1.90%</td><td class="tag down">領跌</td><td>XLC -1.4~-2.9%、Netflix Q3 指引不如預期 -8~-12%、Alphabet Gemini 3.5 Pro 延遲拖累延續、Meta 跟隨走弱</td></tr>
+      <tr><td>非必需消費</td><td class="pct down">-1.63%</td><td class="tag down">下跌</td><td>XLY -1.63%、Netflix 拖累+Risk Off 輪動、Amazon/Tesla 同步走弱</td></tr>
+      <tr><td>必需消費</td><td class="pct down">-0.20%</td><td class="tag neutral">持平</td><td>XLP 微跌、防禦類股買盤自週四轉淡、Walmart/Costco/P&amp;G 相對抗跌</td></tr>
+      <tr><td>能源</td><td class="pct up">+0.90%</td><td class="tag up">領漲</td><td>XLE +0.9% 為當日唯一領漲板塊、WTI 油價 +1.3% 至 $80.09、美對伊朗制裁豁免 7/17 到期、Valero/COP/XOM 盤前 +2%</td></tr>
+      <tr><td>金融</td><td class="pct up">+0.30%</td><td class="tag up">上漲</td><td>XLF 微幅收高、Travelers Q2 財報超預期 +9% 領軍保險股、大型銀行相對持穩</td></tr>
+      <tr><td>醫療保健</td><td class="pct down">-0.40%</td><td class="tag down">下跌</td><td>XLV 小跌、承接週四 UnitedHealth +5% 後獲利了結、Abbott +12% 後回吐</td></tr>
+      <tr><td>工業</td><td class="pct down">-0.60%</td><td class="tag down">下跌</td><td>XLI 跟隨大盤走弱、Risk Off 輪動壓力、Caterpillar/GE/Boeing 同步走弱</td></tr>
+      <tr><td>原物料</td><td class="pct down">-0.80%</td><td class="tag down">下跌</td><td>XLB 跟隨走弱、Freeport-McMoRan/Nucor 走弱、Risk Off 輪動</td></tr>
+      <tr><td>不動產</td><td class="pct down">-0.30%</td><td class="tag down">下跌</td><td>XLRE 持平至微跌、殖利率壓力+Risk Off 資金退場</td></tr>
+      <tr><td>公用事業</td><td class="pct down">-0.66%</td><td class="tag down">下跌</td><td>XLU ~$45.17、防禦類股資金退場、AI 電力概念（Vistra/Constellation）獲利了結</td></tr>
+    </tbody>
+  </table>
+  <ul class="law-list">
+    <li>當日輪動方向：Risk Off 典型「賣科技買能源」極端分化格局、資訊科技 -2.24%/通訊服務 -1.90%/非必需消費 -1.63% 領跌三大類股、僅能源 +0.9%（伊朗制裁豁免到期）與金融 +0.3%（Travelers 財報超預期）二類股收紅、其餘八大板塊全面走弱、SOX 進入熊市確立 105 天 AI 狂歡結束為當日主軸。</li>
+    <li>資訊科技/半導體板塊對台股電子權值股連動研判：SOX 進入熊市（自 6/22 峰值跌逾 20%）+全球晶片市值蒸發 $3.3 兆美元+AMD -5%+Micron -5.7%+NVDA -2.7%+TSM ADR -2.77% 對台股 7/20（週一）電子權值股短線構成延續壓力、然週五（7/17）台股已經歷史上最大單日跌點 -2,953/-6.47%、部份下週壓力已提前反應、關鍵觀察台積電 2,290 元支撐位能否守穩、若破守勢將擴散至記憶體（南亞科/華邦電/旺宏）+IC 設計（聯發科/世芯-KY）+晶圓（聯電/中美晶）+設備（京鼎/漢唐/帆宣）+AI 伺服器（廣達/緯創/技嘉/鴻海）全電子產業鏈。</li>
+    <li>Netflix Q3 展望不如預期為 Q2 2026 財報季首個大型科技股警訊、下週 NVDA 以外 AI 晶片股（AMD 7/28/AVGO 7/24）與雲廠 CapEx 財報（MSFT 7/29/GOOGL 7/28/META 7/29）為關鍵、若持續下修將深化 AI 資本支出放緩敘事、對台股 AI 供應鏈估值形成延續壓力。</li>
+  </ul>
+
+  <!-- ============ 五、日本（參考） ============ -->
+  <h2>五、日本（參考）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th></tr></thead>
+    <tbody>
+      <tr><td class="time">15:00</td><td>日經 225 暴跌 -4.03% 進入技術性修正 史上第 5 大單日跌點</td><td class="src"><a class="src-link" href="https://www.bloomberg.com/news/articles/2026-07-17/japan-s-stocks-dive-as-investors-worry-about-ai-rally-s-run-mro83xih">Bloomberg</a></td><td>日經 225 7/17 收 64,141.12 點單日重挫 -2,694.42 點(-4.03%)寫下史上第 5 大單日跌點、TOPIX 同步下跌 -2.72% 收 3,919.21 點、自 6/25 峰值已回落逾 10% 進入技術性修正、全球 AI/晶片 rout 直襲東京、失守 65K 大關。</td></tr>
+      <tr><td class="time">全日</td><td>日本半導體/AI 股全面重挫 SoftBank -9~-11.4% Advantest -7.2~-10.5% TEL -8~-9.3%</td><td class="src"><a class="src-link" href="https://invezz.com/au/news/2026/07/17/heres-why-tokyo-electron-advantest-and-kioxia-stocks-are-plunging-today/">Invezz</a></td><td>SoftBank Group 7/17 -9~-11.4%、Tokyo Electron -8~-9.3%、Advantest -7.2~-10.5%、Renesas -4%、Kioxia/Laser Tec 同步走弱、AI 動能交易解構、Alphabet AI 模型延遲傳言+華爾街晶片殺盤引爆、直接壓力台積電 Kumamoto 廠與台廠設備供應鏈。</td></tr>
+      <tr><td class="time">全日</td><td>BOJ 7/30-31 預估上修成長預測但維持利率 USD/JPY 維持 162 區間</td><td class="src"><a class="src-link" href="https://www.bloomberg.com/news/articles/2026-07-17/boj-is-said-likely-to-raise-growth-forecast-stand-pat-on-rates">Bloomberg</a></td><td>BOJ 料 7/30-31 政策會議上修年度成長預測但維持 1.0% 政策利率不變（6 月已升至 post-1995 高點）、財相 Katayama 重申 BOJ 獨立性、首相 Takaichi 呼籲 GPIF 加碼投資國內資產、USD/JPY 約 162.37(-0.02%) 幾乎持平、日圓年跌約 9%、165 為實質干預門檻。</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 六、香港（參考） ============ -->
+  <h2>六、香港（參考）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th></tr></thead>
+    <tbody>
+      <tr><td class="time">16:00</td><td>恒生指數收 24,562.24(-400+/-1.78%) 失守 25K 大關</td><td class="src"><a class="src-link" href="http://www.hongkongherald.com/news/279193449/hong-kong-hang-seng-index-closes-178-pct-lower">Hong Kong Herald</a></td><td>恒生指數 7/17 下跌 -1.78%（跌 400+ 點）收 24,562.24 點失守 25K 大關、國企指數 8,136.73(-2.18%)、亞洲晶片 rout 連鎖衝擊、騰訊 -4.63%（拖累 HSI ~100 點）、阿里巴巴 -3.68%（拖累 HSI ~70 點）為兩大主跌動能。</td></tr>
+      <tr><td class="time">全日</td><td>恒生科技指數暴跌 -4.37% 為 2025 年 4 月以來最大單日跌幅 芯片股領跌</td><td class="src"><a class="src-link" href="https://sundayguardianlive.com/business/hang-seng-index-today-july-17-why-is-the-hang-seng-index-down-today-hong-kong-stocks-crash-over-400-points-as-zai-plunges-285-minimax-drops-156-tech-shares-tumble-239065/">Sunday Guardian</a></td><td>恒生科技指數 7/17 收 4,623.17 點暴跌 -4.37% 為 2025/4 以來最大單日跌幅、半導體子指數 -6%、Z.ai(2513) 暴跌 -28.5%、MiniMax -15.6%、SMIC ~-10%、Shanghai Fudan -10%+、Hua Hong Semi -11%+、跟隨 SK Hynix -11%/Samsung -9% 亞洲晶片殺盤。</td></tr>
+      <tr><td class="time">全日</td><td>南向資金淨流入 HK$5.04 億 集中阿里/騰訊/百度 逆勢承接</td><td class="src"><a class="src-link" href="https://www.bloomberg.com/news/articles/2026-07-17/hong-kong-stocks-discount-to-china-widens-on-liquidity-pressure">Bloomberg</a></td><td>南向資金 7/17 淨買入 HK$5.04B、集中在阿里巴巴/智譜/騰訊、Xiaomi 淨賣 -HK$1.37B/Kingboard -HK$1.17B/Pop Mart -HK$391M、Bloomberg 另報 HK 與 A 股折價擴大反映流動性壓力+北京資本外流管制、南向資金結構性動能延續。</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 七、跨市場連動分析 ============ -->
+  <h2>七、跨市場連動分析</h2>
+  <ul class="law-list">
+    <li>美股→台股：SOX 進入熊市（自 6/22 峰值 -20%+）+全球晶片市值蒸發 $3.3 兆美元+AMD -5%+Micron -5.7%+NVDA -2.7%+TSM ADR -2.77% 對台股 7/20（週一開盤）電子權值股構成延續壓力、然週五（7/17）台股已經歷史上最大單日跌點 -2,953/-6.47%、部份下週壓力已提前反應（甚至可能過度反應）、核心關注台積電 2,290 元支撐位能否守穩與外資 1,890 億賣壓能否收斂、若守穩則有望轉為技術性反彈整理格局、若破則探底風險升高。</li>
+    <li>匯率：新台幣週五爆量貶 3.9 分收 32.288 元、央行進場防守、北市匯市成交 41.51 億美元史上第 9 大量、AI 泡沫化疑慮+美伊衝突拉高風險趨避、外資實際匯出估不到 30 億美元尚有部份資金滯留、USD/JPY 維持 162 區間中段、165 為實質干預門檻、BOJ 7/30-31 政策會議為關鍵；密西根消費者信心 7 月初值 54.4 大幅超預期支持 soft landing 敘事、Fed 7/22-23 FOMC 按兵不動機率延續 95%+。</li>
+    <li>亞股連鎖：日經 225 -4.03%（史上第 5 大跌點）進入技術性修正+韓國央行升息 KOSPI 重挫+HSI -1.78% 失守 25K+HSCEI -2.18%+HSTI -4.37%（2025/4 來最大）為亞股全面連鎖警訊、SK Hynix -11%/Samsung -9% 為亞洲 AI/半導體殺盤主軸、Z.ai -28.5%/MiniMax -15.6% 反映中國 AI 模型股泡沫化壓力擴散、亞股 Risk Off 週末效應下週一測試。</li>
+    <li>其他：伊朗制裁豁免 7/17 到期 WTI +1.3% 至 $80、能源類股為當日美股唯一領漲板塊、地緣衝擊延續為避險資金流入動能、對台股航空（長榮航/華航）與塑化（台塑化）成本壓力增；下週 NVDA 以外 AI 晶片股（AMD 7/28、AVGO 7/24）與雲廠 CapEx 財報（MSFT 7/29、GOOGL 7/28、META 7/29）將決定 AI 資本支出敘事延續與否、對台股 AI 供應鏈估值形成關鍵測試。</li>
+  </ul>
+
+  <!-- ============ 八、今日總覽 ============ -->
+  <h2>八、今日總覽</h2>
+  <div class="overview">
+    <div class="mood">整體氛圍：利空（歷史性重挫）</div>
+    <ul class="law-list">
+      <li>台股關注重點：週五 7/17 台股經歷史上最大單日跌點 -2,953/-6.47% 收 42,671.27、外資 -1,890 億史上最大賣壓、135 檔跌停、台積電 -7.29% 收 2,290 元單股影響指數逾 1,300 點、下週一(7/20)關注 2,290 元支撐位能否守穩、若守穩有望觸發技術性反彈。</li>
+      <li>台股關注重點：被動元件族群全面跌停潮、國巨 -9.92% 收 699 元自 7/1 歷史高 1,220 元跌逾 40%、華新科腰斬、日韓被動元件指標股同步暴跌、Q3 為結構性題材（Panasonic 漲價+MLCC 供需吃緊+缺貨潮延續 2027）關鍵測試點。</li>
+      <li>台股關注重點：新台幣爆量貶 3.9 分收 32.288、央行進場防守、北市匯市成交 41.51 億美元史上第 9 大量、外資實際匯出估不到 30 億美元、下週外資匯出動能為關鍵觀察、若持續匯出將加深新台幣貶壓與外資賣壓循環。</li>
+      <li>美股關注重點：SOX 進入熊市確立 105 天 AI 狂歡結束（自 6/22 峰值跌逾 20%）、AMD -5%/Micron -5.7%/NVDA -2.7%/TSM ADR -2.77% 全面走弱、Netflix Q3 展望不如預期為 Q2 財報季首個大型科技股警訊、下週 AI 晶片股與雲廠 CapEx 財報為關鍵。</li>
+      <li>美股關注重點：密西根消費者信心 7 月初值飆升至 54.4 創 2 月來新高、1 年通膨預期回落至 4.2%、Fed 7/22-23 FOMC 按兵不動機率 95%+、能源為當日唯一領漲板塊、伊朗制裁豁免 7/17 到期 WTI 油價漲至 $80、金融板塊 Travelers 財報超預期 +9%。</li>
+      <li>風險提示：全球 AI/半導體殺盤延續、日經 -4.03% 進入技術性修正+韓國央行升息+HSTI -4.37%（2025/4 來最大）為亞股連鎖警訊、下週 NVDA 以外 AI 晶片股（AMD 7/28、AVGO 7/24）與雲廠 CapEx 財報將決定 AI 資本支出敘事延續與否。</li>
+      <li>風險提示：週末伊朗制裁+中東地緣風險+外資匯出壓力延續、關注 7/20（週一）開盤台積電 2,290 元支撐位、若破守勢將擴散至記憶體/IC 設計/晶圓/設備/AI 伺服器全電子產業鏈、日圓維持 162 區間 40 年新低、165 為實質干預門檻、BOJ 7/30-31 政策會議為關鍵。</li>
+    </ul>
+  </div>
+
+  <footer class="brief-foot">
+    本簡報為資訊整理，非投資建議。「事實」與「市場預期／分析觀點」已於摘要中區分標示。<br>
+    自動產出於 2026/07/18 06:37（UTC+8）。
+  </footer>
+</body>
+</html>
