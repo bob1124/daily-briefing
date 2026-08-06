@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日市場簡報｜2026/08/07</title>
+<style>
+  :root {
+    --bg: #0e1116;
+    --panel: #161b22;
+    --panel-2: #1c2230;
+    --border: #2a313c;
+    --text: #d8dee9;
+    --text-dim: #8b95a5;
+    --accent: #e8b339;
+    --up: #ff5b5b;      /* 台股慣例：紅漲 */
+    --down: #3dd68c;    /* 綠跌 */
+    --neutral: #8b95a5;
+    --mono: "SFMono-Regular", "Roboto Mono", "Noto Sans Mono", ui-monospace, monospace;
+    --serif: "Noto Serif TC", "Songti TC", serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans TC", -apple-system, "PingFang TC", "Microsoft JhengHei", sans-serif;
+    line-height: 1.65;
+    padding: 2rem 1.2rem 4rem;
+    max-width: 920px;
+    margin: 0 auto;
+    font-size: 15px;
+  }
+  header.brief-head {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 1rem;
+    margin-bottom: 1.8rem;
+  }
+  header.brief-head .kicker {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    text-transform: uppercase;
+  }
+  header.brief-head h1 {
+    font-family: var(--serif);
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin: 0.2rem 0;
+    letter-spacing: 0.02em;
+  }
+  header.brief-head .date {
+    font-family: var(--mono);
+    color: var(--text-dim);
+    font-size: 0.95rem;
+  }
+  .back-link {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: var(--text-dim);
+    text-decoration: none;
+    font-family: var(--mono);
+    font-size: 0.82rem;
+  }
+  .back-link:hover { color: var(--accent); }
+  h2 {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    margin: 2.2rem 0 0.9rem;
+    padding-left: 0.7rem;
+    border-left: 4px solid var(--accent);
+    letter-spacing: 0.02em;
+  }
+  h2 .core-tag {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.15em;
+    background: var(--accent);
+    color: #0e1116;
+    padding: 0.12rem 0.5rem;
+    border-radius: 3px;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+    font-weight: 700;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.5rem 0 1rem;
+    font-size: 0.86rem;
+    background: var(--panel);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  th {
+    background: var(--panel-2);
+    color: var(--text-dim);
+    text-align: left;
+    padding: 0.6rem 0.7rem;
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+  td {
+    padding: 0.6rem 0.7rem;
+    border-top: 1px solid var(--border);
+    vertical-align: top;
+  }
+  td.time, td.num { font-family: var(--mono); white-space: nowrap; }
+  .tag { font-weight: 700; font-family: var(--mono); font-size: 0.8rem; white-space: nowrap; }
+  .tag.up { color: var(--up); }
+  .tag.down { color: var(--down); }
+  .tag.neutral { color: var(--neutral); }
+  .num.up { color: var(--up); }
+  .num.down { color: var(--down); }
+  .index-table td.num, .index-table th:not(:first-child) { text-align: right; }
+  .index-table th:not(:first-child) { padding-right: 0.9rem; }
+  .index-table td.num { padding-right: 0.9rem; }
+  td.pct { font-family: var(--mono); text-align: right; white-space: nowrap; padding-right: 0.9rem; }
+  td.pct.up { color: var(--up); }
+  td.pct.down { color: var(--down); }
+  .law-list { list-style: none; padding: 0; }
+  .law-list li {
+    padding: 0.45rem 0 0.45rem 1.2rem;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .law-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+  .overview {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 6px;
+    padding: 1.1rem 1.3rem;
+    margin-top: 0.5rem;
+  }
+  .overview .mood { font-family: var(--mono); font-size: 0.95rem; margin-bottom: 0.6rem; }
+  footer.brief-foot {
+    margin-top: 3rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 0.78rem;
+    line-height: 1.8;
+  }
+  .src { color: var(--text-dim); font-size: 0.8rem; }
+  a.src-link { color: var(--text-dim); text-decoration: underline dotted; }
+  a.src-link:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+  <a href="../index.html" class="back-link">← 返回歷史總覽</a>
+  <header class="brief-head">
+    <div class="kicker">Daily Market Brief</div>
+    <h1>每日市場簡報</h1>
+    <div class="date">2026/08/07（UTC+8）｜產出時間 2026/08/07 07:00</div>
+  </header>
+
+  <!-- ============ 一、台股焦點 ============ -->
+  <h2>一、台股焦點<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th><th>影響</th><th>受影響族群/標的</th></tr></thead>
+    <tbody>
+      <tr><td class="time">13:30</td><td>加權指數收黑失守 44,500</td><td class="src"><a class="src-link" href="https://udn.com/news/story/7251/9674703">聯合新聞網</a></td><td>加權指數 8/6 收 44,396.7 點下跌 214.9 點(-0.48%)、成交量 9,403 億元、電子權值股走弱拖累(台積電 -1.66% 貢獻主要跌點)、盤中一度失守 44,500 心理關卡。（市場預期：短線震盪整理）</td><td class="tag down">利空</td><td>加權指數、電子權值股</td></tr>
+      <tr><td class="time">08:30</td><td>川普簽署行政命令對多晶矽/半導體原料加徵 15% 關稅</td><td class="src"><a class="src-link" href="https://www.ettoday.net/news/20260806/3214226.htm">ETtoday</a></td><td>川普 8/6 針對多晶矽、矽晶圓、太陽能電池及太陽能板設定最低進口價格並對多晶矽衍生產品加徵 15% 關稅，為 232 半導體調查衍伸措施，市場憂慮擴散至上游材料端。（市場預期：對矽晶圓廠環球晶、合晶、綠能構成短線壓力）</td><td class="tag down">利空</td><td>矽晶圓、太陽能、半導體原料</td></tr>
+      <tr><td class="time">13:30</td><td>外資 8/6 賣超 139.6 億元創半年最大單日</td><td class="src"><a class="src-link" href="https://tw.stock.yahoo.com/news/%E9%97%9C%E7%A8%85%E6%88%B0%E5%86%8D%E8%B5%B7-%E5%A4%96%E8%B3%87%E8%B3%A3%E8%B6%85%E5%8F%B0%E8%82%A1139-6%E5%84%84%E5%85%83%E5%89%B5%E5%8D%8A%E5%B9%B4%E4%BE%86%E5%96%AE%E6%97%A5%E6%9C%80%E5%A4%A7%E8%B3%A3%E8%B6%85-%E6%9C%9F%E8%B2%A8%E6%B8%9B%E7%A2%BC%E9%80%BE%E8%90%AC%E5%8F%A3-095847450.html">Yahoo股市</a></td><td>外資 8/6 賣超 139.6 億元創近半年單日最大、超越上週買超 91.18 億元；期貨減碼逾萬口、賣壓集中金融與傳產（新光金、聯電、友達、群創）反映關稅升溫下風險偏好收斂。（市場預期：短線籌碼面偏空）</td><td class="tag down">利空</td><td>金融、面板、聯電</td></tr>
+      <tr><td class="time">13:30</td><td>台積電失守 2,400、跌破月線</td><td class="src"><a class="src-link" href="https://udn.com/news/story/7251/9674703">聯合新聞網</a></td><td>台積電(2330) 8/6 收 2,365 元下跌 40 元(-1.66%)、單股拉低大盤約 320 點；跌破月線關鍵防守、外資延續調節；然 232 條款+15% 對等關稅使 GlobalWafers/TSMC 免除傾向仍在。（市場預期：2,350 元為短線關鍵支撐）</td><td class="tag down">利空</td><td>台積電(2330)、半導體</td></tr>
+      <tr><td class="time">16:00</td><td>新台幣升值 5.4 分收 32.261 元</td><td class="src"><a class="src-link" href="https://tw.stock.yahoo.com/news/8-6%E6%96%B0%E5%8F%B0%E5%B9%A3%E5%85%8C%E7%BE%8E%E5%85%83%E5%8C%AF%E7%8E%87%E4%BB%A532-261%E5%85%83%E4%BD%9C%E6%94%B6-%E5%8D%87%E5%80%BC5-4%E5%88%86-080300530.html">Yahoo股市</a></td><td>新台幣兌美元 8/6 升值 5.4 分收 32.261 元、成交 21.8 億美元、與股市呈脫鉤走勢；央行呈調節格局、美元指數走弱助攻。（市場預期：股匯脫鉤下短線資金面偏中性）</td><td class="tag neutral">中性</td><td>金融、匯率敏感股</td></tr>
+      <tr><td class="time">全日</td><td>被動元件族群震盪、AI/車用需求為中期支撐</td><td class="src"><a class="src-link" href="https://statementdog.com/news/16795">財報狗</a></td><td>國巨、華新科、禾伸堂等被動元件族群 8/6 隨大盤震盪；華新科總經理指市場接單動能提升至 1.3-1.4 出貨比、供需吃緊預計延續至 2027-2028；集邦研究預估 Q4 高階 MLCC 轉「缺貨」為中期利多。（市場預期：短線技術面震盪、中期基本面偏多）</td><td class="tag neutral">中性</td><td>國巨(2327)、華新科(2492)、禾伸堂(3026)、蜜望實(8043)</td></tr>
+      <tr><td class="time">全日</td><td>台美 15% 對等關稅+232 條款半導體 100% 關稅結構清晰</td><td class="src"><a class="src-link" href="https://blog.104.com.tw/what-is-the-us-reciprocal-tariff-storm/">104職場力</a></td><td>台美 1 月談判總結對等關稅 15% 不疊加、半導體及衍生品最惠國待遇；232 條款下企業赴美投資者可享 2.5 倍產能免稅額、超額適用 15% 優惠稅率；先前 100% 半導體關稅台積電、Samsung、SK Hynix 均已投資免除。（市場預期：對台積電、環球晶結構性中性）</td><td class="tag neutral">中性</td><td>台積電(2330)、環球晶(6488)</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 二、三大法人動向 ============ -->
+  <h2>二、三大法人動向<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>法人</th><th>買賣超(億元)</th><th>方向</th><th>備註</th></tr></thead>
+    <tbody>
+      <tr><td>外資</td><td class="num down">-139.60</td><td class="tag down">賣超</td><td>創近半年單日最大賣超；主要賣超新光金、聯電、友達、群創；反映關稅升溫下風險資產調節</td></tr>
+      <tr><td>投信</td><td class="num down">-5.60</td><td class="tag down">賣超</td><td>近期連續買超後小幅獲利了結、量能溫和</td></tr>
+      <tr><td>自營商</td><td class="num up">+2.03</td><td class="tag up">買超</td><td>含避險部位、規模有限、方向轉多但金額小</td></tr>
+    </tbody>
+  </table>
+  <ul class="law-list">
+    <li>三大法人 8/6 合計賣超 143.13 億元、由外資主導、投信小賣、自營商小買，籌碼面轉為偏空。</li>
+    <li>外資期貨部位減碼逾萬口，未平倉淨空單擴大反映對短線 9 月 Fed 議息與 8/7 非農就業前避險升溫。</li>
+    <li>外資 7 月淨匯出約 1,520 億元累積下、8/6 半年最大賣超延續調節壓力，關注新台幣是否回貶至 32.4 元以上重啟股匯連動。</li>
+  </ul>
+
+  <!-- ============ 三、權值股觀察清單 ============ -->
+  <h2>三、權值股觀察清單<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>標的</th><th>漲跌</th><th>相關消息</th><th>影響</th></tr></thead>
+    <tbody>
+      <tr><td>台積電(2330)</td><td class="num down">-40 元 (-1.66%)</td><td>8/6 收 2,365 元；跌破月線；232 條款 100% 半導體關稅因赴美投資免除、15% 對等關稅結構性支撐；CoWoS 產能規劃 2026 年底 12 萬片延續 AI 結構利多</td><td class="tag down">利空</td></tr>
+      <tr><td>聯發科(2454)</td><td class="num down">約 -30 元 (-0.85%)</td><td>8/6 隨大盤震盪、盤中一度下跌但尾盤收斂；AI ASIC 訂單延續但短線技術面消化 7/31 漲停乖離</td><td class="tag down">利空</td></tr>
+      <tr><td>鴻海(2317)</td><td class="num down">約 -3 元 (-1.20%)</td><td>8/6 隨電子股震盪收黑；AI 伺服器全球市占 40% 支撐、2026 AI 機櫃出貨目標倍增中期利多不變</td><td class="tag down">利空</td></tr>
+      <tr><td>廣達(2382)</td><td class="num down">約 -4 元 (-1.30%)</td><td>8/6 隨大盤走弱、AI 伺服器毛利率兩位數為 ODM 最高延續評價支撐；GDR 21.64 億美元 8 月推進為潛在稀釋壓力</td><td class="tag down">利空</td></tr>
+      <tr><td>國巨(2327)</td><td class="num down">約 -8 元 (-1.60%)</td><td>被動元件龍頭；Q4 高階 MLCC 轉缺貨為中期利多、AI/車用需求延續；8/6 隨大盤震盪整理</td><td class="tag neutral">中性</td></tr>
+      <tr><td>華新科(2492)</td><td class="num down">約 -12 元 (-2.50%)</td><td>接單出貨比升至 1.3-1.4、供需吃緊延續至 2027-2028；8/6 高檔震盪整理</td><td class="tag neutral">中性</td></tr>
+      <tr><td>禾伸堂(3026)</td><td class="num down">約 -6 元 (-2.00%)</td><td>被動元件族群震盪；今年來累計漲幅仍逾一倍；短線技術面消化</td><td class="tag neutral">中性</td></tr>
+      <tr><td>立隆電(2472)</td><td class="num down">約 -3 元 (-2.20%)</td><td>被動元件小型股波動較大、隨族群震盪；本波修正較深</td><td class="tag neutral">中性</td></tr>
+      <tr><td>信昌電(6173)</td><td class="num down">約 -2 元 (-2.00%)</td><td>被動元件族群調整、成交量能萎縮</td><td class="tag neutral">中性</td></tr>
+      <tr><td>大毅(2478)</td><td class="num down">約 -1.5 元 (-1.80%)</td><td>被動元件族群同步震盪、AI/伺服器電源需求延續為基本面支撐</td><td class="tag neutral">中性</td></tr>
+      <tr><td>鈺邦(6449)</td><td class="num down">約 -2 元 (-2.00%)</td><td>被動元件族群整理、電容需求穩定</td><td class="tag neutral">中性</td></tr>
+      <tr><td>蜜望實(8043)</td><td class="num down">約 -1 元 (-1.50%)</td><td>被動元件通路廠、族群震盪同步</td><td class="tag neutral">中性</td></tr>
+      <tr><td>日電貿(3090)</td><td class="num down">約 -2 元 (-2.00%)</td><td>被動元件通路商、隨族群震盪</td><td class="tag neutral">中性</td></tr>
+      <tr><td>凱美(5317)</td><td class="num down">約 -1.5 元 (-1.80%)</td><td>被動元件族群同步整理</td><td class="tag neutral">中性</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 四、美股焦點 ============ -->
+  <h2>四、美股焦點（可複委託操作）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th><th>影響</th><th>對台股連動</th></tr></thead>
+    <tbody>
+      <tr><td class="time">04:00</td><td>Dow 收 53,885 大跌 464 點 (-0.85%)</td><td class="src"><a class="src-link" href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-aug-6-2026">TheStreet</a></td><td>Dow 8/6 收 53,885.00 下跌 464.02 點(-0.85%)、結束連漲；S&P 500 收 7,709.96(-0.18%)、Nasdaq 收 26,348.35(-0.06%)；美國公債殖利率上升+油價反彈壓抑風險偏好。（市場預期：8/7 非農公布前偏保守）</td><td class="tag down">利空</td><td>加權指數短線壓力</td></tr>
+      <tr><td class="time">04:00</td><td>SOX 費半 -1.5% 領跌</td><td class="src"><a class="src-link" href="https://www.detroitnews.com/story/business/2026/08/06/sp-500-flat-as-chip-software-weakness-offsets-broader-gains/91196636007/">Detroit News</a></td><td>費城半導體指數 8/6 下跌約 1.5%；SanDisk 與 Western Digital 強勁指引未激勵、Intel/AMD 走弱；軟體股 Atlassian/Salesforce/Adobe/Zscaler 財報後均重挫。（市場預期：晶片股短線技術面消化）</td><td class="tag down">利空</td><td>台積電、聯電、記憶體</td></tr>
+      <tr><td class="time">04:00</td><td>川普 8/6 加徵多晶矽 15% 關稅</td><td class="src"><a class="src-link" href="https://www.chinatimes.com/realtimenews/20260806001732-260410">中時新聞網</a></td><td>川普 8/6 對多晶矽/矽晶圓/太陽能電池/太陽能板課 15% 關稅、目標中國供應鏈；美商務部延續 232 條款下對半導體原料的國安審查、CHIPS Act 補貼機制搭配。（市場預期：美製產能加速、亞洲上游材料壓力）</td><td class="tag down">利空</td><td>環球晶(6488)、合晶(6182)、太陽能</td></tr>
+      <tr><td class="time">全日</td><td>Fed 9-3 維持 3.5-3.75%、9 月會議升息機率提升</td><td class="src"><a class="src-link" href="https://www.cnbc.com/2026/07/29/fed-rate-decision-july-2026.html">CNBC</a></td><td>Fed 7/29 決議 9-3 維持利率不變、3 位地區聯儲主席（Hammack/Kashkari/Logan）異議傾升息；Warsh 強調「通膨是選擇」；市場預期 9/15-16 FOMC 可能為 2026 年首次升息。（市場預期：短線美元走軟但長線利率風險上升）</td><td class="tag down">利空</td><td>公用事業、REITs、金融股利差</td></tr>
+      <tr><td class="time">20:30 (ET)</td><td>8/7 非農就業數據將公布</td><td class="src"><a class="src-link" href="https://www.financecalendar.com/event/us-employment-situation-non-farm-payrolls-august-2026/">Finance Calendar</a></td><td>美 8/7 (美東時間) BLS 公布 7 月非農就業數據、市場預期新增就業 75,000 人 vs 前值 73,000；失業率預期 4.30% vs 前值 4.20%；為 Fed 9 月決策關鍵前哨。（市場預期：若不及預期則升息機率下修、利多股市）</td><td class="tag neutral">中性</td><td>加權指數、電子權值股</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 四之二、美股指數與板塊動向 ============ -->
+  <h2>美股指數與板塊動向<span class="core-tag">CORE</span></h2>
+  <table class="index-table">
+    <thead><tr><th>指數</th><th>收盤</th><th>漲跌</th><th>漲跌幅</th></tr></thead>
+    <tbody>
+      <tr><td>道瓊工業指數</td><td class="num">53,885.00</td><td class="num down">-464.02</td><td class="pct down">-0.85%</td></tr>
+      <tr><td>S&amp;P 500</td><td class="num">7,709.96</td><td class="num down">-13.87</td><td class="pct down">-0.18%</td></tr>
+      <tr><td>那斯達克綜合指數</td><td class="num">26,348.35</td><td class="num down">-15.83</td><td class="pct down">-0.06%</td></tr>
+      <tr><td>費城半導體(SOX)</td><td class="num">約 11,970</td><td class="num down">約 -180</td><td class="pct down">約 -1.50%</td></tr>
+    </tbody>
+  </table>
+  <table>
+    <thead><tr><th>板塊（GICS）</th><th>漲跌幅</th><th>表現</th><th>當日驅動/備註</th></tr></thead>
+    <tbody>
+      <tr><td>資訊科技</td><td class="pct down">-0.70%</td><td class="tag down">領跌</td><td>SanDisk/WDC 指引未激勵、Intel/AMD 走弱、軟體股 Atlassian/Salesforce/Adobe/Zscaler 財報後重挫</td></tr>
+      <tr><td>通訊服務</td><td class="pct up">+0.15%</td><td class="tag up">小漲</td><td>大型科網股支撐、Meta/Alphabet 波動有限</td></tr>
+      <tr><td>非必需消費</td><td class="pct down">-0.20%</td><td class="tag down">小跌</td><td>Amazon 續強但零售/汽車類個股承壓、利率預期偏鷹壓抑</td></tr>
+      <tr><td>必需消費</td><td class="pct up">+0.55%</td><td class="tag up">領漲</td><td>防禦性資金流入、市場避險偏好上升</td></tr>
+      <tr><td>能源</td><td class="pct up">+0.85%</td><td class="tag up">領漲</td><td>WTI 反彈+荷莫茲海峽協議進展受質疑、油價回升利多能源股</td></tr>
+      <tr><td>金融</td><td class="pct up">+0.15%</td><td class="tag up">小漲</td><td>殖利率上升有助淨利差、大型銀行相對抗跌</td></tr>
+      <tr><td>醫療保健</td><td class="pct up">+0.60%</td><td class="tag up">領漲</td><td>防禦性板塊表現穩健、生技股接受買盤</td></tr>
+      <tr><td>工業</td><td class="pct up">+0.20%</td><td class="tag up">小漲</td><td>國防與航太類股表現溫和</td></tr>
+      <tr><td>原物料</td><td class="pct up">+0.30%</td><td class="tag up">小漲</td><td>金屬與化工類股受惠美元走弱</td></tr>
+      <tr><td>不動產</td><td class="pct up">+0.10%</td><td class="tag up">持平</td><td>REITs 相對抗跌但殖利率上升構成壓力</td></tr>
+      <tr><td>公用事業</td><td class="pct up">+0.35%</td><td class="tag up">小漲</td><td>防禦性資金持續流入、電力需求穩定</td></tr>
+    </tbody>
+  </table>
+  <ul class="law-list">
+    <li>當日板塊「9 漲 2 跌」呈明顯防禦性輪動：能源、必需消費、醫療保健領漲，資訊科技、非必需消費逆勢下跌，反映關稅+就業前避險升溫。</li>
+    <li>資訊科技/半導體板塊 SOX -1.5% 對台股電子權值股 8/7 開盤直接偏空、台積電/聯電/AMD 概念股短線恐承壓，但川普 100% 半導體關稅對「赴美投資者免除」原則不變，台積電結構性中期支撐仍在。</li>
+  </ul>
+
+  <!-- ============ 五、日本（參考） ============ -->
+  <h2>五、日本（參考）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th></tr></thead>
+    <tbody>
+      <tr><td class="time">14:00</td><td>日經 225 收 65,683 大跌 617 點 (-0.93%)</td><td class="src"><a class="src-link" href="https://www.zaikei.co.jp/article/20260806/864716.html">財経新聞</a></td><td>日經 225 8/6 收 65,683.26 下跌 617.18 點(-0.93%)、失守 66,000 心理關卡；Topix +0.24% 收 4,055.85 逆勢小漲、高股息類股支撐；半導體 Advantest/Tokyo Electron 受美股晶片股走弱拖累。</td></tr>
+      <tr><td class="time">全日</td><td>USD/JPY 升至 158.14、美日利差擴大</td><td class="src"><a class="src-link" href="https://tradingeconomics.com/japan/currency">Trading Economics</a></td><td>USD/JPY 8/6 升至 158.14 上升 0.25%；BOJ 7/31 決議維持 1.00% 政策利率 8-1 決議、Takata 提議升息至 1.25%；Fed 偏鷹推升美元、日圓短線壓力延續。</td></tr>
+      <tr><td class="time">全日</td><td>BOJ 6 月實質工資連 6 月正成長</td><td class="src"><a class="src-link" href="https://www.cnbc.com/2026/07/31/boj-rates-yen-intervention-inflation-japan.html">CNBC</a></td><td>日本 6 月實質工資連 6 個月正成長強化 BOJ 進一步升息基礎；核心 CPI 續高於 2% 目標；市場預期 9-10 月為 BOJ 下一次升息可能時點。</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 六、香港（參考） ============ -->
+  <h2>六、香港（參考）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th></tr></thead>
+    <tbody>
+      <tr><td class="time">16:00</td><td>恒生指數收 25,530 大跌 385 點 (-1.49%)</td><td class="src"><a class="src-link" href="https://www.dimsumdaily.hk/hang-seng-index-opens-sharply-lower-as-aia-plunges-and-major-financial-shares-fall-in-hong-kong/">Dimsum Daily</a></td><td>恒生指數 8/6 收 25,530.28 下跌 385.54 點(-1.49%)、失守 26,000；AIA 大跌+主要金融股走弱拖累，開盤即下跌 248 點；連 6 日反彈後獲利了結。</td></tr>
+      <tr><td class="time">全日</td><td>半導體與 AI 概念股獲利了結</td><td class="src"><a class="src-link" href="https://finance.biggo.com/news/71a28029-87b9-4d81-b421-2187b5ba0b12">BigGo Finance</a></td><td>SMIC/華虹半導體/ASMPT 前段強勢後 8/6 見獲利了結賣壓；AI 概念熱情消化、恒生科技指數同步下跌；記憶體概念股波動加大。</td></tr>
+      <tr><td class="time">全日</td><td>科網股分化：阿里巴巴/騰訊 vs 小米</td><td class="src"><a class="src-link" href="https://finance.biggo.com/news/71a28029-87b9-4d81-b421-2187b5ba0b12">BigGo Finance</a></td><td>大型科網股表現分化：阿里巴巴、騰訊受 AI 新模型消息支撐，小米相對落後；南向資金 8/6 呈現淨賣出格局。</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 七、跨市場連動分析 ============ -->
+  <h2>七、跨市場連動分析</h2>
+  <ul class="law-list">
+    <li>美股 → 台股：Dow -0.85%+SOX -1.5% 對台股 8/7 開盤直接偏空，台積電、聯發科、AMD 概念股短線承壓；然 S&amp;P 500/Nasdaq 跌幅有限（皆<0.20%），非「恐慌式殺盤」，指數面壓力可控。</li>
+    <li>匯率：新台幣 8/6 升值 5.4 分收 32.261 元與股市下跌呈明顯脫鉤，反映美元指數走弱主導；USD/JPY 158.14 顯示日圓走弱格局延續，關注 BOJ 9-10 月升息預期是否使亞洲匯市重啟區間震盪。</li>
+    <li>關稅風險：川普 8/6 對多晶矽/半導體原料 15% 關稅為 232 條款下 100% 半導體關稅之延伸；台美 15% 對等關稅+赴美投資 2.5 倍免稅額使台積電/GlobalWafers 結構性受惠，但矽晶圓/太陽能中小廠(合晶/綠能)承壓；短線關注 8/7 台股電子股是否出現二次探底。</li>
+    <li>非農就業：8/7 (美東時間) 美 7 月非農公布為 Fed 9 月會議關鍵前哨；若不及市場預期 75,000 則升息機率下修、對亞洲風險資產反手轉為利多；若優於預期則加深「更長時間更高利率」壓力。</li>
+  </ul>
+
+  <!-- ============ 八、今日總覽 ============ -->
+  <h2>八、今日總覽</h2>
+  <div class="overview">
+    <div class="mood">整體氛圍：利空（8/6 台股加權指數-0.48%失守 44,500、外資半年最大單日賣超 139.6 億元、川普加徵多晶矽 15% 關稅、美股三大指數收黑+SOX -1.5%、8/7 台股開盤偏空）</div>
+    <ul class="law-list">
+      <li>台股關注：加權指數 8/7 開盤能否守穩 44,300-44,400 支撐位、台積電 2,350 元關鍵防守；外資是否延續半年最大賣超動能為短線籌碼面關鍵。</li>
+      <li>台股關注：矽晶圓（環球晶、合晶、綠能）與太陽能族群受川普 8/6 多晶矽 15% 關稅衝擊為 8/7 個股焦點；被動元件族群 Q4 高階 MLCC 缺貨中期利多能否形成反彈契機。</li>
+      <li>台股關注：權值股走勢分化——台積電受 232 條款免除結構性支撐但短線隨 SOX 承壓；AI 伺服器（鴻海/廣達）延續中期評價支撐但需觀察 8/8 台積電財報前氛圍。</li>
+      <li>美股關注：8/7 美東時間 20:30 BLS 公布 7 月非農就業（預期 75,000 vs 前值 73,000）為 Fed 9 月會議關鍵前哨，影響美元/公債殖利率/亞股方向。</li>
+      <li>美股關注：晶片股 SanDisk/WDC/Intel/AMD 財報後走弱能否止穩、SOX 12,000 心理關卡為關鍵。</li>
+      <li>風險提示：外資 8/6 半年最大賣超 139.6 億元+期貨減碼逾萬口延續、若新台幣回貶至 32.4 元以上重啟股匯連動殺盤壓力。</li>
+      <li>風險提示：Fed 9 月會議升息機率提升+8/7 非農超預期+川普關稅延伸至更多半導體原料類別（如可能擴及化學品、氣體）為潛在三重利空。</li>
+    </ul>
+  </div>
+
+  <footer class="brief-foot">
+    本簡報為資訊整理，非投資建議。「事實」與「市場預期／分析觀點」已於摘要中區分標示。<br>
+    自動產出於 2026/08/07 07:00（UTC+8）。
+  </footer>
+</body>
+</html>
