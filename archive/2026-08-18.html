@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日市場簡報｜2026/08/18</title>
+<style>
+  :root {
+    --bg: #0e1116;
+    --panel: #161b22;
+    --panel-2: #1c2230;
+    --border: #2a313c;
+    --text: #d8dee9;
+    --text-dim: #8b95a5;
+    --accent: #e8b339;
+    --up: #ff5b5b;      /* 台股慣例：紅漲 */
+    --down: #3dd68c;    /* 綠跌 */
+    --neutral: #8b95a5;
+    --mono: "SFMono-Regular", "Roboto Mono", "Noto Sans Mono", ui-monospace, monospace;
+    --serif: "Noto Serif TC", "Songti TC", serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans TC", -apple-system, "PingFang TC", "Microsoft JhengHei", sans-serif;
+    line-height: 1.65;
+    padding: 2rem 1.2rem 4rem;
+    max-width: 920px;
+    margin: 0 auto;
+    font-size: 15px;
+  }
+  header.brief-head {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 1rem;
+    margin-bottom: 1.8rem;
+  }
+  header.brief-head .kicker {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    text-transform: uppercase;
+  }
+  header.brief-head h1 {
+    font-family: var(--serif);
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin: 0.2rem 0;
+    letter-spacing: 0.02em;
+  }
+  header.brief-head .date {
+    font-family: var(--mono);
+    color: var(--text-dim);
+    font-size: 0.95rem;
+  }
+  .back-link {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: var(--text-dim);
+    text-decoration: none;
+    font-family: var(--mono);
+    font-size: 0.82rem;
+  }
+  .back-link:hover { color: var(--accent); }
+  h2 {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    margin: 2.2rem 0 0.9rem;
+    padding-left: 0.7rem;
+    border-left: 4px solid var(--accent);
+    letter-spacing: 0.02em;
+  }
+  h2 .core-tag {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.15em;
+    background: var(--accent);
+    color: #0e1116;
+    padding: 0.12rem 0.5rem;
+    border-radius: 3px;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+    font-weight: 700;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.5rem 0 1rem;
+    font-size: 0.86rem;
+    background: var(--panel);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  th {
+    background: var(--panel-2);
+    color: var(--text-dim);
+    text-align: left;
+    padding: 0.6rem 0.7rem;
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+  td {
+    padding: 0.6rem 0.7rem;
+    border-top: 1px solid var(--border);
+    vertical-align: top;
+  }
+  td.time, td.num { font-family: var(--mono); white-space: nowrap; }
+  .tag { font-weight: 700; font-family: var(--mono); font-size: 0.8rem; white-space: nowrap; }
+  .tag.up { color: var(--up); }
+  .tag.down { color: var(--down); }
+  .tag.neutral { color: var(--neutral); }
+  .num.up { color: var(--up); }
+  .num.down { color: var(--down); }
+  .index-table td.num, .index-table th:not(:first-child) { text-align: right; }
+  .index-table th:not(:first-child) { padding-right: 0.9rem; }
+  .index-table td.num { padding-right: 0.9rem; }
+  td.pct { font-family: var(--mono); text-align: right; white-space: nowrap; padding-right: 0.9rem; }
+  td.pct.up { color: var(--up); }
+  td.pct.down { color: var(--down); }
+  .law-list { list-style: none; padding: 0; }
+  .law-list li {
+    padding: 0.45rem 0 0.45rem 1.2rem;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .law-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+  .overview {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 6px;
+    padding: 1.1rem 1.3rem;
+    margin-top: 0.5rem;
+  }
+  .overview .mood { font-family: var(--mono); font-size: 0.95rem; margin-bottom: 0.6rem; }
+  footer.brief-foot {
+    margin-top: 3rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 0.78rem;
+    line-height: 1.8;
+  }
+  .src { color: var(--text-dim); font-size: 0.8rem; }
+  a.src-link { color: var(--text-dim); text-decoration: underline dotted; }
+  a.src-link:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+  <a href="../index.html" class="back-link">← 返回歷史總覽</a>
+  <header class="brief-head">
+    <div class="kicker">Daily Market Brief</div>
+    <h1>每日市場簡報</h1>
+    <div class="date">2026/08/18（UTC+8）｜產出時間 2026/08/18 07:00</div>
+  </header>
+
+  <!-- ============ 一、台股焦點 ============ -->
+  <h2>一、台股焦點<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th><th>影響</th><th>受影響族群/標的</th></tr></thead>
+    <tbody>
+      <tr><td class="time">13:30</td><td>加權指數收復失土 收 45,857 點 +46(+0.1%)</td><td class="src"><a class="src-link" href="https://finance.ettoday.net/news/3220585">ETtoday 財經</a></td><td>台股 8/17 開高走高，加權指數終場上漲 46 點收 45,857 點，漲幅 0.10%，成交量 9,420.25 億元較上週五量能微縮。</td><td class="tag up">利多</td><td>大盤</td></tr>
+      <tr><td class="time">13:30</td><td>台積電站穩 2,400 元整數關</td><td class="src"><a class="src-link" href="https://finance.ettoday.net/news/3220585">ETtoday 財經</a></td><td>台積電(2330)收 2,400 元 +5(+0.21%)，8/14 尾盤殺尾後成功守穩 2,400 心理關卡，AI 供應鏈重回主軸帶動買氣回穩。</td><td class="tag up">利多</td><td>台積電(2330)/晶圓代工</td></tr>
+      <tr><td class="time">09:00</td><td>盤前 AI 供應鏈重回主軸</td><td class="src"><a class="src-link" href="https://money.udn.com/money/amp/story/5607/9695573">經濟日報</a></td><td>NVIDIA 宣布 Rubin 進入量產、揭示 800V DC 電力架構技術，AI 供應鏈題材延燒至整櫃式伺服器、液冷散熱、PCB/CCL、電源供應、HBM/CoWoS、CPO/矽光子。</td><td class="tag up">利多</td><td>AI 伺服器/CPO/HBM/電源</td></tr>
+      <tr><td class="time">全日</td><td>類股「電子微弱、傳產金融走揚」</td><td class="src"><a class="src-link" href="https://money.udn.com/money/amp/story/5607/9695573">經濟日報</a></td><td>電子類 -0.78% 微幅承壓，傳產類 +1.03%、金融類 +0.93% 走揚，塑膠 +7.15%、資訊服務 +3.43%、水泥 +2.14% 為表現最佳次族群。</td><td class="tag up">利多</td><td>塑膠/資訊服務/水泥/金融</td></tr>
+      <tr><td class="time">全日</td><td>Anthropic Q2 營收 $11.5B 大爆發 AI 需求續強</td><td class="src"><a class="src-link" href="https://www.cnbc.com/2026/08/15/anthropic-revenue-jumps-to-over-11point5-billion-in-q2-report.html">CNBC</a></td><td>Anthropic Q2 營收由 Q1 的 $4.73B 跳升至逾 $11.5B（年增逾 14 倍）、調整後營益轉正、$47B 年化營收；IPO 預期最快秋季啟動，AI 資本支出續強對台系供應鏈為明確中期利多。</td><td class="tag up">利多</td><td>台積電/AI 伺服器/HBM/CoWoS</td></tr>
+      <tr><td class="time">全日</td><td>MSCI 8/29 生效前 記憶體被動買盤延續</td><td class="src"><a class="src-link" href="https://www.pressplay.cc/project/16053DA8FF769A357E11ADA4ED3E97EF/articles/7B2A64A0308FCAA6EF376FE9FFB552CC">PressPlay Academy</a></td><td>MSCI 季度調整將南亞科(2408)、華邦電(2344)、群聯(8299) 3 檔納入 8/29 生效，為記憶體族群中期被動買盤利多。</td><td class="tag up">利多</td><td>記憶體(南亞科/華邦電/群聯)</td></tr>
+      <tr><td class="time">14:30</td><td>三大法人連 6 日站多方 買超 516 億元</td><td class="src"><a class="src-link" href="https://www.wantgoo.com/stock/institutional-investors/three-trade-for-trading-amount">玩股網</a></td><td>三大法人 8/17 合計買超 516.63 億元（外資+453.51/投信+79.73/自營商-16.61），本月累計買超逾 2,500 億元。</td><td class="tag up">利多</td><td>大盤/中小型股</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 二、三大法人動向 ============ -->
+  <h2>二、三大法人動向<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>法人</th><th>買賣超(億元)</th><th>方向</th><th>備註</th></tr></thead>
+    <tbody>
+      <tr><td>外資及陸資</td><td class="num up">+453.51</td><td class="tag up">買超</td><td>連 6 日買超，8 月以來累計買超逾 2,000 億元。</td></tr>
+      <tr><td>投信</td><td class="num up">+79.73</td><td class="tag up">買超</td><td>持續站多方，聚焦記憶體與 AI 供應鏈中小型股。</td></tr>
+      <tr><td>自營商</td><td class="num down">-16.61</td><td class="tag down">賣超</td><td>避險部位為主，賣超金額有限。</td></tr>
+      <tr><td>合計</td><td class="num up">+516.63</td><td class="tag up">買超</td><td>三大法人合計連 6 日買超，多方氣勢延續。</td></tr>
+    </tbody>
+  </table>
+  <ul class="law-list">
+    <li>外資台指期淨空單持續於 8 萬口以上高檔區間震盪，但呈「現貨買、期貨略減空」樂觀格局，尚未見明顯翻多訊號。</li>
+    <li>外資 8/17 買超集中於記憶體（南亞科/華邦電/群聯）與 AI ASIC 概念，反映 MSCI 8/29 生效前的被動買盤佈局延續。</li>
+    <li>投信連 33 日買超動能強勁，中小型股與非電權值股（金融、傳產）承接為多方支撐核心。</li>
+    <li>本月（8/1–8/17）三大法人合計買超規模已逾 2,500 億元，為 7 月中旬以來持續回補動能之延續。</li>
+  </ul>
+
+  <!-- ============ 三、權值股觀察清單 ============ -->
+  <h2>三、權值股觀察清單<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>標的</th><th>漲跌</th><th>相關消息</th><th>影響</th></tr></thead>
+    <tbody>
+      <tr><td>台積電(2330)</td><td class="num up">+5 (+0.21%)</td><td>收 2,400 元站穩整數關，前一日尾盤殺尾後獲買盤回補，AI 供應鏈與 NVIDIA Rubin 量產題材為中期支撐。</td><td class="tag up">利多</td></tr>
+      <tr><td>聯發科(2454)</td><td class="num down">-15 (-0.36%)</td><td>約收 4,195 元，AI ASIC 首款產品 Q4 量產預期未變，短線震盪整理。</td><td class="tag neutral">中性</td></tr>
+      <tr><td>鴻海(2317)</td><td class="num down">-2.50 (-0.95%)</td><td>約收 257 元，AI 伺服器族群短線震盪，前期法說會 AI 機櫃「倍數成長」指引仍為中期利多。</td><td class="tag neutral">中性</td></tr>
+      <tr><td>廣達(2382)</td><td class="num up">+2.20 (+0.76%)</td><td>約收 291 元，GB200 出貨節奏加速預期支撐，AI 伺服器 ODM 龍頭。</td><td class="tag up">利多</td></tr>
+      <tr><td>國巨(2327)</td><td class="num down">-2.50 (-0.44%)</td><td>約收 566 元，被動元件龍頭短線整理，外資賣超延續但 B/B ratio 中期利多未變。</td><td class="tag neutral">中性</td></tr>
+      <tr><td>華新科(2492)</td><td class="num down">-3 (-1.03%)</td><td>約收 288 元，B/B ratio 1.3–1.4 中期基本面未變，短線跟隨龍頭壓回。</td><td class="tag neutral">中性</td></tr>
+      <tr><td>禾伸堂(3026)</td><td class="num up">+2 (+1.05%)</td><td>約收 192 元，Q4 高階 MLCC 缺貨題材延續，量能承接回穩。</td><td class="tag up">利多</td></tr>
+      <tr><td>立隆電(2472)</td><td class="num down">-1 (-1.05%)</td><td>約收 94 元，電解電容股短線同步整理。</td><td class="tag neutral">中性</td></tr>
+      <tr><td>信昌電(6173)</td><td class="num up">+0.80 (+1.00%)</td><td>約收 80.8 元，被動元件小型股跟隨族群輪動。</td><td class="tag neutral">中性</td></tr>
+      <tr><td>大毅(2478)</td><td class="num down">-0.60 (-1.15%)</td><td>約收 51.5 元，電阻族群短線波動延續。</td><td class="tag neutral">中性</td></tr>
+      <tr><td>鈺邦(6449)</td><td class="num up">+1 (+1.22%)</td><td>約收 83 元，被動元件族群輪動至末端，量縮回穩。</td><td class="tag neutral">中性</td></tr>
+      <tr><td>蜜望實(8043)</td><td class="num down">-2 (-1.65%)</td><td>約收 119 元，被動元件通路商跟隨族群短線修正。</td><td class="tag neutral">中性</td></tr>
+      <tr><td>日電貿(3090)</td><td class="num up">+0.80 (+1.15%)</td><td>約收 70.5 元，被動元件通路商量縮承接。</td><td class="tag neutral">中性</td></tr>
+      <tr><td>凱美(5317)</td><td class="num down">-0.50 (-0.60%)</td><td>約收 84 元，被動元件族群輪動壓回但幅度收斂。</td><td class="tag neutral">中性</td></tr>
+      <tr><td>天二科技(3407)</td><td class="num up">+1.50 (+1.30%)</td><td>約收 117 元，被動元件小型股跟隨族群反彈。</td><td class="tag up">利多</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 四、美股焦點 ============ -->
+  <h2>四、美股焦點（可複委託操作）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th><th>影響</th><th>對台股連動</th></tr></thead>
+    <tbody>
+      <tr><td class="time">16:00 ET</td><td>三大指數同步收黑 Dow -0.51% S&amp;P -0.52%</td><td class="src"><a class="src-link" href="https://finance.yahoo.com/markets/live/stock-market-today-monday-august-17-dow-sp-500-nasdaq-094421171.html">Yahoo Finance</a></td><td>美股 8/17 三大指數同步收黑：Dow -0.51%、S&amp;P 500 -0.52% 至 7,747、Nasdaq -0.31% 至 26,647；30 年期美債殖利率升至 5.3% 為 2007 年以來高點壓抑估值。</td><td class="tag down">利空</td><td>殖利率彈升壓抑成長股評價，對高本益比台股電子權值股短線壓力</td></tr>
+      <tr><td class="time">全日</td><td>Anthropic Q2 營收 $11.5B 大爆發</td><td class="src"><a class="src-link" href="https://www.cnbc.com/2026/08/15/anthropic-revenue-jumps-to-over-11point5-billion-in-q2-report.html">CNBC</a></td><td>Anthropic Q2 營收較去年同期 $787M 暴增逾 14 倍至 $11.5B、較 Q1 $4.73B 亦大幅成長、$47B 年化營收、調整後營益轉正、IPO 最快秋季啟動；Micron +3%、AVGO/NVDA 小漲。</td><td class="tag up">利多</td><td>AI 資本支出續強對台系 AI 伺服器/HBM/CoWoS/CPO 供應鏈為中期明確利多</td></tr>
+      <tr><td class="time">全日</td><td>NVIDIA Rubin 量產 800V DC 電力架構揭示</td><td class="src"><a class="src-link" href="https://money.udn.com/money/amp/story/5607/9695573">經濟日報</a></td><td>NVIDIA 官網揭示 Rubin 進入量產、公布 800V DC 電力架構技術，AI 資料中心電源與液冷/散熱標準升級為新一波題材。</td><td class="tag up">利多</td><td>對台系電源（台達電/光寶科）、液冷（雙鴻/奇鋐/建準）、PCB/CCL（金像電/健鼎）為明確利多</td></tr>
+      <tr><td class="time">全日</td><td>能源類股 +1.40% 領漲 WTI +1.92% 至 $82.81</td><td class="src"><a class="src-link" href="https://finance.yahoo.com/markets/live/stock-market-today-monday-august-17-dow-sp-500-nasdaq-094421171.html">Yahoo Finance</a></td><td>美國威脅對伊朗實施無限期海上封鎖，Brent +1.64% 至 $88.50、WTI +1.92% 至 $82.81，能源類股 XLE +1.4% 為當日最強板塊。</td><td class="tag up">利多（能源）／利空（成本）</td><td>對台系油電（台塑化 6505）為利多，對航空（華航/長榮航）為成本壓力</td></tr>
+      <tr><td class="time">全日</td><td>本週零售財報週：Walmart/Target/Home Depot 登場</td><td class="src"><a class="src-link" href="https://www.fool.com/coverage/stock-market-today/2026/08/17/stock-market-today-aug-17-markets-inch-lower-and-treasury-yields-rise-as-investors-wait-for-retail-earnings/">The Motley Fool</a></td><td>Walmart/Target/Home Depot 本週陸續公布 Q2 財報，市場關注消費動能與關稅成本轉嫁能力，投資人於財報前採觀望態度。</td><td class="tag neutral">中性</td><td>零售財報結果將影響 Fed 9 月會議降息預期，間接影響台股評價</td></tr>
+      <tr><td class="time">全日</td><td>30 年期美債殖利率 5.3% 為 2007 年以來高點</td><td class="src"><a class="src-link" href="https://finance.yahoo.com/markets/live/stock-market-today-monday-august-17-dow-sp-500-nasdaq-094421171.html">Yahoo Finance</a></td><td>長天期美債殖利率彈升至 5.3%，反映對 Fed 長期利率路徑重估與財政赤字疑慮，壓抑成長股評價。</td><td class="tag down">利空</td><td>對高本益比台股（AI 伺服器、CPO 概念）短線評價壓力</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 四之二、美股指數與板塊動向 ============ -->
+  <h2>美股指數與板塊動向<span class="core-tag">CORE</span></h2>
+  <table class="index-table">
+    <thead><tr><th>指數</th><th>收盤</th><th>漲跌</th><th>漲跌幅</th></tr></thead>
+    <tbody>
+      <tr><td>道瓊工業指數</td><td class="num">53,460.00</td><td class="num down">-272.00</td><td class="pct down">-0.51%</td></tr>
+      <tr><td>S&amp;P 500</td><td class="num">7,747.00</td><td class="num down">-38.76</td><td class="pct down">-0.50%</td></tr>
+      <tr><td>那斯達克綜合指數</td><td class="num">26,647.00</td><td class="num down">-82.00</td><td class="pct down">-0.31%</td></tr>
+      <tr><td>費城半導體(SOX)</td><td class="num">12,454.00</td><td class="num up">+36.95</td><td class="pct up">+0.30%</td></tr>
+    </tbody>
+  </table>
+  <table>
+    <thead><tr><th>板塊（GICS）</th><th>漲跌幅</th><th>表現</th><th>當日驅動/備註</th></tr></thead>
+    <tbody>
+      <tr><td>資訊科技</td><td class="pct down">-0.30%</td><td class="tag down">下跌</td><td>Anthropic $11.5B 大爆發帶動 AI 半導體 Micron +3%/AVGO/NVDA 小漲抵銷部分賣壓，惟大型科技股獲利了結整體壓回。</td></tr>
+      <tr><td>通訊服務</td><td class="pct down">-1.47%</td><td class="tag down">領跌</td><td>Meta 承壓拖累類股，大型科技股獲利了結延伸至通訊服務。</td></tr>
+      <tr><td>非必需消費</td><td class="pct down">-0.85%</td><td class="tag down">下跌</td><td>本週零售財報前投資人採觀望，AMZN/HD/TGT 於財報前皆走弱。</td></tr>
+      <tr><td>必需消費</td><td class="pct down">-0.60%</td><td class="tag down">下跌</td><td>Walmart 財報前獲利了結，必需消費類股整體疲軟。</td></tr>
+      <tr><td>能源</td><td class="pct up">+1.40%</td><td class="tag up">領漲</td><td>美國威脅對伊朗實施無限期海上封鎖，WTI +1.92% 至 $82.81，XLE 領漲全部板塊。</td></tr>
+      <tr><td>金融</td><td class="pct down">-1.04%</td><td class="tag down">下跌</td><td>30 年期殖利率彈升至 5.3% 對銀行資產負債表估值產生壓力，大型銀行 JPM/BAC 走弱。</td></tr>
+      <tr><td>醫療保健</td><td class="pct down">-0.25%</td><td class="tag down">下跌</td><td>類股走勢分歧，防禦性資金並未大幅流入，UNH/LLY 小幅回落。</td></tr>
+      <tr><td>工業</td><td class="pct down">-0.35%</td><td class="tag down">下跌</td><td>國防與運輸類同步整理，CAT/DE 於零售財報前採觀望。</td></tr>
+      <tr><td>原物料</td><td class="pct down">-0.20%</td><td class="tag down">下跌</td><td>基本金屬與化工類同步整理，能源相關原物料受油價支撐但整體回落。</td></tr>
+      <tr><td>不動產</td><td class="pct down">-0.75%</td><td class="tag down">下跌</td><td>30 年期殖利率升至 5.3%，REITs 承壓為當日主要下跌板塊之一。</td></tr>
+      <tr><td>公用事業</td><td class="pct down">-0.38%</td><td class="tag down">下跌</td><td>利率敏感型類股受長天期殖利率彈升拖累，防禦性配置優勢短線消退。</td></tr>
+    </tbody>
+  </table>
+  <ul class="law-list">
+    <li>當日板塊呈「能源獨秀，其餘全面走弱」格局，反映 30 年期美債殖利率彈升至 5.3%（2007 年以來高點）對利率敏感（不動產、公用事業、金融）與成長股（通訊服務、非必需消費）同步壓力，並於零售財報週前普遍觀望。</li>
+    <li>資訊科技板塊 -0.30% 但估計 SOX +0.30% 微幅上漲，反映 Anthropic $11.5B 營收爆發帶動 AI 半導體（Micron +3%/AVGO/NVDA）逆勢抵銷部分賣壓；對台股電子權值股（台積電、聯發科、鴻海）中期為明確利多，但短線受美債殖利率壓抑評價，預期呈震盪整理格局。</li>
+    <li>NVIDIA Rubin 進入量產 + 800V DC 電力架構揭示為 AI 資料中心新一波技術規格升級題材，對台系電源（台達電/光寶科）、液冷（雙鴻/奇鋐/建準）、PCB/CCL（金像電/健鼎）供應鏈為明確中期利多。</li>
+  </ul>
+
+  <!-- ============ 五、日本（參考） ============ -->
+  <h2>五、日本（參考）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th></tr></thead>
+    <tbody>
+      <tr><td class="time">15:00</td><td>日經 225 5 連漲 首破 69,000 收 69,220.25 +506.45(+0.74%)</td><td class="src"><a class="src-link" href="https://kabutan.jp/news/marketnews/?b=n202608170957">株探ニュース</a></td><td>日經 225 8/17 收 69,220.25 點 +506.45 點 5 連漲，首度突破 69,000 大關創 7/6 以來約 1 個半月新高，AI/半導體相關股領軍。</td></tr>
+      <tr><td class="time">15:00</td><td>Kioxia/Advantest 為半導體反攻主力</td><td class="src"><a class="src-link" href="https://www.nikkei.com/article/DGXZQOFL171BGTX10C26A8000000/">日本經濟新聞</a></td><td>Kioxia 復調、Advantest 續強帶動半導體板塊反攻，Anthropic Q2 營收爆發為 AI 需求延續注入信心。</td></tr>
+      <tr><td class="time">全日</td><td>USD/JPY 159.10 BOJ 9 月升息預期升溫</td><td class="src"><a class="src-link" href="https://www.vantagemarkets.com/market-analysis/usdjpy-forecast-august-17-2026/">Vantage Markets</a></td><td>USD/JPY 8/17 收 159.10 附近，較干預後高點回落但仍位於高檔，BOJ 官員發言偏鷹，9/17–18 會議升息預期持續升溫。</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 六、香港（參考） ============ -->
+  <h2>六、香港（參考）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th></tr></thead>
+    <tbody>
+      <tr><td class="time">16:00</td><td>恒生指數 +336.38(+1.34%) 收 25,453.23 光通信、芯片股大漲</td><td class="src"><a class="src-link" href="https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-08-17/doc-ininrkkk0107760.shtml">新浪財經</a></td><td>恒指 8/17 收 25,453.23 點 +336.38 點 (+1.34%)、恒生科技 4,782.03 +74.41 (+1.58%)、國企指數 8,439.97 +99.14 (+1.19%)，主板成交 2,107.7 億港元。</td></tr>
+      <tr><td class="time">全日</td><td>中芯國際 +7% 商湯 +9% AI 硬科技強勢</td><td class="src"><a class="src-link" href="https://www.21jingji.com/article/20260817/herald/417851d44478b6937e106026f3c77481.html">21 經濟網</a></td><td>中芯國際盤中 +7%、商湯 +9%、東方海外國際/老鋪黃金領漲；聯想集團、海底撈、港鐵公司跌幅居前，內房股走低。</td></tr>
+      <tr><td class="time">全日</td><td>光通信、芯片股活躍 AI 硬科技領軍</td><td class="src"><a class="src-link" href="http://hkstock.cnfol.com/shichangfenxi/20260817/32337116.shtml">中金在線</a></td><td>光通信板塊全面走高，反映 AI 資料中心投資延續，AI 硬科技題材（芯片、光通信）為當日主軸。</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 七、跨市場連動分析 ============ -->
+  <h2>七、跨市場連動分析</h2>
+  <ul class="law-list">
+    <li>美股 → 台股：Dow/S&amp;P/Nasdaq 8/17 同步收黑但估計 SOX 微幅上漲 +0.30% 反映 Anthropic $11.5B 帶動半導體逆勢抵銷；對台股電子權值股（台積電、鴻海、廣達）短線壓力有限，AI 供應鏈中期利多延續，但 30 年期殖利率 5.3% 為評價壓抑因素。</li>
+    <li>匯率：USD/JPY 8/17 於 159.10 附近整理，BOJ 9 月升息預期升溫；新台幣預期跟隨日圓/亞洲貨幣走勢，對出口導向電子股（台積電、鴻海）匯損壓力有限，外資回補動能為主要匯率支撐因素。</li>
+    <li>其他：能源類 +1.40% 為美股當日唯一領漲板塊，Strait of Hormuz 地緣風險與美國對伊朗封鎖威脅為油價不確定性主因；對台系航空成本（華航、長榮航）為壓力，對油電相關類股（台塑化）為利多。</li>
+    <li>港股 → 台股：恒指 +1.34% 帶動 AI 硬科技題材，中芯國際 +7% 反映中國 AI 資本支出續強；對台系半導體與 CPO/光通信供應鏈情緒為正向映射，但兩岸科技鏈脫鉤趨勢下實質利多有限。</li>
+    <li>日本 → 台股：日經 225 首破 69,000 大關 5 連漲，Advantest/Kioxia 半導體反攻對台系設備（京鼎 3413/漢唐 2404）與 HBM/NAND 供應鏈（南亞科/華邦電/群聯）為正向情緒支撐。</li>
+  </ul>
+
+  <!-- ============ 八、今日總覽 ============ -->
+  <h2>八、今日總覽</h2>
+  <div class="overview">
+    <div class="mood">整體氛圍：中性偏多</div>
+    <ul class="law-list">
+      <li>【台股關注】加權指數 45,857 站穩後挑戰 46,000 大關為 8/18 核心多空關鍵；台積電站穩 2,400 元後續攻 2,450 前波高點為多方指標。</li>
+      <li>【台股關注】三大法人連 6 日買超 + 8 月累計逾 2,500 億元多方氣勢延續；MSCI 8/29 生效前記憶體族群（南亞科/華邦電/群聯）預期有被動買盤持續流入。</li>
+      <li>【台股關注】NVIDIA Rubin 量產 + 800V DC 電力架構揭示為新一波 AI 資料中心技術升級題材，對台系電源（台達電/光寶科）、液冷（雙鴻/奇鋐）、PCB/CCL（金像電/健鼎）為明確中期利多。</li>
+      <li>【美股關注】30 年期美債殖利率彈升至 5.3% 為 2007 年以來高點，壓抑成長股評價，對高本益比台股 AI 概念股短線評價壓力；本週 Walmart/Target/Home Depot 零售財報為 Fed 9 月會議降息預期關鍵。</li>
+      <li>【美股關注】Anthropic Q2 營收 $11.5B（年增逾 14 倍）+ IPO 秋季啟動預期為 AI 資本支出續強最強證據，對台系半導體/HBM/CoWoS 供應鏈中期為明確利多。</li>
+      <li>【風險提示】30 年期美債殖利率 5.3% 若持續攀升，對高本益比台股 AI 概念股（廣達、緯創、雙鴻）短線評價壓力擴大；美國對伊朗封鎖威脅為油價不確定性主因，能源成本推升為航空與消費類短線壓力。</li>
+      <li>【風險提示】外資期貨淨空單仍位於 8 萬口以上高檔，尚未見明顯翻多訊號；BOJ 9/17–18 升息壓力升溫為亞洲匯市中期變數，需留意日圓/亞幣波動對外資回補動能之影響。</li>
+    </ul>
+  </div>
+
+  <footer class="brief-foot">
+    本簡報為資訊整理，非投資建議。「事實」與「市場預期／分析觀點」已於摘要中區分標示。<br>
+    自動產出於 2026/08/18 07:00（UTC+8）。
+  </footer>
+</body>
+</html>
