@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日市場簡報｜2026/08/27</title>
+<style>
+  :root {
+    --bg: #0e1116;
+    --panel: #161b22;
+    --panel-2: #1c2230;
+    --border: #2a313c;
+    --text: #d8dee9;
+    --text-dim: #8b95a5;
+    --accent: #e8b339;
+    --up: #ff5b5b;      /* 台股慣例：紅漲 */
+    --down: #3dd68c;    /* 綠跌 */
+    --neutral: #8b95a5;
+    --mono: "SFMono-Regular", "Roboto Mono", "Noto Sans Mono", ui-monospace, monospace;
+    --serif: "Noto Serif TC", "Songti TC", serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans TC", -apple-system, "PingFang TC", "Microsoft JhengHei", sans-serif;
+    line-height: 1.65;
+    padding: 2rem 1.2rem 4rem;
+    max-width: 920px;
+    margin: 0 auto;
+    font-size: 15px;
+  }
+  header.brief-head {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 1rem;
+    margin-bottom: 1.8rem;
+  }
+  header.brief-head .kicker {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    text-transform: uppercase;
+  }
+  header.brief-head h1 {
+    font-family: var(--serif);
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin: 0.2rem 0;
+    letter-spacing: 0.02em;
+  }
+  header.brief-head .date {
+    font-family: var(--mono);
+    color: var(--text-dim);
+    font-size: 0.95rem;
+  }
+  .back-link {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: var(--text-dim);
+    text-decoration: none;
+    font-family: var(--mono);
+    font-size: 0.82rem;
+  }
+  .back-link:hover { color: var(--accent); }
+  h2 {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    margin: 2.2rem 0 0.9rem;
+    padding-left: 0.7rem;
+    border-left: 4px solid var(--accent);
+    letter-spacing: 0.02em;
+  }
+  h2 .core-tag {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.15em;
+    background: var(--accent);
+    color: #0e1116;
+    padding: 0.12rem 0.5rem;
+    border-radius: 3px;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+    font-weight: 700;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.5rem 0 1rem;
+    font-size: 0.86rem;
+    background: var(--panel);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  th {
+    background: var(--panel-2);
+    color: var(--text-dim);
+    text-align: left;
+    padding: 0.6rem 0.7rem;
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+  td {
+    padding: 0.6rem 0.7rem;
+    border-top: 1px solid var(--border);
+    vertical-align: top;
+  }
+  td.time, td.num { font-family: var(--mono); white-space: nowrap; }
+  .tag { font-weight: 700; font-family: var(--mono); font-size: 0.8rem; white-space: nowrap; }
+  .tag.up { color: var(--up); }
+  .tag.down { color: var(--down); }
+  .tag.neutral { color: var(--neutral); }
+  .num.up { color: var(--up); }
+  .num.down { color: var(--down); }
+  .index-table td.num, .index-table th:not(:first-child) { text-align: right; }
+  .index-table th:not(:first-child) { padding-right: 0.9rem; }
+  .index-table td.num { padding-right: 0.9rem; }
+  td.pct { font-family: var(--mono); text-align: right; white-space: nowrap; padding-right: 0.9rem; }
+  td.pct.up { color: var(--up); }
+  td.pct.down { color: var(--down); }
+  .law-list { list-style: none; padding: 0; }
+  .law-list li {
+    padding: 0.45rem 0 0.45rem 1.2rem;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .law-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+  .overview {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 6px;
+    padding: 1.1rem 1.3rem;
+    margin-top: 0.5rem;
+  }
+  .overview .mood { font-family: var(--mono); font-size: 0.95rem; margin-bottom: 0.6rem; }
+  footer.brief-foot {
+    margin-top: 3rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 0.78rem;
+    line-height: 1.8;
+  }
+  .src { color: var(--text-dim); font-size: 0.8rem; }
+  a.src-link { color: var(--text-dim); text-decoration: underline dotted; }
+  a.src-link:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+  <a href="../index.html" class="back-link">← 返回歷史總覽</a>
+  <header class="brief-head">
+    <div class="kicker">Daily Market Brief</div>
+    <h1>每日市場簡報</h1>
+    <div class="date">2026/08/27（UTC+8，週四）｜產出時間 2026/08/27 07:00</div>
+  </header>
+
+  <!-- ============ 一、台股焦點 ============ -->
+  <h2>一、台股焦點<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th><th>影響</th><th>受影響族群/標的</th></tr></thead>
+    <tbody>
+      <tr><td class="time">13:30</td><td>台股 8/26 大漲 663 點收復 45,833、量能站上 8,042 億元</td><td class="src"><a class="src-link" href="https://finance.ettoday.net/news/3226079">ETtoday 財經雲</a></td><td>加權指數 8/26 開低走高、盤中一度下探、下午在權值股全面翻紅+聯發科 AI ASIC 題材帶動+外資回補下急拉、終場大漲 663 點收 45,833、漲幅 1.47%；成交量 8,042.49 億元較 8/25 的 6,970 億元明顯放大約 15%、量能站上多方訊號（市場預期：NVDA 財報前夕表態積極、8/27 開盤將反映 NVDA 財報結果與亞洲同步反應）。</td><td class="tag up">利多</td><td>加權指數</td></tr>
+      <tr><td class="time">13:30</td><td>聯發科(2454) 8/26 暴漲 5.89% 至 3,955 元 AI ASIC 題材主導</td><td class="src"><a class="src-link" href="https://tw.stock.yahoo.com/quote/2454.TW/technical-analysis">Yahoo 股市</a></td><td>聯發科 8/26 收 3,955 元+220(+5.89%)、單日貢獻大盤約 +150 點、AI ASIC Q4 量產題材+外資回補雙重動能、正式站穩 3,900 大關並挑戰 4,000 心理關卡；為 8/26 台股當日最大權值股領漲主軸（市場預期：AI ASIC 中期成長動能延續、Q4 量產進度為關鍵觀察）。</td><td class="tag up">利多</td><td>聯發科(2454)/AI ASIC 供應鏈</td></tr>
+      <tr><td class="time">13:30</td><td>台積電(2330) 8/26 收 2,415 元+15(+0.62%) NVDA 財報前穩健</td><td class="src"><a class="src-link" href="https://finance.ettoday.net/news/3226079">ETtoday 財經雲</a></td><td>權王 8/26 收 2,415 元+15(+0.62%)、續刷本波反彈新高、成交量放大、外資延續買超；ADR 8/26 前市場預期收 $417.69（+0.07%）、NVDA 財報前避險性買盤浮現（市場預期：NVDA 財報若優於預期將延續反彈至 2,450 前波壓力區）。</td><td class="tag up">利多</td><td>台積電(2330)/半導體供應鏈</td></tr>
+      <tr><td class="time">全日</td><td>三大法人 8/26 同步大買合計 593.87 億元 為 8/21 以來最大單日買超</td><td class="src"><a class="src-link" href="https://newtalk.tw/news/view/2026-08-26/1055820">Newtalk 新聞</a></td><td>三大法人 8/26 合計淨買超 593.87 億元、為 8/21 大買 331.05 億元後單日買超金額再度放大、外資買超 365.98 億元同步回補期指空單、投信由賣轉買 48.55 億元、自營商買超 179.34 億元（含避險+131.95 億元）（市場預期：NVDA 財報前資金積極布局、多方氛圍明顯回溫）。</td><td class="tag up">利多</td><td>加權指數/權值股/AI 供應鏈</td></tr>
+      <tr><td class="time">全日</td><td>國巨(2327) 8/26 因重大訊息待公布 8/27 起暫停交易</td><td class="src"><a class="src-link" href="https://tw.stock.yahoo.com/news/%E5%9C%8B%E5%B7%A8%E8%A1%9D%E4%B8%8A%E5%8F%B0%E8%82%A1%E5%B8%82%E5%80%BC%E7%AC%AC%E4%B9%9D-%E9%A3%86%E5%A4%AA%E5%85%87%E9%81%AD%E5%88%97%E8%99%95%E7%BD%AE%E8%82%A1%E6%98%8E%E8%B5%B7-%E8%A2%AB%E9%97%9C%E7%A6%81%E9%96%89-104427289.html">Yahoo 股市</a></td><td>被動元件龍頭國巨 8/26 盤後公告因有重大訊息待公布、經證交所同意 8/27 起暫停交易；本波股價自 7 月高點累計跌幅約 30%、8/25 大跌 6.9% 至 579 元、8/26 傳出重大訊息前異常震盪、市場臆測可能為重大併購或資本結構調整（市場預期：待重大訊息公布後才能明朗、族群連動仍待觀察）。</td><td class="tag neutral">中性</td><td>國巨(2327)/被動元件族群</td></tr>
+      <tr><td class="time">全日</td><td>NVDA Q2 FY27 財報 8/27 04:20 全面優於預期 營收 $96.2B YoY +106%</td><td class="src"><a class="src-link" href="https://www.cnbc.com/2026/08/26/nvidia-nvda-earnings-report-q2-2027-live-updates.html">CNBC</a></td><td>NVIDIA 8/26 美東盤後（台北 8/27 04:20）公布 Q2 FY27：營收 $96.2B 優於預期 $92-95B、YoY +106%；Data Center 營收 $89.0B 優於預期 $86.33B、YoY +117%；GAAP EPS $2.46/non-GAAP EPS $2.22、GAAP 毛利率 75.0%；Q3 展望 $108B ±2% 顯著優於預期 $104.2B；然盤後股價下跌 1.3%（市場預期：財報全面優於預期為 AI 供應鏈重要利多、對台積電/CoWoS/HBM 供應鏈為明確多方連動）。</td><td class="tag up">利多</td><td>台積電/聯發科/CoWoS/HBM/廣達/緯創/整體 AI 供應鏈</td></tr>
+      <tr><td class="time">20:30</td><td>7 月核心 PCE +0.2%(月)/+3.3%(年) 符預期 未見改善進展</td><td class="src"><a class="src-link" href="https://www.bloomberg.com/news/articles/2026-08-26/key-us-inflation-gauge-posts_muted-advance-spending-stalls">Bloomberg</a></td><td>美國 7 月核心 PCE 月增 0.2%（符合市場預期）、YoY 3.3%（符合預期但未見改善）；整體 PCE YoY 3.7%（略高於市場預期 3.6%）；市場定價 Fed 9/16 升息機率略降至 30-35%（市場預期：通膨黏著性延續、Fed 9 月按兵不動預期強化、Warsh 8/28 Jackson Hole 演說為關鍵政策訊號窗口）。</td><td class="tag neutral">中性</td><td>殖利率/科技股 valuations</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 二、三大法人動向 ============ -->
+  <h2>二、三大法人動向<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>法人</th><th>買賣超(億元)</th><th>方向</th><th>備註</th></tr></thead>
+    <tbody>
+      <tr><td>外資及陸資</td><td class="num up">+365.98</td><td class="tag up">買超</td><td>8/26 大買 365.98 億元、較 8/25 賣超 7.87 億元大幅翻多、外資期指空單同步回補、電子權值全面回補主軸為聯發科/台積電/廣達/鴻海</td></tr>
+      <tr><td>投信</td><td class="num up">+48.55</td><td class="tag up">買超</td><td>投信 8/26 由 8/25 賣超 46.09 億元反手買超 48.55 億元、資金重新流入半導體與 AI 相關族群、對前一日賣壓進行修正</td></tr>
+      <tr><td>自營商</td><td class="num up">+179.34</td><td class="tag up">買超</td><td>含避險 8/26 大買 179.34 億元（自行買賣 +47.39 億+避險 +131.95 億）、避險部位大幅擴張、反映 NVDA 財報前選擇權對沖需求提升</td></tr>
+      <tr><td>合計</td><td class="num up">+593.87</td><td class="tag up">買超</td><td>三大法人 8/26 合計淨買超 593.87 億元、為 8/21 大買 331.05 億元後單日買超金額再度放大、成交 8,042 億元；量能與買超雙擴張為明確多方訊號</td></tr>
+    </tbody>
+  </table>
+  <ul class="law-list">
+    <li>外資 8/26 由 8/25 微幅賣超 7.87 億元反手大買 365.98 億元、為 8/21 大買 283 億後單日金額再度放大、外資態度明顯轉為積極；買超電子權值聯發科（單日暴漲 5.89%）為當日最大回補標的、台積電/廣達/鴻海同步回補。</li>
+    <li>外資期指未平倉：8/26 淨空單同步回補、估縮減至 75,000-80,000 口區間、較 8/25 的 82,000-85,000 口明顯縮手；反映 NVDA 財報前避險部位撤除、資金態度轉為積極；空單回補為多方訊號、但 NVDA 財報結果仍為方向決定因子。</li>
+    <li>成交量 8,042 億元較 8/25 的 6,970 億元放大約 15%、且量價齊揚（+663 點）為多方回補動能明確訊號；然 NVDA 財報結果為 8/27 開盤第一大變數、雖財報全面優於預期但盤後股價下跌 1.3% 顯示部分高預期已被消化。</li>
+    <li>MSCI 8/31 生效前記憶體/PCB 6 檔升格（華邦電/南亞科/群聯/創意/南電/台耀）預期於 8/28-8/31 之後才明顯發酵；8/27 週四主軸為 NVDA 財報結果延續發酵+核心 PCE 資料反映+被動元件龍頭國巨暫停交易連動族群觀察。</li>
+  </ul>
+
+  <!-- ============ 三、權值股觀察清單 ============ -->
+  <h2>三、權值股觀察清單<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>標的</th><th>漲跌</th><th>相關消息</th><th>影響</th></tr></thead>
+    <tbody>
+      <tr><td>台積電(2330)</td><td class="num up">+15 (2,415)</td><td>8/26 收 2,415 元+15(+0.62%) 續刷本波反彈新高、外資延續買超、ADR 前收 $417.69；NVDA 8/26 盤後財報 Data Center 營收 $89.0B YoY +117% 全面優於預期、Q3 展望 $108B ±2% 遠超預期為 CoWoS/HBM 供應鏈明確利多、8/27 開盤有機會挑戰 2,450 前波壓力</td><td class="tag up">利多</td></tr>
+      <tr><td>聯發科(2454)</td><td class="num up">+220 (3,955)</td><td>8/26 暴漲 5.89% 至 3,955 元為當日大盤最大領漲主軸、AI ASIC Q4 量產題材+外資大力回補雙重動能、正式站穩 3,900 大關；NVDA 財報優於預期為 AI 邊緣/雲端 ASIC 供應鏈利多、8/27 有機會挑戰 4,000 心理關卡</td><td class="tag up">利多</td></tr>
+      <tr><td>鴻海(2317)</td><td class="num up">+4 (247)</td><td>8/26 收 247 元+4(+1.65%) 隨大盤反彈、AI 機櫃/伺服器出貨題材延續、NVDA 財報 Data Center +117% 為 GB300 機櫃供應鏈明確利多、8/27 開盤有連動反彈支撐</td><td class="tag up">利多</td></tr>
+      <tr><td>廣達(2382)</td><td class="num up">+3.5 (328.5)</td><td>8/26 收 328.5 元+3.5(+1.08%) AI 伺服器族群隨大盤反彈、NVDA Blackwell Ultra 出貨執行率為關鍵、Q3 展望 $108B ±2% 為 AI 伺服器 ODM 明確利多、8/27 開盤有連動支撐</td><td class="tag up">利多</td></tr>
+      <tr><td>台達電(2308)</td><td class="num up">反彈</td><td>8/26 電源族群隨電子權值反彈、AI 電源+液冷題材延續、NVDA 財報後 AI 資料中心資本支出加速為中期利多</td><td class="tag up">利多</td></tr>
+      <tr><td>國巨(2327)</td><td class="num neutral">停牌</td><td>8/26 盤後公告因重大訊息待公布、經證交所同意 8/27 起暫停交易；本波股價自 7 月高點累計跌幅約 30%、市場臆測可能為重大併購或資本結構調整、待訊息公布後才能明朗；股價停牌期間族群同業承壓觀察</td><td class="tag neutral">中性</td></tr>
+      <tr><td>華新科(2492)</td><td class="num down">震盪偏弱</td><td>MLCC 8/26 隨龍頭國巨異常震盪整體族群觀望、8/25 接近跌停後短線技術面偏弱、8/27 需觀察國巨重大訊息公布連動、產能滿載題材短線失色</td><td class="tag down">利空</td></tr>
+      <tr><td>禾伸堂(3026)</td><td class="num down">震盪偏弱</td><td>被動元件 8/26 隨族群觀望、8/25 跌停附近後短線續探底、族群獲利了結壓力持續、待國巨重大訊息公布方向明朗</td><td class="tag down">利空</td></tr>
+      <tr><td>大毅(2478)</td><td class="num down">走弱</td><td>MLCC 中小型股 8/26 隨族群觀望、短線技術面偏弱、族群龍頭國巨停牌前後連動壓力</td><td class="tag down">利空</td></tr>
+      <tr><td>信昌電(6173)</td><td class="num down">震盪偏弱</td><td>MLCC 陶瓷粉 8/26 隨族群觀望、8/25 接近跌停後短線技術面偏弱、中期高壓 MLCC 訂單題材觀察</td><td class="tag down">利空</td></tr>
+      <tr><td>日電貿(3090)</td><td class="num down">走弱</td><td>被動元件通路商 8/26 隨族群觀望、無重大個股消息、族群連動壓力延續</td><td class="tag down">利空</td></tr>
+      <tr><td>蜜望實(8043)</td><td class="num down">走弱</td><td>MLCC 通路 8/26 隨族群觀望、無重大個股消息、族群龍頭停牌連動觀察</td><td class="tag down">利空</td></tr>
+      <tr><td>千如(3236)</td><td class="num down">走弱</td><td>電感族群 8/26 隨被動元件同步觀望、AI 伺服器電源需求為中期支撐、短線族群氛圍偏弱</td><td class="tag down">利空</td></tr>
+      <tr><td>金山電(8042)</td><td class="num down">走弱</td><td>電感 8/26 隨被動元件走弱、無重大個股消息、族群連動壓力延續</td><td class="tag down">利空</td></tr>
+      <tr><td>立隆電(2472)</td><td class="num down">走弱</td><td>鋁質電容族群 8/26 隨族群觀望、AI 伺服器與電源應用中期支撐、短線族群氛圍偏弱</td><td class="tag down">利空</td></tr>
+      <tr><td>凱美(5317)</td><td class="num down">走弱</td><td>電容中小型股 8/26 隨族群觀望、短線技術面偏弱、族群龍頭停牌前後連動</td><td class="tag down">利空</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 四、美股焦點 ============ -->
+  <h2>四、美股焦點（可複委託操作）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th><th>影響</th><th>對台股連動</th></tr></thead>
+    <tbody>
+      <tr><td class="time">04:00</td><td>美股 8/26 三大指數同步收紅 Dow 連 3 日走揚 科技股撐盤</td><td class="src"><a class="src-link" href="https://finance.yahoo.com/markets/stocks/articles/stock-market-news-aug-26-130500595.html">Yahoo Finance</a></td><td>8/26 美股三大指數同步收紅：Dow +160.24(+0.30%) 收 53,577.40、S&amp;P 500 +24.38(+0.31%) 收 7,677.24、Nasdaq +171.11(+0.66%) 收 26,151.30；Dow 連 3 日走揚、6 個板塊收紅、資訊科技（XLK +0.9%）與通訊服務板塊領漲、市場靜候 NVDA 財報+核心 PCE 雙催化（市場預期：技術性反彈為主、方向感將由 8/27 亞洲盤前反映）。</td><td class="tag up">利多</td><td>台股 8/27 開盤有短線支撐 台積電 ADR 連動反彈</td></tr>
+      <tr><td class="time">16:20</td><td>NVDA 8/26 盤後公布 Q2 FY27 財報 全面優於預期 然股價-1.3%</td><td class="src"><a class="src-link" href="https://247wallst.com/cards/nvidia-q2-2027-earnings-nvda-01m0zw3hstde6rb2mt0kwj6d2c">24/7 Wall St.</a></td><td>NVIDIA Q2 FY27（截至 7/26/2026）：營收 $96.2B 優於預期 $92-95B、YoY +106%；Data Center 營收 $89.0B 優於預期 $86.33B、YoY +117%（占總營收 92%）；GAAP EPS $2.46/non-GAAP EPS $2.22、GAAP 毛利率 75.0%；Q3 展望 $108B ±2% 顯著優於預期 $104.2B；然盤後股價下跌 1.3%（市場預期：財報全面超共識、然高預期已消化、CEO Huang「AI has reached its inflection point」延續 AI 基礎建設加速主軸）。</td><td class="tag up">利多</td><td>台積電/CoWoS/HBM/AI 伺服器 8/27 開盤明確利多</td></tr>
+      <tr><td class="time">20:30</td><td>7 月核心 PCE +0.2%(月)/+3.3%(年) 符預期 未見改善進展</td><td class="src"><a class="src-link" href="https://www.bloomberg.com/news/articles/2026-08-26/key-us-inflation-gauge-posts-muted-advance-spending-stalls">Bloomberg</a></td><td>7 月核心 PCE 月增 0.2%（符預期）、YoY 3.3%（符預期但未達 3.2% 改善目標）；整體 PCE YoY 3.7%（略高於預期 3.6%）；個人消費支出停滯；市場定價 Fed 9/16 升息機率略降至 30-35%（市場預期：通膨黏著性延續、Warsh 8/28 Jackson Hole 演說為關鍵政策訊號窗口）。</td><td class="tag neutral">中性</td><td>殖利率下降對 AI 半導體 valuations 為短線支撐</td></tr>
+      <tr><td class="time">全日</td><td>資訊科技板塊 XLK +0.9% 領漲 半導體股 NVDA 財報前技術性回補</td><td class="src"><a class="src-link" href="https://finance.yahoo.com/markets/stocks/articles/stock-market-news-aug-26-130500595.html">Yahoo Finance</a></td><td>8/26 資訊科技板塊 XLK +0.9% 領漲、通訊服務板塊同步收紅、11 大板塊中 6 個收紅；市場靜候 NVDA 財報前 AI 半導體板塊技術性回補、防禦性資金部分撤出（市場預期：8/27 台北時間會反映 NVDA 財報全面優於預期利多）。</td><td class="tag up">利多</td><td>SOX 反彈+NVDA 盤後-1.3% 台股半導體 8/27 有機會續強</td></tr>
+      <tr><td class="time">全日</td><td>Warsh 首場 Jackson Hole 演說倒數 T-1 政策訊號窗口</td><td class="src"><a class="src-link" href="https://www.kiplinger.com/investing/live/nvidia-earnings-live-updates-and-commentary-august-2026">Kiplinger</a></td><td>Fed 主席 Warsh 8/28 首場 Jackson Hole 主題演說（自 5 月接任 Fed Chair 以來首次公開重大講話）；市場定價 9/16 升息機率降至約 33%、Fed funds rate 3.50-3.75% 目前已連 2 次會議按兵不動、69% 基金經理人預期演說為 neutral 已被消化（市場預期：Warsh 若釋放鴿派訊號恐再壓低殖利率）。</td><td class="tag neutral">中性</td><td>殖利率+AI 資本支出雙主軸 8/28-8/29 連動亞洲</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 四之二、美股指數與板塊動向 ============ -->
+  <h2>美股指數與板塊動向<span class="core-tag">CORE</span></h2>
+  <table class="index-table">
+    <thead><tr><th>指數</th><th>收盤</th><th>漲跌</th><th>漲跌幅</th></tr></thead>
+    <tbody>
+      <tr><td>道瓊工業指數</td><td class="num">53,577.40</td><td class="num up">+160.24</td><td class="pct up">+0.30%</td></tr>
+      <tr><td>S&amp;P 500</td><td class="num">7,677.24</td><td class="num up">+24.38</td><td class="pct up">+0.31%</td></tr>
+      <tr><td>那斯達克綜合指數</td><td class="num">26,151.30</td><td class="num up">+171.11</td><td class="pct up">+0.66%</td></tr>
+      <tr><td>費城半導體(SOX)</td><td class="num">~11,745</td><td class="num up">~+95</td><td class="pct up">~+0.80%</td></tr>
+    </tbody>
+  </table>
+  <table>
+    <thead><tr><th>板塊（GICS）</th><th>漲跌幅</th><th>表現</th><th>當日驅動/備註</th></tr></thead>
+    <tbody>
+      <tr><td>資訊科技</td><td class="pct up">+0.90%</td><td class="tag up">領漲</td><td>XLK +0.9% 領漲、NVDA 財報前技術性回補+殖利率溫和下降雙重利多、SOX 續漲約 0.8% 至 11,745、Micron/Intel/Broadcom 同步收紅</td></tr>
+      <tr><td>通訊服務</td><td class="pct up">+0.75%</td><td class="tag up">領漲</td><td>Meta/Google 隨科技股同步反彈、Netflix 溫和收紅、通訊類股跟隨資訊科技板塊回神為 8/26 第二領漲板塊</td></tr>
+      <tr><td>非必需消費</td><td class="pct up">+0.20%</td><td class="tag neutral">持平</td><td>AMZN 隨科技股微幅反彈、Tesla 溫和收紅、消費類股個股表現分歧</td></tr>
+      <tr><td>必需消費</td><td class="pct down">-0.15%</td><td class="tag neutral">持平</td><td>Walmart/Costco 防禦性資金部分撤出、個人消費支出停滯數據影響、月度累計仍偏弱</td></tr>
+      <tr><td>能源</td><td class="pct down">-0.65%</td><td class="tag down">領跌</td><td>WTI 續於 $81-82 區間震盪、Exxon/Chevron 承壓、8/25 -1.85% 後 8/26 續弱、獲利了結壓力延續</td></tr>
+      <tr><td>金融</td><td class="pct up">+0.25%</td><td class="tag up">領漲</td><td>大型銀行 JPM/BAC/GS 續穩、殖利率溫和下降有利利差、Berkshire 撐盤</td></tr>
+      <tr><td>醫療保健</td><td class="pct up">+0.10%</td><td class="tag neutral">持平</td><td>Moderna/Eli Lilly 溫和收紅、UNH 撐盤、當月 MTD 累計仍為當月領漲板塊之一</td></tr>
+      <tr><td>工業</td><td class="pct up">+0.15%</td><td class="tag neutral">持平</td><td>Caterpillar/Deere/UPS 傳統工業股回穩、Dow 撐盤動能減弱、GE 溫和上揚</td></tr>
+      <tr><td>原物料</td><td class="pct down">-0.30%</td><td class="tag down">領跌</td><td>金屬與化工類股隨油價下跌溫和承壓、Freeport 銅礦題材整理、Nucor 鋼鐵股疲弱</td></tr>
+      <tr><td>不動產</td><td class="pct down">-0.20%</td><td class="tag neutral">持平</td><td>10 年期殖利率溫和回升+Bessent 公債回購計畫效果消化、REITs 獲利了結、8/25 大漲後回檔</td></tr>
+      <tr><td>公用事業</td><td class="pct down">-0.35%</td><td class="tag down">領跌</td><td>類債特性受殖利率溫和回升壓抑、8/25 大漲 0.60% 後獲利了結、AI 資料中心電力題材短線消化</td></tr>
+    </tbody>
+  </table>
+  <ul class="law-list">
+    <li>板塊輪動：8/26 呈「NVDA 財報前技術性回補+資金撤離防禦回歸科技」主軸——資訊科技（XLK +0.9%）/通訊服務（+0.75%）連袂領漲為當日雙主軸、非必需消費/金融小幅收紅、能源（-0.65%）續為最大空方壓力、公用事業（-0.35%）/原物料（-0.30%）/不動產（-0.20%）承壓、11 個板塊 6 個收紅 5 個收黑格局。</li>
+    <li>資訊科技/半導體板塊研判：SOX 續漲約 0.8% 至 11,745+Micron/Intel/Broadcom 溫和回補+NVDA 財報前技術性反彈、對台股電子權值（台積電/聯發科/CoWoS 供應鏈）8/27 開盤為明確多方連動；NVDA 盤後財報 Data Center 營收 $89.0B YoY +117% + Q3 展望 $108B ±2% 遠超預期為 AI 半導體供應鏈明確利多、然盤後股價下跌 1.3% 顯示高預期已被消化為短線變數。</li>
+    <li>費城半導體(SOX)自 8/24 破 11,500 支撐後 8/25 反彈至 11,650、8/26 續站上 11,745；NVDA 財報全面優於預期為結構性利多、Q3 展望 $108B ±2% 隱含營收 YoY 延續 60%+成長為 AI 供應鏈明確方向、若 8/27 台北時間亞洲盤反映樂觀情緒 SOX 有機會挑戰 11,900-12,000 前波壓力區；然核心 PCE 3.3% 未見改善+Warsh 8/28 Jackson Hole 為附加變數。</li>
+  </ul>
+
+  <!-- ============ 五、日本（參考） ============ -->
+  <h2>五、日本（參考）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th></tr></thead>
+    <tbody>
+      <tr><td class="time">15:00</td><td>日經 8/26 收 66,262 +406 點(+0.62%) 連 2 日反彈 站上 66K</td><td class="src"><a class="src-link" href="https://tradingeconomics.com/japan/stock-market/news/526568">Trading Economics</a></td><td>日經 225 8/26 收 66,262.16 +405.73(+0.62%)、連 2 日反彈、站上 66K 大關；房地產/銀行/纖維類股領漲、Mitsubishi Materials +5.95% 為最大漲幅、SUMCO -3.90% 為半導體類股中最大跌幅；NVDA 財報前部位調整為主軸（市場預期：8/27 反映 NVDA 財報全面優於預期利多為多方訊號）。</td></tr>
+      <tr><td class="time">全日</td><td>BOJ 9/17-18 升息機率升至 82% 日圓 159 附近震盪</td><td class="src"><a class="src-link" href="https://finance.yahoo.com/economy/policy/articles/boj-eyeing-september-rate-hike-061747472.html">Reuters via Yahoo</a></td><td>BOJ 9/17-18 會議升息機率升至約 82%、預期由 1.00% 升至 1.25%、為 1995 年 9 月以來最高；日圓 8/26 於 158-159 區間震盪（USD/JPY 約 159.13）、日本 10 年期公債殖利率仍位 1996 年來高檔（市場預期：日圓升值壓力延續、出口股受壓、金融/銀行股受惠殖利率上升）。</td></tr>
+      <tr><td class="time">全日</td><td>Advantest/半導體股為 NVDA 財報連動觀察重點</td><td class="src"><a class="src-link" href="https://note.com/hirokimiyano/n/n69de39fd6952">Japan Market Report</a></td><td>日本半導體與 AI 相關類股 8/26 表現分歧、SUMCO -3.90% 為當日最大空方壓力、Kioxia/Tokyo Electron 溫和收紅、Advantest 8/25 反彈約 3.6% 後 8/26 整理為主；本週日經核心觀察為 NVDA 財報後對日股半導體股 8/27 反映+BOJ 9/17-18 升息預期下日圓走勢對出口股連動雙重變數。</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 六、香港（參考） ============ -->
+  <h2>六、香港（參考）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th></tr></thead>
+    <tbody>
+      <tr><td class="time">16:00</td><td>恒生 8/26 收漲 0.79% 港股資金流入偏強於陸股</td><td class="src"><a class="src-link" href="https://247wallst.com/cards/hong-kong-held-its-early-gain-all-the-way-to-the-close-fini-hsi-market-bell-01m0yhgrsk44gnqtntx399kbmd">24/7 Wall St.</a></td><td>恒生指數 8/26 收漲 0.79%、開盤即穩守漲幅至收盤、上證綜合指數同日收黑；港股資金流入偏強、投資人由 A 股輪動至 H 股港股上市中概股；恒生科技+金融+電信板塊全面收紅（市場預期：阿里巴巴配股 8/26 交割籌碼壓力已被消化+NVDA 財報前風險偏好回升）。</td></tr>
+      <tr><td class="time">全日</td><td>阿里巴巴 8/26 配股交割日 Joe Tsai 加碼 HK$82M 提振信心</td><td class="src"><a class="src-link" href="https://247wallst.com/cards/hong-kong-held-its-early-gain-all-the-way-to-the-close-fini-hsi-market-bell-01m0yhgrsk44gnqtntx399kbmd">24/7 Wall St.</a></td><td>阿里巴巴 8/26 HK$800 億配股交割日、董事局主席 Joe Tsai（蔡崇信）加碼買進 720,000 股（約 HK$82M）、繼多位高階主管接連加碼後、大幅減緩配股籌碼壓力顧慮；配售所得 100% 投入 AI 基礎設施為長期利多（市場預期：籌碼壓力減緩+高管加碼信號正面、8/27 有機會延續反攻）。</td></tr>
+      <tr><td class="time">全日</td><td>本週港股焦點：NVDA 財報反映+阿里配股完成+人民幣匯率</td><td class="src"><a class="src-link" href="https://tradingeconomics.com/hong-kong/stock-market">Trading Economics</a></td><td>本週港股核心觀察為 8/27 NVDA 財報反映對恒生科技與光通信類股連動（中際旭創/中芯國際）、阿里巴巴 8/26 配股交割完成後籌碼壓力減緩、以及美團/京東/騰訊等中概科技與消費類財報進度；人民幣匯率走勢與 10 月中共政策訊號為中期搖擺因子（市場預期：8/27-8/28 為多空關鍵）。</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 七、跨市場連動分析 ============ -->
+  <h2>七、跨市場連動分析</h2>
+  <ul class="law-list">
+    <li>美股→台股：8/26 SOX 續漲約 0.8% 至 11,745+資訊科技 XLK +0.9% 領漲+通訊服務 +0.75% 雙主軸、對台股 8/27 週四開盤為明確多方連動；NVDA 8/26 盤後財報全面優於預期（營收 $96.2B YoY +106%/Data Center $89.0B YoY +117%/Q3 展望 $108B ±2%）為 AI 供應鏈明確結構性利多、對台積電/聯發科/廣達/緯創/CoWoS/HBM 8/27 開盤為多方主軸；然 NVDA 盤後股價下跌 1.3% 顯示高預期已被消化為短線波動變數。</li>
+    <li>匯率：台幣 8/26 於 31.8-31.9 區間震盪、外資大買 366 億元後短線有升值壓力；日圓 158-159 區間 BOJ 9/17-18 升息機率升至 82%、預期由 1.00% 升至 1.25% 為 1995 年來最高；美 10 年期殖利率 8/26 溫和回升至 4.72%（核心 PCE 3.3% 未見改善+Bessent 公債回購計畫效果消化雙重因素）、WTI 續於 $81-82 區間震盪對亞洲進口通膨壓力持續減緩。</li>
+    <li>其他：MSCI 8/31 生效前記憶體/PCB 6 檔升格（華邦電/南亞科/群聯/創意/南電/台耀）預期於 8/28-8/31 之後才明顯發酵、被動買盤為本週後段亞洲半導體族群結構性支撐；被動元件龍頭國巨 8/27 起暫停交易為族群短線變數、待重大訊息公布方向明朗；阿里巴巴 8/26 HK$800 億配股交割日+Joe Tsai 加碼 HK$82M 為亞洲科技股信心正面訊號；Warsh 8/28 首場 Jackson Hole 演說為連續政策訊號窗口、市場定價 9/16 升息機率降至 33%；週末美加關稅疑慮升溫+中東地緣風險延續為中期不定變數。</li>
+  </ul>
+
+  <!-- ============ 八、今日總覽 ============ -->
+  <h2>八、今日總覽</h2>
+  <div class="overview">
+    <div class="mood">整體氛圍：利多（8/26 台股大漲 663 點站上 45,833+量能突破 8,000 億元+外資大買 366 億元+NVDA 8/26 盤後財報全面優於預期，8/27 亞洲盤有機會延續多方氛圍反映 NVDA 利多；然核心 PCE 未見改善+國巨停牌為短線變數）</div>
+    <ul class="law-list">
+      <li>台股關注 1：加權指數 8/27 週四開盤有機會延續反攻、45,833 突破後 46,000-46,500 為短線第一目標區、45,500 為多方支撐、成交量能否延續 8,000 億元以上為多方回補訊號持續與否關鍵；NVDA 財報 Q3 展望 $108B ±2% 遠超預期為 AI 供應鏈結構性利多。</li>
+      <li>台股關注 2：台積電 2,415 為關鍵心理關卡、NVDA 財報全面優於預期後 8/27 有機會挑戰 2,450 前波壓力；聯發科 3,955 續攻 4,000 心理關卡為 AI ASIC 中期成長動能訊號；鴻海 247/廣達 328.5 為 AI 伺服器 ODM 連動主軸。</li>
+      <li>台股關注 3：被動元件龍頭國巨 8/27 起暫停交易為族群短線變數、待重大訊息公布（市場臆測可能為重大併購或資本結構調整）方向明朗；MSCI 8/31 生效前記憶體/PCB 6 檔升格為結構性利多、被動買盤預期於 8/28-8/31 之後明顯發酵。</li>
+      <li>美股關注 1：NVDA Q2 FY27 財報全面優於預期（營收 $96.2B/Data Center $89.0B YoY +117%/Q3 展望 $108B ±2%）為 AI 供應鏈結構性利多、然盤後股價下跌 1.3% 顯示高預期已被消化為短線變數；CEO Huang「AI has reached its inflection point」延續 AI 基礎建設加速主軸。</li>
+      <li>美股關注 2：7 月核心 PCE +0.2%(月)/+3.3%(年) 符預期但未見改善進展、Fed 9/16 升息機率略降至 30-35%、Warsh 8/28 首場 Jackson Hole 演說為關鍵政策訊號窗口、市場預期 Warsh 若釋放鴿派訊號恐再壓低殖利率利多科技股。</li>
+      <li>風險提示 1：NVDA 盤後股價下跌 1.3% 顯示財報高預期已被消化為 8/27 台股開盤第一波動變數、若亞洲盤情緒過度樂觀恐面臨獲利了結；核心 PCE 通膨黏著性未見改善+Warsh 8/28 Jackson Hole 演說若釋放鷹派訊號為中期殖利率再飆升動能雙重風險。</li>
+      <li>風險提示 2：被動元件龍頭國巨 8/27 起暫停交易為族群短線最大變數、待重大訊息公布方向明朗前族群動能受壓；BOJ 9/17-18 升息機率升至 82% 為亞洲匯市中期變數；週末美加關稅疑慮升溫+中東地緣風險延續為中期不定變數；外資期指淨空單雖已回補至 75,000-80,000 口區間但仍位歷史相對高檔。</li>
+    </ul>
+  </div>
+
+  <footer class="brief-foot">
+    本簡報為資訊整理，非投資建議。「事實」與「市場預期／分析觀點」已於摘要中區分標示。<br>
+    自動產出於 2026/08/27 07:00（UTC+8）。
+  </footer>
+</body>
+</html>
