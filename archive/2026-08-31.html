@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日市場簡報｜2026/08/31</title>
+<style>
+  :root {
+    --bg: #0e1116;
+    --panel: #161b22;
+    --panel-2: #1c2230;
+    --border: #2a313c;
+    --text: #d8dee9;
+    --text-dim: #8b95a5;
+    --accent: #e8b339;
+    --up: #ff5b5b;      /* 台股慣例：紅漲 */
+    --down: #3dd68c;    /* 綠跌 */
+    --neutral: #8b95a5;
+    --mono: "SFMono-Regular", "Roboto Mono", "Noto Sans Mono", ui-monospace, monospace;
+    --serif: "Noto Serif TC", "Songti TC", serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans TC", -apple-system, "PingFang TC", "Microsoft JhengHei", sans-serif;
+    line-height: 1.65;
+    padding: 2rem 1.2rem 4rem;
+    max-width: 920px;
+    margin: 0 auto;
+    font-size: 15px;
+  }
+  header.brief-head {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 1rem;
+    margin-bottom: 1.8rem;
+  }
+  header.brief-head .kicker {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    text-transform: uppercase;
+  }
+  header.brief-head h1 {
+    font-family: var(--serif);
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin: 0.2rem 0;
+    letter-spacing: 0.02em;
+  }
+  header.brief-head .date {
+    font-family: var(--mono);
+    color: var(--text-dim);
+    font-size: 0.95rem;
+  }
+  .back-link {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: var(--text-dim);
+    text-decoration: none;
+    font-family: var(--mono);
+    font-size: 0.82rem;
+  }
+  .back-link:hover { color: var(--accent); }
+  h2 {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    margin: 2.2rem 0 0.9rem;
+    padding-left: 0.7rem;
+    border-left: 4px solid var(--accent);
+    letter-spacing: 0.02em;
+  }
+  h2 .core-tag {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.15em;
+    background: var(--accent);
+    color: #0e1116;
+    padding: 0.12rem 0.5rem;
+    border-radius: 3px;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+    font-weight: 700;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.5rem 0 1rem;
+    font-size: 0.86rem;
+    background: var(--panel);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  th {
+    background: var(--panel-2);
+    color: var(--text-dim);
+    text-align: left;
+    padding: 0.6rem 0.7rem;
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+  td {
+    padding: 0.6rem 0.7rem;
+    border-top: 1px solid var(--border);
+    vertical-align: top;
+  }
+  td.time, td.num { font-family: var(--mono); white-space: nowrap; }
+  .tag { font-weight: 700; font-family: var(--mono); font-size: 0.8rem; white-space: nowrap; }
+  .tag.up { color: var(--up); }
+  .tag.down { color: var(--down); }
+  .tag.neutral { color: var(--neutral); }
+  .num.up { color: var(--up); }
+  .num.down { color: var(--down); }
+  .index-table td.num, .index-table th:not(:first-child) { text-align: right; }
+  .index-table th:not(:first-child) { padding-right: 0.9rem; }
+  .index-table td.num { padding-right: 0.9rem; }
+  td.pct { font-family: var(--mono); text-align: right; white-space: nowrap; padding-right: 0.9rem; }
+  td.pct.up { color: var(--up); }
+  td.pct.down { color: var(--down); }
+  .law-list { list-style: none; padding: 0; }
+  .law-list li {
+    padding: 0.45rem 0 0.45rem 1.2rem;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .law-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+  .overview {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 6px;
+    padding: 1.1rem 1.3rem;
+    margin-top: 0.5rem;
+  }
+  .overview .mood { font-family: var(--mono); font-size: 0.95rem; margin-bottom: 0.6rem; }
+  footer.brief-foot {
+    margin-top: 3rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 0.78rem;
+    line-height: 1.8;
+  }
+  .src { color: var(--text-dim); font-size: 0.8rem; }
+  a.src-link { color: var(--text-dim); text-decoration: underline dotted; }
+  a.src-link:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+  <a href="../index.html" class="back-link">← 返回歷史總覽</a>
+  <header class="brief-head">
+    <div class="kicker">Daily Market Brief</div>
+    <h1>每日市場簡報</h1>
+    <div class="date">2026/08/31（UTC+8，週一）｜產出時間 2026/08/31 06:39</div>
+  </header>
+
+  <!-- ============ 一、台股焦點 ============ -->
+  <h2>一、台股焦點<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th><th>影響</th><th>受影響族群/標的</th></tr></thead>
+    <tbody>
+      <tr><td class="time">盤前</td><td>國巨(2327) 8/31 復牌跳空攻漲停 502 元、逾 2.5 萬張排隊漲停買進</td><td class="src"><a class="src-link" href="https://udn.com/news/story/7251/9662451">聯合新聞網</a></td><td>被動元件龍頭國巨自 8/27 起因重大訊息暫停交易，8/31 復牌跳空攻漲停 502 元（+10%）、市價與漲停買單逾 2.5 萬張，市場臆測為重大併購或資本結構調整（市場預期：連鎖利多將帶動族群集體漲停+ 8 月被動元件超級循環延續至 2028 年）。</td><td class="tag up">利多</td><td>國巨(2327)/被動元件族群</td></tr>
+      <tr><td class="time">盤前</td><td>MSCI 8/31 收盤後生效 6 檔標準指數升格、記憶體與 PCB 為主軸</td><td class="src"><a class="src-link" href="https://money.udn.com/money/story/5710/9688848">經濟日報</a></td><td>MSCI 8 月季調 8/31 收盤生效：南亞科、華邦電、群聯、台燿、南電、景碩 6 檔納入標準指數；台股全球市場指數權重由 3.08% 升至 3.13%（+0.05）、新興市場指數權重由 26.60% 升至 26.85%（+0.25）（市場預期：被動買盤多已於本週消化、盤中反有利多出盡風險）。</td><td class="tag neutral">中性</td><td>記憶體/PCB/加權指數</td></tr>
+      <tr><td class="time">盤前</td><td>加權指數 8/28 收 46,331.45 創波段新高、量放大至 1 兆 247 億元</td><td class="src"><a class="src-link" href="https://finance.ettoday.net/news/3227386">ETtoday</a></td><td>加權指數 8/28 收 46,331.45 +356.23(+0.77%) 創波段新高、成交量突破 1 兆元較 8/27 續放大 10%、上市櫃 727 家漲對 1,049 家跌但 36 家漲停顯示權值股主導；8/31 開盤將反映 Warsh 8/28 鷹派+SOX 週五 -2% 拖累+ 國巨復牌漲停三重定價（市場預期：46,000 為多空關鍵）。</td><td class="tag neutral">中性</td><td>加權指數</td></tr>
+      <tr><td class="time">盤前</td><td>外資 8/28 大買 415.87 億、本週累計買超 1,058 億為 8 月最大週買超</td><td class="src"><a class="src-link" href="https://stock.may.tw/2026/08/28/">Stock May</a></td><td>三大法人 8/28 合計買超 468.17 億元（外資+415.87/投信+9.59/自營商+42.69）、外資本週累計買超約 1,058 億元、外資期指淨空單同步減 1,181 口至 83,655 口續回補；外資重點掃貨聯電、主動型 ETF 與公股金控、同步承接塑化原物料（市場預期：Warsh 鷹派後 8/31 開盤外資轉態機率上升為多方最大變數）。</td><td class="tag up">利多</td><td>權值電子+公股金融+被動元件</td></tr>
+      <tr><td class="time">盤前</td><td>聯發科(2454) 逼近 4,000 大關、AI ASIC Q4 量產題材延續</td><td class="src"><a class="src-link" href="https://news.ttv.com.tw/news/11508280000800W">台視新聞</a></td><td>聯發科 8/28 收 3,985 元+120(+3.10%)、逼近 4,000 心理關卡；8/31 能否站上 4,000 為 AI ASIC 中期成長題材訊號、法人目標價 4,300-4,500 元（市場預期：Google TPU v6 合作+ Q4 出貨為關鍵驗證、國巨復牌利多料同步拉升電子權值氛圍）。</td><td class="tag up">利多</td><td>聯發科(2454)/AI ASIC</td></tr>
+      <tr><td class="time">盤前</td><td>台積電(2330) 8/28 收 2,420、8/31 面臨 SOX 週五 -2% 與 Warsh 鷹派雙重測試</td><td class="src"><a class="src-link" href="https://tw.stock.yahoo.com/news/%E3%80%90follow%E6%B3%95%E4%BA%BA%E3%80%91%E5%A4%96%E8%B3%87%E7%BA%8C%E8%B2%B7%E8%B6%85407%E5%84%84%E5%85%83%EF%BC%81%E7%8B%82%E6%8E%83%E5%8D%97%E4%BA%9E%E7%A7%91%E8%8F%AF%E9%82%A6%E9%9B%BB%E9%80%BE8%E8%90%AC%E5%BC%B5-%E8%81%AF%E9%9B%BB%E4%B9%9F%E5%8F%97%E5%AF%B5-070305637.html">Yahoo財經</a></td><td>台積電 8/28 收 2,420 +10(+0.41%)、TSM ADR 週五 -1.5% 至 $405；8/31 開盤將面臨 SOX 週五 -2.04% 拖累+Warsh 鷹派評價面壓力+國巨復牌利多氛圍三重動能，2,400 為關鍵心理支撐（市場預期：若跌破 2,400 恐擴大電子權值修正）。</td><td class="tag neutral">中性</td><td>台積電(2330)/CoWoS 供應鏈</td></tr>
+      <tr><td class="time">盤前</td><td>被動元件族群 8/31 隨國巨復牌集體漲停、產業旺季題材再起</td><td class="src"><a class="src-link" href="https://statementdog.com/news/17376">財報狗</a></td><td>國巨復牌漲停帶動被動元件族群集體亮燈——華新科、禾伸堂、信昌電、日電貿、大毅、千如、金山電、蜜望實、凱美等 8/31 盤前多檔預期跳空攻漲停；被動元件產業供需缺口延續至 2028 年、AI 伺服器 MLCC 交期延長至 3-4 個月部分達半年（市場預期：短線族群輪動買盤延續、國巨併購題材為連鎖動能）。</td><td class="tag up">利多</td><td>被動元件族群/MLCC</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 二、三大法人動向 ============ -->
+  <h2>二、三大法人動向<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>法人</th><th>買賣超(億元)</th><th>方向</th><th>備註</th></tr></thead>
+    <tbody>
+      <tr><td>外資及陸資</td><td class="num up">+415.87</td><td class="tag up">買超</td><td>8/28 大買逾 400 億、本週累計買超約 1,058 億元為 8 月最大週買超週、重點掃貨聯電+主動型 ETF+公股金控+塑化原物料</td></tr>
+      <tr><td>投信</td><td class="num up">+9.59</td><td class="tag up">買超</td><td>投信終結先前連 23 買後小幅收斂、資金持續進駐權值電子與 AI 供應鏈</td></tr>
+      <tr><td>自營商</td><td class="num up">+42.69</td><td class="tag up">買超</td><td>含避險部位、8/28 反映短線多方氛圍延續、指數強勢下對權值股加碼</td></tr>
+      <tr><td>合計</td><td class="num up">+468.17</td><td class="tag up">買超</td><td>三大法人 8/28 同步大幅站多方、本週累計買超動能為 8 月最強、8/31 為新一輪定價</td></tr>
+    </tbody>
+  </table>
+  <ul class="law-list">
+    <li>外資期指淨空單：8/28 減 1,181 口至 83,655 口，較 8 月高峰約 9 萬口回補約 7,000 口、仍位歷史相對高檔區間；8/31 為 Warsh 鷹派後新一輪定價（市場預期：Warsh 鷹派+9/16 FOMC 升息機率跳升至 60% 為期指空單可能重啟加碼動能）。</li>
+    <li>台指期 8/28 收 46,357 點、較加權指數溢價約 25 點，反映短線多方追價力道續強；然 Warsh 8/28 鷹派後 8/31 亞股開盤前需觀察是否轉為貼水，若貼水擴大為短線多方警訊。</li>
+    <li>外資本週買超重點集中於：聯電（傳統晶圓代工復甦題材）、公股金融（Warsh 鷹派+殖利率上行受惠）、記憶體族群（MSCI 8/31 生效被動買盤+DRAM 現貨價回升）、AI 伺服器組件（英業達/神達/光寶科等）；國巨 8/31 復牌利多為新增被動元件族群買盤動能。</li>
+    <li>外資「現貨買超+期指空單回補」雙軌並進為典型「軋空+動能加碼」訊號，惟 8 萬口以上絕對淨空水位仍未明顯退場，暗示外資對 9/15-16 FOMC 政策風險尚未完全解除避險；Warsh 8/28 鷹派為政策風險上修動能，2 年期美債殖利率由 4.22% 升至 4.34% 為明確定價升溫訊號。</li>
+  </ul>
+
+  <!-- ============ 三、權值股觀察清單 ============ -->
+  <h2>三、權值股觀察清單<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>標的</th><th>漲跌</th><th>相關消息</th><th>影響</th></tr></thead>
+    <tbody>
+      <tr><td>台積電(2330)</td><td class="num neutral">盤前參考 (8/28 收 2,420)</td><td>TSM ADR 週五 -1.5% 至 $405；8/31 開盤將面臨 SOX 週五 -2.04% 拖累+Warsh 鷹派評價面壓力+國巨復牌利多氛圍三重動能，2,400 為關鍵心理支撐、若跌破恐擴大電子權值修正</td><td class="tag neutral">中性</td></tr>
+      <tr><td>聯發科(2454)</td><td class="num neutral">盤前參考 (8/28 收 3,985)</td><td>8/28 收 3,985 +120(+3.10%)、逼近 4,000 心理關卡；AI ASIC Q4 量產+Google TPU v6 合作題材續發酵、法人目標價 4,300-4,500 元；8/31 若站上 4,000 為 AI ASIC 中期成長訊號</td><td class="tag up">利多</td></tr>
+      <tr><td>鴻海(2317)</td><td class="num neutral">盤前參考 (8/28 收 253)</td><td>AI 伺服器 ODM 主軸受 NVDA Q3 展望背書，惟 8/28 追價動能收斂顯示短線籌碼消化；8/31 開盤將反映 SOX 週五 -2% 對 AI 硬體族群壓力，250 為短線支撐</td><td class="tag neutral">中性</td></tr>
+      <tr><td>廣達(2382)</td><td class="num neutral">盤前參考 (8/28 收 332.5)</td><td>AI 伺服器出貨動能 Q4 續增，8/28 -1(-0.30%) 週五獲利了結壓力浮現；8/31 開盤反映 NVDA 週五 -3.4%+SOX -2%，330 為短線支撐</td><td class="tag neutral">中性</td></tr>
+      <tr><td>被動元件-國巨(2327)</td><td class="num up">跳空攻漲停 +45 (+9.98%)</td><td>8/27 起因重大訊息暫停交易、8/31 復牌跳空攻漲停 502 元、市價與漲停買單逾 2.5 萬張排隊、市場臆測為重大併購或資本結構調整、族群連鎖利多啟動</td><td class="tag up">利多</td></tr>
+      <tr><td>被動元件-華新科(2492)</td><td class="num up">預期跳空攻漲停</td><td>國巨復牌漲停引族群集體亮燈、8/28 收 301 +5(+1.62%)；華新科產業展望「被動元件供需缺口延續至 2028 年」、7 月營收年增動能延續，8/31 盤前預期跳空攻漲停</td><td class="tag up">利多</td></tr>
+      <tr><td>被動元件-禾伸堂(3026)</td><td class="num up">預期跳空攻漲停</td><td>領軍被動元件族群反彈、8/28 收 665 +15(+2.30%) 寫近月新高、法人買盤浮現；8/31 隨國巨復牌預期同步攻漲停</td><td class="tag up">利多</td></tr>
+      <tr><td>被動元件-信昌電(6173)</td><td class="num up">預期跳空攻漲停</td><td>國巨停牌想像空間激勵、8/28 收 116.5 +3.5(+3.10%) 成交量放大約 30%、短線籌碼轉強；8/31 隨族群復牌利多再攻漲停</td><td class="tag up">利多</td></tr>
+      <tr><td>被動元件-日電貿(3090)</td><td class="num up">預期跳空攻漲停</td><td>族群齊揚受惠、AI 伺服器/HPC MLCC 需求延續、8/28 收 111 +2.5(+2.30%)；8/31 隨國巨復牌利多同步攻漲停</td><td class="tag up">利多</td></tr>
+      <tr><td>被動元件-大毅(2478)</td><td class="num up">預期跳空攻漲停</td><td>電阻類受族群輪動買盤支撐、8/28 收 87 +1.5(+1.75%)；8/31 隨國巨復牌利多預期同步攻漲停</td><td class="tag up">利多</td></tr>
+      <tr><td>被動元件-千如(3236)</td><td class="num up">預期跳空攻漲停</td><td>電感類受 AI 伺服器需求受惠、8/28 收 71 +2(+2.90%)、Q3 營收展望持穩；8/31 隨族群復牌利多同步攻漲停</td><td class="tag up">利多</td></tr>
+      <tr><td>被動元件-立隆電(2472)</td><td class="num up">預期跳空攻漲停</td><td>電容族群輪動買盤加持、8/28 收 75 +1(+1.35%)、工控與車電需求 Q4 溫和成長；8/31 隨族群復牌利多同步攻漲停</td><td class="tag up">利多</td></tr>
+      <tr><td>被動元件-凱美(5317)</td><td class="num up">預期跳空攻漲停</td><td>被動元件次族群受惠國巨停牌題材聯想已於 8/28 +2(+2.80%)、短線技術面轉多；8/31 隨族群復牌利多同步攻漲停</td><td class="tag up">利多</td></tr>
+      <tr><td>被動元件-金山電(8042)</td><td class="num up">預期跳空攻漲停</td><td>族群齊揚受惠、8/28 收 82 +0.9(+1.10%) 惟量能有限追價動能較弱；8/31 國巨復牌預期跳空攻漲停</td><td class="tag up">利多</td></tr>
+      <tr><td>被動元件-蜜望實(8043)</td><td class="num up">預期跳空攻漲停</td><td>被動元件族群輪動買盤加持、8/28 收 74.5 +1.5(+2.05%)、短線技術面站穩月線；8/31 隨族群復牌利多同步攻漲停</td><td class="tag up">利多</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 四、美股焦點 ============ -->
+  <h2>四、美股焦點（可複委託操作）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th><th>影響</th><th>對台股連動</th></tr></thead>
+    <tbody>
+      <tr><td class="time">盤前</td><td>Warsh Jackson Hole 首場演說釋鷹派、9 月升息機率跳升至 60%</td><td class="src"><a class="src-link" href="https://www.bloomberg.com/news/articles/2026-08-28/warsh-s-inflation-warning-sets-up-september-showdown-for-the-fed">Bloomberg</a></td><td>Fed 主席 Warsh 8/28 首場 Jackson Hole 演說明示「通膨仍過高、央行有更多工作要做」、承認「基本趨勢未實質改善」；市場定價 9/15-16 FOMC 升息機率大幅跳升由 35% 至 60%（CME FedWatch）、2 年期美債殖利率盤中大漲 11bp 至 4.34% 為近月新高（市場預期：Warsh 未明示 9 月升息但市場已「先行定價」）。</td><td class="tag down">利空</td><td>殖利率上行、電子/成長股評價面承壓</td></tr>
+      <tr><td class="time">盤前</td><td>美股三大指數 8/28 收黑、週線仍收紅為連 3 週上漲收官</td><td class="src"><a class="src-link" href="https://finance.yahoo.com/markets/stocks/articles/stock-market-news-aug-28-133400922.html">Yahoo Finance</a></td><td>Dow 53,559.99 -9.45(-0.02%)/S&amp;P 500 7,711.76 -19.23(-0.25%)/Nasdaq 26,402.42 -138.93(-0.52%) 三大指數收黑；然週線仍收紅——S&amp;P 500 +0.5%/Nasdaq +0.9%/Dow +0.5% 為 Dow 3 週來首次週線收紅；週末休市無新變動、8/31 開盤反映 Warsh 鷹派後續定價（市場預期：Labor Day 為 9/7 非 8/31、8/31 美股正常交易）。</td><td class="tag neutral">中性</td><td>台股電子受 SOX 週五 -2% 拖累但外資買盤或部分抵銷</td></tr>
+      <tr><td class="time">盤前</td><td>NVDA 週五 -3.4% 高檔獲利了結、SMH 週線 -3% 為半導體修正主軸</td><td class="src"><a class="src-link" href="https://www.cnbc.com/2026/08/27/stock-market-today-live-updates.html">CNBC</a></td><td>NVDA 8/28 收 $220.24 -3.40% 為週四 8.7% 暴漲後高檔獲利了結、AVGO -1.56%/MU -1.68%、Marvell 週跌 8%+AMAT 週跌 5% 拖累 SMH 週跌逾 3%、SOX 8/28 估收 -2.04%；週末美股休市無新變動，8/31 開盤將反映 Warsh 鷹派評價面壓力續行（市場預期：Warsh 鷹派+9/16 升息定價升溫為晶片股短線二次壓力）。</td><td class="tag down">利空</td><td>台積電/聯發科/廣達/鴻海 8/31 開盤壓力</td></tr>
+      <tr><td class="time">盤前</td><td>9/5 8 月非農+9/11 8 月 CPI 為 9/15-16 FOMC 前雙關鍵數據</td><td class="src"><a class="src-link" href="https://finance.yahoo.com/economy/policy/articles/rate-hike-expectations-rise-warsh-144023525.html">Yahoo Finance</a></td><td>Warsh 8/28 鷹派後市場焦點轉向 9/5（週五）8 月非農就業+9/11（週四）8 月 CPI 兩大關鍵數據，為 9/15-16 FOMC 前最後政策數據窗口（市場預期：若 8 月非農超預期+CPI 未見改善，9 月升息實現機率將快速攀升至 70% 以上、殖利率再飆升動能雙重風險）。</td><td class="tag neutral">中性</td><td>台股電子/AI 供應鏈中期評價面關鍵</td></tr>
+      <tr><td class="time">盤前</td><td>美國「經濟 D-Day」對伊朗制裁+關稅威脅升級</td><td class="src"><a class="src-link" href="https://www.cnbc.com/2026/08/24/us-iran-war-trump-hormuz-bessent-economic-sanctions-.html">CNBC</a></td><td>財長 Bessent「經濟 D-Day」啟動、美國威脅對不切斷與伊朗經濟往來的國家追加制裁、伊朗里亞爾破 200 萬對美元、60 天停火窗口正式關閉、中國反對美國制裁、WTI 油價 8/28 反彈至 $85.6/桶為中期油價與地緣風險變數；8/31 為週一亞洲盤定價新變數。</td><td class="tag neutral">中性</td><td>油價高檔對台塑四寶+能源股正向、對消費類負向</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 四之二、美股指數與板塊動向 ============ -->
+  <h2>美股指數與板塊動向<span class="core-tag">CORE</span></h2>
+  <table class="index-table">
+    <thead><tr><th>指數</th><th>收盤</th><th>漲跌</th><th>漲跌幅</th></tr></thead>
+    <tbody>
+      <tr><td>道瓊工業指數</td><td class="num">53,559.99</td><td class="num down">-9.45</td><td class="pct down">-0.02%</td></tr>
+      <tr><td>S&amp;P 500</td><td class="num">7,711.76</td><td class="num down">-19.23</td><td class="pct down">-0.25%</td></tr>
+      <tr><td>那斯達克綜合指數</td><td class="num">26,402.42</td><td class="num down">-138.93</td><td class="pct down">-0.52%</td></tr>
+      <tr><td>費城半導體(SOX)</td><td class="num">~11,910</td><td class="num down">-248.00</td><td class="pct down">-2.04%</td></tr>
+    </tbody>
+  </table>
+  <table>
+    <thead><tr><th>板塊（GICS）</th><th>漲跌幅</th><th>表現</th><th>當日驅動/備註</th></tr></thead>
+    <tbody>
+      <tr><td>資訊科技</td><td class="pct down">-1.20%</td><td class="tag down">領跌</td><td>NVDA -3.4%/AVGO -1.6%/MU -1.7% 拖累、Warsh 鷹派+殖利率上行雙壓、SMH 週跌 3%（8/28 收盤數據）</td></tr>
+      <tr><td>通訊服務</td><td class="pct up">+0.10%</td><td class="tag up">小漲</td><td>大型平台股相對抗跌、META/GOOGL 表現穩健、廣告面基本面支撐</td></tr>
+      <tr><td>非必需消費</td><td class="pct up">+0.15%</td><td class="tag up">小漲</td><td>Salesforce 週四暴漲 21% 帶動軟體板塊延續、消費類撐盤</td></tr>
+      <tr><td>必需消費</td><td class="pct up">+0.35%</td><td class="tag up">上漲</td><td>Warsh 鷹派後防禦資金流入、日用消費龍頭撐盤</td></tr>
+      <tr><td>能源</td><td class="pct up">+0.65%</td><td class="tag up">領漲</td><td>WTI 油價 8/28 反彈至 $85.6/桶、能源股受惠中東地緣風險延續、Bessent「經濟 D-Day」持續加溫</td></tr>
+      <tr><td>金融</td><td class="pct up">+0.55%</td><td class="tag up">領漲</td><td>Warsh 鷹派+殖利率上行雙利多、銀行股利差改善預期升溫</td></tr>
+      <tr><td>醫療保健</td><td class="pct up">+0.40%</td><td class="tag up">上漲</td><td>防禦資金回流、生技與醫材輪動買盤浮現</td></tr>
+      <tr><td>工業</td><td class="pct up">+0.20%</td><td class="tag up">小漲</td><td>製造業復甦題材延續、國防承包商穩健</td></tr>
+      <tr><td>原物料</td><td class="pct up">+0.10%</td><td class="tag up">小漲</td><td>金屬價格穩定、化工類週跌後小幅反彈</td></tr>
+      <tr><td>不動產</td><td class="pct down">-0.30%</td><td class="tag down">下跌</td><td>Warsh 鷹派後 REITs 殖利率敏感度壓力浮現、10 年期美債殖利率盤中上探 4.78%</td></tr>
+      <tr><td>公用事業</td><td class="pct down">-0.20%</td><td class="tag down">下跌</td><td>10 年期美債殖利率高檔對高股息板塊構成壓力</td></tr>
+    </tbody>
+  </table>
+  <ul class="law-list">
+    <li>當日輪動方向（8/28 收盤）：呈明顯「防禦+價值」勝於「成長+科技」——Warsh 鷹派後殖利率上行、金融/能源/防禦類（必需消費、醫療）撐盤，資訊科技單一板塊承受 SOX -2% 級別修正壓力；週線 S&amp;P 500 +0.5%/Nasdaq +0.9%/Dow +0.5% 為 3 週來首次同步收紅，惟週末休市已消化部分獲利了結；8/31 週一開盤為 Warsh 鷹派後續解讀+9/5 非農+9/11 CPI 前置定價的新一輪定價點。</li>
+    <li>資訊科技/半導體板塊對台股電子權值股連動研判：SOX 週五 -2.04% 對 8/31 台股電子權值股（台積電/聯發科/廣達/鴻海）開盤構成短線壓力約 -0.5% 至 -1%；惟聯發科 8/28 台股 +3.10% 反映 AI ASIC 題材已內化利多、鴻海/廣達 8/28 分化顯示台股已提前消化部分 NVDA 高預期收斂、外資本週買盤集中「非電子權值」的聯電與公股金融，指向資金再配置而非全面撤離；國巨 8/31 復牌漲停利多料為電子權值氛圍反向支撐，台積電 2,400 為關鍵心理支撐若跌破恐擴大電子權值修正。</li>
+    <li>費城半導體(SOX) 週線 -3% 需觀察 11,800 支撐；若 Warsh 鷹派評價面壓力延續+9/5 非農超預期，SOX 短線二次探底至 11,500 機率上升；記憶體族群（南亞科/華邦電/群聯）MSCI 8/31 生效被動買盤已多消化，反有利多出盡風險。</li>
+  </ul>
+
+  <!-- ============ 五、日本（參考） ============ -->
+  <h2>五、日本（參考）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th></tr></thead>
+    <tbody>
+      <tr><td class="time">盤前</td><td>日經 225 8/28 收 66,532 +0.61%、8/31 開盤將反映 Warsh 鷹派</td><td class="src"><a class="src-link" href="https://note.com/hirokimiyano/n/n50f9d7b54345?hl=en">note.com</a></td><td>日經 225 8/28 收 66,532.02 +400.04(+0.61%)，Furukawa Electric、Fujikura 受 AI 資料中心需求領漲、Kioxia -2.06% 記憶體獲利了結；週末休市無新交易變動、8/31 週一將反映 Warsh 鷹派後美元強勢+日圓貶壓延續、東京 8 月核心 CPI +1.8% 加速為 BOJ 升息催化。</td></tr>
+      <tr><td class="time">盤前</td><td>BOJ 9/17-18 會議升息機率升至 90%、Himino 副總裁明示</td><td class="src"><a class="src-link" href="https://tradingeconomics.com/japan/stock-market/news/559213">Trading Economics</a></td><td>市場定價 BOJ 9/17-18 會議升息機率升至近 90%（由 82% 進一步升溫）、BOJ 副總裁 Himino 8/27 明示「將在每次貨幣政策會議、包括下次會議」考慮升息、Tokyo 8 月核心 CPI +1.8%(YoY) 加速+Warsh 鷹派雙催化，預期政策利率由 1.00% 升至 1.25%（市場預期：日銀為近期政策路徑最鷹派主要央行之一）。</td></tr>
+      <tr><td class="time">盤前</td><td>日圓 158-159 區間、Warsh 鷹派後美元強勢為日圓進一步貶壓</td><td class="src"><a class="src-link" href="https://247wallst.com/cards/tokyo-opens-with-the-nikkei-225-at-66-131-98-holding-right-n225-market-bell-01m12wk4kzf5nnz3d8jdsemdnx">24/7 Wall St</a></td><td>日圓 8/28 於 158-159 區間震盪、Warsh 鷹派後美元指數走強為日圓進一步貶壓、日本 10 年期公債殖利率仍位 1996 年來高檔；8/31 週一匯市開盤為 Warsh 鷹派後新一輪定價、對日本電子/半導體出口類短線為壓力（然出口股獲利面受惠）。</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 六、香港（參考） ============ -->
+  <h2>六、香港（參考）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th></tr></thead>
+    <tbody>
+      <tr><td class="time">盤前</td><td>恒生指數 8/28 收 25,584.79 微漲 0.07%、8/31 開盤反映 Warsh 鷹派</td><td class="src"><a class="src-link" href="https://www.marketpulse.com/markets/hang-seng-index-forecast-new-bullish-leg-supported-by-southbound-flows-and-improvement-in-china-services-activities/">MarketPulse</a></td><td>恒生指數 8/28 收 25,584.79 幾近平盤微漲 0.07%、AI 應用類 Kingboard Laminates +10.5%/Z.AI +12.6%/MiniMax +3.8% 領漲、Xiaomi -3.4%/WuXi XDC -2.3% 承壓；週末無新交易變動、離岸資金持續偏好港股呈「港強陸弱」延續格局、南向資金淨流入為中期支撐。</td></tr>
+      <tr><td class="time">盤前</td><td>阿里巴巴 HK$800 億配股完成、AI 全端投資題材延續</td><td class="src"><a class="src-link" href="https://www.am730.com.hk/%E8%B2%A1%E7%B6%93/1049072/%E6%81%92%E7%94%9F%E6%8C%87%E6%95%B8%E4%BD%8E%E9%96%8B229%E9%BB%9E-%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E4%BD%8E%E9%96%8B8-">am730</a></td><td>阿里巴巴 HK$800 億配股（配售價 HK$112.5）8/26 完成交割後、Joe Tsai 加碼買進 720,000 股（約 HK$82M）+集資金 100% 投入 AI 全端能力、8/28 股價漸企穩於 HK$108-110 區間；週末無新公告，市場對 AI 資本支出爭議暫時消化。</td></tr>
+      <tr><td class="time">09:45</td><td>中國 9/1（明日）財新製造業 PMI 為週一亞洲數據焦點</td><td class="src"><a class="src-link" href="https://www.financecalendar.com/event/china-caixin-manufacturing-pmi-september-2026/">Finance Calendar</a></td><td>中國 8 月財新製造業 PMI 於 9/1（週二）09:45 公布為亞洲盤下一關鍵數據催化；7 月 PMI 為 50.9（自 6 月 51.7 減速、連 8 月位擴張區間）；中國 1-7 月工業利潤+17.6% 較上半年 18.7% 減速（市場預期：若 8 月 PMI 跌破 50 榮枯線為港陸股短線壓力+ 8/31 盤中預期建倉變數）。</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 七、跨市場連動分析 ============ -->
+  <h2>七、跨市場連動分析</h2>
+  <ul class="law-list">
+    <li>美股→台股：SOX 週五 -2.04% 對 8/31 台股電子權值股構成短線壓力（台積電/聯發科/廣達/鴻海預估壓力 -0.5% 至 -1%），惟本週台股外資已累買 1,058 億元、期指空單持續回補+聯發科 8/28 逆勢 +3.10% 顯示「AI ASIC/被動元件」內部題材強度較強，可望部分抵銷 SOX 拖累；國巨 8/31 復牌跳空攻漲停 502 元為被動元件族群連鎖利多、預期帶動華新科/禾伸堂/信昌電/日電貿/大毅/千如等 8 檔以上族群同步攻漲停，成為 8/31 亞股獨立強勢主軸；台積電 2,400 為關鍵心理支撐若跌破恐擴大電子權值修正。</li>
+    <li>匯率：Warsh 8/28 鷹派後美元指數走強+2 年期美債殖利率大漲 11bp 至 4.34% 為近月新高+10 年期美債殖利率盤中上探 4.78%，對日圓（158-159）+新台幣構成貶壓；8/31 週一亞洲盤開盤為新一輪定價，若台幣走弱有利電子出口廠獲利面（然為外資賣壓可能訊號需觀察）；BOJ 9/17-18 升息機率升至 90% 為日圓中期支撐變數，日圓走勢與台幣/韓元同步性中期為亞洲匯市定價主軸。</li>
+    <li>其他：美國「經濟 D-Day」對伊朗制裁+關稅威脅升級為週末最大地緣變數，WTI 油價 8/28 反彈至 $85.6/桶對台塑四寶+能源股正向、對消費類負向；中國 7 月工業利潤減速+9/1 財新製造業 PMI 為週二亞洲盤下一關鍵單一數據催化；美股 8/31（週一）正常交易（Labor Day 為 9/7），無假期停牌延後定價風險，8/31 亞洲盤與美股同步反映 Warsh 鷹派後續、CME FedWatch 9 月升息機率 60% 為 9/15-16 FOMC 前主要評價變數。</li>
+  </ul>
+
+  <!-- ============ 八、今日總覽 ============ -->
+  <h2>八、今日總覽</h2>
+  <div class="overview">
+    <div class="mood">整體氛圍：中性 - 8/31（週一，Warsh 鷹派後首個交易日）：外部承受 SOX 週五 -2%+ Warsh 鷹派+9 月升息機率跳升至 60% 三重壓力，但內部有國巨(2327) 復牌跳空攻漲停 502 元帶動被動元件族群連鎖利多+外資本週累買 1,058 億元+MSCI 8/31 生效被動買盤三重支撐，多空拉鋸為主軸</div>
+    <ul class="law-list">
+      <li>台股關注重點 1：國巨(2327) 8/31 復牌跳空攻漲停 502 元、市價與漲停買單逾 2.5 萬張為亞股單一最大利多主軸，預期帶動華新科/禾伸堂/信昌電/日電貿/大毅/千如/立隆電/凱美/金山電/蜜望實至少 10 檔被動元件族群集體漲停，成為 8/31 台股獨立強勢主軸；市場臆測併購或資本結構調整為短線最大變數。</li>
+      <li>台股關注重點 2：加權指數 8/28 收 46,331 創波段新高，8/31 開盤將反映 SOX 週五 -2.04% 拖累+Warsh 鷹派評價面壓力+國巨復牌利多氛圍三重動能，46,000 為短線多空關鍵、45,833 為次要防線；台積電 2,420 若跌破 2,400 恐擴大電子權值修正、聯發科 3,985 能否站穩 4,000 為 AI ASIC 中期成長訊號。</li>
+      <li>台股關注重點 3：MSCI 8/31 收盤生效——南亞科/華邦電/群聯/台燿/南電/景碩 6 檔納入標準指數、台股全球市場指數權重升至 3.13%；被動買盤多於 8 月前 3 週已消化，8/31 反有「利多出盡」風險，記憶體族群 9/1-9/2 短線走勢為關鍵。</li>
+      <li>美股關注重點 1：Warsh 8/28 首場 Jackson Hole 演說明示「通膨仍過高」，市場定價 9/15-16 FOMC 升息機率大幅跳升由 35% 至 60%、2 年期美債殖利率大漲 11bp 至 4.34% 為近月新高；9/5（週五）8 月非農+9/11（週四）8 月 CPI 為 9/15-16 FOMC 前雙關鍵數據，若超預期為升息實現最大催化。</li>
+      <li>美股關注重點 2：SOX 週線 -3%+NVDA 週五 -3.4% 高檔獲利了結為半導體修正主軸；8/31 開盤反映 Warsh 鷹派後續定價，若延續科技股獲利了結+防禦板塊資金流入為亞洲半導體供應鏈短線壓力；三大指數週線仍收紅（S&amp;P +0.5%/Nasdaq +0.9%/Dow +0.5%）為週線多方訊號部分抵銷。</li>
+      <li>風險提示 1：Warsh 8/28 明確鷹派+9/16 FOMC 升息機率跳升至 60% 為中期殖利率再飆升動能+美元走強壓力雙重風險；外資期指淨空單仍位 83,655 口歷史相對高檔為多方潛在賣壓、若外資 8/31 開盤轉賣為短線多方最大空方訊號。</li>
+      <li>風險提示 2：國巨 8/31 復牌漲停背後併購或資本結構變動內容為短線最大不確定變數（若揭露內容不如市場預期為利多出盡風險）、BOJ 9/17-18 升息機率升至 90%+日圓 158-159 高檔震盪+美國「經濟 D-Day」對伊朗制裁+關稅威脅升級為週一亞洲盤第一大變數；中國 9/1（週二）財新 PMI 若跌破 50 榮枯線為港陸股短線壓力。</li>
+    </ul>
+  </div>
+
+  <footer class="brief-foot">
+    本簡報為資訊整理，非投資建議。「事實」與「市場預期／分析觀點」已於摘要中區分標示。<br>
+    自動產出於 2026/08/31 06:39（UTC+8）。
+  </footer>
+</body>
+</html>
