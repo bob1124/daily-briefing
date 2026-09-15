@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日市場簡報｜2026/09/16</title>
+<style>
+  :root {
+    --bg: #0e1116;
+    --panel: #161b22;
+    --panel-2: #1c2230;
+    --border: #2a313c;
+    --text: #d8dee9;
+    --text-dim: #8b95a5;
+    --accent: #e8b339;
+    --up: #ff5b5b;      /* 台股慣例：紅漲 */
+    --down: #3dd68c;    /* 綠跌 */
+    --neutral: #8b95a5;
+    --mono: "SFMono-Regular", "Roboto Mono", "Noto Sans Mono", ui-monospace, monospace;
+    --serif: "Noto Serif TC", "Songti TC", serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans TC", -apple-system, "PingFang TC", "Microsoft JhengHei", sans-serif;
+    line-height: 1.65;
+    padding: 2rem 1.2rem 4rem;
+    max-width: 920px;
+    margin: 0 auto;
+    font-size: 15px;
+  }
+  header.brief-head {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 1rem;
+    margin-bottom: 1.8rem;
+  }
+  header.brief-head .kicker {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    text-transform: uppercase;
+  }
+  header.brief-head h1 {
+    font-family: var(--serif);
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin: 0.2rem 0;
+    letter-spacing: 0.02em;
+  }
+  header.brief-head .date {
+    font-family: var(--mono);
+    color: var(--text-dim);
+    font-size: 0.95rem;
+  }
+  .back-link {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: var(--text-dim);
+    text-decoration: none;
+    font-family: var(--mono);
+    font-size: 0.82rem;
+  }
+  .back-link:hover { color: var(--accent); }
+  h2 {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    margin: 2.2rem 0 0.9rem;
+    padding-left: 0.7rem;
+    border-left: 4px solid var(--accent);
+    letter-spacing: 0.02em;
+  }
+  h2 .core-tag {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.15em;
+    background: var(--accent);
+    color: #0e1116;
+    padding: 0.12rem 0.5rem;
+    border-radius: 3px;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+    font-weight: 700;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.5rem 0 1rem;
+    font-size: 0.86rem;
+    background: var(--panel);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  th {
+    background: var(--panel-2);
+    color: var(--text-dim);
+    text-align: left;
+    padding: 0.6rem 0.7rem;
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+  td {
+    padding: 0.6rem 0.7rem;
+    border-top: 1px solid var(--border);
+    vertical-align: top;
+  }
+  td.time, td.num { font-family: var(--mono); white-space: nowrap; }
+  .tag { font-weight: 700; font-family: var(--mono); font-size: 0.8rem; white-space: nowrap; }
+  .tag.up { color: var(--up); }
+  .tag.down { color: var(--down); }
+  .tag.neutral { color: var(--neutral); }
+  .num.up { color: var(--up); }
+  .num.down { color: var(--down); }
+  .index-table td.num, .index-table th:not(:first-child) { text-align: right; }
+  .index-table th:not(:first-child) { padding-right: 0.9rem; }
+  .index-table td.num { padding-right: 0.9rem; }
+  td.pct { font-family: var(--mono); text-align: right; white-space: nowrap; padding-right: 0.9rem; }
+  td.pct.up { color: var(--up); }
+  td.pct.down { color: var(--down); }
+  .law-list { list-style: none; padding: 0; }
+  .law-list li {
+    padding: 0.45rem 0 0.45rem 1.2rem;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .law-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+  .overview {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 6px;
+    padding: 1.1rem 1.3rem;
+    margin-top: 0.5rem;
+  }
+  .overview .mood { font-family: var(--mono); font-size: 0.95rem; margin-bottom: 0.6rem; }
+  footer.brief-foot {
+    margin-top: 3rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 0.78rem;
+    line-height: 1.8;
+  }
+  .src { color: var(--text-dim); font-size: 0.8rem; }
+  a.src-link { color: var(--text-dim); text-decoration: underline dotted; }
+  a.src-link:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+  <a href="../index.html" class="back-link">← 返回歷史總覽</a>
+  <header class="brief-head">
+    <div class="kicker">Daily Market Brief</div>
+    <h1>每日市場簡報</h1>
+    <div class="date">2026/09/16（UTC+8）｜產出時間 2026/09/16 07:00</div>
+  </header>
+
+  <!-- ============ 一、台股焦點 ============ -->
+  <h2>一、台股焦點<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th><th>影響</th><th>受影響族群/標的</th></tr></thead>
+    <tbody>
+      <tr><td class="time">全日</td><td>台股 9/15 跌 351 點收 45,511.49 量縮至 6,034 億元</td><td class="src"><a class="src-link" href="https://wp.taronews.tw/2026/09/15/1208421/">Taro News</a></td><td>加權指數 9/15 開低震盪，早盤一度翻紅站上 46,000 點但買盤追價無力反黑、終場下跌 351.03 點(-0.77%) 收 45,511.49；成交量再縮至 6,034.53 億元較 9/14 6,309 億元續縮 4.4% 為近期新低；台積電除息前最後買進日買盤動能明顯不足（市場預期：9/16 除息缺口 55.64 點+FOMC 決議雙重變數壓抑短線籌碼意願）。</td><td class="tag down">利空</td><td>大盤/電子權值/晶圓代工</td></tr>
+      <tr><td class="time">全日</td><td>台積電(2330) 9/15 收 2,385 元微漲 5 元(+0.21%) 除息前最後買進日</td><td class="src"><a class="src-link" href="https://udn.com/news/story/7251/9755738">聯合新聞網</a></td><td>台積電 9/15 收 2,385 元(+5, +0.21%)為除息前最後買進日、盤中一度攻至 2,395 元+15 元後回落、外資賣壓明顯收斂；9/16 除息 7 元創季配息單季新高（較前次 6 元增幅 16.7%）+除息參考價 2,378 元、3 檔除息合計影響指數 56.59 點（台積電單一影響 55.64 點）（市場預期：填息難度不高但同日 FOMC 決議為關鍵變數）。</td><td class="tag neutral">中性</td><td>台積電(2330)/晶圓代工/大盤</td></tr>
+      <tr><td class="time">全日</td><td>台達電(2308) 9/15 逆勢強攻 5.86% 收 1,715 元 為電子權值單日最強</td><td class="src"><a class="src-link" href="https://tw.stock.yahoo.com/quote/2308.TW">Yahoo 股市</a></td><td>台達電 9/15 上漲 95 元(+5.86%)收 1,715 元、成為當日電子權值撐盤主軸；AI 電源+液冷+資料中心三大主軸續為結構性動能，Anthropic/OpenAI 呼籲放緩開發後市場轉向具備明確 AI 貨幣化能力+基礎設施+終端應用受益股（市場預期：AI 資料中心電源架構升級為中期主軸未變）。</td><td class="tag up">利多</td><td>台達電(2308)/AI 電源/散熱族群</td></tr>
+      <tr><td class="time">全日</td><td>外資 9/15 大砍 627 億元 連 4 日賣超 累計 2.2 兆元</td><td class="src"><a class="src-link" href="https://tw.stock.yahoo.com/news/%E5%A4%96%E8%B3%87%E8%B3%A3%E8%B6%85626%E5%84%84%E5%85%83-%E8%AA%BF%E7%AF%80%E5%8A%9B%E7%A9%8D%E9%9B%BB-%E5%8A%A0%E7%A2%BC%E9%87%91%E8%9E%8D%E5%8F%8A%E9%9B%BB%E4%BF%A1%E8%82%A1-085923135.html">Yahoo 股市</a></td><td>外資 9/15 賣超 626.99 億元由 9/14 -369.63 億元大幅擴大 69.6%+連 4 日賣超、累計外資賣超逾 2.2 兆元；主砍力積電+友達+多檔台股 ETF、資金明顯轉進金融+電信防禦股——大買中信金 +13,000 張+中華電 +11,000 張為明確避險部位配置訊號（市場預期：FOMC 前風險部位加速調整+外資對台股短線信心明顯轉弱）。</td><td class="tag down">利空</td><td>電子權值/大盤/金融電信防禦</td></tr>
+      <tr><td class="time">全日</td><td>三大法人 9/15 合計賣超 791 億元 連 4 日賣超</td><td class="src"><a class="src-link" href="https://www.storm.mg/article/11164733">風傳媒</a></td><td>三大法人 9/15 合計賣超 791.24 億元為連 4 日賣超（外資 -626.99/投信+自營商 -164.25 合計），為 9/11 -762.70 以來次大單日賣超；投信於被動元件族群仍逆勢加碼、金融+電信+防禦股續為結構性撐盤動能（市場預期：季底作帳延續+FOMC 前多方觀望明顯）。</td><td class="tag down">利空</td><td>大盤/電子權值/金融電信</td></tr>
+      <tr><td class="time">全日</td><td>9/16 三大事件同日疊加 台積電除息+FOMC 決議+期指結算</td><td class="src"><a class="src-link" href="https://finance.ettoday.net/news/3237976">ETtoday 財經雲</a></td><td>9/16（週三）為台積電除息 7 元+FOMC 利率決議公布+台指期結算三大事件同日疊加；台積電、材料-KY、利奇 3 檔同步除息影響指數 56.59 點、預估台積電除息參考價 2,378 元；FOMC 升息 25bp 機率 CME FedWatch 已跳升至 90%（市場預期：升息已明確定價、然殖利率破 5% 為長期評價面關鍵壓力）。</td><td class="tag neutral">中性</td><td>台積電(2330)/期指結算/大盤</td></tr>
+      <tr><td class="time">全日</td><td>費半重挫 5.86% AI 疑慮發酵 台股電子權值短線壓力延續</td><td class="src"><a class="src-link" href="https://udn.com/news/story/7251/9754946">聯合新聞網</a></td><td>費城半導體指數 9/14 重挫 5.86% 為 AI 巨頭 Anthropic/OpenAI 呼籲放緩開發後續發酵、9/15 台股電子權值短線壓力延續、然台達電+被動元件+電信金融為當日明確結構性撐盤主軸；投資人對 AI 資本支出短線放緩疑慮+FOMC 前風險部位調整雙重壓抑（市場預期：SOX 9/15 進一步 -5% 為 9/16 台股電子權值變數）。</td><td class="tag down">利空</td><td>台積電(2330)/AI 供應鏈/半導體族群</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 二、三大法人動向 ============ -->
+  <h2>二、三大法人動向<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>法人</th><th>買賣超(億元)</th><th>方向</th><th>備註</th></tr></thead>
+    <tbody>
+      <tr><td>外資及陸資</td><td class="num down">-626.99</td><td class="tag down">賣超</td><td>9/15 賣超 626.99 億元由 9/14 -369.63 億元大幅擴大 69.6% 為連 4 日賣超、累計 8/25 以來外資賣超逾 2.2 兆元；主砍力積電+友達+台股 ETF、大買中信金 +13,000 張+中華電 +11,000 張為明確防禦性配置訊號；台積電 9/16 除息前遭連 4 日賣超收斂但仍未見翻多。</td></tr>
+      <tr><td>投信</td><td class="num down">-估 -55</td><td class="tag down">賣超</td><td>9/15 由 9/14 估 -30 億元估擴大至 -55 億元、季底作帳延續且中期部位明顯調整、然於被動元件族群逆勢加碼（國巨/華新科/禾伸堂）+金融+電信+防禦股續為主要買盤動能。</td></tr>
+      <tr><td>自營商</td><td class="num down">-估 -109</td><td class="tag down">賣超</td><td>9/15 由 9/14 估 -97 億元擴大至 -109 億元、避險部位大幅回補+權證放空明顯、跟進外資調節動作為當日籌碼結構主要壓抑訊號、期指結算前風險部位加速釋放。</td></tr>
+      <tr><td>合計</td><td>-791.24</td><td class="tag down">賣超</td><td>9/15 三大法人合計賣超 791.24 億元為連 4 日賣超（9/10 -503+9/11 -762.70+9/14 -497+9/15 -791.24）、規模較 9/11 -762.70 略擴大 3.7%；資金明顯自 AI 供應鏈輪動至傳產+金融+防禦股、FOMC 前風險部位加速調整明顯。</td></tr>
+    </tbody>
+  </table>
+  <ul class="law-list">
+    <li>外資期指淨空單估仍位 85,000-90,000 口高檔區間、由 9/14 82,000-86,000 續加空 3,000-4,000 口；反映外資對 9/16 FOMC+9/17-18 BOJ 前風險部位持續加空、9/16 期指結算前空單是否明顯回補為短線籌碼關鍵觀察；現貨端 9/15 賣壓 626.99 億元較 9/14 369.63 億元擴大 69.6% 為短線籌碼壓力明顯升高訊號。</li>
+    <li>投信估賣超 55 億元+自營商估賣超 109 億元為 9/15 三大法人連 4 日翻空、規模較 9/14 -127 億元擴大 29%；然投信於被動元件族群逆勢加碼（國巨/華新科/禾伸堂延續買盤）+金融+電信+防禦股續為結構性撐盤動能、9/16 除息當日內資能否明確承接為關鍵觀察。</li>
+    <li>45,511.49 收盤失守 46,000 心理關卡連 2 日+9/15 早盤一度攻高至 46,000 點以上但買盤追價無力反黑、45,500 為 9 月低點測試區、46,000 為短線壓力區、45,000 為週線關鍵防線；9/16 週三為台積電除息 7 元+FOMC 決議+期指結算三大事件同日疊加、大盤預估開盤下扣 55.64 點約 45,455 附近、短線震盪區間 45,300-46,000。</li>
+  </ul>
+
+  <!-- ============ 三、權值股觀察清單 ============ -->
+  <h2>三、權值股觀察清單<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>標的</th><th>漲跌</th><th>相關消息</th><th>影響</th></tr></thead>
+    <tbody>
+      <tr><td>台積電(2330)</td><td class="num up">+5 (+0.21%)</td><td>9/15 收 2,385 元微漲 5 元(+0.21%) 為除息前最後買進日、盤中一度攻至 2,395 元後回落、外資賣壓明顯收斂；9/16 除息 7 元創季配息單季新高（較前次 6 元增幅 16.7%）+除息參考價 2,378 元、單一影響指數 55.64 點；SEMICON Taiwan 2026 台積電 2026 設備需求年內翻近 2 倍+同步興建 13 座台廠為歷史新高+美國廠追加 1,000 億美元投資為中期利多結構未變、2,350 為關鍵支撐、2,400 為短線壓力。</td><td class="tag neutral">中性</td></tr>
+      <tr><td>聯發科(2454)</td><td class="num down">-25 (-0.55%)</td><td>9/15 收 4,535 元下跌 25 元(-0.55%) 續延賣壓、盤中一度下跌 65 元至 4,495 元(-1.43%) 觸月線後略見反彈；然 NVDA-聯發科 $3.5B ECB 認購+AI ASIC 客製晶片+Q4 天璣新旗艦手機晶片三大結構性主軸未變、Anthropic AI 警示為短線情緒面雜訊、4,500 為關鍵支撐、4,650 為短線壓力。</td><td class="tag down">利空</td></tr>
+      <tr><td>鴻海(2317)</td><td class="num down">-2.5 (-1.01%)</td><td>9/15 收 246 元下跌 2.5 元(-1.01%) 由 9/14 逆勢 +0.20% 反手翻黑、成交量收斂為觀望明顯訊號；然輝達 GB300 AI 伺服器出貨延續+法人目標價 315 元+2027 AI 伺服器全年出貨倍數成長為中期主軸未變、AMD 上調 AI 晶片市場規模預測至 $3T 為長期利多、244 為短線支撐、252 為短線壓力。</td><td class="tag down">利空</td></tr>
+      <tr><td>廣達(2382)</td><td class="num down">-4 (-1.25%)</td><td>9/15 收 315 元下跌 4 元(-1.25%) 續延賣壓、AI 伺服器 ODM 龍頭連 3 日修正、遭外資調節 8-10 億元；然 AMD MI500 系列相較 MI300X 效能倍數 1,000 倍+AMD Helios 系統挑戰 NVDA NVL72+AI 伺服器全年出貨倍數成長為中期主軸未變、313 為關鍵支撐、325 為短線壓力。</td><td class="tag down">利空</td></tr>
+      <tr><td>國巨(2327)</td><td class="num up">+18 (+3.90%)</td><td>9/15 收 480 元續漲 18 元(+3.90%) 由 9/14 漲停後多方動能延續、外資買超再現+成交量放大；三星電機 Q4 MLCC 消費規格 X5R 調幅 25-30%+AI 伺服器高階 X6S +10-20%+村田製作所擬停產部分 MLCC 料號三大結構性動能齊發、Q4 平均定價估上調 30-40%、8 月營收 163.32 億元創單月新高；470 為短線支撐、495 為短線壓力。</td><td class="tag up">利多</td></tr>
+      <tr><td>華新科(2492)</td><td class="num up">+10 (+4.55%)</td><td>9/15 收 230 元續漲 10 元(+4.55%) 由 9/14 漲停後多方動能延續、外資+投信雙買動能明顯；MLCC 90%+主力+鎖定高壓/高容/特殊規格為 AI 純度最高被動元件、4 月自結獲利年增 454.55% 為結構性動能爆發、225 為短線支撐、240 為短線壓力。</td><td class="tag up">利多</td></tr>
+      <tr><td>禾伸堂(3026)</td><td class="num up">+15 (+4.20%)</td><td>9/15 收 372.5 元續漲 15 元(+4.20%) 由 9/14 漲停後多方動能延續、短線漲勢明顯；MLCC 高階規格+高壓高容+AI 伺服器供應鏈+短線籌碼結構明顯偏多、365 為短線支撐、385 為短線壓力。</td><td class="tag up">利多</td></tr>
+      <tr><td>信昌電(6173)</td><td class="num up">+2 (+5.19%)</td><td>9/15 收 40.5 元續漲 2 元(+5.19%)、高壓 MLCC 訂單暴量+為盤面被動元件受惠股主力；AI 伺服器高階被動元件供應鏈+短線籌碼明顯集中偏多、38 為短線支撐、43 為短線壓力。</td><td class="tag up">利多</td></tr>
+      <tr><td>大毅(2478)</td><td class="num up">+1.2 (+4.55%)</td><td>9/15 收 27.6 元續漲 1.2 元(+4.55%)、晶片電阻高階規格續為結構性動能+被動元件價漲量增雙軌成長；26 為短線支撐、29 為短線壓力。</td><td class="tag up">利多</td></tr>
+      <tr><td>金山電(8038)</td><td class="num up">+4.5 (+5.84%)</td><td>9/15 收 81.5 元續漲 4.5 元(+5.84%)、鋁質電解電容續為結構性受惠標的+AI 電源供應鏈+短線籌碼結構明顯偏多、78 為短線支撐、85 為短線壓力。</td><td class="tag up">利多</td></tr>
+      <tr><td>蜜望實(8043)</td><td class="num up">+2 (+4.76%)</td><td>9/15 收 44 元續漲 2 元(+4.76%)、被動元件通路商受惠 MLCC 漲價+訂單能見度明顯改善、42 為短線支撐、46 為短線壓力。</td><td class="tag up">利多</td></tr>
+      <tr><td>鈺邦(6449)</td><td class="num up">+5 (+5.03%)</td><td>9/15 收 104.4 元續漲 5 元(+5.03%)、高分子固態電容+AI 伺服器+高階電源供應鏈受惠股、100 為短線支撐、110 為短線壓力。</td><td class="tag up">利多</td></tr>
+      <tr><td>台達電(2308)</td><td class="num up">+95 (+5.86%)</td><td>9/15 上漲 95 元(+5.86%)收 1,715 元為當日電子權值單日最強、AI 電源+液冷+資料中心三大主軸續為結構性動能；市場明顯轉向具備明確 AI 貨幣化+基礎設施受益股、1,680 為短線支撐、1,760 為短線壓力。</td><td class="tag up">利多</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 四、美股焦點 ============ -->
+  <h2>四、美股焦點（可複委託操作）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th><th>影響</th><th>對台股連動</th></tr></thead>
+    <tbody>
+      <tr><td class="time">全日</td><td>美股 9/15 三大指數連 2 黑 FOMC 首日 10Y 美債殖利率破 5%</td><td class="src"><a class="src-link" href="https://www.thestreet.com/stock-market-today/stock-market-today-sept-15-2026-dow-futures-slide-as-oil-prices-surge-and-treasury-yields-hit-2007-highs">TheStreet</a></td><td>美股 9/15 三大指數收黑：Dow -328.09(-0.63%) 52,093.11/S&P 500 -33.87(-0.45%) 7,585.73/Nasdaq -204.84(-0.78%) 25,981.57；10Y 美債殖利率盤中觸 5.041% 為 2007 年以來新高（19 年高點）、FOMC 兩天會議首日召開+市場全面預期 9/16 升息 25bp 機率 90%（市場預期：升息已充分定價、然殖利率破 5% 為長期評價面關鍵壓力）。</td><td class="tag down">利空</td><td>台股電子權值/AI 供應鏈/大盤估值</td></tr>
+      <tr><td class="time">全日</td><td>科技巨頭分歧：Meta/Google/MSFT 上漲 NVDA -3.36% 半導體續挫</td><td class="src"><a class="src-link" href="https://finance.yahoo.com/technology/ai/articles/meta-alphabet-microsoft-rise-while-142444084.html">Yahoo Finance</a></td><td>科技股 9/15 呈現「hyperscalers 上漲 vs 晶片供應鏈續挫」明顯分歧格局：Meta +2.71%+Alphabet +3.06%+微軟 +1.97%+蘋果 +0.24%+特斯拉 -1.77%+亞馬遜 -1.26%+輝達 -3.36%；市場明顯將「AI 開發放緩」解讀為 hyperscalers 受惠（自建 AI 模型使用晶片者）+晶片供應鏈受害（Anthropic/OpenAI 呼籲放緩開發+資本支出短線減緩壓力）（市場預期：AI 產業鏈由基礎設施 CapEx 主軸轉向 AI 貨幣化+終端應用主軸）。</td><td class="tag down">利空</td><td>台積電(2330)/AI 伺服器/半導體族群</td></tr>
+      <tr><td class="time">全日</td><td>費城半導體指數 9/15 盤中續挫 5%+ NVDA/AMD/BRCM/MU 齊挫</td><td class="src"><a class="src-link" href="https://www.cnbc.com/2026/09/14/stock-market-today-live-updates.html">CNBC</a></td><td>費城半導體指數 SOX 9/15 盤中續挫超過 5% 為 9/14 -5.86% 後連 2 日重挫、NVIDIA+AMD+Broadcom+Micron Technology 齊挫為主要領跌個股；然尾盤明顯反彈 AMD +1.75%+NVDA +0.21% 由重挫低點大幅回彈為短線技術面觀察（市場預期：SOX 連 2 日重挫後技術面短線反彈需求明確）。</td><td class="tag down">利空</td><td>台積電(2330)/AI 伺服器 ODM/半導體族群</td></tr>
+      <tr><td class="time">全日</td><td>10Y 美債殖利率 9/15 觸 5.041% 為 2007 年以來新高</td><td class="src"><a class="src-link" href="https://finance.yahoo.com/markets/live/stock-market-today-tuesday-september-15-dow-sp-500-nasdaq-081307838.html">Yahoo Finance</a></td><td>10Y 美債殖利率 9/15 盤中觸 5.041% 為 2007 年以來 19 年新高、由 9/14 突破 5.0% 後續攀升；FOMC 9/15-16 兩天會議首日召開+市場預期升息機率 90%+8 月 CPI +3.4%/PPI +5.4% 通膨延續三大動能齊發（市場預期：殖利率破 5% 為長期股債評價面關鍵壓力+成長股短線承壓明顯）。</td><td class="tag down">利空</td><td>大盤/科技股評價/金融族群</td></tr>
+      <tr><td class="time">全日</td><td>FOMC 9/15-16 兩天會議首日 升息 25bp 機率跳升至 90%</td><td class="src"><a class="src-link" href="https://www.kiplinger.com/investing/live/fed-meeting-updates-and-commentary-september-2026">Kiplinger</a></td><td>FOMC 9/15-16 兩天會議首日 9/15 召開、9/16 台北時間凌晨（UTC-4 14:00）公布利率決議+Powell 記者會；CME FedWatch 升息 25bp 機率跳升至 90% 為近期最高，主因中東地緣風險升溫+8 月 CPI +3.4%/PPI +5.4% 通膨延續+10Y 美債殖利率突破 5% 三大動能齊發（市場預期：升息已明確定價、關注點集中在點狀圖是否示意 12 月再升+2027 政策路徑）。</td><td class="tag neutral">中性</td><td>大盤/科技股/金融族群</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 四之二、美股指數與板塊動向 ============ -->
+  <h2>美股指數與板塊動向<span class="core-tag">CORE</span></h2>
+  <table class="index-table">
+    <thead><tr><th>指數</th><th>收盤</th><th>漲跌</th><th>漲跌幅</th></tr></thead>
+    <tbody>
+      <tr><td>道瓊工業指數</td><td class="num">52,093.11</td><td class="num down">-328.09</td><td class="pct down">-0.63%</td></tr>
+      <tr><td>S&P 500</td><td class="num">7,585.73</td><td class="num down">-33.87</td><td class="pct down">-0.45%</td></tr>
+      <tr><td>那斯達克綜合指數</td><td class="num">25,981.57</td><td class="num down">-204.84</td><td class="pct down">-0.78%</td></tr>
+      <tr><td>費城半導體指數(SOX)</td><td class="num">10,835.00</td><td class="num down">-575.00</td><td class="pct down">-5.04%</td></tr>
+    </tbody>
+  </table>
+  <table>
+    <thead><tr><th>板塊（GICS）</th><th>漲跌幅</th><th>表現</th><th>當日驅動/備註</th></tr></thead>
+    <tbody>
+      <tr><td>資訊科技</td><td class="pct down">-1.20%</td><td class="tag down">下跌</td><td>半導體供應鏈續挫為當日板塊主要壓力：NVDA -3.36%+SOX 盤中續挫 5%+；然 Meta/Alphabet/微軟 hyperscaler 三大巨頭齊揚 2-3% 使板塊跌幅收斂、市場明顯將「AI 開發放緩」解讀為晶片供應鏈受害。</td></tr>
+      <tr><td>通訊服務</td><td class="pct up">+1.30%</td><td class="tag up">領漲</td><td>Alphabet +3.06%+Meta +2.71% 齊揚為當日板塊最大領漲動能、AI 貨幣化+廣告主軸受惠明顯；Netflix+Disney 隨情緒面回溫、通訊服務為 AI 放緩事件下最明確受惠板塊。</td></tr>
+      <tr><td>非必需消費</td><td class="pct down">-0.80%</td><td class="tag down">下跌</td><td>Tesla -1.77%+Amazon -1.26% 齊挫、AI 相關支出短線放緩+高油價擠壓消費者可支配所得雙重壓力主軸為明顯利空；然家得寶+Lowe's 隨房貸利率預期回溫略見支撐。</td></tr>
+      <tr><td>必需消費</td><td class="pct up">+0.30%</td><td class="tag up">上漲</td><td>Walmart+Costco+P&G 齊揚、避險資金持續轉進防禦性配置、必需消費為 FOMC 前資金停泊主軸；殖利率破 5% 下防禦股評價相對抗跌。</td></tr>
+      <tr><td>能源</td><td class="pct up">+0.80%</td><td class="tag up">上漲</td><td>Exxon+Chevron+ConocoPhillips 齊揚、中東地緣風險延續+沙國東西輸油管道修復需 1 個月+Brent 續於 $105-108 區間為結構性動能；能源類股 YTD +48%+續為 S&P 500 年度最強板塊。</td></tr>
+      <tr><td>金融</td><td class="pct down">-0.90%</td><td class="tag down">下跌</td><td>Goldman Sachs+摩根大通+Bank of America 齊挫、10Y 殖利率破 5% 對銀行放款品質+房貸業務為明顯利空+FOMC 前風險部位調整；Berkshire 相對抗跌。</td></tr>
+      <tr><td>醫療保健</td><td class="pct down">-0.60%</td><td class="tag down">下跌</td><td>Lilly+UnitedHealth+J&J 齊挫、FOMC 前風險部位調整+殖利率破 5% 為評價面壓力；然生技+製藥中期成長題材未變。</td></tr>
+      <tr><td>工業</td><td class="pct down">-1.10%</td><td class="tag down">下跌</td><td>Caterpillar+Boeing+Honeywell+3M 齊挫、10Y 殖利率破 5%+高油價+關稅政策三重利空齊發；GE Aerospace 中期主軸未變。</td></tr>
+      <tr><td>原物料</td><td class="pct down">-0.50%</td><td class="tag down">下跌</td><td>Dow Chemical+Freeport+Nucor 齊挫、油價升+關稅政策為短線壓力；然 AI 資料中心+電氣化基建續為結構性支撐、銅價+鋁價續為多方主軸。</td></tr>
+      <tr><td>不動產</td><td class="pct down">-1.40%</td><td class="tag down">下跌</td><td>10Y 殖利率突破 5.041% 為 2007 以來新高+利率敏感度最高板塊為明顯利空、Prologis+Public Storage+American Tower+Equinix 齊挫。</td></tr>
+      <tr><td>公用事業</td><td class="pct down">-0.70%</td><td class="tag down">下跌</td><td>NextEra+Duke+Southern 齊挫於殖利率壓抑下、AI 資料中心電力需求結構性動能未變；然殖利率新高使公用事業評價面短線承壓。</td></tr>
+    </tbody>
+  </table>
+  <ul class="law-list">
+    <li>9/15 板塊輪動明顯呈現「通訊服務/必需消費/能源上漲 vs 資訊科技/金融/工業/不動產齊挫」二元格局：通訊服務 +1.30% 領漲（Google/Meta hyperscaler 齊揚） vs 資訊科技 -1.20%（半導體續挫）+不動產 -1.40%（殖利率破 5%）+工業 -1.10% 為 S&P 500 板塊三大領跌；11 板塊 3 紅 8 黑格局較 9/14 2 紅 9 黑略有回溫、市場明顯將「AI 開發放緩」解讀為 hyperscalers 受惠+晶片供應鏈受害的板塊輪動。</li>
+    <li>資訊科技/半導體板塊對台股電子權值股連動研判：SOX 盤中續挫超過 5%+NVDA -3.36%+AMD+BRCM+MU 齊挫為 9/16 台股電子權值明顯壓力主軸、然尾盤 AMD +1.75%+NVDA +0.21% 由低點反彈為技術面短線觀察；台積電 9/16 除息 7 元前遭外資連 4 賣為短線籌碼變數、然 SEMICON Taiwan 2026 台積電設備需求年內翻近 2 倍為中期結構性動能未變、被動元件族群 9/15 續漲為當日盤面最強撐盤主軸。</li>
+    <li>10Y 美債殖利率 9/15 觸 5.041% 為 2007 以來 19 年新高為明顯評價面壓力+FOMC 9/16 升息 25bp 機率 90%+9/17-18 BOJ 升息 25bp 機率 88% 三大結構性動能齊發、9/16 台股短線於「除息缺口 55.64 點+FOMC 決議+期指結算」三大事件同日疊加為未來 24 小時關鍵催化、通訊服務板塊 hyperscalers 齊揚為 AI 應用面撐盤明顯訊號。</li>
+  </ul>
+
+  <!-- ============ 五、日本（參考） ============ -->
+  <h2>五、日本（參考）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th></tr></thead>
+    <tbody>
+      <tr><td class="time">全日</td><td>日經 225 9/15 收 63,484.10 -8.89 幾乎持平 資訊通信領漲</td><td class="src"><a class="src-link" href="https://jp.investing.com/news/forex-news/article-1680252">Investing.com JP</a></td><td>日經 225 9/15 收 63,484.10 前日下跌 8.89 円幾乎持平、東證 Prime 上漲個股 51.5%+下跌個股 44.1% 為明顯分歧格局；資訊通信業、醫藥品、服務業上升為當日撐盤主軸、石油石炭製品、銀行業、證券商品期貨交易業為當日領跌板塊；日本國內長期利率上升+原油高為短線壓抑動能。</td></tr>
+      <tr><td class="time">全日</td><td>BOJ 9/17-18 會議 升息 25bp 機率高 政策利率至 1.25%</td><td class="src"><a class="src-link" href="https://www.nippon.com/en/news/yjj2026090400739/">Nippon.com</a></td><td>BOJ 9/17-18 兩天政策會議廣泛預期升息 25bp、政策利率由 1.00% 上調至 1.25%；BOJ 總裁植田和男明確表態「每次會議升息都在考量範圍」，中東地緣風險+日圓貶值+AI 相關需求續強為三大動能、7 月實質工資年增 2.4% 為明確工資-物價循環動能；市場明顯不預期一次升 50bp、然升息間距明顯縮短。</td></tr>
+      <tr><td class="time">全日</td><td>日圓 9/15 於 152-153 區間 BOJ 升息預期支撐</td><td class="src"><a class="src-link" href="https://asia.nikkei.com/economy/bank-of-japan/boj-chief-says-rate-hikes-on-table-at-every-meeting-including-this-month-s">Nikkei Asia</a></td><td>日圓 9/15 於 152-153 兌美元區間+由 9/14 153-154 略見升值、BOJ 9/17-18 升息預期為主要動能；持續弱勢日圓透過燃料+化工進口通膨+輸入型物價壓力為 BOJ 升息重要考量、升息決議預期進一步推升日圓（市場預期：日圓短線區間 151-153+升息後突破 150 為關鍵觀察）。</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 六、香港（參考） ============ -->
+  <h2>六、香港（參考）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th></tr></thead>
+    <tbody>
+      <tr><td class="time">全日</td><td>恒生指數 9/15 收 24,667.24 大跌 1% 科網股拖累</td><td class="src"><a class="src-link" href="https://www.bastillepost.com/global/article/6157563-hong-kongs-hang-seng-index-closes-1-pct-lower">Bastille Post Global</a></td><td>恒生指數 9/15 收 24,667.24 大跌 1% 由 9/14 +0.39% 反手翻黑；市場明顯反映 FOMC 前風險部位調整+美股 AI 巨頭放緩開發呼籲擴散+A 股弱勢三重壓抑；恒生科技指數 9/15 收 4,291.34 -0.62% 為當日主要拖累板塊+恒生中國企業指數收 8,204.91 -0.96% 為連 2 日下跌。</td></tr>
+      <tr><td class="time">全日</td><td>恒生科技指數 9/15 收 4,291.34 -0.62% AI 硬體股續承壓</td><td class="src"><a class="src-link" href="https://www.hsi.com.hk/eng/indexes/all-indexes/hstech">HSI</a></td><td>恒生科技指數 9/15 收 4,291.34 下跌 0.62% 為當日主要拖累板塊、AI 硬體股續承壓為主要壓力主軸；然聯想集團+小米+快手於 AI 終端硬體+應用面呈明顯分化、內銀+內險續為結構性撐盤。</td></tr>
+      <tr><td class="time">全日</td><td>港股 9/15 承壓 FOMC 前風險部位調整明顯</td><td class="src"><a class="src-link" href="https://tradingeconomics.com/hong-kong/stock-market">Trading Economics</a></td><td>港股 9/15 承壓 -1% 明顯反映 FOMC 前風險部位調整+A 股弱勢+美股 AI 警示情緒面擴散三重利空；南下資金 9/15 續呈流入為結構性撐盤動能、然港股估值處歷史相對低點+9/16 FOMC 決議+9/17-18 BOJ 升息為短線多空拉扯關鍵。</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 七、跨市場連動分析 ============ -->
+  <h2>七、跨市場連動分析</h2>
+  <ul class="law-list">
+    <li>美股→台股連動：美股 9/15 三大指數連 2 黑（Dow -0.63%/S&P -0.45%/Nasdaq -0.78%）+SOX 盤中續挫 5%+ 為 9/16 台股電子權值明顯壓力主軸、然科技巨頭分歧明顯（Meta +2.71%/Alphabet +3.06%/微軟 +1.97% 齊揚 vs NVDA -3.36% 續挫）為 AI 產業鏈由 CapEx 轉向貨幣化主軸的明確訊號；台積電 9/16 除息 7 元前遭外資連 4 賣為短線籌碼變數、然被動元件族群 9/15 續漲+台達電 +5.86% 為當日盤面最強撐盤主軸；預估 9/16 台股於 45,300-46,000 區間震盪（除息參考價 45,455 為短線技術中軸）、45,000 為週線關鍵防線。</li>
+    <li>匯率連動：美元指數受 10Y 美債殖利率突破 5.041% 為 2007 以來新高續走強、日圓於 152-153 區間為 BOJ 9/17-18 升息前避險買盤持續湧入；新台幣 9/15 貶值至 31.90 附近為外資賣超延續動能、然出口電子廠受惠新台幣貶值+日圓走強雙軌利多；黃金 9/15 於 $3,650-3,720/盎司區間為避險資產首選、原油 Brent 於 $105-108 區間為地緣風險+FOMC 前通膨壓力雙重動能。</li>
+    <li>其他跨市場動能：9/16 FOMC 升息 25bp 機率 90%+9/17-18 BOJ 升息 25bp 機率 88% 為雙央行本週齊步升息明確訊號+全球資金成本抬升關鍵訊號、10Y 美債殖利率破 5.041% 為 19 年新高為評價面關鍵壓力；然 SEMICON Taiwan 2026 台積電設備需求年內翻近 2 倍+被動元件超級周期+AI 資料中心結構性動能為中期主軸未變、9/24 MU 財報+10 月 NVDA 財報+11 月 Q4 財報季為未來 2 個月三大關鍵催化。</li>
+  </ul>
+
+  <!-- ============ 八、今日總覽 ============ -->
+  <h2>八、今日總覽</h2>
+  <div class="overview">
+    <div class="mood">整體氛圍：利空</div>
+    <ul class="law-list">
+      <li>台股關注重點：9/15 加權指數失守 46,000 關卡連 2 日+跌 351.03 點收 45,511.49 為明確技術面破位訊號延續、量能再縮至 6,034 億元較 9/14 減 4.4% 為近期新低；三大法人合計賣超 791.24 億元為連 4 日賣超+外資單日賣超 626.99 億元較 9/14 擴大 69.6%、被動元件族群（國巨/華新科/禾伸堂）9/15 續漲+台達電 +5.86% 為當日盤面最強撐盤主軸。</li>
+      <li>台股關注重點：資金明顯自 AI 供應鏈輪動至傳產+金融+防禦股+被動元件+AI 電源受惠股、外資 9/15 大買中信金 +13,000 張+中華電 +11,000 張為明確防禦性配置訊號；9/16 週三為台積電除息 7 元（歷史新高）+FOMC 決議+期指結算三大事件同日疊加、預估開盤下扣 55.64 點約 45,455 附近、短線震盪區間 45,300-46,000。</li>
+      <li>美股關注重點：9/15 三大指數連 2 黑+SOX 盤中續挫 5%+ 為 9/14 -5.86% 後連 2 日重挫、科技巨頭分歧明顯（Meta/Google/微軟 hyperscalers 齊揚 vs NVDA/AMD/BRCM 晶片供應鏈續挫）為 AI 產業鏈明顯輪動訊號；10Y 美債殖利率 9/15 觸 5.041% 為 2007 以來 19 年新高為評價面關鍵壓力、FOMC 9/15-16 兩天會議升息 25bp 機率 90%。</li>
+      <li>美股關注重點：市場明顯將「AI 開發放緩」解讀為 hyperscalers 受惠（Meta +2.71%/Alphabet +3.06%/微軟 +1.97%）+晶片供應鏈受害（NVDA -3.36%/AMD 盤中 -5%+）的板塊輪動；然中期 AI 資本支出主軸未變+2027 AI 資料中心需求續為結構性動能+SEMICON Taiwan 2026 台積電設備需求年內翻近 2 倍為明確中期利多。</li>
+      <li>風險提示：9/16 FOMC 升息 25bp 機率 90%+9/17-18 BOJ 升息 25bp 機率 88% 為雙央行本週齊步升息明確訊號+全球資金成本抬升關鍵訊號、10Y 美債殖利率突破 5.041% 為 2007 以來 19 年新高為評價面關鍵壓力；台積電 9/16 除息+FOMC+期指結算三大事件同日疊加為未來 24 小時關鍵催化、45,000 為週線關鍵防線。</li>
+      <li>風險提示：中東地緣風險延續（沙國東西輸油管道修復需 1 個月+Brent 於 $105-108 區間為 3 個月新高）為地緣+通膨雙重風險主軸；外資期指淨空單估仍位 85,000-90,000 口高檔+9/15 三大法人合計連 4 日賣超為短線籌碼結構關鍵變數、9/24 MU 財報+10 月 NVDA 財報+11 月 Q4 財報季為未來 2 個月關鍵驗證。</li>
+    </ul>
+  </div>
+
+  <footer class="brief-foot">
+    本簡報為資訊整理，非投資建議。「事實」與「市場預期／分析觀點」已於摘要中區分標示。<br>
+    自動產出於 2026/09/16 07:00（UTC+8）。
+  </footer>
+</body>
+</html>
