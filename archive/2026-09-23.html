@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日市場簡報｜2026/09/23</title>
+<style>
+  :root {
+    --bg: #0e1116;
+    --panel: #161b22;
+    --panel-2: #1c2230;
+    --border: #2a313c;
+    --text: #d8dee9;
+    --text-dim: #8b95a5;
+    --accent: #e8b339;
+    --up: #ff5b5b;      /* 台股慣例：紅漲 */
+    --down: #3dd68c;    /* 綠跌 */
+    --neutral: #8b95a5;
+    --mono: "SFMono-Regular", "Roboto Mono", "Noto Sans Mono", ui-monospace, monospace;
+    --serif: "Noto Serif TC", "Songti TC", serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans TC", -apple-system, "PingFang TC", "Microsoft JhengHei", sans-serif;
+    line-height: 1.65;
+    padding: 2rem 1.2rem 4rem;
+    max-width: 920px;
+    margin: 0 auto;
+    font-size: 15px;
+  }
+  header.brief-head {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 1rem;
+    margin-bottom: 1.8rem;
+  }
+  header.brief-head .kicker {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    text-transform: uppercase;
+  }
+  header.brief-head h1 {
+    font-family: var(--serif);
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin: 0.2rem 0;
+    letter-spacing: 0.02em;
+  }
+  header.brief-head .date {
+    font-family: var(--mono);
+    color: var(--text-dim);
+    font-size: 0.95rem;
+  }
+  .back-link {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: var(--text-dim);
+    text-decoration: none;
+    font-family: var(--mono);
+    font-size: 0.82rem;
+  }
+  .back-link:hover { color: var(--accent); }
+  h2 {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    margin: 2.2rem 0 0.9rem;
+    padding-left: 0.7rem;
+    border-left: 4px solid var(--accent);
+    letter-spacing: 0.02em;
+  }
+  h2 .core-tag {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.15em;
+    background: var(--accent);
+    color: #0e1116;
+    padding: 0.12rem 0.5rem;
+    border-radius: 3px;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+    font-weight: 700;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.5rem 0 1rem;
+    font-size: 0.86rem;
+    background: var(--panel);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  th {
+    background: var(--panel-2);
+    color: var(--text-dim);
+    text-align: left;
+    padding: 0.6rem 0.7rem;
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+  td {
+    padding: 0.6rem 0.7rem;
+    border-top: 1px solid var(--border);
+    vertical-align: top;
+  }
+  td.time, td.num { font-family: var(--mono); white-space: nowrap; }
+  .tag { font-weight: 700; font-family: var(--mono); font-size: 0.8rem; white-space: nowrap; }
+  .tag.up { color: var(--up); }
+  .tag.down { color: var(--down); }
+  .tag.neutral { color: var(--neutral); }
+  .num.up { color: var(--up); }
+  .num.down { color: var(--down); }
+  .index-table td.num, .index-table th:not(:first-child) { text-align: right; }
+  .index-table th:not(:first-child) { padding-right: 0.9rem; }
+  .index-table td.num { padding-right: 0.9rem; }
+  td.pct { font-family: var(--mono); text-align: right; white-space: nowrap; padding-right: 0.9rem; }
+  td.pct.up { color: var(--up); }
+  td.pct.down { color: var(--down); }
+  .law-list { list-style: none; padding: 0; }
+  .law-list li {
+    padding: 0.45rem 0 0.45rem 1.2rem;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .law-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+  .overview {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 6px;
+    padding: 1.1rem 1.3rem;
+    margin-top: 0.5rem;
+  }
+  .overview .mood { font-family: var(--mono); font-size: 0.95rem; margin-bottom: 0.6rem; }
+  footer.brief-foot {
+    margin-top: 3rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 0.78rem;
+    line-height: 1.8;
+  }
+  .src { color: var(--text-dim); font-size: 0.8rem; }
+  a.src-link { color: var(--text-dim); text-decoration: underline dotted; }
+  a.src-link:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+  <a href="../index.html" class="back-link">← 返回歷史總覽</a>
+  <header class="brief-head">
+    <div class="kicker">Daily Market Brief</div>
+    <h1>每日市場簡報</h1>
+    <div class="date">2026/09/23（UTC+8）｜產出時間 2026/09/23 07:00</div>
+  </header>
+
+  <!-- ============ 一、台股焦點 ============ -->
+  <h2>一、台股焦點<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th><th>影響</th><th>受影響族群/標的</th></tr></thead>
+    <tbody>
+      <tr><td class="time">13:30</td><td>加權指數盤中創48,601點歷史新高後拉回收47,800</td><td class="src"><a class="src-link" href="https://udn.com/news/story/7251/9770475">聯合新聞網</a></td><td>9/22台股受美股Nasdaq創新高激勵盤中最多大漲883點攻上48,601.53點刷新歷史新高，惟長假前調節賣壓湧現終場僅漲81.33點(+0.17%)收47,800.17，成交量放大至1兆215.69億元較9/21擴大24.5%，留下長上影線。（市場預期：短線於47,500-48,000區間震盪整理）</td><td class="tag up">利多</td><td>加權指數/電子權值</td></tr>
+      <tr><td class="time">全日</td><td>三大法人合計買超608.21億元 外資大買447億</td><td class="src"><a class="src-link" href="https://news.cts.com.tw/cna/money/202609/202609223081647.html">華視新聞網</a></td><td>9/22三大法人同步偏多合計買超608.21億元（外資+447.26連4買、自營商+158.54、投信+2.4），外資連4日買超為8月中旬以來最強籌碼結構，累計4日買超逾1,900億元。</td><td class="tag up">利多</td><td>整體台股/籌碼面</td></tr>
+      <tr><td class="time">13:30</td><td>台積電盤中翻黑收2,460跌20元</td><td class="src"><a class="src-link" href="https://finance.ettoday.net/news/3241969">ETtoday財經雲</a></td><td>台積電(2330) 9/22盤中一度攻高至2,505元寫近期高，惟午盤後由紅翻黑終場收最低價2,460元跌20元(-0.81%)，為當日加權指數轉弱主因。（市場預期：權值股短線獲利了結）</td><td class="tag down">利空</td><td>台積電/晶圓代工</td></tr>
+      <tr><td class="time">13:30</td><td>聯發科再漲170元收5,180連創新高</td><td class="src"><a class="src-link" href="https://tw.stock.yahoo.com/quote/2454.TW">Yahoo股市</a></td><td>聯發科(2454) 9/22再漲170元(+3.39%)收5,180元連續刷新歷史新高，市值突破8.2兆元，外資連4日買超為主要動能。（市場預期：法人目標價再上修）</td><td class="tag up">利多</td><td>IC設計/聯發科</td></tr>
+      <tr><td class="time">13:30</td><td>友達再攻漲停 成交量爆破85萬張</td><td class="src"><a class="src-link" href="https://www.chinatimes.com/realtimenews/20260922001760-260410">中時新聞網</a></td><td>友達(2409) 9/22爆量再攻第二根漲停收36.65元(+9.9%)，盤中成交量逼近85萬張居台股個股成交量之冠，Intel與台積電先進封裝合作題材雙重利多加持。（市場預期：切入AI供應鏈想像持續發酵）</td><td class="tag up">利多</td><td>面板股/友達/群創/彩晶</td></tr>
+      <tr><td class="time">13:30</td><td>台達電再漲25元收1,900改寫歷史新高</td><td class="src"><a class="src-link" href="https://tw.stock.yahoo.com/quote/2308.TW">Yahoo股市</a></td><td>台達電(2308) 9/22再漲25元(+1.33%)收1,900元改寫歷史新高，AI電源與液冷散熱雙主軸受惠帶動股價續攻。</td><td class="tag up">利多</td><td>AI電源/台達電</td></tr>
+      <tr><td class="time">全日</td><td>台指期未平倉擴大至10.29萬口</td><td class="src"><a class="src-link" href="https://tw.stock.yahoo.com/future/WTX&">Yahoo股市</a></td><td>台指期近月9/22收48,261點(+0.43%)較現貨47,800.17溢價逾460點，未平倉口數擴大至102,946口創近期新高顯示多方持續加碼。（市場預期：期現貨溢價高檔顯示樂觀情緒濃厚）</td><td class="tag up">利多</td><td>期現貨/籌碼結構</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 二、三大法人動向 ============ -->
+  <h2>二、三大法人動向<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>法人</th><th>買賣超(億元)</th><th>方向</th><th>備註</th></tr></thead>
+    <tbody>
+      <tr><td>外資</td><td class="num up">+447.26</td><td class="tag up">買超</td><td>連4買為2026年單日買超前5大，累計4日買超逾1,900億元</td></tr>
+      <tr><td>投信</td><td class="num up">+2.4</td><td class="tag up">買超</td><td>連5買但金額大幅收斂，持續加碼AI供應鏈</td></tr>
+      <tr><td>自營商</td><td class="num up">+158.54</td><td class="tag up">買超</td><td>期貨避險部位與現股同步偏多</td></tr>
+    </tbody>
+  </table>
+  <ul class="law-list">
+    <li>三大法人9/22合計買超608.21億元，較9/21的470.37億元擴大近30%，籌碼結構持續強勢。</li>
+    <li>台指期近月9/22收48,261點較現貨47,800.17明顯溢價逾460點，未平倉口數擴大至102,946口創近期新高。</li>
+    <li>外資買超前3大以聯發科、友達、鴻海為主軸，AI與面板題材為當日買盤核心。</li>
+    <li>投信買超金額大幅收斂至2.4億元，短線籌碼由投信主導轉為外資接手。</li>
+  </ul>
+
+  <!-- ============ 三、權值股觀察清單 ============ -->
+  <h2>三、權值股觀察清單<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>標的</th><th>漲跌</th><th>相關消息</th><th>影響</th></tr></thead>
+    <tbody>
+      <tr><td>台積電(2330)</td><td class="num down">-20 (-0.81%)</td><td>收2,460元，盤中最高攻至2,505後回落，短線獲利了結賣壓</td><td class="tag down">利空</td></tr>
+      <tr><td>聯發科(2454)</td><td class="num up">+170 (+3.39%)</td><td>收5,180元連續刷新歷史新高，市值突破8.2兆元</td><td class="tag up">利多</td></tr>
+      <tr><td>鴻海(2317)</td><td class="num up">+3 (+1.20%)</td><td>收253元，AI伺服器出貨動能延續，法人持續加碼</td><td class="tag up">利多</td></tr>
+      <tr><td>廣達(2382)</td><td class="num up">約+2 (+0.5%)</td><td>收約350元，GB300伺服器出貨放量續為主軸</td><td class="tag up">利多</td></tr>
+      <tr><td>台達電(2308)</td><td class="num up">+25 (+1.33%)</td><td>收1,900元改寫歷史新高，AI電源與液冷散熱雙主軸受惠</td><td class="tag up">利多</td></tr>
+      <tr><td>國巨(2327)</td><td class="num up">約+15 (+3%)</td><td>MLCC超級周期加速，三星電機Q4調漲25-30%持續發酵</td><td class="tag up">利多</td></tr>
+      <tr><td>華新科(2492)</td><td class="num up">約+8 (+3%)</td><td>MLCC接單出貨比升至1.4，缺貨延至2027-2028年</td><td class="tag up">利多</td></tr>
+      <tr><td>禾伸堂(3026)</td><td class="num up">約+10 (+2.5%)</td><td>MLCC高階料號漲價確認，Q4營收動能明顯</td><td class="tag up">利多</td></tr>
+      <tr><td>信昌電(6173)</td><td class="num up">約+5 (+3%)</td><td>陶瓷電容第二梯隊補漲，AI伺服器供貨明確</td><td class="tag up">利多</td></tr>
+      <tr><td>大毅(2478)</td><td class="num up">約+2 (+3%)</td><td>晶片電阻供不應求，Q4起漲勢明確</td><td class="tag up">利多</td></tr>
+      <tr><td>金山電(8038)</td><td class="num up">約+3 (+3%)</td><td>MLCC小廠受惠漲價擴散效應</td><td class="tag up">利多</td></tr>
+      <tr><td>蜜望實(8043)</td><td class="num up">約+2 (+3%)</td><td>被動元件通路商營運明顯改善</td><td class="tag up">利多</td></tr>
+      <tr><td>鈺邦(6449)</td><td class="num up">約+3 (+2.5%)</td><td>固態電容需求同步強勁</td><td class="tag up">利多</td></tr>
+      <tr><td>興勤(2428)</td><td class="num up">約+2 (+2%)</td><td>熱敏電阻族群齊揚</td><td class="tag up">利多</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 四、美股焦點 ============ -->
+  <h2>四、美股焦點（可複委託操作）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th><th>影響</th><th>對台股連動</th></tr></thead>
+    <tbody>
+      <tr><td class="time">04:00</td><td>Nasdaq +0.45%連2日創歷史新高收27,244</td><td class="src"><a class="src-link" href="https://www.staradvertiser.com/2026/09/22/breaking-news/nasdaq-reaches-record-high-close-ai-stocks-rally/">Honolulu Star-Advertiser</a></td><td>Nasdaq綜合指數9/22上漲121點(+0.45%)收27,244.28再創歷史新高為連續2日新高，AI相關晶片股齊揚為主要動能，殖利率回落與Meta Muse AI題材同步發酵。（市場預期：AI敘事重返主導）</td><td class="tag up">利多</td><td>台股電子權值撐盤動能</td></tr>
+      <tr><td class="time">04:00</td><td>Dow -185點連2日走弱 金融股領跌</td><td class="src"><a class="src-link" href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-sept-22-2026">TheStreet</a></td><td>Dow指數9/22下跌185點(-0.36%)收51,863.69，Cisco -4.50%/JPMorgan -3.35%/American Express -2.62%領跌，S&P 500幾乎持平收盤，市場擔憂Meta Muse AI代理將衝擊金融支付業務。（市場預期：金融板塊短線壓力）</td><td class="tag down">利空</td><td>對台股金控股間接壓力</td></tr>
+      <tr><td class="time">04:00</td><td>Micron股價首度突破$1,000大關</td><td class="src"><a class="src-link" href="https://startupfortune.com/micron-stock-tops-1000-for-the-first-time-as-the-ai-memory-boom-rages-on/">Startup Fortune</a></td><td>Micron(MU) 9/22收盤首度突破$1,000大關(+3.29%)，今年以來累計漲幅266%，AI記憶體超級周期發酵為主軸，2026年HBM產能已全數售罄予NVIDIA。（市場預期：9/24 MU財報為AI記憶體驗證關鍵）</td><td class="tag up">利多</td><td>華邦電/南亞科/記憶體族群連動明確</td></tr>
+      <tr><td class="time">04:00</td><td>Meta Muse AI代理引爆科技股漲勢</td><td class="src"><a class="src-link" href="https://www.chartmill.com/news/COP/Chartmill-55140-Metas-Muse-Sends-the-Nasdaq-to-a-Record-and-Rekindles-the-AI-Trade">ChartMill</a></td><td>Meta本月發表的AI助手Muse可代客戶收發電子郵件、完成交易，帶動科技股連續6日走高、AI晶片股全面受惠，晶片ETF +2%、記憶體ETF +3%領軍。（市場預期：AI代理成新一輪主題）</td><td class="tag up">利多</td><td>AI供應鏈情緒面正向</td></tr>
+      <tr><td class="time">04:00</td><td>AMD守穩1兆美元市值 ARM +2.5% Intel +1%</td><td class="src"><a class="src-link" href="https://www.tradingkey.com/news/market-movers/262180651-market-movers-mu-20260922">TradingKey</a></td><td>AMD 9/22 +0.49%守穩市值1兆美元大關、ARM +2.5%、Intel +1%，晶片股延續前一日噴發後強勢盤整格局，SOX估微幅收紅。（市場預期：AI CapEx敘事延續）</td><td class="tag up">利多</td><td>台積電/IC設計/AI供應鏈</td></tr>
+      <tr><td class="time">全日</td><td>亞馬遜封鎖Meta Muse代理購物</td><td class="src"><a class="src-link" href="https://en.cryptonomist.ch/2026/09/22/ai-driven-stock-rally-meta-muse/">Cryptonomist</a></td><td>亞馬遜9/22宣布封鎖Meta Muse AI代理於平台上進行購物，帶動亞馬遜股價與非必需消費板塊承壓，市場擔憂AI代理將顛覆電商生態。（市場預期：AI代理與平台業者角力升溫）</td><td class="tag neutral">中性</td><td>電商代工/廣達/仁寶潛在受影響</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 四之二、美股指數與板塊動向 ============ -->
+  <h2>美股指數與板塊動向<span class="core-tag">CORE</span></h2>
+  <table class="index-table">
+    <thead><tr><th>指數</th><th>收盤</th><th>漲跌</th><th>漲跌幅</th></tr></thead>
+    <tbody>
+      <tr><td>道瓊工業指數</td><td class="num">51,863.69</td><td class="num down">-185.14</td><td class="pct down">-0.36%</td></tr>
+      <tr><td>S&P 500</td><td class="num">7,769</td><td class="num up">約+4.80</td><td class="pct up">約+0.06%</td></tr>
+      <tr><td>那斯達克綜合指數</td><td class="num">27,244.28</td><td class="num up">+121.53</td><td class="pct up">+0.45%</td></tr>
+      <tr><td>費城半導體指數(SOX)</td><td class="num">約12,555</td><td class="num up">約+100</td><td class="pct up">約+0.80%</td></tr>
+    </tbody>
+  </table>
+  <table>
+    <thead><tr><th>板塊（GICS）</th><th>漲跌幅</th><th>表現</th><th>當日驅動/備註</th></tr></thead>
+    <tbody>
+      <tr><td>資訊科技</td><td class="pct up">約+0.85%</td><td class="tag up">領漲</td><td>晶片ETF +2%、記憶體ETF +3%，MU突破$1000大關為主軸</td></tr>
+      <tr><td>通訊服務</td><td class="pct up">約+1.20%</td><td class="tag up">領漲</td><td>Meta連6日走高（Muse AI代理），Google同步走揚</td></tr>
+      <tr><td>非必需消費</td><td class="pct down">約-0.65%</td><td class="tag down">下跌</td><td>亞馬遜封鎖Muse代理購物拖累電商股</td></tr>
+      <tr><td>必需消費</td><td class="pct up">約+0.20%</td><td class="tag neutral">持平</td><td>防禦性表現平穩，資金流向科技</td></tr>
+      <tr><td>能源</td><td class="pct down">約-1.60%</td><td class="tag down">領跌</td><td>XLE ETF延續前日跌勢，WTI原油低檔震盪</td></tr>
+      <tr><td>金融</td><td class="pct down">約-1.30%</td><td class="tag down">領跌</td><td>JPM -3.35%、Amex -2.62%、Visa下跌，Muse代理衝擊支付業務擔憂</td></tr>
+      <tr><td>醫療保健</td><td class="pct up">約+0.55%</td><td class="tag up">上漲</td><td>Amgen +4.33%領軍生技製藥齊揚</td></tr>
+      <tr><td>工業</td><td class="pct up">約+0.35%</td><td class="tag up">上漲</td><td>Honeywell +2.58%領漲，Boeing小幅走高</td></tr>
+      <tr><td>原物料</td><td class="pct down">約-0.45%</td><td class="tag down">下跌</td><td>能源相關化工類股走弱拖累</td></tr>
+      <tr><td>不動產</td><td class="pct up">約+0.30%</td><td class="tag up">上漲</td><td>殖利率回落REITs評價修復</td></tr>
+      <tr><td>公用事業</td><td class="pct up">約+0.25%</td><td class="tag up">上漲</td><td>殖利率下滑帶動利率敏感板塊小幅走揚</td></tr>
+    </tbody>
+  </table>
+  <ul class="law-list">
+    <li>當日輪動明確由金融+能源→科技+通訊服務，Meta Muse AI代理發酵成為Nasdaq連2日創歷史新高的關鍵催化，然金融股受Muse將衝擊支付業務擔憂拖累呈明顯分歧。</li>
+    <li>資訊科技+通訊服務板塊為對9/23台股電子權值股（台積電、聯發科、鴻海、廣達、台達電）明確撐盤動能；MU首度突破$1,000大關（+3.29%）為對台股記憶體族群（華邦電/南亞科）明確直接連動主軸，AMD +0.49%守穩1兆美元、ARM +2.5%、Intel +1%為對IC設計族群持續正向情緒。</li>
+  </ul>
+
+  <!-- ============ 五、日本（參考） ============ -->
+  <h2>五、日本（參考）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th></tr></thead>
+    <tbody>
+      <tr><td class="time">全日</td><td>日股9/22持續休市（銀色週間 敬老日隔日）</td><td class="src"><a class="src-link" href="https://www.bbntimes.com/financial/nikkei-225-today-tokyo-shut-for-respect-for-the-aged-day-leaving-index-at-65-018-95-after-boj-fuelled-rally">BBN Times</a></td><td>東京證交所9/21-23連續3日休市（21日敬老日+22日國民假日+23日秋分之日），日經225維持在9/18收盤65,018.95點，9/24方恢復交易。</td></tr>
+      <tr><td class="time">全日</td><td>日圓於157兌美元附近震盪</td><td class="src"><a class="src-link" href="https://www.gaitame.com/media/entry/2026/09/21/130247">外為どっとコム</a></td><td>9/22日圓維持於156-158區間震盪，BOJ 9/18升息25bp後鴿派解讀持續，日本財務省介入警戒下上檔受限。（市場預期：9/24日股復盤後將對升息定價再校準）</td></tr>
+      <tr><td class="time">全日</td><td>來週BOJ會議紀要為市場焦點</td><td class="src"><a class="src-link" href="https://www.gaitame.com/media/entry/2026/09/20/060200">外為どっとコム</a></td><td>本週日本市場焦點集中在BOJ 9/18升息後的紀要公布與植田總裁後續講話，9/24日股復盤後將對升息定價再校準。</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 六、香港（參考） ============ -->
+  <h2>六、香港（參考）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th></tr></thead>
+    <tbody>
+      <tr><td class="time">16:00</td><td>恒指連3日走高 收25,087點 騰訊大漲5%</td><td class="src"><a class="src-link" href="https://www.21jingji.com/article/20260922/herald/cc639b1840e36642461f14a92c248df9.html">21經濟網</a></td><td>恒生指數9/22收25,087.75點+45.04(+0.18%)連3日走高，恒生科技+0.34%收4,438.21，恒生國企+0.28%收8,362.6，全日主板成交2,492億港元較9/21擴大逾22%。</td></tr>
+      <tr><td class="time">16:00</td><td>騰訊+5.02%領軍科網股 阿里+1.95%</td><td class="src"><a class="src-link" href="https://www.nbd.com.cn/articles/2026-09-22/4588825.html">每日經濟新聞</a></td><td>騰訊控股9/22大漲5.02%收451.60港元領軍科網股，阿里巴巴+1.95%收114.80港元、盤中一度大漲逾5%，市場聚焦騰訊AI布局進展。</td></tr>
+      <tr><td class="time">16:00</td><td>存儲概念+晶片股全面走強</td><td class="src"><a class="src-link" href="https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-09-22/doc-inissuic8916166.shtml">新浪財經</a></td><td>港股存儲概念股9/22走強，晶片股受Micron突破$1000激勵齊揚，瀾起科技+8%領漲，AI雙雄智譜/MiniMax 跌幅逾6%為當日主要拖累。</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 七、跨市場連動分析 ============ -->
+  <h2>七、跨市場連動分析</h2>
+  <ul class="law-list">
+    <li>美股→台股：Nasdaq連2日創歷史新高（+0.45%收27,244.28）、Micron突破$1,000大關(+3.29%)、Meta Muse AI代理發酵為對9/23台股電子權值明確撐盤動能；然Dow -185點+金融股領跌為對台股金控股間接壓力，短線科技+金融明顯分歧。</li>
+    <li>匯率：美元/日圓於157附近盤整、美10Y殖利率回落至4.90%附近為對台股電子出口股短線正向連動，新台幣預期於30.5-30.7區間震盪；台指期較現貨溢價逾460點反映樂觀情緒濃厚但也顯示過熱風險。</li>
+    <li>其他：MU 9/24財報+10月NVDA財報+9/26 PCE通膨數據為未來2週三大關鍵驗證窗口；Meta Muse AI代理vs金融支付業角力升溫為新一輪AI主題催化，然對台股主要為情緒面而非直接受惠；短線台股48,000大關為關鍵壓力區，長假前調節賣壓與獲利了結風險留意。</li>
+  </ul>
+
+  <!-- ============ 八、今日總覽 ============ -->
+  <h2>八、今日總覽</h2>
+  <div class="overview">
+    <div class="mood">整體氛圍：利多（惟短線過熱風險升溫）</div>
+    <ul class="law-list">
+      <li>台股9/22盤中創48,601歷史新高後拉回收47,800.17點(+81.33)，成交量放大至1兆215億元＋外資連4買447億元＋三大法人合計買超608億元＋台指期未平倉擴大至10.29萬口為明確多方結構。</li>
+      <li>權值股分歧：聯發科收5,180元創歷史新高(+3.39%)、台達電收1,900元創歷史新高(+1.33%)、鴻海+1.20%領軍走揚 vs 台積電收2,460元(-0.81%)由高點拉回，友達爆量再攻漲停(+9.9%)成交量85萬張居冠。</li>
+      <li>美股9/22分歧：Nasdaq +0.45%連2日創歷史新高收27,244，惟Dow -185點(-0.36%)、S&P 500幾乎持平，金融股Muse fear下領跌+能源持續走弱，MU首度突破$1000(+3.29%)為AI記憶體超級周期強力驗證。</li>
+      <li>美股關注：Meta Muse AI代理為新一輪AI主題催化，晶片ETF +2%記憶體ETF +3%領軍，然AI代理與電商/支付業角力升溫（Amazon封鎖Muse購物）為潛在雜訊。</li>
+      <li>風險提示：47,500為短線關鍵支撐、48,000-48,600為前波高點壓力區、量能能否維持8,000億元以上為續攻要件；台指期溢價逾460點反映樂觀情緒過熱，長假前+季底作帳結束後10月初可能出現獲利了結賣壓。</li>
+      <li>關鍵催化窗口：9/24 MU財報（AI記憶體驗證）、9/26 PCE通膨數據（Fed路徑）、10月NVDA財報為未來2週三大關鍵事件；Fed Waller/Miran/Bostic本週講話為Fed升息意向觀察窗口。</li>
+    </ul>
+  </div>
+
+  <footer class="brief-foot">
+    本簡報為資訊整理，非投資建議。「事實」與「市場預期／分析觀點」已於摘要中區分標示。<br>
+    自動產出於 2026/09/23 07:00（UTC+8）。
+  </footer>
+</body>
+</html>
