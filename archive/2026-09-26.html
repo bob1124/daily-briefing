@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日市場簡報｜2026/09/26</title>
+<style>
+  :root {
+    --bg: #0e1116;
+    --panel: #161b22;
+    --panel-2: #1c2230;
+    --border: #2a313c;
+    --text: #d8dee9;
+    --text-dim: #8b95a5;
+    --accent: #e8b339;
+    --up: #ff5b5b;      /* 台股慣例：紅漲 */
+    --down: #3dd68c;    /* 綠跌 */
+    --neutral: #8b95a5;
+    --mono: "SFMono-Regular", "Roboto Mono", "Noto Sans Mono", ui-monospace, monospace;
+    --serif: "Noto Serif TC", "Songti TC", serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans TC", -apple-system, "PingFang TC", "Microsoft JhengHei", sans-serif;
+    line-height: 1.65;
+    padding: 2rem 1.2rem 4rem;
+    max-width: 920px;
+    margin: 0 auto;
+    font-size: 15px;
+  }
+  header.brief-head {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 1rem;
+    margin-bottom: 1.8rem;
+  }
+  header.brief-head .kicker {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    text-transform: uppercase;
+  }
+  header.brief-head h1 {
+    font-family: var(--serif);
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin: 0.2rem 0;
+    letter-spacing: 0.02em;
+  }
+  header.brief-head .date {
+    font-family: var(--mono);
+    color: var(--text-dim);
+    font-size: 0.95rem;
+  }
+  .back-link {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: var(--text-dim);
+    text-decoration: none;
+    font-family: var(--mono);
+    font-size: 0.82rem;
+  }
+  .back-link:hover { color: var(--accent); }
+  h2 {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    margin: 2.2rem 0 0.9rem;
+    padding-left: 0.7rem;
+    border-left: 4px solid var(--accent);
+    letter-spacing: 0.02em;
+  }
+  h2 .core-tag {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.15em;
+    background: var(--accent);
+    color: #0e1116;
+    padding: 0.12rem 0.5rem;
+    border-radius: 3px;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+    font-weight: 700;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.5rem 0 1rem;
+    font-size: 0.86rem;
+    background: var(--panel);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  th {
+    background: var(--panel-2);
+    color: var(--text-dim);
+    text-align: left;
+    padding: 0.6rem 0.7rem;
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+  td {
+    padding: 0.6rem 0.7rem;
+    border-top: 1px solid var(--border);
+    vertical-align: top;
+  }
+  td.time, td.num { font-family: var(--mono); white-space: nowrap; }
+  .tag { font-weight: 700; font-family: var(--mono); font-size: 0.8rem; white-space: nowrap; }
+  .tag.up { color: var(--up); }
+  .tag.down { color: var(--down); }
+  .tag.neutral { color: var(--neutral); }
+  .num.up { color: var(--up); }
+  .num.down { color: var(--down); }
+  .index-table td.num, .index-table th:not(:first-child) { text-align: right; }
+  .index-table th:not(:first-child) { padding-right: 0.9rem; }
+  .index-table td.num { padding-right: 0.9rem; }
+  td.pct { font-family: var(--mono); text-align: right; white-space: nowrap; padding-right: 0.9rem; }
+  td.pct.up { color: var(--up); }
+  td.pct.down { color: var(--down); }
+  .law-list { list-style: none; padding: 0; }
+  .law-list li {
+    padding: 0.45rem 0 0.45rem 1.2rem;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .law-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+  .overview {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 6px;
+    padding: 1.1rem 1.3rem;
+    margin-top: 0.5rem;
+  }
+  .overview .mood { font-family: var(--mono); font-size: 0.95rem; margin-bottom: 0.6rem; }
+  footer.brief-foot {
+    margin-top: 3rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 0.78rem;
+    line-height: 1.8;
+  }
+  .src { color: var(--text-dim); font-size: 0.8rem; }
+  a.src-link { color: var(--text-dim); text-decoration: underline dotted; }
+  a.src-link:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+  <a href="../index.html" class="back-link">← 返回歷史總覽</a>
+  <header class="brief-head">
+    <div class="kicker">Daily Market Brief</div>
+    <h1>每日市場簡報</h1>
+    <div class="date">2026/09/26（UTC+8）｜產出時間 2026/09/26 07:00</div>
+  </header>
+
+  <!-- ============ 一、台股焦點 ============ -->
+  <h2>一、台股焦點<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th><th>影響</th><th>受影響族群/標的</th></tr></thead>
+    <tbody>
+      <tr><td class="time">全日</td><td>台股中秋連假休市第2日</td><td class="src"><a class="src-link" href="https://www.twse.com.tw/zh/holidaySchedule/holidaySchedule">台灣證券交易所</a></td><td>9/26（週六）台股中秋連假休市，休市至9/28（週一），9/29（週二）恢復交易；期間美股將經歷2個交易日（9/25、9/28），連假期間波動將於9/29盤前一次反映。</td><td class="tag neutral">中性</td><td>整體大盤</td></tr>
+      <tr><td class="time">全日</td><td>台積電ADR 9/25收$450.57、微跌0.13%</td><td class="src"><a class="src-link" href="https://finance.yahoo.com/quote/TSM/">Yahoo Finance</a></td><td>台積電ADR(TSM) 9/25收盤$450.57、較9/24 $451.15微跌$0.58(-0.13%)，折合台股約2,864元、較9/24現貨收盤2,475元存在明顯溢價，反映外資對AI供應鏈中長線信心。（市場預期：9/29復盤台積電開高機率升溫）</td><td class="tag up">利多</td><td>台積電(2330)/半導體供應鏈</td></tr>
+      <tr><td class="time">全日</td><td>連假期間關鍵事件觀察窗口</td><td class="src"><a class="src-link" href="https://www.cnbc.com/2026/09/24/stock-market-today-live-updates.html">CNBC</a></td><td>連假期間關注重點：9/26美股PCE通膨數據、9/28週一美股走勢、油價與美伊Hormuz談判進展、Trump-Xi峰會後續政策成果、Fed官員本週講話對10月FOMC路徑指引。</td><td class="tag neutral">中性</td><td>電子權值/被動元件/AI供應鏈</td></tr>
+      <tr><td class="time">全日</td><td>被動元件族群連假前結構性題材延續</td><td class="src"><a class="src-link" href="https://www.sinotrade.com.tw/richclub/hotstock/%E4%B8%89%E6%98%9F%E5%96%8A%E6%BC%B2MLCC-%E8%A2%AB%E5%8B%95%E5%85%83%E4%BB%B6%E4%B8%89%E9%9B%84%E9%BD%8A%E6%BC%B2%E5%81%9C-%E5%9C%8B%E5%B7%A8-%E8%8F%AF%E6%96%B0%E7%A7%91%E7%9A%84%E6%98%A5%E5%A4%A9%E5%9B%9E%E4%BE%86%E4%BA%86%E5%97%8E--%E8%82%A1%E5%B8%82%E8%A9%B1%E9%A1%8C-6a91439aa9d77c0b185c6b96">永豐豐雲學堂</a></td><td>MLCC漲價循環結構延續至2027-2028，三星電機Q4調漲25-30%，村田停產部分料號、缺貨延續，被動元件族群為連假後回補首選。</td><td class="tag up">利多</td><td>國巨(2327)、華新科(2492)、禾伸堂(3026)</td></tr>
+      <tr><td class="time">全日</td><td>連假前市場對48K關卡評價分歧</td><td class="src"><a class="src-link" href="https://newtalk.tw/news/view/2026-09-24/1061793">Newtalk新聞</a></td><td>9/24加權指數收48,024.60點，連假前外資期貨淨空單擴大創近期新高、追價意願降溫；技術面47,800為關鍵支撐、48,300為壓力區。（市場預期：9/29復盤需觀察量能能否維持8,000億元）</td><td class="tag neutral">中性</td><td>整體大盤/期貨</td></tr>
+      <tr><td class="time">全日</td><td>台積電2027年1月調漲晶圓代工價題材發酵</td><td class="src"><a class="src-link" href="https://finance.ettoday.net/news/3243124">ETtoday財經雲</a></td><td>市場傳台積電確定於2027年1月調漲晶圓代工報價3%-6%，先進製程（2奈米、3奈米）漲幅較大，反映AI與HPC需求續強，連假期間為中長線利多發酵時機。</td><td class="tag up">利多</td><td>台積電(2330)/半導體供應鏈</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 二、三大法人動向 ============ -->
+  <h2>二、三大法人動向<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>法人</th><th>買賣超(億元)</th><th>方向</th><th>備註</th></tr></thead>
+    <tbody>
+      <tr><td>外資</td><td class="num neutral">休市</td><td class="tag neutral">—</td><td>9/24最後交易日賣超338.02億元；連假期間無交易，9/29復盤將視美股與美元指數走勢重定籌碼方向</td></tr>
+      <tr><td>投信</td><td class="num neutral">休市</td><td class="tag neutral">—</td><td>9/24最後交易日賣超114.09億元、中斷連5買；連假期間為投信季底作帳收尾窗口</td></tr>
+      <tr><td>自營商</td><td class="num neutral">休市</td><td class="tag neutral">—</td><td>9/24自營商買超42.36億元、避險部位小幅調節；連假期間台指期貨無法交易，需觀察9/29開盤跳空幅度</td></tr>
+    </tbody>
+  </table>
+  <ul class="law-list">
+    <li>台股9/26中秋連假休市第2日，三大法人現貨與期貨市場皆無交易；9/29週二復盤前將累積美股9/25（Fri）與9/28（Mon）兩個交易日的波動。</li>
+    <li>9/24最後交易日三大法人合計賣超438.73億元、外資期貨淨空單擴大創近期新高，反映連假前風險偏好明顯轉弱；連假期間美股若明顯轉多，外資期貨補回動能將為9/29復盤關鍵。<a class="src-link" href="https://www.taifex.com.tw/cht/3/futContractsDate">來源</a></li>
+    <li>季底作帳9/30結束，10月初可能出現獲利了結賣壓，投信與自營商換季操作將於連假期間定調。（市場預期：季末作帳結束後10/1-10/3為短線觀察窗口）</li>
+    <li>連假期間關鍵事件：9/26美股PCE通膨數據、9/28週一美股、Fed Waller/Miran/Bostic本週講話為10月FOMC升息意向重要觀察窗口。</li>
+  </ul>
+
+  <!-- ============ 三、權值股觀察清單 ============ -->
+  <h2>三、權值股觀察清單<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>標的</th><th>漲跌</th><th>相關消息</th><th>影響</th></tr></thead>
+    <tbody>
+      <tr><td>台積電(2330)</td><td class="num neutral">休市</td><td>9/24收2,475元；ADR 9/25收$450.57、微跌0.13%；折台股約2,864元存在明顯溢價；2027年1月晶圓代工調漲3%-6%題材延續。</td><td class="tag up">利多</td></tr>
+      <tr><td>聯發科(2454)</td><td class="num neutral">休市</td><td>9/24收5,285元；歐系券商目標價上調至7,300元、Google TPU合作與Dimensity 9500量產題材延燒；連假期間ADR無明顯波動。</td><td class="tag up">利多</td></tr>
+      <tr><td>鴻海(2317)</td><td class="num neutral">休市</td><td>9/24收250.5元；AI伺服器GB300/Rubin訂單能見度延伸2027年；連假期間需觀察NVDA與AMD走勢。</td><td class="tag neutral">中性</td></tr>
+      <tr><td>廣達(2382)</td><td class="num neutral">休市</td><td>9/24收338.5元；AI伺服器出貨動能續有季增；外資買氣趨緩、高檔震盪；連假後回補動能為觀察重點。</td><td class="tag neutral">中性</td></tr>
+      <tr><td>台達電(2308)</td><td class="num neutral">休市</td><td>9/24收1,910元逆勢創高；AI電源與液冷雙主軸、HVDC出貨開始放量；連假前為結構性強勢主軸。</td><td class="tag up">利多</td></tr>
+      <tr><td>國巨(2327)</td><td class="num neutral">休市</td><td>9/24收約498元；被動元件龍頭、MLCC漲價循環延續至2027-2028；三星電機Q4調漲25-30%為結構性利多。</td><td class="tag up">利多</td></tr>
+      <tr><td>華新科(2492)</td><td class="num neutral">休市</td><td>9/24收約244元；8月合併營收45.69億元創2018年11月來新高；MLCC漲價題材延續。</td><td class="tag up">利多</td></tr>
+      <tr><td>禾伸堂(3026)</td><td class="num neutral">休市</td><td>9/24收約394元；特殊規格MLCC供不應求、車用與AI伺服器需求延續。</td><td class="tag up">利多</td></tr>
+      <tr><td>信昌電(6173)</td><td class="num neutral">休市</td><td>被動元件族群一員、MLCC產能利用率滿載，連假期間結構性題材延續。</td><td class="tag up">利多</td></tr>
+      <tr><td>大毅(2478)</td><td class="num neutral">休市</td><td>晶片電阻價量齊揚題材延續、供不應求延至2027-2028。</td><td class="tag up">利多</td></tr>
+      <tr><td>金山電(8042)</td><td class="num neutral">休市</td><td>電感需求隨AI伺服器規格升級延續，連假後回補動能可期。</td><td class="tag neutral">中性</td></tr>
+      <tr><td>蜜望實(8043)</td><td class="num neutral">休市</td><td>被動元件通路商同步受惠MLCC與電阻漲價潮。</td><td class="tag neutral">中性</td></tr>
+      <tr><td>鈺邦(6449)</td><td class="num neutral">休市</td><td>固態電容受惠AI伺服器與電動車滲透率提升。</td><td class="tag neutral">中性</td></tr>
+      <tr><td>華通(2313)</td><td class="num neutral">休市</td><td>PCB載板題材延燒，AI伺服器與HDI需求同步升溫。</td><td class="tag up">利多</td></tr>
+      <tr><td>友達(2409)</td><td class="num neutral">休市</td><td>面板類股連假前拉回、內外資對面板現貨報價漲勢熄火提出警示。</td><td class="tag down">利空</td></tr>
+      <tr><td>群創(3481)</td><td class="num neutral">休市</td><td>與友達同步、面板類股短線續走弱、報價漲勢動能減弱。</td><td class="tag down">利空</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 四、美股焦點 ============ -->
+  <h2>四、美股焦點（可複委託操作）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th><th>影響</th><th>對台股連動</th></tr></thead>
+    <tbody>
+      <tr><td class="time">04:00</td><td>三大指數9/25週線收紅、Dow大漲478點</td><td class="src"><a class="src-link" href="https://finance.yahoo.com/markets/live/stock-market-today-friday-september-25-dow-sp-500-nasdaq-081738529.html">Yahoo Finance</a></td><td>9/25（週五）美股三大指數收紅：Dow +478.64(+0.93%) 51,828.62、S&amp;P 500 +0.51% 7,743.41、Nasdaq +0.5% 27,068.72；油價下跌與10Y殖利率回落雙動能推升，週線同步收紅。</td><td class="tag up">利多</td><td>對9/29台股電子權值明確撐盤動能</td></tr>
+      <tr><td class="time">04:00</td><td>10Y美債殖利率回落至5.2%以下</td><td class="src"><a class="src-link" href="https://tradingeconomics.com/united-states/government-bond-yield/news/509065">Trading Economics</a></td><td>10Y美債殖利率9/25盤中一度觸5.223% 2007年來新高，尾盤回落至5.2%以下，反映Fed 10月升息預期部分定價、鴿派解讀升溫。</td><td class="tag up">利多</td><td>成長股評價面壓力緩解、電子權值ADR回穩</td></tr>
+      <tr><td class="time">全日</td><td>油價大跌逾2%、Hormuz協議進展</td><td class="src"><a class="src-link" href="https://www.cnbc.com/2026/09/24/oil-iran-crude-kepler-trump-us-un-.html">CNBC</a></td><td>WTI原油9/25跌2.33%收$92.41、Brent跌2.14%收$104.32；美國與伊朗研擬分階段開放Hormuz海峽並解除伊朗港口封鎖，供應緩解預期擴大。</td><td class="tag up">利多</td><td>通膨壓力減緩、對台股塑化/航運股利多</td></tr>
+      <tr><td class="time">全日</td><td>S&amp;P 500連5日創收盤新高</td><td class="src"><a class="src-link" href="https://www.hl.co.uk/shares/stock-market-news/market-reports/us-close-s-and-p-500-clocks-fifth-straight-record-close">Hargreaves Lansdown</a></td><td>S&amp;P 500 9/25收盤創歷史新高、為連5日創收盤新高；油價下跌+殖利率回落+9/26 PCE通膨數據前風險偏好回升為三大動能。</td><td class="tag up">利多</td><td>對台股電子權值ADR連動明確正向</td></tr>
+      <tr><td class="time">全日</td><td>9/26 PCE通膨數據為關鍵觀察窗口</td><td class="src"><a class="src-link" href="https://investrade.com/morning-preview-september-25-2026/">Investrade</a></td><td>9/26美東時間8:30公布8月PCE通膨數據，為Fed 10/29 FOMC會議前最重要通膨指標；核心PCE年增率預估3.0%附近，若優於預期將支撐風險偏好。</td><td class="tag neutral">中性</td><td>連假期間美股波動將於9/29盤前一次反映</td></tr>
+      <tr><td class="time">全日</td><td>Trump-Xi峰會後續、聚焦關稅與AI</td><td class="src"><a class="src-link" href="https://www.cnbc.com/2026/09/24/trump-xi-meeting-china-washington.html">CNBC</a></td><td>川習9/24於白宮舉行峰會，議題涵蓋關稅、AI、伊朗與台灣；市場觀察後續實質關稅調整成果，港股AI應用9/25延續回檔反映短線消化。</td><td class="tag up">利多</td><td>台股半導體與科技供應鏈中長線利多</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 四之二、美股指數與板塊動向 ============ -->
+  <h2>美股指數與板塊動向<span class="core-tag">CORE</span></h2>
+  <table class="index-table">
+    <thead><tr><th>指數</th><th>收盤</th><th>漲跌</th><th>漲跌幅</th></tr></thead>
+    <tbody>
+      <tr><td>道瓊工業指數</td><td class="num">51,828.62</td><td class="num up">+478.64</td><td class="pct up">+0.93%</td></tr>
+      <tr><td>S&amp;P 500</td><td class="num">7,743.41</td><td class="num up">+39.28</td><td class="pct up">+0.51%</td></tr>
+      <tr><td>那斯達克綜合指數</td><td class="num">27,068.72</td><td class="num up">+129.35</td><td class="pct up">+0.50%</td></tr>
+      <tr><td>費城半導體指數(SOX)</td><td class="num">12,534.30</td><td class="num up">+145.90</td><td class="pct up">+1.18%</td></tr>
+    </tbody>
+  </table>
+  <table>
+    <thead><tr><th>板塊（GICS）</th><th>漲跌幅</th><th>表現</th><th>當日驅動/備註</th></tr></thead>
+    <tbody>
+      <tr><td>資訊科技</td><td class="pct up">+0.85%</td><td class="tag up">領漲</td><td>半導體與AI股連動反彈，SOX +1.18%、Micron/AMD/NVIDIA齊揚，10Y殖利率回落緩解評價面壓力。</td></tr>
+      <tr><td>通訊服務</td><td class="pct up">+0.72%</td><td class="tag up">領漲</td><td>Meta、Alphabet逢低反彈延續、Trump-Xi峰會期待推動科技供應鏈情緒。</td></tr>
+      <tr><td>非必需消費</td><td class="pct up">+0.65%</td><td class="tag up">領漲</td><td>Amazon、Tesla反彈、油價下跌緩解消費者能源支出壓力，週末風險偏好回升。</td></tr>
+      <tr><td>必需消費</td><td class="pct up">+0.15%</td><td class="tag neutral">持平</td><td>防禦性資金部分回吐、隨風險偏好回升略有撤出，P&amp;G與可口可樂小幅收紅。</td></tr>
+      <tr><td>能源</td><td class="pct down">-1.85%</td><td class="tag down">領跌</td><td>WTI下跌2.33%、Brent下跌2.14%，Hormuz協議進展利多轉為能源股評價壓力，Exxon、Chevron雙雙走弱。</td></tr>
+      <tr><td>金融</td><td class="pct up">+0.55%</td><td class="tag up">領漲</td><td>殖利率回落降低銀行淨利差擔憂、JPM、GS、BAC全數收紅，週線同步收紅。</td></tr>
+      <tr><td>醫療保健</td><td class="pct up">+0.30%</td><td class="tag up">領漲</td><td>大型藥廠與生技股續獲避險資金青睞、Amgen、Lilly穩健收紅。</td></tr>
+      <tr><td>工業</td><td class="pct up">+0.60%</td><td class="tag up">領漲</td><td>週期性工業股受殖利率回落與油價下跌雙動能提振，Caterpillar、GE Aerospace領軍反彈。</td></tr>
+      <tr><td>原物料</td><td class="pct up">+0.40%</td><td class="tag up">領漲</td><td>金屬礦業與化學品股反彈，美元指數走弱助攻，Sherwin-Williams由跌轉平。</td></tr>
+      <tr><td>不動產</td><td class="pct up">+0.95%</td><td class="tag up">領漲</td><td>10Y債息回落至5.2%以下明顯支撐REITs評價、房市股領軍反彈。</td></tr>
+      <tr><td>公用事業</td><td class="pct up">+1.20%</td><td class="tag up">領漲</td><td>利率敏感類股大幅反彈為當日領漲，殖利率回落緩解評價面壓力、高股息吸引力回升。</td></tr>
+    </tbody>
+  </table>
+  <ul class="law-list">
+    <li>當日資金明顯由能源板塊（-1.85%）→利率敏感板塊（Utilities +1.20%、REITs +0.95%）與科技板塊（Info Tech +0.85%），反映油價下跌與殖利率回落的雙重輪動。11板塊10漲1跌為明確風險偏好回升結構。</li>
+    <li>資訊科技與半導體板塊9/25明顯反彈、SOX +1.18%收12,534.30，對台股電子權值股尤其台積電(2330)、聯發科(2454)、鴻海(2317)、廣達(2382)為對9/29復盤明確中性偏多短線利多；AI結構性需求（HBM、AI伺服器、被動元件）與Trump-Xi峰會期待為中長線支撐。</li>
+    <li>S&amp;P 500連5日創收盤新高，反映10Y殖利率由5.223%回落至5.2%以下與Hormuz協議進展的雙重支撐；PCE通膨數據9/26公布為Fed 10月會議前最後關鍵指標，將主導連假期間美股波動方向。</li>
+  </ul>
+
+  <!-- ============ 五、日本（參考） ============ -->
+  <h2>五、日本（參考）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th></tr></thead>
+    <tbody>
+      <tr><td class="time">15:00</td><td>日經225大漲850點、連5日走高突破66,000</td><td class="src"><a class="src-link" href="https://newsonjapan.com/article/150860.php">News On Japan</a></td><td>日經225 9/25收66,364.20點+850.21(+1.30%)為連5日上漲，突破66,000大關；半導體+AI股+9/28除息前配息買盤三重動能推升。</td></tr>
+      <tr><td class="time">15:00</td><td>Advantest+2.8%、Kioxia+2.2%、Ibiden+4.2%領軍</td><td class="src"><a class="src-link" href="https://newsonjapan.com/article/150860.php">News On Japan</a></td><td>半導體與AI相關股續強：Ibiden+4.2%、Advantest+2.8%、Kioxia+2.2%，海外AI供應鏈情緒回暖、Micron HBM4供應鏈題材延燒為主因。</td></tr>
+      <tr><td class="time">15:00</td><td>SoftBank發行1.76兆日圓外幣債、追加投資OpenAI $100億</td><td class="src"><a class="src-link" href="https://www.cnbc.com/2026/05/07/japan-softbank-tech-shares-nikkei-to-record-high.html">CNBC</a></td><td>SoftBank Group 9/24宣布發行約1.76兆日圓外幣債為史上最大單次募資、追加投資OpenAI $100億美元、AI CapEx敘事升溫。</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 六、香港（參考） ============ -->
+  <h2>六、香港（參考）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th></tr></thead>
+    <tbody>
+      <tr><td class="time">16:00</td><td>恒指9/25收24,510.09點-1.01%為連3日下跌</td><td class="src"><a class="src-link" href="https://news.futunn.com/en/post/1000209081/hong-kong-stocks-close-sep-25-hang-seng-index-falls">Futunn News</a></td><td>恒生指數9/25下跌1.01%收24,510.09點失守24,600、恒生科技-1.13%收4,311.78、恒生國企同步走弱；中秋連假Stock Connect南向資金無交易為主要壓抑。</td></tr>
+      <tr><td class="time">16:00</td><td>科技+地產股遭大量賣壓、多股跌逾3%</td><td class="src"><a class="src-link" href="https://finance.biggo.com/news/790a735d-2783-421d-b9b7-b4b74cf7ffbf">BigGo Finance</a></td><td>Xiaomi、NetEase、AAC Technologies跌1.8-3.05%、Alibaba/Baidu/Meituan/JD跌逾2%；地產股融信中國一度重挫14%、融創-7%、萬科-5%。</td></tr>
+      <tr><td class="time">16:00</td><td>聯想集團逆勢+3%領軍藍籌</td><td class="src"><a class="src-link" href="https://news.futunn.com/en/post/1000209081/hong-kong-stocks-close-sep-25-hang-seng-index-falls">Futunn News</a></td><td>Lenovo Group (00992)逆勢+3%為藍籌股領漲、聯想控股年內累計漲逾160%，AI PC與Server題材延燒。</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 七、跨市場連動分析 ============ -->
+  <h2>七、跨市場連動分析</h2>
+  <ul class="law-list">
+    <li>美股→台股：Dow +478、S&amp;P 500 +0.51%連5日創收盤新高、Nasdaq +0.5%、SOX +1.18% 12,534.30為對9/29台股復盤明確中性偏多短線動能，台積電ADR $450.57折台股約2,864元存在明顯溢價、聯發科ADR相對強勢，惟連假期間累積波動需觀察9/28（週一）美股走勢。</li>
+    <li>匯率與債息：10Y美債殖利率由9/24盤中5.223% 2007年來新高回落至5.2%以下、殖利率回落緩解成長股評價壓力；美元指數短線走弱、新台幣連假期間NDF匯率為觀察窗口，出口電子股接單彈性維持。</li>
+    <li>油價與通膨：WTI下跌2.33%至$92.41、Brent -2.14%至$104.32，Hormuz協議進展緩解供應面隱憂、通膨壓力減輕，Fed 10月升息25bp預期部分定價；被動元件、AI伺服器等結構性主軸不受油價波動影響。</li>
+    <li>日經→台股：日經225 +1.30%連5日走高、Advantest+2.8%、Ibiden+4.2%、Kioxia+2.2%為對台股半導體設備與IC封測供應鏈明確正向連動、日圓於157區間為出口電子股匯兌影響中性。</li>
+    <li>港股→台股：恒指-1.01%連3日下跌、Stock Connect休市為主要壓抑，但Lenovo +3%為AI PC/Server題材對台股華碩(2357)、宏碁(2353)、廣達(2382)結構性連動延續。</li>
+    <li>連假效應：台股9/25–9/28中秋連假休市至9/29週二復盤；期間美股將經歷2個交易日（9/25週五已完成、9/28週一），連假期間美股波動將於9/29盤前一次反映，9/26美股PCE通膨數據為關鍵風險事件。</li>
+  </ul>
+
+  <!-- ============ 八、今日總覽 ============ -->
+  <h2>八、今日總覽</h2>
+  <div class="overview">
+    <div class="mood">整體氛圍：中性偏多（美股週線收紅+S&amp;P 500連5日創新高、殖利率回落與油價下跌雙動能撐盤，惟台股連假休市無法即時反映）</div>
+    <ul class="law-list">
+      <li>台股關注重點1：中秋連假休市第2日（9/25-9/28），9/29週二復盤前將累積美股9/25與9/28兩個交易日波動；台積電ADR 9/25收$450.57折台股約2,864元存在明顯溢價，9/29開盤跳空缺口為主要觀察。</li>
+      <li>台股關注重點2：連假前外資期貨淨空單擴大創近期新高、追價意願降溫；技術面47,800為短線關鍵支撐、48,300為壓力區，量能能否維持8,000億元以上為續攻要件。</li>
+      <li>台股關注重點3：被動元件族群（MLCC漲價循環延續至2027-2028）、AI伺服器（台達電HVDC放量）、台積電2027年1月調漲晶圓代工價3%-6%為連假後回補首選結構性題材。</li>
+      <li>美股關注重點1：S&amp;P 500連5日創收盤新高、Dow +478大漲、SOX +1.18% 12,534.30；10Y殖利率由5.223%回落至5.2%以下、油價下跌逾2%、Hormuz協議進展三重利多為週線收紅動能。</li>
+      <li>美股關注重點2：9/26美東時間8:30公布8月PCE通膨數據為Fed 10/29 FOMC會議前最重要通膨指標；Fed Waller/Miran/Bostic本週講話為10月升息意向重要觀察窗口。</li>
+      <li>風險提示1：連假期間累積美股2個交易日波動，若9/28週一出現急殺，9/29台股復盤跳空缺口將擴大；油價急拉或Hormuz談判破局為主要黑天鵝風險。</li>
+      <li>風險提示2：季底作帳9/30結束、10月初可能出現獲利了結賣壓；Trump-Xi峰會實質關稅調整成果、10月NVDA財報、11月Q4財報季為未來2個月三大關鍵驗證窗口。</li>
+    </ul>
+  </div>
+
+  <footer class="brief-foot">
+    本簡報為資訊整理，非投資建議。「事實」與「市場預期／分析觀點」已於摘要中區分標示。<br>
+    自動產出於 2026/09/26 07:00（UTC+8）。
+  </footer>
+</body>
+</html>
