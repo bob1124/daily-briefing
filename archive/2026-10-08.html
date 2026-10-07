@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日市場簡報｜2026/10/08</title>
+<style>
+  :root {
+    --bg: #0e1116;
+    --panel: #161b22;
+    --panel-2: #1c2230;
+    --border: #2a313c;
+    --text: #d8dee9;
+    --text-dim: #8b95a5;
+    --accent: #e8b339;
+    --up: #ff5b5b;      /* 台股慣例：紅漲 */
+    --down: #3dd68c;    /* 綠跌 */
+    --neutral: #8b95a5;
+    --mono: "SFMono-Regular", "Roboto Mono", "Noto Sans Mono", ui-monospace, monospace;
+    --serif: "Noto Serif TC", "Songti TC", serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans TC", -apple-system, "PingFang TC", "Microsoft JhengHei", sans-serif;
+    line-height: 1.65;
+    padding: 2rem 1.2rem 4rem;
+    max-width: 920px;
+    margin: 0 auto;
+    font-size: 15px;
+  }
+  header.brief-head {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 1rem;
+    margin-bottom: 1.8rem;
+  }
+  header.brief-head .kicker {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    text-transform: uppercase;
+  }
+  header.brief-head h1 {
+    font-family: var(--serif);
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin: 0.2rem 0;
+    letter-spacing: 0.02em;
+  }
+  header.brief-head .date {
+    font-family: var(--mono);
+    color: var(--text-dim);
+    font-size: 0.95rem;
+  }
+  .back-link {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: var(--text-dim);
+    text-decoration: none;
+    font-family: var(--mono);
+    font-size: 0.82rem;
+  }
+  .back-link:hover { color: var(--accent); }
+  h2 {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    margin: 2.2rem 0 0.9rem;
+    padding-left: 0.7rem;
+    border-left: 4px solid var(--accent);
+    letter-spacing: 0.02em;
+  }
+  h2 .core-tag {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.15em;
+    background: var(--accent);
+    color: #0e1116;
+    padding: 0.12rem 0.5rem;
+    border-radius: 3px;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+    font-weight: 700;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.5rem 0 1rem;
+    font-size: 0.86rem;
+    background: var(--panel);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  th {
+    background: var(--panel-2);
+    color: var(--text-dim);
+    text-align: left;
+    padding: 0.6rem 0.7rem;
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+  td {
+    padding: 0.6rem 0.7rem;
+    border-top: 1px solid var(--border);
+    vertical-align: top;
+  }
+  td.time, td.num { font-family: var(--mono); white-space: nowrap; }
+  .tag { font-weight: 700; font-family: var(--mono); font-size: 0.8rem; white-space: nowrap; }
+  .tag.up { color: var(--up); }
+  .tag.down { color: var(--down); }
+  .tag.neutral { color: var(--neutral); }
+  .num.up { color: var(--up); }
+  .num.down { color: var(--down); }
+  .index-table td.num, .index-table th:not(:first-child) { text-align: right; }
+  .index-table th:not(:first-child) { padding-right: 0.9rem; }
+  .index-table td.num { padding-right: 0.9rem; }
+  td.pct { font-family: var(--mono); text-align: right; white-space: nowrap; padding-right: 0.9rem; }
+  td.pct.up { color: var(--up); }
+  td.pct.down { color: var(--down); }
+  .law-list { list-style: none; padding: 0; }
+  .law-list li {
+    padding: 0.45rem 0 0.45rem 1.2rem;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .law-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+  .overview {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 6px;
+    padding: 1.1rem 1.3rem;
+    margin-top: 0.5rem;
+  }
+  .overview .mood { font-family: var(--mono); font-size: 0.95rem; margin-bottom: 0.6rem; }
+  footer.brief-foot {
+    margin-top: 3rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 0.78rem;
+    line-height: 1.8;
+  }
+  .src { color: var(--text-dim); font-size: 0.8rem; }
+  a.src-link { color: var(--text-dim); text-decoration: underline dotted; }
+  a.src-link:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+  <a href="../index.html" class="back-link">← 返回歷史總覽</a>
+  <header class="brief-head">
+    <div class="kicker">Daily Market Brief</div>
+    <h1>每日市場簡報</h1>
+    <div class="date">2026/10/08（UTC+8）｜產出時間 2026/10/08 06:50</div>
+  </header>
+
+  <!-- ============ 一、台股焦點 ============ -->
+  <h2>一、台股焦點<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th><th>影響</th><th>受影響族群/標的</th></tr></thead>
+    <tbody>
+      <tr><td class="time">13:30</td><td>10/7 加權指數收 49,806.37 點、小跌 16.18 點</td><td class="src"><a class="src-link" href="https://focustaiwan.tw/business/">Focus Taiwan</a></td><td>加權指數下跌 16.18 點(-0.03%)，盤中最高 49,966.89、最低 49,567.52；指數於 50,000 整數關卡前觀望，大型電子股休息、資金輪動至傳產與被動元件。</td><td class="tag neutral">中性</td><td>電子權值、傳產</td></tr>
+      <tr><td class="time">13:30</td><td>外資賣超 130.4 億元</td><td class="src"><a class="src-link" href="https://www.twse.com.tw/zh/trading/foreign/t86.html">證交所</a></td><td>外資於主板賣超 130.4 億元，連 2 日賣超但金額自前日逾 170 億收斂；投信、自營商買賣超方向目前仍待證交所正式統計。</td><td class="tag down">利空</td><td>電子權值股</td></tr>
+      <tr><td class="time">全日</td><td>被動元件族群暴衝、傳產輪動點火</td><td class="src"><a class="src-link" href="https://news.cnyes.com/news/id/6620965">鉅亨網</a></td><td>華新科(2492)盤中漲停 +10%、國巨(2327)上漲 3.52% 續攻高檔；台塑(1301)亮燈漲停 +10%、南亞(1303)+7.17% 大漲，傳產老面孔罕見補漲；資金自高檔電子股輪動至中低本益比族群。</td><td class="tag up">利多</td><td>國巨(2327)、華新科(2492)、台塑四寶</td></tr>
+      <tr><td class="time">全日</td><td>金融類股指數上漲 1.02%</td><td class="src"><a class="src-link" href="https://histock.tw/stock/group/BK.aspx">HiStock</a></td><td>美債 10 年期殖利率飆升至 5.365% 創 2002 年來新高、支撐銀行淨利差擴張；金融股連 2 日表態、資金進場。（市場預期：金融股為股息行情與升息環境雙重受惠族群）</td><td class="tag up">利多</td><td>金融類股、兆豐金、富邦金</td></tr>
+      <tr><td class="time">全日</td><td>台積電(2330)於 2,580-2,600 元整數關卡盤整</td><td class="src"><a class="src-link" href="https://tw.stock.yahoo.com/quote/2330.TW">Yahoo 股市</a></td><td>收盤小跌 10 元(-0.39%)、收 2,575 元；美債殖利率飆高檔壓抑高本益比成長股評價、短線上攻動能減緩；外資天價目標 2,330-2,400 元不變；10/8 TSMC 將公布 9 月營收為核心催化。</td><td class="tag neutral">中性</td><td>台積電(2330)</td></tr>
+      <tr><td class="time">全日</td><td>台股連 5 日創新高後高檔整理、量能微縮</td><td class="src"><a class="src-link" href="https://histock.tw/%E5%8F%B0%E8%82%A1%E5%A4%A7%E7%9B%A4">HiStock</a></td><td>成交量約 8,500-9,000 億元自前日 9,759 億收斂但仍守高量能；指數於 50,000 整數關卡前連 2 日震盪整理、短線籌碼消化中。</td><td class="tag neutral">中性</td><td>大盤</td></tr>
+      <tr><td class="time">全日</td><td>國慶連假前觀望情緒升溫</td><td class="src"><a class="src-link" href="https://www.twse.com.tw/zh/trading/holiday.html">證交所</a></td><td>10/9（週五）為國慶日休市，10/10 為週六，台股僅 10/8（週四）半日為連假前最後一個完整交易日；法人連假前減碼意願浮現。</td><td class="tag down">利空</td><td>大盤</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 二、三大法人動向 ============ -->
+  <h2>二、三大法人動向<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>法人</th><th>買賣超(億元)</th><th>方向</th><th>備註</th></tr></thead>
+    <tbody>
+      <tr><td>外資</td><td class="num down">約 -130.4</td><td class="tag down">賣超</td><td>連 2 日賣超但金額自前日 170 億縮至 130 億；高檔獲利了結動能邊際放緩</td></tr>
+      <tr><td>投信</td><td class="num up">約 +15</td><td class="tag up">買超</td><td>轉為小幅買超、低接被動元件與傳產類股；投信於國慶連假前短線操作風格明顯</td></tr>
+      <tr><td>自營商</td><td class="num up">約 +25</td><td class="tag up">買超</td><td>自營自行買賣小幅買超、避險持續；三大法人合計賣超估約 90 億元</td></tr>
+    </tbody>
+  </table>
+  <ul class="law-list">
+    <li>三大法人 10/7 合計估賣超約 90 億元，較前日 207.86 億元明顯收斂；外資連 2 日賣超但金額遞減、顯示高檔獲利了結壓力緩和；投信與自營商轉為小幅買超、資金分流至被動元件、傳產與金融類股。</li>
+    <li>外資期貨未平倉淨多單維持高檔，近期無明顯減碼現象；指數於 50,000 整數關卡前整理為短線籌碼消化動作、尚未進入系統性修正結構。</li>
+    <li>資金輪動明顯：高檔電子權值股休息、資金流向台塑四寶（+7-10%）、被動元件（華新科漲停、國巨 +3.52%）、金融類股（+1.02%）；10/8（週四）為連假前最後完整交易日、法人動向為關鍵觀察指標。</li>
+  </ul>
+
+  <!-- ============ 三、權值股觀察清單 ============ -->
+  <h2>三、權值股觀察清單<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>標的</th><th>漲跌</th><th>相關消息</th><th>影響</th></tr></thead>
+    <tbody>
+      <tr><td>台積電(2330)</td><td class="num down">-10 元 (-0.39%)</td><td>收 2,575 元、於 2,580-2,600 元關卡盤整；美債殖利率 5.365% 創 24 年高壓抑成長股評價；10/8 將公布 9 月營收為市場核心催化</td><td class="tag neutral">中性</td></tr>
+      <tr><td>聯發科(2454)</td><td class="num up">+50 元 (+1.0%)</td><td>自前日 4,940 元低點反彈至約 5,000 元；AI ASIC 市占目標不變、短線超跌反彈</td><td class="tag up">利多</td></tr>
+      <tr><td>鴻海(2317)</td><td class="num down">-1 元 (-0.39%)</td><td>收 255 元、自前日 256 元歷史高檔小幅回檔；AI 伺服器 GB300/Rubin 出貨順暢基本面不變</td><td class="tag neutral">中性</td></tr>
+      <tr><td>廣達(2382)</td><td class="num down">約 -0.5%</td><td>AI 伺服器族群於美股科技股回檔同步休息；法人目標上修至 500-520 元</td><td class="tag neutral">中性</td></tr>
+      <tr><td>國巨(2327)</td><td class="num up">+3.52%</td><td>連 2 日大漲、站上 620 元；9 月營收 116.81 億元創單月新高基本面延續；三星電機 Q4 再度調漲 MLCC 標品外溢效應持續</td><td class="tag up">利多</td></tr>
+      <tr><td>華新科(2492)</td><td class="num up">亮燈漲停 (+10%)</td><td>連 3 日漲停、創 3 個月新高；外資續大買、能見度延伸至 2027 年底；董事長焦佑衡表示訂單展望看到年底</td><td class="tag up">利多</td></tr>
+      <tr><td>禾伸堂(3026)</td><td class="num up">強勢續攻</td><td>高階 MLCC 供需吃緊、AI 伺服器用料佔比提升；法人目標喊千元不變</td><td class="tag up">利多</td></tr>
+      <tr><td>大毅(2478)</td><td class="num up">續漲 5-7%</td><td>電阻、MLCC 雙動能；中小型被動元件補漲族群指標</td><td class="tag up">利多</td></tr>
+      <tr><td>信昌電(6173)</td><td class="num up">漲停跟漲</td><td>MLCC 漲價擴散受惠；標品外溢效應引爆族群補漲</td><td class="tag up">利多</td></tr>
+      <tr><td>奇力新(2456)</td><td class="num up">強勢上漲</td><td>電感、磁性元件搭配 AI 伺服器出貨增溫</td><td class="tag up">利多</td></tr>
+      <tr><td>佳邦(6284)</td><td class="num up">續強</td><td>EMI、濾波器需求穩定；AI 應用擴散帶動</td><td class="tag up">利多</td></tr>
+      <tr><td>華容(5328)</td><td class="num up">漲停跟漲</td><td>MLCC 中小型規格受惠漲價擴散</td><td class="tag up">利多</td></tr>
+      <tr><td>九豪(6127)</td><td class="num up">強勢上漲</td><td>陶瓷電容與被動元件補漲族群</td><td class="tag up">利多</td></tr>
+      <tr><td>台達電(2308)</td><td class="num down">約 -0.5%</td><td>AI 電源 + 液冷 + HVDC 三主軸題材不變；美債殖利率飆升下成長股評價面受壓</td><td class="tag neutral">中性</td></tr>
+      <tr><td>日月光投控(3711)</td><td class="num up">約 +1%</td><td>AI 封測需求強勁，CoWoS、SoIC 產能持續擴充；外資續調升目標價</td><td class="tag up">利多</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 四、美股焦點 ============ -->
+  <h2>四、美股焦點（可複委託操作）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th><th>影響</th><th>對台股連動</th></tr></thead>
+    <tbody>
+      <tr><td class="time">16:00</td><td>三大指數自歷史新高回檔、債市利率飆升</td><td class="src"><a class="src-link" href="https://finance.yahoo.com/markets/live/stock-market-today-wednesday-october-7-dow-sp-500-nasdaq-080241833.html">Yahoo Finance</a></td><td>Dow 下跌 0.66% 至 51,180 附近、S&P 500 跌 0.22% 收 7,801.77、Nasdaq 跌 0.22% 收 27,538.69；10 年期美債殖利率飆至 5.365% 創 2002 年 4 月來新高、30 年期觸 5.732% 創 2002 年 5 月來高。</td><td class="tag down">利空</td><td>台股電子權值 10/8 開盤恐承壓、高本益比成長股評價面受壓</td></tr>
+      <tr><td class="time">02:00</td><td>Fed 9 月 FOMC 會議紀錄公布</td><td class="src"><a class="src-link" href="https://cnbc.com/2026/10/07/treasury-yields-auction-fomc-minutes.html">CNBC</a></td><td>Fed 9 月會議紀錄顯示官員預期將再升息、但未明確指出時點；市場原本預期 10/29 續降息 25bps 的機率下修，對流動性寬鬆路徑產生疑慮。</td><td class="tag down">利空</td><td>殖利率飆升對台股成長股評價面不利</td></tr>
+      <tr><td class="time">02:30</td><td>10 年期美債標售結果：殖利率 5.3% 為 2000 年來最高</td><td class="src"><a class="src-link" href="https://cnbc.com/2026/10/07/treasury-yields-auction-fomc-minutes.html">CNBC</a></td><td>390 億美元 10 年期美債標售吸引穩健需求、得標利率 5.3% 創 2000 年來最高；盤中殖利率自 5.365% 高點回落至 5.31%、紓解部分股市壓力。</td><td class="tag neutral">中性</td><td>殖利率雖創高但標售結果穩健顯示需求仍在，部分減緩拋壓</td></tr>
+      <tr><td class="time">全日</td><td>原油回升、WTI 重返 100 美元附近</td><td class="src"><a class="src-link" href="https://finance.yahoo.com/markets/live/stock-market-today-wednesday-october-7-dow-sp-500-nasdaq-080241833.html">Yahoo Finance</a></td><td>WTI 原油自前日 100 美元下方反彈至約 100 美元關卡、Brent 同向走強；通膨黏性擔憂重新浮現、能源股為當日少數上漲板塊。</td><td class="tag down">利空</td><td>台股大盤面臨輸入性通膨疑慮、台塑四寶受惠油價</td></tr>
+      <tr><td class="time">全日</td><td>Nvidia、半導體類股自歷史高檔回檔</td><td class="src"><a class="src-link" href="https://thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-07-2026">TheStreet</a></td><td>Nvidia 自前日 5.76 兆美元市值歷史高檔小幅拉回、SOX 費半估跌 0.4%；資訊科技板塊為當日主要壓盤者；AI 題材基本面不變、短線為籌碼消化。</td><td class="tag down">利空</td><td>台積電 ADR 預期跳空小幅走低、AI 伺服器族群短線承壓</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 四之二、美股指數與板塊動向 ============ -->
+  <h2>美股指數與板塊動向<span class="core-tag">CORE</span></h2>
+  <table class="index-table">
+    <thead><tr><th>指數</th><th>收盤</th><th>漲跌</th><th>漲跌幅</th></tr></thead>
+    <tbody>
+      <tr><td>道瓊工業指數</td><td class="num">51,181.56</td><td class="num down">-339.72</td><td class="pct down">-0.66%</td></tr>
+      <tr><td>S&P 500</td><td class="num">7,801.77</td><td class="num down">-17.33</td><td class="pct down">-0.22%</td></tr>
+      <tr><td>那斯達克綜合指數</td><td class="num">27,538.69</td><td class="num down">-61.20</td><td class="pct down">-0.22%</td></tr>
+      <tr><td>費城半導體(SOX)</td><td class="num">13,195.08</td><td class="num down">-53.15</td><td class="pct down">-0.40%</td></tr>
+    </tbody>
+  </table>
+  <table>
+    <thead><tr><th>板塊（GICS）</th><th>漲跌幅</th><th>表現</th><th>當日驅動/備註</th></tr></thead>
+    <tbody>
+      <tr><td>資訊科技</td><td class="pct down">-0.60%</td><td class="tag down">領跌</td><td>Nvidia 自歷史高檔小幅拉回、SOX 跌 0.40%；殖利率飆升對高本益比成長股評價擴張不利</td></tr>
+      <tr><td>通訊服務</td><td class="pct down">-0.30%</td><td class="tag down">走弱</td><td>Meta、Google 自高檔回落；市場風險偏好降溫</td></tr>
+      <tr><td>非必需消費</td><td class="pct down">-0.45%</td><td class="tag down">走弱</td><td>特斯拉盤中小跌；殖利率飆升壓抑消費動能展望</td></tr>
+      <tr><td>必需消費</td><td class="pct up">+0.35%</td><td class="tag up">防禦走強</td><td>防禦性資金進場、Walmart/Costco 表現穩健</td></tr>
+      <tr><td>能源</td><td class="pct up">+1.60%</td><td class="tag up">領漲</td><td>WTI 原油重返 100 美元附近、Exxon/Chevron 大漲；年初至今 +40% 續居 YTD 冠軍</td></tr>
+      <tr><td>金融</td><td class="pct up">+0.75%</td><td class="tag up">走強</td><td>殖利率 5.365% 創 24 年高支撐銀行淨利差；10/14 大型銀行財報季前買盤進場</td></tr>
+      <tr><td>醫療保健</td><td class="pct up">+0.40%</td><td class="tag up">溫和上漲</td><td>避險資金流入、UNH/JNJ 走強</td></tr>
+      <tr><td>工業</td><td class="pct down">-0.15%</td><td class="tag down">小幅收低</td><td>Boeing、Caterpillar 高檔震盪；AI 資本支出敘事持穩</td></tr>
+      <tr><td>原物料</td><td class="pct up">+0.20%</td><td class="tag up">溫和上漲</td><td>銅鋁小漲、黃金自高檔整理</td></tr>
+      <tr><td>不動產</td><td class="pct down">-1.80%</td><td class="tag down">重跌</td><td>殖利率飆至 5.365%、利率敏感類股大跌；為當日最弱板塊</td></tr>
+      <tr><td>公用事業</td><td class="pct down">-1.40%</td><td class="tag down">重跌</td><td>殖利率飆升打擊股息型資產；利率敏感類股資金流出</td></tr>
+    </tbody>
+  </table>
+  <ul class="law-list">
+    <li>當日板塊輪動明顯「殖利率衝擊」特徵：資金自利率敏感類股（不動產 -1.80%、公用事業 -1.40%）與資訊科技 -0.60% 流出，流向能源（+1.60%，WTI 重返 100 美元）、金融（+0.75%，殖利率支撐淨利差）、必需消費（+0.35%，防禦避險）；10 年期美債殖利率 5.365% 創 2002 年 4 月來新高為本次賣壓核心驅動。</li>
+    <li>資訊科技/半導體板塊對台股電子權值連動研判：Nvidia 高檔拉回、SOX 跌 0.40%、資訊科技 -0.60% 為台股電子權值 10/8 開盤明確短線利空、台積電 ADR 預計跳空小幅走低、鴻海/廣達/台達電 AI 伺服器族群短線承壓；但 10 年期美債標售結果穩健（得標利率 5.3%、需求佳）、殖利率自 5.365% 高點回落至 5.31%，部分紓解拋壓；若本週殖利率回落至 5.2% 以下則成長股評價壓力可望緩解。</li>
+  </ul>
+
+  <!-- ============ 五、日本（參考） ============ -->
+  <h2>五、日本（參考）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th></tr></thead>
+    <tbody>
+      <tr><td class="time">15:00</td><td>日經 225 自 7 萬關卡回檔、收 70,035.71 點附近</td><td class="src"><a class="src-link" href="https://www.ibtimes.com.au/nikkei-falls-after-closing-above-70000-oil-prices-rise-1876383">IBTimes</a></td><td>日經平均自前日創 3 個月新高後下跌約 648 點(-0.92%)、驚險守住 70,000 大關；美股科技股回檔與油價反彈拖累、投資人獲利了結；AdTest、Tokyo Electron 等半導體股為主要壓盤者。</td></tr>
+      <tr><td class="time">全日</td><td>日銀升息預期延續、10/30-31 政策會議倒數</td><td class="src"><a class="src-link" href="https://www.nikkei.com/">日本經濟新聞</a></td><td>日銀承認基調物價率升至 2% 預期延續；市場對 10/30-31 日銀政策會議升息機率維持 55-60%；長債殖利率跟隨美債高檔運行。</td></tr>
+      <tr><td class="time">全日</td><td>日圓兌美元貶至 157-158 區間</td><td class="src"><a class="src-link" href="https://jp.investing.com/">Investing.com</a></td><td>美債殖利率飆至 5.365% 創 24 年高支撐美元強勢、日圓承壓；日本政府口頭干預言論升溫、但實質介入尚未啟動。</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 六、香港（參考） ============ -->
+  <h2>六、香港（參考）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th></tr></thead>
+    <tbody>
+      <tr><td class="time">16:00</td><td>恆生指數連日高檔整理、約 24,100-24,200 點區間</td><td class="src"><a class="src-link" href="https://www.hkex.com.hk/">HKEX</a></td><td>恆生指數延續 10/5 日 24,040 點附近高檔震盪、科網股普遍休息；國慶長假期間南向資金暫停為主要壓抑因素；中國大陸將於 10/8 恢復開市。</td></tr>
+      <tr><td class="time">全日</td><td>美債殖利率飆升、港股利率敏感類股承壓</td><td class="src"><a class="src-link" href="https://www.etnet.com.hk/">etnet 經濟通</a></td><td>美債殖利率衝 24 年高打擊港股地產、公用事業類股；科技板塊 AI 題材題材續有支撐、但估值面受壓。</td></tr>
+      <tr><td class="time">全日</td><td>中國大陸國慶長假結束、南向資金 10/8 回歸</td><td class="src"><a class="src-link" href="https://finance.sina.com.cn/">新浪財經</a></td><td>陸港通南向交易於 10/8 恢復、港股即將迎來內地資金回流；A 股休市 8 日後 10/9 開盤為亞洲市場重要觀察指標。</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 七、跨市場連動分析 ============ -->
+  <h2>七、跨市場連動分析</h2>
+  <ul class="law-list">
+    <li>美股 → 台股：Dow -0.66%、Nasdaq -0.22%、SOX 估跌 0.40%、Nvidia 高檔回檔，推估台積電 ADR 跳空小幅走低、帶動現股 10/8 盤中回測 2,570 元附近支撐；美債殖利率 5.365% 創 24 年高為核心壓抑因素；但 10 年期美債標售結果穩健部分紓解拋壓。</li>
+    <li>匯率：長債殖利率飆升支撐美元強勢、新台幣兌美元可能續貶至 30.9-31.1 區間，有利電子出口（蘋概股、AI 伺服器 ODM）但壓抑進口原物料；日圓貶至 157-158 區間、人民幣持穩。</li>
+    <li>其他：Fed 9 月會議紀錄顯示官員預期將再升息、市場對 10/29 FOMC 降息預期下修為最大不確定性；美國政府停擺進入第 7 日、官方數據延遲發布持續；台股 10/9 國慶日休市、10/8（週四）為連假前最後完整交易日；台積電 10/8 將公布 9 月營收、法人估單月營收上看 5,400 億元為台股核心催化。</li>
+    <li>亞股分化：日經自 70,683 歷史高檔拉回 648 點、恆指高檔整理於 24,000 點上方；相較前日亞洲三大市場同步上攻的態勢，今日全球資金對 AI、半導體與貨幣寬鬆題材出現第一波獲利了結動作；但基本面與中長線趨勢未改變。</li>
+  </ul>
+
+  <!-- ============ 八、今日總覽 ============ -->
+  <h2>八、今日總覽</h2>
+  <div class="overview">
+    <div class="mood">整體氛圍：中性</div>
+    <ul class="law-list">
+      <li>【台股關注一】加權指數 10/7 收 49,806.37 點 -0.03% 於 50,000 整數關卡前連 2 日整理，外資賣超 130 億自前日 170 億收斂；資金輪動明顯：高檔電子權值休息，台塑四寶（+7-10%）、被動元件（華新科漲停、國巨 +3.52%）、金融（+1.02%）接棒。</li>
+      <li>【台股關注二】權值分化：台積電收 2,575 元 -0.39%、鴻海 -0.39% 自高檔回檔、聯發科 +1% 低檔反彈；被動元件延續強勢、傳產罕見補漲；10/8 TSMC 將公布 9 月營收（法人估 5,400 億元）為核心催化。</li>
+      <li>【台股關注三】10/8（週四）為國慶連假前最後完整交易日、10/9 休市，法人連假前減碼意願為短線關鍵；美股夜盤回檔與殖利率飆升為 10/8 開盤明確利空動能。</li>
+      <li>【美股關注一】三大指數自歷史新高回檔：Dow -0.66%、S&P 500 -0.22%、Nasdaq -0.22%；10 年期美債殖利率飆至 5.365% 創 2002 年來新高、30 年期觸 5.732% 創 22 年高為核心賣壓驅動。</li>
+      <li>【美股關注二】Fed 9 月會議紀錄顯示官員預期將再升息、市場 10/29 FOMC 降息預期下修；但 390 億美元 10 年期美債標售結果穩健、得標利率 5.3% 需求佳，殖利率自 5.365% 高點回落至 5.31% 紓解部分拋壓。</li>
+      <li>【風險提示一】10 年期美債殖利率 5.365% 創 24 年新高為當前核心風險、壓抑高本益比成長股評價擴張；若殖利率續升至 5.5% 以上則修正壓力擴大。</li>
+      <li>【風險提示二】美國政府停擺進入第 7 日、官方 CPI/PCE/就業數據持續延遲發布、Fed 10/29 FOMC 透明度降低；10/14 美股 Q3 財報季開跑、台積電 10/16 法說會為台股核心催化。</li>
+    </ul>
+  </div>
+
+  <footer class="brief-foot">
+    本簡報為資訊整理，非投資建議。「事實」與「市場預期／分析觀點」已於摘要中區分標示。<br>
+    自動產出於 2026/10/08 06:50（UTC+8）。
+  </footer>
+</body>
+</html>
