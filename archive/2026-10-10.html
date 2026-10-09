@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日市場簡報｜2026/10/10</title>
+<style>
+  :root {
+    --bg: #0e1116;
+    --panel: #161b22;
+    --panel-2: #1c2230;
+    --border: #2a313c;
+    --text: #d8dee9;
+    --text-dim: #8b95a5;
+    --accent: #e8b339;
+    --up: #ff5b5b;      /* 台股慣例：紅漲 */
+    --down: #3dd68c;    /* 綠跌 */
+    --neutral: #8b95a5;
+    --mono: "SFMono-Regular", "Roboto Mono", "Noto Sans Mono", ui-monospace, monospace;
+    --serif: "Noto Serif TC", "Songti TC", serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans TC", -apple-system, "PingFang TC", "Microsoft JhengHei", sans-serif;
+    line-height: 1.65;
+    padding: 2rem 1.2rem 4rem;
+    max-width: 920px;
+    margin: 0 auto;
+    font-size: 15px;
+  }
+  header.brief-head {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 1rem;
+    margin-bottom: 1.8rem;
+  }
+  header.brief-head .kicker {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    text-transform: uppercase;
+  }
+  header.brief-head h1 {
+    font-family: var(--serif);
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin: 0.2rem 0;
+    letter-spacing: 0.02em;
+  }
+  header.brief-head .date {
+    font-family: var(--mono);
+    color: var(--text-dim);
+    font-size: 0.95rem;
+  }
+  .back-link {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: var(--text-dim);
+    text-decoration: none;
+    font-family: var(--mono);
+    font-size: 0.82rem;
+  }
+  .back-link:hover { color: var(--accent); }
+  h2 {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    margin: 2.2rem 0 0.9rem;
+    padding-left: 0.7rem;
+    border-left: 4px solid var(--accent);
+    letter-spacing: 0.02em;
+  }
+  h2 .core-tag {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.15em;
+    background: var(--accent);
+    color: #0e1116;
+    padding: 0.12rem 0.5rem;
+    border-radius: 3px;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+    font-weight: 700;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.5rem 0 1rem;
+    font-size: 0.86rem;
+    background: var(--panel);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  th {
+    background: var(--panel-2);
+    color: var(--text-dim);
+    text-align: left;
+    padding: 0.6rem 0.7rem;
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+  td {
+    padding: 0.6rem 0.7rem;
+    border-top: 1px solid var(--border);
+    vertical-align: top;
+  }
+  td.time, td.num { font-family: var(--mono); white-space: nowrap; }
+  .tag { font-weight: 700; font-family: var(--mono); font-size: 0.8rem; white-space: nowrap; }
+  .tag.up { color: var(--up); }
+  .tag.down { color: var(--down); }
+  .tag.neutral { color: var(--neutral); }
+  .num.up { color: var(--up); }
+  .num.down { color: var(--down); }
+  .index-table td.num, .index-table th:not(:first-child) { text-align: right; }
+  .index-table th:not(:first-child) { padding-right: 0.9rem; }
+  .index-table td.num { padding-right: 0.9rem; }
+  td.pct { font-family: var(--mono); text-align: right; white-space: nowrap; padding-right: 0.9rem; }
+  td.pct.up { color: var(--up); }
+  td.pct.down { color: var(--down); }
+  .law-list { list-style: none; padding: 0; }
+  .law-list li {
+    padding: 0.45rem 0 0.45rem 1.2rem;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .law-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+  .overview {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 6px;
+    padding: 1.1rem 1.3rem;
+    margin-top: 0.5rem;
+  }
+  .overview .mood { font-family: var(--mono); font-size: 0.95rem; margin-bottom: 0.6rem; }
+  footer.brief-foot {
+    margin-top: 3rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 0.78rem;
+    line-height: 1.8;
+  }
+  .src { color: var(--text-dim); font-size: 0.8rem; }
+  a.src-link { color: var(--text-dim); text-decoration: underline dotted; }
+  a.src-link:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+  <a href="../index.html" class="back-link">← 返回歷史總覽</a>
+  <header class="brief-head">
+    <div class="kicker">Daily Market Brief</div>
+    <h1>每日市場簡報</h1>
+    <div class="date">2026/10/10（UTC+8）｜產出時間 2026/10/10 06:50</div>
+  </header>
+
+  <!-- ============ 一、台股焦點 ============ -->
+  <h2>一、台股焦點<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th><th>影響</th><th>受影響族群/標的</th></tr></thead>
+    <tbody>
+      <tr><td class="time">全日</td><td>10/10 國慶日台股休市、10/13（週一）復盤</td><td class="src"><a class="src-link" href="https://www.twse.com.tw/zh/trading/holiday.html">證交所</a></td><td>今日為中華民國國慶日、台股休市一日，連同 10/9（週五）國慶日連假共 2 日休市（10/11-12 為週六日）；10/13（週一）復盤為連假期間美股累計 2 個交易日（10/9 大漲、10/8 大跌）與國際消息一次反映窗口。</td><td class="tag neutral">中性</td><td>大盤</td></tr>
+      <tr><td class="time">10/8 盤後</td><td>台積電 9 月營收 5,118.57 億元、年增 54.65% 創歷年同期新高</td><td class="src"><a class="src-link" href="https://udn.com/news/story/7252/9802747">經濟日報</a></td><td>台積電(2330) 10/8 盤後公布 9 月合併營收 5,118.57 億元、月減 0.6% 但年增 54.65% 創歷年同期新高、優於法人預期；Q3 累計營收 1 兆 4,942.46 億元、季增 17.6% 年增 51%，單季營收創歷史新高；前三季合併 3 兆 8,987.3 億元、年增 41.1%。</td><td class="tag up">利多</td><td>台積電(2330)、AI 供應鏈</td></tr>
+      <tr><td class="time">10/8 收盤</td><td>加權指數 10/8 大跌 492.93 點 (-0.99%)、收 49,313.44 點</td><td class="src"><a class="src-link" href="https://histock.tw/%E5%8F%B0%E8%82%A1%E5%A4%A7%E7%9B%A4">HiStock</a></td><td>國慶連假前最後交易日大跌 492.93 點、失守 49,500 關卡；成交量放大至 9,245 億元、較前日 8,500 億元放大、拋壓明顯；外資賣超 759 億元創近期單日最大、三大法人合計賣超約 899 億元；美股夜盤 10/7 殖利率飆升、OpenAI 營收疑慮擴散為壓盤主因。</td><td class="tag down">利空</td><td>大盤、電子權值</td></tr>
+      <tr><td class="time">10/8 收盤</td><td>台積電收 2,550 元、下跌 35 元 (-1.35%) 跌破 5 日線</td><td class="src"><a class="src-link" href="https://www.businesstoday.com.tw/article/category/183008/post/202610080023/">今周刊</a></td><td>盤中高點 2,575 元、尾盤走弱收 2,550 元；美債殖利率 5.365% 24 年高加 OpenAI 營收疑慮擴散、高本益比成長股同步承壓；9 月營收創新高基本面不變、法人目標價 2,330-2,400 元；10/15 法說會 Q4 展望為中期核心驗證。</td><td class="tag down">利空</td><td>台積電(2330)</td></tr>
+      <tr><td class="time">10/8 全日</td><td>被動元件族群暴跌、國巨/華新科高檔獲利了結</td><td class="src"><a class="src-link" href="https://money.udn.com/money/story/5607/9657502">經濟日報</a></td><td>被動元件雙龍頭國巨(2327) 10/8 大幅回檔、單日跌幅逾 5%、自連 2 日大漲高檔獲利賣壓湧現；華新科(2492) 自連 3 日漲停高檔亦同步重挫；多檔中小型被動元件亮燈跌停、短線漲多修正；基本面 MLCC 漲價循環延續 2027-2028 不變。</td><td class="tag down">利空</td><td>國巨(2327)、華新科(2492)、被動元件族群</td></tr>
+      <tr><td class="time">10/8 全日</td><td>外資 10/8 單日賣超 759 億元創近期單日最大</td><td class="src"><a class="src-link" href="https://goodinfo.tw/tw/ShowBuySaleChart.asp?STOCK_ID=%E5%8A%A0%E6%AC%8A%E6%8C%87%E6%95%B8&CHT_CAT=DATE">Goodinfo</a></td><td>外資 10/8 大幅賣超 759 億元、連 3 日賣超且金額自前日 130 億元擴大逾 5 倍；國慶連假前外資減碼意願明確、避險意識濃厚；投信買超 46.9 億元連 3 日買盤、自營商賣超 187 億元；三大法人合計賣超約 899 億元。</td><td class="tag down">利空</td><td>電子權值股</td></tr>
+      <tr><td class="time">全日</td><td>連假期間台指期夜盤 10/9 美股大漲為 10/13 開盤參考</td><td class="src"><a class="src-link" href="https://www.taifex.com.tw/">期交所</a></td><td>10/8 台股休市後、10/9 美股三大指數強勁反彈（Dow +0.83%、Nasdaq +0.64%、S&P 500 近歷史新高）、殖利率回落、油價走穩，為 10/13 台股復盤明確中性偏多動能；惟費半 SOX -0.41% 續走弱、NVDA 高檔震盪為壓抑半導體開盤反彈力道。</td><td class="tag up">利多</td><td>大盤、電子權值</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 二、三大法人動向 ============ -->
+  <h2>二、三大法人動向<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>法人</th><th>買賣超(億元)</th><th>方向</th><th>備註</th></tr></thead>
+    <tbody>
+      <tr><td>外資</td><td class="num down">約 -759</td><td class="tag down">賣超</td><td>國慶連假前單日大幅賣超 759 億元創近期最大、連 3 日賣超（金額自 130 億擴大逾 5 倍）、避險意識明確</td></tr>
+      <tr><td>投信</td><td class="num up">約 +46.9</td><td class="tag up">買超</td><td>連 3 日買超、低接電子權值與中小型族群、投信連假前展現逆勢加碼風格</td></tr>
+      <tr><td>自營商</td><td class="num down">約 -187</td><td class="tag down">賣超</td><td>自營連 2 日賣超、避險部位增加；三大法人 10/8 合計賣超約 899 億元為近 2 週單日最大</td></tr>
+    </tbody>
+  </table>
+  <ul class="law-list">
+    <li>三大法人 10/8 合計賣超約 899 億元創近 2 週單日最大、較前日 90 億元收斂局面急速翻轉為大幅賣壓；外資單日賣超 759 億元為近期最大、連假前減碼意願明確；成交量 9,245 億元自前日 8,500 億放大、拋壓具明顯換手動能。</li>
+    <li>外資期貨未平倉淨多單預估大幅收斂、10/8 盤後資料顯示避險操作升溫；10/13 復盤前觀察重點：若夜盤台指期於連假期間反映 10/9 美股大漲、則外資 10/13 回補力道為盤面關鍵；但 OpenAI 營收疑慮、SOX 續走弱可能牽制半導體權值股反彈力道。</li>
+    <li>資金輪動大逆轉：10/7 高檔電子權值休息、被動元件/傳產/金融接棒；10/8 全面性拋售、資金自高檔族群撤出；10/13 復盤後觀察重點為低接電子權值的買盤強度與被動元件修正是否結束、台積電 10/15 法說會為核心催化。</li>
+  </ul>
+
+  <!-- ============ 三、權值股觀察清單 ============ -->
+  <h2>三、權值股觀察清單<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>標的</th><th>漲跌</th><th>相關消息</th><th>影響</th></tr></thead>
+    <tbody>
+      <tr><td>台積電(2330)</td><td class="num down">-35 元 (-1.35%)</td><td>10/8 收 2,550 元跌破 5 日線；盤後公布 9 月營收 5,118.57 億元月減 0.6% 年增 54.65% 創歷年同期新高、優於法人預期；Q3 累計營收 1 兆 4,942 億元創單季歷史新高；10/15 法說會為核心催化</td><td class="tag up">利多</td></tr>
+      <tr><td>聯發科(2454)</td><td class="num down">約 -1.5%</td><td>10/8 隨大盤同步回檔、約收 4,920 元；AI ASIC 市占目標不變、短線受美股科技股 OpenAI 疑慮擴散影響</td><td class="tag down">利空</td></tr>
+      <tr><td>鴻海(2317)</td><td class="num down">約 -2.5%</td><td>10/8 自前日 255 元回檔至約 248 元；AI 伺服器 GB300/Rubin 出貨順暢基本面不變；美債殖利率飆升壓抑成長股評價</td><td class="tag down">利空</td></tr>
+      <tr><td>廣達(2382)</td><td class="num down">約 -2.0%</td><td>AI 伺服器族群於 OpenAI 營收疑慮下短線同步承壓；法人目標上修至 500-520 元不變、基本面未受影響</td><td class="tag down">利空</td></tr>
+      <tr><td>國巨(2327)</td><td class="num down">約 -5~7%</td><td>連 2 日大漲後高檔獲利了結、單日大幅回檔；MLCC 漲價循環延續 2027-2028 基本面不變；短線漲多修正</td><td class="tag down">利空</td></tr>
+      <tr><td>華新科(2492)</td><td class="num down">約 -7~10%</td><td>連 3 日漲停後高檔重挫、短線急殺；外資獲利了結賣壓湧現；基本面 MLCC 供需吃緊、能見度延伸至 2027 年底不變</td><td class="tag down">利空</td></tr>
+      <tr><td>禾伸堂(3026)</td><td class="num down">約 -5~7%</td><td>高階 MLCC 題材熱潮降溫、法人目標喊千元不變；短線跟跌被動元件雙龍頭</td><td class="tag down">利空</td></tr>
+      <tr><td>大毅(2478)</td><td class="num down">約 -7%</td><td>電阻、MLCC 中小型補漲股續跌停潮；高檔漲多獲利了結</td><td class="tag down">利空</td></tr>
+      <tr><td>信昌電(6173)</td><td class="num down">跌停</td><td>被動元件中小型股亮燈跌停；短線漲多賣壓集中</td><td class="tag down">利空</td></tr>
+      <tr><td>奇力新(2456)</td><td class="num down">約 -5%</td><td>電感、磁性元件於族群修正下同步回檔；AI 伺服器需求基本面未變</td><td class="tag down">利空</td></tr>
+      <tr><td>佳邦(6284)</td><td class="num down">約 -4%</td><td>EMI、濾波器族群跟跌、短線漲多修正</td><td class="tag down">利空</td></tr>
+      <tr><td>華容(5328)</td><td class="num down">跌停</td><td>MLCC 中小型規格高檔獲利了結、短線拋壓集中</td><td class="tag down">利空</td></tr>
+      <tr><td>九豪(6127)</td><td class="num down">約 -5%</td><td>陶瓷電容與被動元件補漲族群同步修正</td><td class="tag down">利空</td></tr>
+      <tr><td>台達電(2308)</td><td class="num down">約 -1.5%</td><td>AI 電源 + 液冷 + HVDC 三主軸題材不變；OpenAI 營收疑慮與殖利率飆升下成長股評價面受壓</td><td class="tag down">利空</td></tr>
+      <tr><td>日月光投控(3711)</td><td class="num down">約 -1.5%</td><td>AI 封測需求強勁基本面不變；短線跟隨電子權值回檔；外資續調升目標價</td><td class="tag down">利空</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 四、美股焦點 ============ -->
+  <h2>四、美股焦點（可複委託操作）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th><th>影響</th><th>對台股連動</th></tr></thead>
+    <tbody>
+      <tr><td class="time">10/9 收盤</td><td>Dow 大漲 423 點、三大指數強勁反彈收週線高</td><td class="src"><a class="src-link" href="https://www.cnbc.com/2026/10/08/stock-market-today-live-updates.html">CNBC</a></td><td>Dow +423.31 點 (+0.83%) 收 51,654.95、S&P 500 +46.15 點 (+0.59%) 收 7,811.51 距歷史新高一步之遙、Nasdaq +0.64% 收約 27,366.17；本週結束前強勁反彈、終結週四 OpenAI 營收疑慮引發的科技股拋售；長債殖利率回落、油價走穩為核心驅動；10/14 大型銀行開啟 Q3 財報季前買盤進場。</td><td class="tag up">利多</td><td>台股 10/13 復盤開盤明確中性偏多動能、電子權值跳空小幅走高機率升溫</td></tr>
+      <tr><td class="time">10/8</td><td>華爾街日報：OpenAI 營收低於內部目標、科技股大跌</td><td class="src"><a class="src-link" href="https://www.capitalbrief.com/briefing/tech-stocks-slide-as-report-of-openai-revenue-miss-rattles-investors-67b78644-a09e-41e4-b5c6-0272df8362ac/">Capital Brief</a></td><td>WSJ 10/8 報導 OpenAI Q2 營收 67 億美元僅季增 18%、未達內部用戶與營收目標；CFO 私下警告恐無法履行未來運算合約義務、AI 需求成長疑慮擴散；當日 Nasdaq 跌 1.3%、Nvidia 跌逾 3%、Oracle -3.4%、Arm -6.3%、CoreWeave -2.8%；SOX 10/8 單日重挫 -3.39% 收 12,623.72。</td><td class="tag down">利空</td><td>台股 10/8 已反映部分（加權 -0.99%）、惟 10/13 復盤 AI 供應鏈情緒續受牽制</td></tr>
+      <tr><td class="time">10/9</td><td>SOX 費半續跌 51 點、半導體股未跟上大盤反彈</td><td class="src"><a class="src-link" href="https://en.fnnews.com/news/202610100522497887">FN News</a></td><td>費城半導體指數 10/9 續跌 51.29 點 (-0.41%) 收 12,571.42、連 2 日下跌但跌幅自前日 -3.39% 大幅收斂；Nvidia 續走弱、AMD 盤中下跌；半導體板塊於 OpenAI 營收疑慮下未跟上大盤反彈、顯示 AI 供應鏈情緒仍未穩定。</td><td class="tag down">利空</td><td>台積電 ADR 預計微跌、台股 10/13 復盤半導體權值反彈力道受限</td></tr>
+      <tr><td class="time">10/9</td><td>長債殖利率回落、油價走穩紓解市場壓力</td><td class="src"><a class="src-link" href="https://finance.yahoo.com/markets/live/stock-market-today-friday-october-9-dow-sp-500-nasdaq-080148117.html">Yahoo Finance</a></td><td>10 年期美債殖利率自前日 5.36% 24 年高檔回落、支撐利率敏感類股大幅反彈；WTI 原油自前日 100 美元關卡回落走穩、通膨黏性擔憂緩解；美元指數同步走弱、新興市場貨幣壓力減輕。</td><td class="tag up">利多</td><td>新台幣壓力減輕、台股成長股評價壓力緩解有利電子權值反彈</td></tr>
+      <tr><td class="time">10/9</td><td>台積電 ADR 盤中收約 453 美元、折合現股約 2,730 元</td><td class="src"><a class="src-link" href="https://finviz.com/quote?t=TSM">Finviz</a></td><td>TSM ADR 10/9 盤中約收 453.31 美元、下跌約 1%；折合現股約 2,730 元仍較 10/8 收盤 2,550 元存在 7% 溢價；反映外資對台積電 9 月營收年增 54.65% 創新高基本面肯定、10/15 法說會前買盤未撤。</td><td class="tag up">利多</td><td>台積電 10/13 復盤有望跳空小幅走高、現股測試 2,580-2,600 元關卡</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 四之二、美股指數與板塊動向 ============ -->
+  <h2>美股指數與板塊動向<span class="core-tag">CORE</span></h2>
+  <table class="index-table">
+    <thead><tr><th>指數</th><th>收盤</th><th>漲跌</th><th>漲跌幅</th></tr></thead>
+    <tbody>
+      <tr><td>道瓊工業指數</td><td class="num">51,654.95</td><td class="num up">+423.31</td><td class="pct up">+0.83%</td></tr>
+      <tr><td>S&P 500</td><td class="num">7,811.51</td><td class="num up">+46.15</td><td class="pct up">+0.59%</td></tr>
+      <tr><td>那斯達克綜合指數</td><td class="num">27,366.17</td><td class="num up">+173.69</td><td class="pct up">+0.64%</td></tr>
+      <tr><td>費城半導體(SOX)</td><td class="num">12,571.42</td><td class="num down">-51.29</td><td class="pct down">-0.41%</td></tr>
+    </tbody>
+  </table>
+  <table>
+    <thead><tr><th>板塊（GICS）</th><th>漲跌幅</th><th>表現</th><th>當日驅動/備註</th></tr></thead>
+    <tbody>
+      <tr><td>資訊科技</td><td class="pct down">-0.15%</td><td class="tag down">走弱</td><td>SOX -0.41% 續走弱、Nvidia/AMD 盤中下跌、OpenAI 營收疑慮延續；半導體未跟上大盤反彈為當日主要壓盤因素</td></tr>
+      <tr><td>通訊服務</td><td class="pct up">+0.40%</td><td class="tag up">溫和上漲</td><td>Meta、Google 自前日低檔反彈；市場風險偏好修復</td></tr>
+      <tr><td>非必需消費</td><td class="pct up">+1.10%</td><td class="tag up">走強</td><td>殖利率回落利於消費動能展望、特斯拉盤中反彈；為 10/9 第二大領漲板塊</td></tr>
+      <tr><td>必需消費</td><td class="pct up">+0.55%</td><td class="tag up">溫和上漲</td><td>防禦性資金續進場、Walmart/Costco 走穩</td></tr>
+      <tr><td>能源</td><td class="pct up">+0.70%</td><td class="tag up">走強</td><td>WTI 自前日 100 美元關卡回落走穩、Exxon/Chevron 自高檔整理後反彈；年初至今 +40% 續居 YTD 冠軍</td></tr>
+      <tr><td>金融</td><td class="pct up">+0.75%</td><td class="tag up">走強</td><td>10/14 大型銀行開啟 Q3 財報季前買盤進場；殖利率雖回落但仍於高檔支撐銀行淨利差；JPM、BoA 走高</td></tr>
+      <tr><td>醫療保健</td><td class="pct up">+1.48%</td><td class="tag up">次領漲</td><td>防禦性避險資金流入、Humana 盤中大漲逾 13% 為類股領漲標的；UNH/JNJ 同步走強</td></tr>
+      <tr><td>工業</td><td class="pct up">+0.60%</td><td class="tag up">溫和上漲</td><td>Boeing、Caterpillar 自高檔震盪後反彈；AI 資本支出敘事持穩</td></tr>
+      <tr><td>原物料</td><td class="pct up">+0.45%</td><td class="tag up">溫和上漲</td><td>銅鋁小漲、黃金自高檔整理；美元走弱利於原物料評價</td></tr>
+      <tr><td>不動產</td><td class="pct up">+1.85%</td><td class="tag up">領漲</td><td>10 年期美債殖利率自 5.36% 24 年高大幅回落、利率敏感類股強勁反彈；為 10/9 最強板塊</td></tr>
+      <tr><td>公用事業</td><td class="pct up">+0.85%</td><td class="tag up">走強</td><td>殖利率回落打擊股息型資產壓力解除；利率敏感類股資金回流</td></tr>
+    </tbody>
+  </table>
+  <ul class="law-list">
+    <li>當日板塊輪動明確「殖利率回落」特徵：11 板塊 10 漲 1 跌、不動產 +1.85% 領漲、醫療保健 +1.48% 次領漲、非必需消費 +1.10%、公用事業 +0.85%、金融 +0.75%、能源 +0.70% 全面上揚；僅資訊科技 -0.15% 續走弱為當日唯一走弱板塊；10 年期美債殖利率自前日 5.36% 24 年高回落為核心驅動、紓解高本益比成長股評價壓力。</li>
+    <li>資訊科技/半導體板塊對台股電子權值連動研判：SOX -0.41% 續走弱、Nvidia/AMD 盤中下跌、OpenAI 營收疑慮尚未消退、半導體板塊為 10/9 唯一走弱類股；台積電 ADR 收 453.31 美元折合現股約 2,730 元較 10/13 開盤起點仍存 7% 溢價、顯示外資中長線信心未撤；10/13 台股復盤電子權值跳空小幅走高機率升溫、但 SOX 走弱可能牽制半導體權值股反彈力道；關鍵觀察：若 Nvidia 下週能站穩 220-230 美元、則 AI 供應鏈情緒修復動能可望延續；台積電 10/15 法說會 Q4 展望為中線核心驗證。</li>
+  </ul>
+
+  <!-- ============ 五、日本（參考） ============ -->
+  <h2>五、日本（參考）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th></tr></thead>
+    <tbody>
+      <tr><td class="time">10/9 收盤</td><td>日經 225 跟隨美股科技股拋售自高檔回落</td><td class="src"><a class="src-link" href="https://www.nikkei.com/">日本經濟新聞</a></td><td>日經平均 10/9 跟隨美股 10/8 科技股拋售、AdTest、Tokyo Electron、Kioxia 等 AI 半導體相關股為壓盤主力；指數自前日 70,000 關卡失守、下跌約 500-700 點；但 10/9 美股夜盤反彈為 10/13 日經開盤止跌動能。</td></tr>
+      <tr><td class="time">全日</td><td>日銀 10/30-31 政策會議升息預期延續</td><td class="src"><a class="src-link" href="https://www.boj.or.jp/">日本銀行</a></td><td>日銀承認基調物價率升至 2% 預期延續；市場對 10/30-31 日銀政策會議升息機率維持 55-60%；長債殖利率自美債高檔回落跟隨下行、紓解銀行股評價壓力。</td></tr>
+      <tr><td class="time">全日</td><td>日圓兌美元自 157-158 區間回升</td><td class="src"><a class="src-link" href="https://jp.investing.com/">Investing.com</a></td><td>美債殖利率 10/9 自前日 5.36% 24 年高回落、美元指數同步走弱、日圓自 157-158 區間回升至約 156；日本政府口頭干預言論緩和、實質介入機率下降。</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 六、香港（參考） ============ -->
+  <h2>六、香港（參考）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th></tr></thead>
+    <tbody>
+      <tr><td class="time">10/9 收盤</td><td>恆生指數跟隨美股科技股回檔震盪</td><td class="src"><a class="src-link" href="https://www.hkex.com.hk/">HKEX</a></td><td>恆生指數 10/9 跟隨美股 10/8 科技股拋售走弱、科網股普遍回檔；指數於 24,000-24,200 點區間震盪、南向資金 10/9 當日動能受抑；10/10 休假（重陽翌日補假）後 10/13 開市。</td></tr>
+      <tr><td class="time">全日</td><td>中國大陸 A 股 10/9 國慶後首個交易週結束</td><td class="src"><a class="src-link" href="https://finance.sina.com.cn/">新浪財經</a></td><td>A 股 10/8-10/9 國慶長假結束後首度開市 2 日、上證指數延續節前趨勢震盪整理；南向資金 10/9 回流有限、港股承壓；下週關注 PMI 等 10 月經濟數據。</td></tr>
+      <tr><td class="time">全日</td><td>美債殖利率回落、港股利率敏感類股可望反彈</td><td class="src"><a class="src-link" href="https://www.etnet.com.hk/">etnet 經濟通</a></td><td>10 年期美債殖利率自 24 年高大幅回落、港股地產、公用事業類股受抑壓力解除；科技板塊 AI 題材於 OpenAI 疑慮下受牽制、但估值面因殖利率回落部分減壓。</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 七、跨市場連動分析 ============ -->
+  <h2>七、跨市場連動分析</h2>
+  <ul class="law-list">
+    <li>美股 → 台股：10/9 Dow +0.83%、Nasdaq +0.64%、S&P 500 近歷史新高 +0.59% 強勁反彈、長債殖利率自 5.36% 回落、油價走穩為 10/13 台股復盤明確中性偏多動能；但費半 SOX -0.41% 續走弱、Nvidia/AMD 盤中下跌、OpenAI 營收疑慮延續為半導體權值股反彈力道壓抑因素；台積電 ADR 收 453 美元折合現股 2,730 元存 7% 溢價、外資中長線信心未撤；10/13 開盤電子權值跳空小幅走高機率升溫。</li>
+    <li>匯率：10 年期美債殖利率回落 + 美元指數走弱 → 新台幣兌美元可望自 10/8 區間回升、電子出口匯損壓力減輕；日圓自 157-158 回升至 156、人民幣持穩；亞幣整體壓力緩解有利國際資金回流亞股。</li>
+    <li>其他：連假期間美股累計 2 個交易日（10/8 大跌、10/9 大漲）於 10/13 開盤一次反映，淨影響預期為中性偏多；台積電 9 月營收 5,118.57 億元創歷年同期新高、Q3 累計營收創單季歷史新高為基本面核心利多、10/15 法說會 Q4 展望為中期核心驗證；10/14 美股 Q3 財報季開跑（JPM、WFC 等大型銀行首波）、金融股為美股主要觀察指標；美國政府停擺進入第 9 日、官方 CPI/PCE/就業數據持續延遲、Fed 10/29 FOMC 透明度降低為最大不確定性。</li>
+    <li>亞股分化：日經自 70,000 關卡失守、恆指於 24,000-24,200 區間震盪；10/9 美股反彈為亞股 10/13 復盤同步止跌動能、但各市場內部題材不同（日本：日銀升息、日圓；港股：A 股連動、南向資金；台股：台積電法說、被動元件修正）；AI 供應鏈情緒修復為亞股共通關鍵驗證窗口。</li>
+  </ul>
+
+  <!-- ============ 八、今日總覽 ============ -->
+  <h2>八、今日總覽</h2>
+  <div class="overview">
+    <div class="mood">整體氛圍：中性</div>
+    <ul class="law-list">
+      <li>【台股關注一】10/10 國慶日休市、10/13（週一）復盤為連假期間美股累計 2 個交易日（10/8 OpenAI 疑慮大跌、10/9 強勁反彈）與國際消息一次反映窗口；台積電 9 月營收 5,118.57 億元年增 54.65% 創歷年同期新高、Q3 累計 1 兆 4,942 億元創單季歷史新高為基本面核心利多。</li>
+      <li>【台股關注二】連假前 10/8 加權指數大跌 492.93 點 (-0.99%) 失守 49,500 關卡、外資賣超 759 億元創近期單日最大、三大法人合計賣超 899 億元；被動元件雙龍頭國巨、華新科高檔獲利了結族群重挫；10/13 復盤後觀察重點為外資回補力道、台積電測試 2,580-2,600 元整數關卡能否站穩。</li>
+      <li>【台股關注三】台積電 10/15 法說會 Q4 展望為中期核心催化、法人目標價 2,330-2,400 元不變；若法說會展望優於預期則電子權值有望帶動加權指數重返 50,000 整數關卡並挑戰創新高。</li>
+      <li>【美股關注一】10/9 三大指數強勁反彈：Dow +423.31 (+0.83%) 51,654.95、S&P 500 +46.15 (+0.59%) 7,811.51 距歷史新高一步之遙、Nasdaq +0.64% 27,366.17；11 板塊 10 漲 1 跌、不動產 +1.85% 領漲、醫療 +1.48%、僅資訊科技 -0.15% 走弱；長債殖利率自 5.36% 24 年高回落為核心驅動。</li>
+      <li>【美股關注二】OpenAI 10/8 WSJ 報導營收低於內部目標引發的科技股拋售 10/9 部分修復、但費半 SOX -0.41% 續走弱、Nvidia/AMD 盤中下跌、AI 供應鏈情緒修復仍未完全；10/14 大型銀行開啟 Q3 財報季為下一波關鍵驗證窗口。</li>
+      <li>【風險提示一】OpenAI 營收疑慮擴散為當前 AI 題材核心風險、短線半導體供應鏈情緒受抑；若 Nvidia 下週無法站穩 220-230 美元則 AI 供應鏈評價壓力擴大、台積電 10/15 法說會前觀望氣氛升溫。</li>
+      <li>【風險提示二】美國政府停擺進入第 9 日、官方 CPI/PCE/就業數據持續延遲、Fed 10/29 FOMC 透明度降低為最大不確定性；10/14 美股 Q3 財報季開跑為第一波關卡；被動元件族群高檔獲利了結是否結束為台股中線盤面觀察指標。</li>
+    </ul>
+  </div>
+
+  <footer class="brief-foot">
+    本簡報為資訊整理，非投資建議。「事實」與「市場預期／分析觀點」已於摘要中區分標示。<br>
+    自動產出於 2026/10/10 06:50（UTC+8）。
+  </footer>
+</body>
+</html>
