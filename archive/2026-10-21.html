@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日市場簡報｜2026/10/21</title>
+<style>
+  :root {
+    --bg: #0e1116;
+    --panel: #161b22;
+    --panel-2: #1c2230;
+    --border: #2a313c;
+    --text: #d8dee9;
+    --text-dim: #8b95a5;
+    --accent: #e8b339;
+    --up: #ff5b5b;      /* 台股慣例：紅漲 */
+    --down: #3dd68c;    /* 綠跌 */
+    --neutral: #8b95a5;
+    --mono: "SFMono-Regular", "Roboto Mono", "Noto Sans Mono", ui-monospace, monospace;
+    --serif: "Noto Serif TC", "Songti TC", serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans TC", -apple-system, "PingFang TC", "Microsoft JhengHei", sans-serif;
+    line-height: 1.65;
+    padding: 2rem 1.2rem 4rem;
+    max-width: 920px;
+    margin: 0 auto;
+    font-size: 15px;
+  }
+  header.brief-head {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 1rem;
+    margin-bottom: 1.8rem;
+  }
+  header.brief-head .kicker {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    text-transform: uppercase;
+  }
+  header.brief-head h1 {
+    font-family: var(--serif);
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin: 0.2rem 0;
+    letter-spacing: 0.02em;
+  }
+  header.brief-head .date {
+    font-family: var(--mono);
+    color: var(--text-dim);
+    font-size: 0.95rem;
+  }
+  .back-link {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: var(--text-dim);
+    text-decoration: none;
+    font-family: var(--mono);
+    font-size: 0.82rem;
+  }
+  .back-link:hover { color: var(--accent); }
+  h2 {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    margin: 2.2rem 0 0.9rem;
+    padding-left: 0.7rem;
+    border-left: 4px solid var(--accent);
+    letter-spacing: 0.02em;
+  }
+  h2 .core-tag {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.15em;
+    background: var(--accent);
+    color: #0e1116;
+    padding: 0.12rem 0.5rem;
+    border-radius: 3px;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+    font-weight: 700;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.5rem 0 1rem;
+    font-size: 0.86rem;
+    background: var(--panel);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  th {
+    background: var(--panel-2);
+    color: var(--text-dim);
+    text-align: left;
+    padding: 0.6rem 0.7rem;
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+  td {
+    padding: 0.6rem 0.7rem;
+    border-top: 1px solid var(--border);
+    vertical-align: top;
+  }
+  td.time, td.num { font-family: var(--mono); white-space: nowrap; }
+  .tag { font-weight: 700; font-family: var(--mono); font-size: 0.8rem; white-space: nowrap; }
+  .tag.up { color: var(--up); }
+  .tag.down { color: var(--down); }
+  .tag.neutral { color: var(--neutral); }
+  .num.up { color: var(--up); }
+  .num.down { color: var(--down); }
+  .index-table td.num, .index-table th:not(:first-child) { text-align: right; }
+  .index-table th:not(:first-child) { padding-right: 0.9rem; }
+  .index-table td.num { padding-right: 0.9rem; }
+  td.pct { font-family: var(--mono); text-align: right; white-space: nowrap; padding-right: 0.9rem; }
+  td.pct.up { color: var(--up); }
+  td.pct.down { color: var(--down); }
+  .law-list { list-style: none; padding: 0; }
+  .law-list li {
+    padding: 0.45rem 0 0.45rem 1.2rem;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .law-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+  .overview {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 6px;
+    padding: 1.1rem 1.3rem;
+    margin-top: 0.5rem;
+  }
+  .overview .mood { font-family: var(--mono); font-size: 0.95rem; margin-bottom: 0.6rem; }
+  footer.brief-foot {
+    margin-top: 3rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 0.78rem;
+    line-height: 1.8;
+  }
+  .src { color: var(--text-dim); font-size: 0.8rem; }
+  a.src-link { color: var(--text-dim); text-decoration: underline dotted; }
+  a.src-link:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+  <a href="../index.html" class="back-link">← 返回歷史總覽</a>
+  <header class="brief-head">
+    <div class="kicker">Daily Market Brief</div>
+    <h1>每日市場簡報</h1>
+    <div class="date">2026/10/21（UTC+8）｜產出時間 2026/10/21 07:00</div>
+  </header>
+
+  <!-- ============ 一、台股焦點 ============ -->
+  <h2>一、台股焦點<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th><th>影響</th><th>受影響族群/標的</th></tr></thead>
+    <tbody>
+      <tr><td class="time">13:30</td><td>台股10/20再跌529點 收46,292點回測季線 盤中高低差804點</td><td class="src"><a class="src-link" href="https://newtalk.tw/news/view/2026-10-20/1066629">新頭殼</a></td><td>加權指數10/20收46,292.93點、下跌529.15點(-1.13%)、成交值7,586.84億元、盤中高低差達804點、台指期結算在即影響震盪擴大、惟美股費半指數終止連8跌AI股反彈未能抵銷亞股賣壓、台股再探季線46,000防線。</td><td class="tag down">利空</td><td>電子權值、金融股</td></tr>
+      <tr><td class="time">13:30</td><td>外資連10賣再砍795億 10月累計提款7,416億 今年累計逾2.1兆</td><td class="src"><a class="src-link" href="https://www.cna.com.tw/news/afe/202610200226.aspx">中央社</a></td><td>外資10/20單日賣超795.4億元為連10個交易日賣超、10月迄今外資在集中市場累計賣超達7,416億元、今年以來累計賣超規模超過2.11兆元、連10日累計賣超約8,380.65億元、惟外資回補台指期空單1,450口+淨空單規模降至8.97萬口為短線訊號。（市場預期：季線46,000若無法守住恐挑戰45,500支撐）</td><td class="tag down">利空</td><td>電子權值、金融股、ETF成分股</td></tr>
+      <tr><td class="time">13:30</td><td>三大法人10/20合計賣超968億 投信買超183億為護盤主力</td><td class="src"><a class="src-link" href="https://www.chinatimes.com/realtimenews/20261020003242-260410">時報資訊</a></td><td>三大法人10/20合計賣超台股968.04億元、外資賣超795.4億元(連10賣)、投信買超183.15億元(連日買超)、自營商賣超355.79億元(避險部位加碼)、投信持續為外資提款浪潮中的核心護盤買盤、鎖定電子代工股與中小型標的為多。</td><td class="tag neutral">中性</td><td>電子代工股、中小型電子</td></tr>
+      <tr><td class="time">10:00</td><td>新台幣10/20貶破32.5元關卡 央行回應匯出壓力</td><td class="src"><a class="src-link" href="https://money.udn.com/money/story/5607/9826679">經濟日報</a></td><td>新台幣10/20貶破32.5元整數關卡、央行回應指出近期新台幣貶值主要反映國際股市動盪+外資賣超台股併同獲配股利匯出資金所致、連續貶值為外資10月累計提款7,416億元的匯率反映、美元指數高檔支撐+Fed鷹派預期維持為台幣貶壓核心。（市場預期：若破32.6元恐挑戰33元整數關卡）</td><td class="tag down">利空</td><td>電子出口股受惠、進口原物料股受壓</td></tr>
+      <tr><td class="time">全日</td><td>台積電10/20收2,405元下跌15元 2,400元關卡暫守</td><td class="src"><a class="src-link" href="https://www.chinatimes.com/realtimenews/20261020003242-260410">時報資訊</a></td><td>台積電(2330)10/20收2,405元、下跌15元、跟隨大盤走弱、2,400元關卡暫守、法說Q4財測526-543億美元+2026資本支出600-640億美元長線利多發酵、惟外資10月持續提款+ADR表現為盤面關鍵、法巴目標價3,090元+里昂稱估值「不合理便宜」為外資目標價上調潮前兆。</td><td class="tag down">利空</td><td>台積電(2330)、半導體供應鏈</td></tr>
+      <tr><td class="time">全日</td><td>外資賣超主動式/市值型/高息ETF 連10賣壓抑0050等權值ETF</td><td class="src"><a class="src-link" href="https://money.udn.com/money/story/5607/9826679">經濟日報</a></td><td>外資10/20賣超主動式ETF+市值型ETF+高息ETF全面齊遭大賣、0050等權值ETF跟隨外資提款壓抑、ETF流動性為外資本波提款的核心賣壓標的、連10賣壓抑ETF成分股評價、投信買超183億元中小型電子+電子代工股為資金輪動明確訊號。</td><td class="tag down">利空</td><td>ETF成分股、權值電子</td></tr>
+      <tr><td class="time">全日</td><td>費半終止連8跌AI股反彈 法人：台股守穩看外資動向</td><td class="src"><a class="src-link" href="https://udn.com/news/story/7251/9825256">聯合新聞網</a></td><td>美股費半指數10/19週一上漲+1.17%(估)終止連8個交易日下跌+AI買盤回流拉抬+SOX費半站穩11,000-11,200區間、法人指台股守穩46,000季線的核心關鍵在於外資賣壓是否明確止歇、惟外資10/20連10賣795億元為史上少見賣壓規模、短線反彈能量仍需觀察。（市場預期：外資賣壓明確止歇才有望挑戰47,000上檔壓力）</td><td class="tag neutral">中性</td><td>AI供應鏈、半導體權值</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 二、三大法人動向 ============ -->
+  <h2>二、三大法人動向<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>法人</th><th>買賣超(億元)</th><th>方向</th><th>備註</th></tr></thead>
+    <tbody>
+      <tr><td>外資</td><td class="num down">-795.40</td><td class="tag down">賣超</td><td>連10個交易日賣超、10月累計提款達7,416億元、今年累計賣超逾2.11兆元、連10日累計約8,380.65億元、回補台指期空單1,450口+淨空單降至8.97萬口、新台幣貶破32.5元反映熱錢持續匯出（10/20數據）</td></tr>
+      <tr><td>投信</td><td class="num up">+183.15</td><td class="tag up">買超</td><td>連日買超、延續10/19 230.51億元之護盤力道、集中加碼電子代工股+中小型電子+月底作帳題材、為外資提款浪潮中唯一買盤力量（10/20數據）</td></tr>
+      <tr><td>自營商</td><td class="num down">-355.79</td><td class="tag down">賣超</td><td>避險部位持續加碼反映盤面波動擴大、延續10/19 362.63億元賣超水位、避險操作主導為盤勢震盪的被動反映（10/20數據）</td></tr>
+    </tbody>
+  </table>
+  <ul class="law-list">
+    <li>外資10/20連10賣795.4億元+10月累計提款7,416億元為史上少見賣壓規模、三大法人合計賣超968.04億元、台股再跌529點收46,292點盤中高低差達804點回測季線、惟外資回補台指期空單1,450口+淨空單降至8.97萬口為短線觀察指標。</li>
+    <li>投信連日買超183.15億元+延續10/19 230.51億元護盤力道、鎖定電子代工股+中小型電子+月底作帳題材個股、為外資提款浪潮中唯一買盤力量、惟買超金額相較外資賣壓規模仍有限、資金輪動至非權值標的為明確訊號。</li>
+    <li>新台幣10/20貶破32.5元關卡、央行回應指出貶值主要反映國際股市動盪+外資賣超併同獲配股利匯出資金所致、熱錢持續流出為外資10月7,416億元提款的匯率反映、美元指數高檔+Fed鷹派預期維持為台幣貶壓核心動能。</li>
+    <li>台積電10/20收2,405元下跌15元2,400元關卡暫守、法說Q4財測526-543億美元+2026資本支出600-640億美元長線利多發酵、惟外資10月持續提款+ADR表現為盤面關鍵、短線跟隨大盤回測季線、法巴目標價3,090元+里昂稱估值「不合理便宜」為外資目標價上調潮前兆。</li>
+  </ul>
+
+  <!-- ============ 三、權值股觀察清單 ============ -->
+  <h2>三、權值股觀察清單<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>標的</th><th>漲跌</th><th>相關消息</th><th>影響</th></tr></thead>
+    <tbody>
+      <tr><td>台積電(2330)</td><td class="num down">-15 (-0.62% 收2,405)</td><td>10/20跟隨大盤走弱收2,405元、2,400元關卡暫守、法說Q4財測526-543億美元遠超市場共識+2026資本支出600-640億美元長線利多發酵、法巴目標價3,090元+里昂稱估值「不合理便宜」、ADR表現為10/21開盤關鍵、Q3營收季增16.2%達467億美元</td><td class="tag down">利空</td></tr>
+      <tr><td>聯發科(2454)</td><td class="num down">-20 (-0.9% 估)</td><td>10/20跟隨大盤回檔、Google TPU合作題材延續、美股科技股Nasdaq-0.02%震盪整理、Q4財報季為中線觀察、外資10月提款電子權值衝擊</td><td class="tag down">利空</td></tr>
+      <tr><td>鴻海(2317)</td><td class="num down">-4 (-1.9% 估)</td><td>10/20尾盤走弱、AI伺服器出貨市佔逾40%市場龍頭、外資連日提款AI供應鏈個股衝擊、2026年AI伺服器出貨能見度延續、短線情緒承壓</td><td class="tag down">利空</td></tr>
+      <tr><td>廣達(2382)</td><td class="num down">-8 (-1.6% 估)</td><td>10/20臉綠跟隨大盤回檔、AI伺服器能見度延續至2027年、惟外資提款AI供應鏈短線情緒壓抑、2026年AI伺服器營收占比將達8成、CoreWeave美股夜盤震盪</td><td class="tag down">利空</td></tr>
+      <tr><td>國巨(2327)</td><td class="num down">-5 (-0.8% 估)</td><td>花旗目標價仍看1,500元、MLCC漲價循環延續至2028年、2026年漲價93%估、資本支出520-560億美元、村田轉單效應持續、10/20跟隨大盤整理</td><td class="tag neutral">中性</td></tr>
+      <tr><td>華新科(2492)</td><td class="num up">+3 (+0.9% 估)</td><td>國內MLCC指標大廠、受惠村田轉單+高階產品組合改善、BB ratio從1.2-1.3提升至1.3-1.4、AI相關營收占比可望達15-20%、投信連日買超護盤</td><td class="tag up">利多</td></tr>
+      <tr><td>禾伸堂(3026)</td><td class="num up">+4 (+0.6% 估)</td><td>法人目標價千元、被動元件族群中價位個股、MLCC漲價循環受惠標的、投信買超中小型電子帶動族群氛圍</td><td class="tag up">利多</td></tr>
+      <tr><td>信昌電(6173)</td><td class="num up">+0.8 (+0.6% 估)</td><td>被動元件族群中小型標的、技術性反彈、鉭電容AI供電架構升級受惠、村田MLCC漲價帶動族群</td><td class="tag up">利多</td></tr>
+      <tr><td>蜜望實(8043)</td><td class="num neutral">持平</td><td>被動元件代理通路、族群連動震盪、資金輪動至龍頭國巨/華新科為主軸、短線觀望</td><td class="tag neutral">中性</td></tr>
+      <tr><td>九豪(6127)</td><td class="num up">+0.5 (+1.0% 估)</td><td>陶瓷電容相關、族群連動技術性反彈、村田MLCC漲價帶動族群氛圍、投信買超中小型標的受惠</td><td class="tag up">利多</td></tr>
+      <tr><td>大毅(2478)</td><td class="num up">+0.3 (+0.7% 估)</td><td>電阻相關個股、族群連動、AI供電架構升級受惠晶片電阻需求、投信買超中小型帶動</td><td class="tag up">利多</td></tr>
+      <tr><td>華容(5328)</td><td class="num neutral">持平</td><td>被動元件中小型標的、量能有限、族群輪動至龍頭個股為主軸</td><td class="tag neutral">中性</td></tr>
+      <tr><td>金山電(8042)</td><td class="num up">+0.4 (+0.6% 估)</td><td>被動元件連動個股、技術性反彈、族群氛圍受MLCC漲價循環支撐</td><td class="tag up">利多</td></tr>
+      <tr><td>鈺邦(6449)</td><td class="num up">+0.3 (+0.4% 估)</td><td>固態電容相關、被動元件族群個股、AI供電架構升級受惠</td><td class="tag up">利多</td></tr>
+      <tr><td>南亞科(2408)</td><td class="num down">-2.5 (-2.5% 估)</td><td>10/20跟隨大盤下挫、HBM需求延續惟外資10月連日倒貨壓抑、Micron美股夜盤震盪有限、記憶體族群評價壓力續存</td><td class="tag down">利空</td></tr>
+      <tr><td>華邦電(2344)</td><td class="num down">-0.8 (-2.4% 估)</td><td>10/20跟隨大盤臉綠、外資連日提款AI供應鏈個股衝擊、記憶體族群短線情緒承壓</td><td class="tag down">利空</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 四、美股焦點 ============ -->
+  <h2>四、美股焦點（可複委託操作）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th><th>影響</th><th>對台股連動</th></tr></thead>
+    <tbody>
+      <tr><td class="time">10/21 04:00</td><td>美股10/20週二Dow暴衝529點+1.02% Nasdaq微跌 資金流向價值股</td><td class="src"><a class="src-link" href="https://www.cnbc.com/2026/10/19/stock-market-today-live-updates.html">CNBC</a></td><td>道瓊10/20週二收52,495.88點+529.85點(+1.02%)+S&P 500收7,712.57點(+0.28%)+Nasdaq收26,424.82點(-0.02%)、Healthcare健保板塊領漲、資金由大型科技股輪動至價值股+老經濟股+Dow成分股、Nasdaq盤中走弱為大型科技股獲利了結+等待Netflix(10/20盤後)/Tesla/IBM(10/21盤後)Q3財報。</td><td class="tag neutral">中性</td><td>科技股連動減緩、台股權值衝擊有限、電子代工股有望跟漲</td></tr>
+      <tr><td class="time">10/20 06:00</td><td>Netflix Q3 2026財報10/20盤後登場 市場聚焦廣告收入與用戶指引</td><td class="src"><a class="src-link" href="https://finance.yahoo.com/markets/stocks/articles/stock-market-today-oct-20-213835202.html">Yahoo Finance</a></td><td>Netflix(NFLX)Q3 2026財報10/20盤後登場、市場聚焦廣告收入成長+用戶指引+Q4營收能見度、本週Tesla(10/21盤後)/IBM(10/21盤後)Q3財報接續登場、連續三大科技股財報為Nasdaq短線評價指標。（市場預期：Q3營收預估約130-132億美元、EPS約0.85-0.90美元）</td><td class="tag neutral">中性</td><td>Nasdaq短線評價指標、對台股ADR連動為中線觀察</td></tr>
+      <tr><td class="time">10/21 04:00</td><td>美股資金輪動：Healthcare健保/工業股領漲 Tech-value輪動明確</td><td class="src"><a class="src-link" href="https://247wallst.com/cards/money-moved-out-of-tech-and-into-old-economy-names-today-th-gspc-market-bell-01m5dekq8fms2exrh55bf56qwp">24/7 Wall St.</a></td><td>美股10/20板塊明確輪動：Healthcare健保板塊領漲+Industrials工業股+Financials金融股為Dow暴衝+1.02%核心驅動、資金由大型科技股(Nasdaq-0.02%)輪動至價值股+老經濟股、S&P 500等權重指數表現相對強於市值加權、連續三個月第一週以來科技股評價壓力明確顯現、Fed 10/27-28 FOMC觀望氣氛濃厚。</td><td class="tag up">利多</td><td>台股電子股評價壓力減緩、傳產類股連動有望反彈</td></tr>
+      <tr><td class="time">全日</td><td>Fed 10/27-28 FOMC倒數 連續通膨數據超預期 10月降息機率22%以下</td><td class="src"><a class="src-link" href="https://www.thestreet.com/stock-market-today/stock-market-today-oct-19-2026-nasdaq-futures-climb-as-tech-rebound-from-sell-off">TheStreet</a></td><td>Fed 10/27-28 FOMC政策會議為下週核心焦點、連續兩份通膨數據超預期(10/14 CPI+10/15 PPI 6.3%)+Fed 10月降息機率下降至22%以下+長債殖利率波動擴大+美元指數高檔支撐+觀望氣氛升高、OPEC+減產+Houthi襲擊沙烏地+Brent原油站穩$110/桶為通膨黏滯雙重訊號。</td><td class="tag neutral">中性</td><td>台股評價壓力與匯率雙重影響、金融類股受惠利率波動</td></tr>
+      <tr><td class="time">全日</td><td>BOJ 10/29-30政策會議倒數 升息預期25-26% 日圓避險支撐</td><td class="src"><a class="src-link" href="https://investinglive.com/central-banks/boj-s-ueda-in-focus-as-markets-weigh-a-back-to-back-october-rate-hike/">InvestingLive</a></td><td>日銀10/29-30政策會議市場聚焦升息指引、期貨市場隱含10/30升息機率約25-26%、BOJ 9/18已升息至1.25%為31年來最高、植田總裁重申依經濟/物價/金融狀況持續升息、副總裁內田10/16再度表態將持續升息、短期利率再升一碼至1.5%為下一步觀察。</td><td class="tag neutral">中性</td><td>日圓避險需求+對台幣壓力有限、BOJ升息預期支撐日圓短線</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 四之二、美股指數與板塊動向 ============ -->
+  <h2>美股指數與板塊動向<span class="core-tag">CORE</span></h2>
+  <table class="index-table">
+    <thead><tr><th>指數</th><th>收盤</th><th>漲跌</th><th>漲跌幅</th></tr></thead>
+    <tbody>
+      <tr><td>道瓊工業指數</td><td class="num">52,495.88</td><td class="num up">+529.85</td><td class="pct up">+1.02%</td></tr>
+      <tr><td>S&P 500</td><td class="num">7,712.57</td><td class="num up">+21.84</td><td class="pct up">+0.28%</td></tr>
+      <tr><td>那斯達克綜合指數</td><td class="num">26,424.82</td><td class="num down">-6.07</td><td class="pct down">-0.02%</td></tr>
+      <tr><td>費城半導體指數(SOX)</td><td class="num">11,220 (估)</td><td class="num down">-70 (估)</td><td class="pct down">-0.62% (估)</td></tr>
+    </tbody>
+  </table>
+  <table>
+    <thead><tr><th>板塊（GICS）</th><th>漲跌幅</th><th>表現</th><th>當日驅動/備註</th></tr></thead>
+    <tbody>
+      <tr><td>資訊科技</td><td class="pct down">-0.30% (估)</td><td class="tag down">走弱</td><td>Nasdaq微跌-0.02%、大型科技股獲利了結、半導體股輪動、資金輪出至價值股、Netflix盤後財報觀望</td></tr>
+      <tr><td>通訊服務</td><td class="pct down">-0.20% (估)</td><td class="tag down">小跌</td><td>Netflix盤後財報觀望、Google/Meta隨科技股整理、資金輪出至Dow成分股</td></tr>
+      <tr><td>非必需消費</td><td class="pct down">-0.40% (估)</td><td class="tag down">走弱</td><td>Tesla財報前觀望(10/21盤後)+10/19大漲+1.77%後獲利了結、消費景氣敏感板塊承壓</td></tr>
+      <tr><td>必需消費</td><td class="pct up">+1.20% (估)</td><td class="tag up">走強</td><td>防禦性類股回流+資金輪動至老經濟股、Dow成分股支撐、Walmart/Costco連動反彈</td></tr>
+      <tr><td>能源</td><td class="pct up">+0.60% (估)</td><td class="tag up">小漲</td><td>WTI/Brent原油維持$110/桶高檔、Houthi襲擊沙烏地中東地緣風險支撐、能源股評價修復</td></tr>
+      <tr><td>金融</td><td class="pct up">+0.90% (估)</td><td class="tag up">走強</td><td>Q3財報季持續開跑、區域銀行Q3業績優於預期、長債殖利率波動帶動+Dow成分股支撐</td></tr>
+      <tr><td>醫療保健</td><td class="pct up">+2.00% (估)</td><td class="tag up">領漲</td><td>Healthcare板塊單日領漲+UnitedHealth/Eli Lilly/J&J連動反彈、資金輪入防禦性類股+Dow成分股為大盤+1.02%的核心驅動</td></tr>
+      <tr><td>工業</td><td class="pct up">+1.50% (估)</td><td class="tag up">走強</td><td>Industrials工業股為Dow暴衝第二大驅動、Caterpillar/Boeing/Honeywell連動反彈、景氣敏感板塊回流資金</td></tr>
+      <tr><td>原物料</td><td class="pct up">+0.70% (估)</td><td class="tag up">小漲</td><td>WTI/Brent原油走高帶動相關類股、金屬類股隨通膨預期走強、資金輪入老經濟股</td></tr>
+      <tr><td>不動產</td><td class="pct up">+0.50% (估)</td><td class="tag up">小漲</td><td>Fed 10/27-28觀望+長債殖利率短暫走穩、利率敏感資產技術性反彈</td></tr>
+      <tr><td>公用事業</td><td class="pct up">+1.10% (估)</td><td class="tag up">走強</td><td>防禦類股回流+10/19領跌後技術性反彈、資金輪入避險需求同步升溫</td></tr>
+    </tbody>
+  </table>
+  <ul class="law-list">
+    <li>10/20週二美股板塊明確反轉：Healthcare健保+2.00%(估)領漲+工業+1.50%+必需消費+1.20%+公用事業+1.10%+金融+0.90%為資金明確輪入防禦性類股+價值股+老經濟股為Dow暴衝+1.02%(+529.85點)的核心驅動，vs 資訊科技-0.30%(估)+通訊服務-0.20%+非必需消費-0.40%為大型科技股獲利了結、Netflix(10/20盤後)/Tesla/IBM(10/21盤後)Q3財報觀望氣氛濃厚、Fed 10/27-28 FOMC倒數為資金輪動核心背景。</li>
+    <li>資訊科技/半導體板塊走弱-0.30%(估)+SOX費半連8跌後10/19反彈後10/20再度回檔對台股電子權值短線中性：大型科技股獲利了結+等待Netflix財報指引、惟10/19費半+1.17%為亞股半導體連日跌勢暫告段落訊號、對10/21(週三)台股開盤有望跟隨穩定、台積電ADR表現為核心指標、惟外資10月累計提款7,416億元為史上少見賣壓、季線46,000為核心防線。</li>
+    <li>連續兩份通膨數據超預期(10/14 CPI+10/15 PPI年增6.3%)+Fed 10/27-28 FOMC政策觀望氣氛升高+Fed 10月降息機率下降至22%以下+長債殖利率波動擴大+美元指數高檔支撐為美股資金輪動核心背景、Netflix(10/20盤後)/Tesla/IBM(10/21盤後)Q3財報為Nasdaq短線評價指標、BOJ 10/29-30政策會議為日股/日圓雙重觀察。</li>
+  </ul>
+
+  <!-- ============ 五、日本（參考） ============ -->
+  <h2>五、日本（參考）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th></tr></thead>
+    <tbody>
+      <tr><td class="time">全日</td><td>BOJ 10/29-30政策會議倒數 期貨市場隱含升息機率25-26%</td><td class="src"><a class="src-link" href="https://investinglive.com/central-banks/boj-s-ueda-in-focus-as-markets-weigh-a-back-to-back-october-rate-hike/">InvestingLive</a></td><td>日銀10/29-30政策會議市場聚焦升息指引、期貨市場隱含10/30升息機率約25-26%、植田總裁重申依經濟/物價/金融狀況持續升息、副總裁內田10/16再度表態將持續升息、BOJ 9/18已升息至1.25%為31年來最高、短期利率再升一碼至1.5%為下一步觀察。</td></tr>
+      <tr><td class="time">全日</td><td>日經225 10/20跟隨美股科技股震盪 Advantest/東京威力科創觀望</td><td class="src"><a class="src-link" href="https://www.stockopedia.com/share-prices/advantest-PNK:ATEYY/news/japan-apos-s-nikkei-slips-from-record-high-jg-bs-wobble-on-boj-apos-s-hawkish-hold-updated-019e6a20-384a-7a01-b89d-9cd051502e93/">Stockopedia</a></td><td>日經225 10/20週二跟隨美股Nasdaq震盪整理、Advantest/東京威力科創/鎧俠等AI半導體股為盤面焦點、惟10/19美股費半+1.17%反彈後10/20再度回檔+日圓避險需求升溫壓抑指數、BOJ 10/29-30會議+美股科技股評價為亞股連動雙重觀察。（市場預期：Nikkei波動加劇BOJ會議倒數+美股財報季為核心）</td></tr>
+      <tr><td class="time">全日</td><td>美元兌日圓156-158區間整理 BOJ升息預期支撐日圓避險</td><td class="src"><a class="src-link" href="https://www.fxstreet.com/news/the-japanese-yen-flatlines-through-a-boj-speech-that-changed-nothing-202610062233">FXStreet</a></td><td>美元兌日圓近期波動於156-158區間整理、Fed鷹派預期+美元指數高檔支撐美元、惟BOJ 10/29-30升息預期支撐日圓避險需求、東京核心CPI 9月年增2.7%+除生鮮/能源指標達3%為13個月新高、通膨黏滯為日銀會議核心背景。</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 六、香港（參考） ============ -->
+  <h2>六、香港（參考）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th></tr></thead>
+    <tbody>
+      <tr><td class="time">全日</td><td>港股10/20跟隨亞股震盪 恆科觀望 美股科技股分化拖累</td><td class="src"><a class="src-link" href="https://www.thestandard.com.hk/finance/article/345687/Hong-Kong-shares-close-higher-Lenovo-up-8-percent">The Standard</a></td><td>恆生指數10/20週二跟隨亞股震盪、恆生科技指數受美股Nasdaq微跌-0.02%+大型科技股獲利了結拖累、聯想/阿里/科網股為盤面觀察主力、南向資金動能偏弱、中國政策面未見新刺激、Netflix(10/20盤後)/Tesla(10/21盤後)Q3財報為亞股連動核心觀察。（市場預期：中國政策面若無新刺激恐壓抑港股評價）</td></tr>
+      <tr><td class="time">全日</td><td>中國9月經濟數據已公布完畢 關注11月政策面動能</td><td class="src"><a class="src-link" href="https://www.marketscreener.com/quote/index/HONG-KONG-HANG-SENG-101835/">MarketScreener</a></td><td>中國9月CPI/PPI/進出口數據已於上週全數公布、南向資金有限、下月(11月)關注中國政策面動能+十四五收官+十五五規劃定調、港股科網股為資金輪動核心、Alibaba/Tencent等權值股隨美股科技股連動震盪、十一長假後消費動能觀察為中線觀察指標。</td></tr>
+      <tr><td class="time">全日</td><td>軍工股+科網股10月港股資金輪動核心 美股輪動對港連動需觀察</td><td class="src"><a class="src-link" href="https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-10-16/doc-inivmazi7774326.shtml">新浪財經</a></td><td>10月港股軍工股+科網股為資金輪動核心、聯想10/19曾漲逾8%為軍工概念帶動、恆生科技指數相對抗跌、惟美股10/20大型科技股獲利了結+Nasdaq-0.02%+資金輪動至Dow成分股+價值股輪動的連動需觀察、整體港股月線仍受中國經濟放緩拖累。</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 七、跨市場連動分析 ============ -->
+  <h2>七、跨市場連動分析</h2>
+  <ul class="law-list">
+    <li><strong>美股→台股：</strong>美股10/20週二Dow +1.02%(+529.85點)暴衝+S&P 500 +0.28%+Nasdaq -0.02%微跌、Healthcare健保+工業股+金融股領漲+資金明確由大型科技股輪動至Dow成分股+價值股+老經濟股、對台股電子權值短線中性+對傳產類股連動偏多；惟外資10月累計提款7,416億元為史上少見賣壓+台股10/20再跌529點收46,292點回測季線、台積電收2,405元2,400元關卡暫守、週三(10/21)台積電ADR+SOX費半表現為台股開盤關鍵、季線46,000核心防線不宜輕忽。</li>
+    <li><strong>匯率：</strong>連續兩份通膨數據超預期(10/14 CPI、10/15 PPI年增6.3%)+Fed 10/27-28 FOMC政策觀望氣氛升高+Fed 10月降息機率下降至22%以下、美元指數高檔支撐、新台幣10/20貶破32.5元整數關卡、央行回應指出貶值主要反映國際股市動盪+外資賣超併同獲配股利匯出資金所致、熱錢持續流出為外資7,416億元提款的匯率反映、美元兌日圓156-158區間整理、BOJ 10/29-30升息預期支撐日圓避險、油價Brent觸$110/桶+WTI續攀為台股雙重輸入性通膨壓力。</li>
+    <li><strong>其他：</strong>台積電10/15法說會Q4營收財測526-543億美元遠超市場共識+2026資本支出維持600-640億美元+2027-2028資本支出將顯著高於過去3年為台積電基本面明確中線利多、法巴目標價3,090元+里昂稱估值「不合理便宜」為外資目標價上調潮前兆、本週Netflix(10/20盤後)/Tesla(10/21盤後)/IBM(10/21盤後)Q3財報為美股評價雙重觀察指標、尤其Netflix財報對台股ADR連動影響為中線觀察。</li>
+    <li><strong>亞股連動：</strong>日經225 10/20週二跟隨美股科技股震盪整理+Advantest/東京威力科創AI半導體股觀望+恆生指數跟隨亞股震盪+恆科受美股大型科技股獲利了結拖累+南向資金動能偏弱、顯示亞股半導體在10/19反彈後再度進入觀望期、SOX費半10/19終止連8跌是否持續為亞股評價修復關鍵、BOJ 10/29-30會議為日股/日圓雙重觀察、中國政策面若無新刺激恐壓抑港股連動。</li>
+    <li><strong>資金輪動：</strong>美股10/20板塊明確輪動：Healthcare健保+2.00%(估)+工業+1.50%+必需消費+1.20%+公用事業+1.10%+金融+0.90%為資金明確輪入防禦性類股+價值股+老經濟股為Dow暴衝+1.02%的核心驅動，vs 資訊科技-0.30%+通訊服務-0.20%+非必需消費-0.40%為大型科技股獲利了結；台股投信連日買超183.15億元逆勢加碼電子代工股+中小型電子+月底作帳題材個股為資金輪動明確訊號、外資10月累計提款7,416億元為台股本波核心賣壓動能、15檔投信連日買超個股為「大人在顧」核心標的、月底作帳行情為中線觀察。</li>
+  </ul>
+
+  <!-- ============ 八、今日總覽 ============ -->
+  <h2>八、今日總覽</h2>
+  <div class="overview">
+    <div class="mood">整體氛圍：利空</div>
+    <ul class="law-list">
+      <li><strong>台股關注重點：</strong>10/20週二台股收46,292點下跌529點(-1.13%)盤中高低差達804點回測季線、外資連10賣795.4億元為史上少見賣壓+10月累計提款達7,416億元+今年累計賣超逾2.11兆元、三大法人合計賣超968.04億元、投信買超183.15億元為護盤主力、台積電收2,405元2,400元關卡暫守。</li>
+      <li><strong>台股關注重點：</strong>新台幣10/20貶破32.5元整數關卡+央行回應貶值主要反映外資賣超併同獲配股利匯出資金、熱錢持續流出為外資提款的匯率反映、美元指數高檔+Fed鷹派預期維持為台幣貶壓核心、週三(10/21)需觀察季線46,000若無法守住恐挑戰45,500支撐。</li>
+      <li><strong>台股關注重點：</strong>台積電法說Q4營收財測526-543億美元遠超市場共識+16%以上季增、2026資本支出維持600-640億美元、法巴目標價3,090元、里昂稱估值「不合理便宜」為外資目標價上調潮前兆、2027-2028資本支出顯著高於過去3年為AI供應鏈長線動能、投信買超電子代工股+中小型電子為資金輪動明確訊號。</li>
+      <li><strong>美股關注重點：</strong>美股10/20週二Dow 52,495.88 (+1.02%, +529.85點)+S&P 500 7,712.57 (+0.28%)+Nasdaq 26,424.82 (-0.02%)、Healthcare健保板塊領漲+工業+金融股為Dow暴衝核心驅動、資金由大型科技股輪動至價值股+老經濟股+Dow成分股為10/19反彈後明確分化、Netflix(10/20盤後)/Tesla(10/21盤後)/IBM(10/21盤後)Q3財報為Nasdaq短線評價指標。</li>
+      <li><strong>美股關注重點：</strong>10/20板塊明確輪動：Healthcare健保+2.00%(估)領漲+工業+1.50%+必需消費+1.20%+公用事業+1.10%為資金明確輪入防禦性類股+價值股為Dow暴衝核心驅動，vs 資訊科技-0.30%+通訊服務-0.20%+非必需消費-0.40%為大型科技股獲利了結+Netflix財報觀望氣氛濃厚。</li>
+      <li><strong>風險提示：</strong>外資賣壓未見明確止歇訊號+10月累計提款7,416億元為史上少見+連10賣+新台幣貶破32.5元+Fed 10月降息機率下降至22%以下+長債殖利率波動擴大+Fed 10/27-28 FOMC觀望+油價Brent觸$110/桶為台股雙重匯率+通膨壓力、週三(10/21)台股開盤若無法站穩46,000季線恐挑戰45,500支撐、短線反彈不宜急搶。</li>
+      <li><strong>風險提示：</strong>連續兩份通膨數據超預期(10/14 CPI+10/15 PPI 6.3%)+Fed鷹派預期維持高檔+BOJ 10/29-30政策會議升息預期25-26%為通膨黏滯雙重訊號、油價續攀+Houthi襲擊沙烏地中東地緣風險持續支撐+Brent觸$110/桶為台股輸入性通膨壓力、Netflix(10/20盤後)/Tesla/IBM(10/21盤後)Q3財報為Nasdaq短線評價觀察、中國政策面若無新刺激恐壓抑港股評價連動。</li>
+    </ul>
+  </div>
+
+  <footer class="brief-foot">
+    本簡報為資訊整理，非投資建議。「事實」與「市場預期／分析觀點」已於摘要中區分標示。<br>
+    自動產出於 2026/10/21 07:00（UTC+8）。
+  </footer>
+</body>
+</html>
