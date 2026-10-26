@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日市場簡報｜2026/10/27</title>
+<style>
+  :root {
+    --bg: #0e1116;
+    --panel: #161b22;
+    --panel-2: #1c2230;
+    --border: #2a313c;
+    --text: #d8dee9;
+    --text-dim: #8b95a5;
+    --accent: #e8b339;
+    --up: #ff5b5b;      /* 台股慣例：紅漲 */
+    --down: #3dd68c;    /* 綠跌 */
+    --neutral: #8b95a5;
+    --mono: "SFMono-Regular", "Roboto Mono", "Noto Sans Mono", ui-monospace, monospace;
+    --serif: "Noto Serif TC", "Songti TC", serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans TC", -apple-system, "PingFang TC", "Microsoft JhengHei", sans-serif;
+    line-height: 1.65;
+    padding: 2rem 1.2rem 4rem;
+    max-width: 920px;
+    margin: 0 auto;
+    font-size: 15px;
+  }
+  header.brief-head {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 1rem;
+    margin-bottom: 1.8rem;
+  }
+  header.brief-head .kicker {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    text-transform: uppercase;
+  }
+  header.brief-head h1 {
+    font-family: var(--serif);
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin: 0.2rem 0;
+    letter-spacing: 0.02em;
+  }
+  header.brief-head .date {
+    font-family: var(--mono);
+    color: var(--text-dim);
+    font-size: 0.95rem;
+  }
+  .back-link {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: var(--text-dim);
+    text-decoration: none;
+    font-family: var(--mono);
+    font-size: 0.82rem;
+  }
+  .back-link:hover { color: var(--accent); }
+  h2 {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    margin: 2.2rem 0 0.9rem;
+    padding-left: 0.7rem;
+    border-left: 4px solid var(--accent);
+    letter-spacing: 0.02em;
+  }
+  h2 .core-tag {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.15em;
+    background: var(--accent);
+    color: #0e1116;
+    padding: 0.12rem 0.5rem;
+    border-radius: 3px;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+    font-weight: 700;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.5rem 0 1rem;
+    font-size: 0.86rem;
+    background: var(--panel);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  th {
+    background: var(--panel-2);
+    color: var(--text-dim);
+    text-align: left;
+    padding: 0.6rem 0.7rem;
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+  td {
+    padding: 0.6rem 0.7rem;
+    border-top: 1px solid var(--border);
+    vertical-align: top;
+  }
+  td.time, td.num { font-family: var(--mono); white-space: nowrap; }
+  .tag { font-weight: 700; font-family: var(--mono); font-size: 0.8rem; white-space: nowrap; }
+  .tag.up { color: var(--up); }
+  .tag.down { color: var(--down); }
+  .tag.neutral { color: var(--neutral); }
+  .num.up { color: var(--up); }
+  .num.down { color: var(--down); }
+  .index-table td.num, .index-table th:not(:first-child) { text-align: right; }
+  .index-table th:not(:first-child) { padding-right: 0.9rem; }
+  .index-table td.num { padding-right: 0.9rem; }
+  td.pct { font-family: var(--mono); text-align: right; white-space: nowrap; padding-right: 0.9rem; }
+  td.pct.up { color: var(--up); }
+  td.pct.down { color: var(--down); }
+  .law-list { list-style: none; padding: 0; }
+  .law-list li {
+    padding: 0.45rem 0 0.45rem 1.2rem;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .law-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+  .overview {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 6px;
+    padding: 1.1rem 1.3rem;
+    margin-top: 0.5rem;
+  }
+  .overview .mood { font-family: var(--mono); font-size: 0.95rem; margin-bottom: 0.6rem; }
+  footer.brief-foot {
+    margin-top: 3rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 0.78rem;
+    line-height: 1.8;
+  }
+  .src { color: var(--text-dim); font-size: 0.8rem; }
+  a.src-link { color: var(--text-dim); text-decoration: underline dotted; }
+  a.src-link:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+  <a href="../index.html" class="back-link">← 返回歷史總覽</a>
+  <header class="brief-head">
+    <div class="kicker">Daily Market Brief</div>
+    <h1>每日市場簡報</h1>
+    <div class="date">2026/10/27（UTC+8，週二復市首日）｜產出時間 2026/10/27 07:00</div>
+  </header>
+
+  <!-- ============ 一、台股焦點 ============ -->
+  <h2>一、台股焦點<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th><th>影響</th><th>受影響族群/標的</th></tr></thead>
+    <tbody>
+      <tr><td class="time">預期</td><td>台股連3日休市後10/27(週二)正式復市 連假期間美股由跌轉漲為正向支撐</td><td class="src"><a class="src-link" href="https://www.cnbc.com/2026/10/25/stock-market-today-live-updates.html">CNBC</a></td><td>台股10/23(颱風假)+10/24-10/25週六日+10/26補假連3日休市、10/27(週二)正式復市為週首觀察點、連假期間美股由跌轉漲：10/23(五)續跌後、10/26(一)Dow +0.28%/S&P 500 +0.70%/Nasdaq +0.82%、Anthropic送件IPO激勵AI族群反彈、SOXX費半ETF+3%為最強板塊、油價降溫+前周賣壓消化為正向轉折。（市場預期：台股10/27有望跳空開高300-500點挑戰46,500關卡）</td><td class="tag up">利多</td><td>大盤、電子權值股、AI供應鏈</td></tr>
+      <tr><td class="time">預期</td><td>台積電ADR 10/26收424.37美元(+1.40%) 連假期間累漲5.86美元為台股復市關鍵支撐</td><td class="src"><a class="src-link" href="https://stockanalysis.com/stocks/tsm/">StockAnalysis</a></td><td>台積電ADR 10/26週一收424.37美元(+5.86美元/+1.40%)、連假期間ADR由10/23的418.51美元累漲至424.37美元+累計漲幅1.40%、換算台股折價收斂、法說Q4營收財測526-543億美元遠超共識+2026資本支出600-640億美元為結構性支撐、2,400元關卡10/27料將跳空突破挑戰2,450-2,480元區間。（市場預期：台積電為10/27大盤領漲核心）</td><td class="tag up">利多</td><td>台積電(2330)、半導體供應鏈</td></tr>
+      <tr><td class="time">預期</td><td>Fed FOMC 10/27-28美東時間揭曉 市場預期維持利率不變機率升至93%</td><td class="src"><a class="src-link" href="https://www.cnbc.com/2026/10/26/fed-decision-expectations-october-meeting.html">CNBC</a></td><td>Fed 10/27-28 FOMC政策會議10/28美東時間揭曉、Kalshi預測市場Fed維持利率機率升至93%(前期44-47%已明顯下修)、9月非農就業弱於預期+升息預期轉移至12/9會議、Fed已於9/16升息1碼至3.75-4.00%、鮑爾記者會指引為全週最大變數、鷹派指引下恐壓抑風險性資產。（市場預期：若鮑爾意外偏鷹派恐觸發短線修正）</td><td class="tag neutral">中性</td><td>電子權值股、金融股、新興市場資金動向</td></tr>
+      <tr><td class="time">預期</td><td>Anthropic送件IPO 擬以代碼ANT掛牌納斯達克 上半年營收162.9億美元年增1,304%為AI股東風</td><td class="src"><a class="src-link" href="https://finance.yahoo.com/markets/live/stock-market-today-monday-october-26-dow-sp-500-nasdaq-101153035.html">Yahoo Finance</a></td><td>AI新創Anthropic 10/26送件IPO招股書+擬以代碼「ANT」掛牌納斯達克、公布2026上半年營收達162.9億美元+年增1,304%為史上最高成長率、Claude模型需求爆發+企業AI投資潮延續、激勵AI族群技術性反彈+SOXX費半+3%+NVDA+2.4%+MU+3%、Microsoft/Alphabet雲端資本支出動向為後續觀察。（市場預期：AI軍備競賽延續+供應鏈受惠）</td><td class="tag up">利多</td><td>台積電(2330)、聯發科(2454)、AI伺服器供應鏈</td></tr>
+      <tr><td class="time">預期</td><td>國安基金第9次進駐持續護盤 連假累積資金動向為10/27復市關鍵</td><td class="src"><a class="src-link" href="https://udn.com/news/story/7251/9831314">聯合新聞網</a></td><td>國安基金第9次進駐於10/13啟動+持續護盤為結構性支撐+連假期間累積護盤籌碼、依據歷史經驗國安基金通常於早盤震盪時進場+以電子權值股為首要承接標的、45,500為前期國安基金重點防守區、投信連10買為盤面主力+累計買超逾千億元為資金輪動明確訊號、連假期間美股由跌轉漲+台積電ADR走強為10/27復市正向轉折。（市場預期：若10/27跳空開高後震盪 國安基金進場需求可能降低）</td><td class="tag up">利多</td><td>電子權值股、金融股</td></tr>
+      <tr><td class="time">預期</td><td>外資10月累計提款逾8,200億元 外資期貨淨空單87,297口 復市後空單回補需求為反彈動能</td><td class="src"><a class="src-link" href="https://www.cna.com.tw/news/afe/202610220160.aspx">中央社</a></td><td>外資10月累計提款逾8,200億元+年初累計賣超突破2.19兆元為史上少見、外資期貨淨空單87,297口+期貨空方權續擁、惟連假期間美股由跌轉漲+SOXX+3%+台積電ADR +1.40%為外資轉向訊號、空單回補需求若啟動恐觸發軋空反彈行情、投信連10買+累計買超逾千億元為盤面支撐、月底作帳行情為資金輪動指引。（市場預期：若復市跳空開高300點以上 外資空單回補需求強勁）</td><td class="tag up">利多</td><td>大盤、電子權值股、期貨標的</td></tr>
+      <tr><td class="time">預期</td><td>新台幣連假期間亞幣走弱 10/27復市匯價缺口風險為外資動向關鍵</td><td class="src"><a class="src-link" href="https://udn.com/news/story/7239/9831805">聯合新聞網</a></td><td>新台幣最後交易日10/22貶2分收32.508元為連7貶+外資匯出壓力續存、連假期間美元指數高檔震盪+日圓承壓156-158區間+美元兌亞幣結構性走強、Fed 10/27-28會議前美元指數偏強為結構性貶壓、10/27復市匯價若貶破32.6元恐壓抑外資回流動能、電子出口股受惠貶值+進口原物料股受壓。（市場預期：32.5-32.7元區間為核心觀察）</td><td class="tag neutral">中性</td><td>電子出口股受惠、進口原物料股受壓</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 二、三大法人動向 ============ -->
+  <h2>二、三大法人動向<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>法人</th><th>買賣超(億元)</th><th>方向</th><th>備註</th></tr></thead>
+    <tbody>
+      <tr><td>外資</td><td class="num down">-816.57</td><td class="tag down">賣超</td><td>最後交易日10/22數據（10/23-10/26連3日休市）、單日第3大賣超、台積電單日砍309億元為最大賣超、反手掃貨台泥/台玻各逾2萬張輪動至資產股、10月累計提款逾8,200億元、年初累計賣超突破2.19兆元、惟連假期間美股由跌轉漲+SOXX費半+3%+台積電ADR +1.40%+Anthropic IPO激勵AI族群 為外資轉向訊號、10/27復市需觀察空單回補力道</td></tr>
+      <tr><td>投信</td><td class="num up">+88.75</td><td class="tag up">買超</td><td>最後交易日10/22數據（10/23-10/26連3日休市）、連10買為盤面唯一護盤主力、累計買超已逾千億元、持續鎖定電子代工股+中小型電子+月底作帳題材+被動元件族群中價位個股、15檔投信連日買超個股為「大人在顧」核心標的、10/27復市若美股轉強 投信連買力道有望延續至連11-12買</td></tr>
+      <tr><td>自營商</td><td class="num down">-273.78</td><td class="tag down">賣超</td><td>最後交易日10/22數據（10/23-10/26連3日休市）、避險部位賣超236.62億元+自行買賣賣超37.16億元、避險需求升溫反映盤面波動擴大、惟連假期間美股由跌轉漲+VIX氛圍降溫、10/27復市若跳空開高 自營商避險部位有望減碼</td></tr>
+    </tbody>
+  </table>
+  <ul class="law-list">
+    <li>台股10/23-10/26連3日休市（10/23颱風薔琵+10/24-10/25週六日+10/26補假）、10/27(週二)正式復市為週首觀察點、三大法人最後交易日10/22合計賣超1,001.59億元+外資砍816.57億元為單日第3大賣超+台積電單日砍309億元最大賣超+台指期淨空單87,297口期貨空方權續擁；惟連假期間美股由跌轉漲(10/26 Dow +0.28%/S&P +0.70%/Nasdaq +0.82%)+Anthropic送件IPO激勵AI族群+SOXX費半+3%+台積電ADR +1.40%為正向轉折，10/27復市料將跳空開高消化外資空單回補需求。</li>
+    <li>外資10/22反手掃貨台泥(1101)/台玻(1802)各逾2萬張+資金輪動至傳統內需+資產股+水泥股、顯示避險需求升溫；惟10/26美股由跌轉漲+科技/非必需消費領漲+能源板塊降溫、投信持續買超電子代工股+中小型電子+月底作帳題材+被動元件族群中價位個股、15檔投信連日買超個股為「大人在顧」核心標的為10/27資金輪動指引、若復市跳空開高 資金有機會由避險輪回至AI電子重砲區。</li>
+    <li>新台幣最後交易日10/22貶2分收32.508元為連7貶+外資匯出壓力續存+Fed 10/28 FOMC會議前美元指數高檔震盪+9月CPI年增3.7%遠超預期+美元指數走強為結構性貶壓、連假期間亞幣整體走弱+日圓承壓156-158區間、惟Fed升息預期已下修至93%機率維持利率+升息轉移至12/9會議 為新台幣壓力減緩訊號、32.5-32.7元區間為10/27核心觀察。</li>
+    <li>國安基金第9次進駐於10/13啟動+持續護盤為結構性支撐+連假期間累積護盤籌碼、依據歷史經驗國安基金通常於早盤震盪時進場+以電子權值股為首要承接標的、45,500為前期國安基金重點防守區+台積電2,400元關卡攻防為大盤生命線；惟連假期間美股由跌轉漲+台積電ADR走強+Anthropic IPO激勵AI族群 為10/27復市正向轉折、若跳空開高後震盪 國安基金進場需求可能降低、投信連10買為盤面支撐。</li>
+  </ul>
+
+  <!-- ============ 三、權值股觀察清單 ============ -->
+  <h2>三、權值股觀察清單<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>標的</th><th>漲跌</th><th>相關消息</th><th>影響</th></tr></thead>
+    <tbody>
+      <tr><td>台積電(2330)</td><td class="num down">-15 (-0.62% 收2,405，10/22)</td><td>連假期間ADR 10/26收424.37美元(+1.40%)+10/23-10/26累漲5.86美元為台股復市關鍵支撐、Anthropic IPO送件激勵AI族群+SOXX費半+3%+NVDA +2.4%+MU +3%為正向氛圍、法說Q4營收財測526-543億美元遠超共識+2026資本支出600-640億美元、法巴目標價3,090元、2,400元關卡10/27料將跳空突破+挑戰2,450-2,480元區間、為10/27領漲核心</td><td class="tag up">利多</td></tr>
+      <tr><td>聯發科(2454)</td><td class="num down">-25 (-1.76% 估收1,395，10/22)</td><td>連假期間SOXX費半+3%+Anthropic IPO激勵AI族群+Google TPU合作為中線題材、AI周邊晶片需求為中線利多、10/27復市有望隨大盤跳空開高、1,400元關卡挑戰1,420-1,450區間、Microsoft/Alphabet Q3財報雲端資本支出動向為後續觀察</td><td class="tag up">利多</td></tr>
+      <tr><td>鴻海(2317)</td><td class="num down">-7.5 (-3.00% 估收242.5，10/22)</td><td>連假期間Tesla +5%(受Barclays升評)+SpaceX概念+AI供應鏈情緒回暖、AI伺服器2026年出貨市佔逾40%為中線題材、CoreWeave等neocloud反彈氛圍、10/27復市有望隨大盤跳空開高+245-250元區間挑戰、Tesla Q3優於預期雖能源儲存低於預期為結構性題材</td><td class="tag up">利多</td></tr>
+      <tr><td>廣達(2382)</td><td class="num down">-9 (-2.73% 估收320，10/22)</td><td>連假期間SOXX費半+3%+Microsoft/Alphabet Q3財報雲端資本支出動向為核心觀察、AI伺服器出貨能見度延伸至2027+CoreWeave連動反彈+2026年AI伺服器營收占比將達8成、10/27復市有望跳空開高+325-335元區間挑戰、Anthropic IPO激勵AI投資潮為結構性利多</td><td class="tag up">利多</td></tr>
+      <tr><td>國巨(2327)</td><td class="num down">-10 (-1.60% 估收615，10/22)</td><td>10月整體區間600-650元+花旗目標價仍看1,500元、村田減產部分MLCC料號+台廠轉單效應持續、2026年MLCC漲價93%估+摩根士丹利估下半年單位售價調漲30-40%、三星電機已率先對客戶調高2026 Q4報價、投信買超被動元件族群為支撐、10/27復市Q3財報預期為核心觀察</td><td class="tag up">利多</td></tr>
+      <tr><td>華新科(2492)</td><td class="num down">-5 (-1.42% 估收347，10/22)</td><td>10月初漲停至361.5元後震盪、國內MLCC指標大廠、受惠村田減產轉單+高階產品組合改善、BB ratio從1.2-1.3提升至1.3-1.4、AI相關營收占比可望達15-20%、投信連日買超護盤、連假期間日系被動元件(村田)動向為間接觀察、10/27復市AI族群反彈氛圍為支撐</td><td class="tag up">利多</td></tr>
+      <tr><td>禾伸堂(3026)</td><td class="num down">-8 (-0.88% 估收900，10/22)</td><td>10月回檔整理、7月曾觸跌停後10月築底盤整、法人目標價千元、被動元件族群中價位個股、MLCC漲價循環受惠標的、村田減產題材受惠（族群觀察）、投信連日買超為支撐、10/27復市若大盤跳空開高有望隨族群反彈</td><td class="tag neutral">中性</td></tr>
+      <tr><td>奇力新(2456)</td><td class="num down">-2 (-1.90% 估收103.5，10/22)</td><td>電感元件龍頭+資料中心PMIC相關、族群連動隨國巨走勢震盪、AI供電架構升級受惠標的、投信買超被動元件族群帶動（族群觀察）、連假期間Microsoft/Alphabet雲端資本支出動向為後續觀察、Anthropic IPO激勵AI資本支出潮為間接利多</td><td class="tag up">利多</td></tr>
+      <tr><td>日電貿(3090)</td><td class="num down">-1.5 (-1.76% 估收83.5，10/22)</td><td>村田代理轉單受惠股+10月承接7月反彈後整理、連假期間日圓156-158區間與日本電子股連動為間接觀察、族群連動（族群觀察）、BOJ 10/29-30會議+日圓156-158區間為間接變數、10/27復市若AI族群反彈有望隨漲</td><td class="tag neutral">中性</td></tr>
+      <tr><td>美磊(3068)</td><td class="num down">-1.8 (-1.80% 估收98.2，10/22)</td><td>電感元件次族群+族群連動隨國巨/華新科震盪、AI電源管理+資料中心需求為中線題材（族群觀察）、投信買超中小型被動元件為支撐、10/27復市若AI族群反彈有望隨族群走強</td><td class="tag up">利多</td></tr>
+      <tr><td>凱美(5317)</td><td class="num down">-0.8 (-1.80% 估收43.6，10/22)</td><td>利基型電容廠+族群連動+MLCC漲價循環氛圍、投信買超中小型被動元件為支撐（族群觀察）、月底作帳題材受惠、10/27復市被動元件族群反彈氛圍為支撐</td><td class="tag neutral">中性</td></tr>
+      <tr><td>立隆電(2472)</td><td class="num down">-0.7 (-1.80% 估收38.2，10/22)</td><td>電解電容廠+族群連動+AI供電架構升級受惠+投信買超被動元件族群氛圍（族群觀察）、Microsoft/Alphabet Q3財報資料中心資本支出動向為間接觀察、10/27復市AI族群反彈氛圍為支撐</td><td class="tag up">利多</td></tr>
+      <tr><td>智寶(2375)</td><td class="num down">-0.6 (-1.80% 估收32.7，10/22)</td><td>電解電容廠+中國市場曝險+族群連動、連假期間港股/中國市場連動為間接觀察（族群觀察）、十五五規劃定調為中線題材、10/27復市被動元件族群反彈氛圍為支撐</td><td class="tag neutral">中性</td></tr>
+      <tr><td>鈞寶(6155)</td><td class="num down">-1.2 (-1.80% 估收65.5，10/22)</td><td>EMI/EMC元件商+族群連動+AI伺服器EMI防護需求提升為中線題材（族群觀察）、投信連日買超為支撐、Microsoft/Alphabet雲端資本支出動向為間接利多、10/27復市AI族群反彈氛圍為支撐</td><td class="tag up">利多</td></tr>
+      <tr><td>信昌電(6173)</td><td class="num down">-2.5 (-1.80% 估收136.5，10/22)</td><td>7/27曾觸跌停後10月整理、被動元件族群中小型標的、鉭電容AI供電架構升級受惠、村田MLCC漲價帶動族群（族群觀察）、月底作帳題材受惠、Anthropic IPO激勵AI資本支出潮為間接利多</td><td class="tag up">利多</td></tr>
+      <tr><td>大毅(2478)</td><td class="num down">-0.8 (-1.80% 估收43.8，10/22)</td><td>電阻相關個股+族群連動、AI供電架構升級受惠晶片電阻需求、村田減產轉單效應延續（族群觀察）、投信買超為支撐、10/27復市被動元件族群反彈氛圍為支撐</td><td class="tag neutral">中性</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 四、美股焦點 ============ -->
+  <h2>四、美股焦點（可複委託操作）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th><th>影響</th><th>對台股連動</th></tr></thead>
+    <tbody>
+      <tr><td class="time">10/27 04:00</td><td>美股10/26週一三大指數同步反彈 Nasdaq +0.82%領漲 AI氛圍回暖終結連2週跌勢</td><td class="src"><a class="src-link" href="https://finance.yahoo.com/markets/live/stock-market-today-monday-october-26-dow-sp-500-nasdaq-101153035.html">Yahoo Finance</a></td><td>10/26週一Dow 52,361.58(+146.42/+0.28%)+S&P 500 7,676.77(+53.09/+0.70%)+Nasdaq 26,169.38(+214.04/+0.82%)、三大指數同步反彈+終結S&P/Nasdaq連2週跌勢、Anthropic送件IPO+油價降溫+Fed升息預期下修為核心驅動、科技+非必需消費為領漲板塊、本週Fed FOMC 10/27-28+美科技Q3財報密集揭露為下週全球風險中心。</td><td class="tag up">利多</td><td>10/27台股復市有望跳空開高消化前期跌勢+外資空單回補需求為反彈動能</td></tr>
+      <tr><td class="time">10/27 04:00</td><td>Anthropic送件IPO 擬以代碼ANT掛牌納斯達克 上半年營收162.9億美元年增1,304% 激勵AI族群反彈</td><td class="src"><a class="src-link" href="https://www.fool.com/coverage/stock-market-today/2026/10/26/stock-market-today-oct-26-ai-optimism-lifts-nasdaq-as-tech-stocks-rebound/">The Motley Fool</a></td><td>AI新創Anthropic 10/26送件IPO招股書+擬以代碼「ANT」掛牌納斯達克、公布2026上半年營收達162.9億美元+年增1,304%為史上最高成長率、Claude模型需求爆發+企業AI投資潮延續、激勵AI族群技術性反彈+SOXX費半ETF+3%+NVDA +2.4%+MU +3%+CoreWeave等neocloud反彈、Microsoft/Alphabet雲端資本支出動向為後續觀察。（市場預期：AI軍備競賽延續）</td><td class="tag up">利多</td><td>台積電(2330)/聯發科(2454)/廣達(2382)/鴻海(2317)直接受惠AI供應鏈反彈氛圍</td></tr>
+      <tr><td class="time">預期</td><td>Fed FOMC 10/27-28 美東時間10/28揭曉 Kalshi預測維持利率機率93% 鮑爾記者會為全週變數</td><td class="src"><a class="src-link" href="https://www.cnbc.com/2026/10/26/fed-decision-expectations-october-meeting.html">CNBC</a></td><td>Fed 10/27-28 FOMC政策會議10/28美東時間揭曉、Kalshi預測市場Fed維持利率機率升至93%(前期44-47%已明顯下修)、9月非農就業弱於預期+升息預期轉移至12/9會議、Fed已於9/16升息1碼至3.75-4.00%、鮑爾記者會指引為全週最大變數、鷹派指引下恐壓抑風險性資產+鴿派指引為全球股市反彈動能。（市場預期：若鮑爾意外偏鷹派恐觸發短線修正）</td><td class="tag neutral">中性</td><td>Fed維持利率+升息預期下修 為新興市場資金壓力減緩訊號+外資賣壓有望減緩</td></tr>
+      <tr><td class="time">10/27 03:00</td><td>Tesla +5%Barclays升評 Meta -2%送件募資擴AI投資 美科技權值股分化加劇</td><td class="src"><a class="src-link" href="https://finance.yahoo.com/markets/live/stock-market-today-monday-october-26-dow-sp-500-nasdaq-101153035.html">Yahoo Finance</a></td><td>Tesla 10/26單日漲逾5%受Barclays升評激勵、Meta Platforms 10/26下跌約2%受送件募資擴充AI基礎建設投資稀釋疑慮、科技權值股分化加劇、Microsoft/Alphabet/Meta/Apple/Amazon輪番Q3財報密集揭露、AI資本支出動向+Azure/GCP雲端成長率+Meta Reality Labs燒錢規模+Apple服務業成長+AWS利潤率為核心觀察。（市場預期：Meta擴充AI投資為中線利多但短線稀釋）</td><td class="tag neutral">中性</td><td>鴻海(2317)Tesla供應鏈受關注+Meta擴充AI投資為台股AI供應鏈間接利多</td></tr>
+      <tr><td class="time">10/27 02:30</td><td>油價10/26降溫 WTI/布蘭特週線收黑終結前週飆漲 通膨壓力與Fed升息預期雙降溫</td><td class="src"><a class="src-link" href="https://sundayguardianlive.com/business/why-is-us-stock-market-up-today-dow-jones-rises-05-sp-500-gains-09-nasdaq-climbs-13-as-oil-prices-ease-check-what-investors-should-know-312444/">Sunday Guardian</a></td><td>原油價格10/26降溫+WTI/布蘭特週線收黑+終結前週(10/23)飆漲3-3.8%至$116.72/$103.27之勢、油價降溫為通膨壓力減緩+Fed升息預期下修為93%機率維持利率、能源板塊回檔+科技/非必需消費重返主流、全球風險性資產氛圍回暖為10/27台股復市正向轉折。（市場預期：油價若續跌恐觸發能源板塊獲利了結）</td><td class="tag up">利多</td><td>通膨壓力減緩+台股電子出口股評價壓力減輕+10/27復市正向支撐</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 四之二、美股指數與板塊動向 ============ -->
+  <h2>美股指數與板塊動向<span class="core-tag">CORE</span></h2>
+  <table class="index-table">
+    <thead><tr><th>指數</th><th>收盤</th><th>漲跌</th><th>漲跌幅</th></tr></thead>
+    <tbody>
+      <tr><td>道瓊工業指數</td><td class="num">52,361.58</td><td class="num up">+146.42</td><td class="pct up">+0.28%</td></tr>
+      <tr><td>S&P 500</td><td class="num">7,676.77</td><td class="num up">+53.09</td><td class="pct up">+0.70%</td></tr>
+      <tr><td>那斯達克綜合指數</td><td class="num">26,169.38</td><td class="num up">+214.04</td><td class="pct up">+0.82%</td></tr>
+      <tr><td>費城半導體指數(SOX)</td><td class="num">約12,620 (估)</td><td class="num up">+約380 (估)</td><td class="pct up">約+3.1% (估)</td></tr>
+    </tbody>
+  </table>
+  <table>
+    <thead><tr><th>板塊（GICS）</th><th>漲跌幅</th><th>表現</th><th>當日驅動/備註</th></tr></thead>
+    <tbody>
+      <tr><td>資訊科技</td><td class="pct up">+1.70%</td><td class="tag up">領漲</td><td>10/26週一：Anthropic送件IPO激勵AI族群反彈+SOXX費半+3%+NVDA +2.4%+MU +3%、技術性反彈+台積電ADR +1.40%為支撐、Microsoft/Alphabet Q3財報雲端資本支出動向為後續觀察、連2週跌勢終結為結構性轉折</td></tr>
+      <tr><td>通訊服務</td><td class="pct down">-0.30%</td><td class="tag down">走弱</td><td>10/26週一：Meta -2%送件募資擴AI投資稀釋疑慮為核心拖累、Alphabet/Netflix獲利了結、下週Meta 10/29盤後+Alphabet 10/28盤後財報為全週關鍵、Microsoft Q3雲端資本支出動向為指引</td></tr>
+      <tr><td>非必需消費</td><td class="pct up">+1.30%</td><td class="tag up">領漲</td><td>10/26週一：Tesla +5%受Barclays升評激勵+Amazon連動走強、油價降溫+Fed升息預期下修為消費景氣敏感板塊支撐、Amazon 10/30盤後財報為後續指引</td></tr>
+      <tr><td>必需消費</td><td class="pct down">-0.20%</td><td class="tag down">走弱</td><td>10/26週一：防禦股資金輪出至成長股+Walmart/Costco獲利了結、通膨黏滯壓抑消費類股評價、油價降溫雖為成本利多但資金流向更積極成長股</td></tr>
+      <tr><td>能源</td><td class="pct down">-1.50%</td><td class="tag down">領跌</td><td>10/26週一：油價10/26降溫+WTI/布蘭特週線收黑終結前週飆漲、Exxon/Chevron獲利了結+美伊緊張氛圍短暫減緩、中東局勢仍為結構性變數</td></tr>
+      <tr><td>金融</td><td class="pct up">+0.50%</td><td class="tag up">上漲</td><td>10/26週一：Fed升息預期下修至93%機率維持利率+殖利率下降為銀行股支撐、JPM/BAC/C獲利回補+Fed FOMC 10/27-28為核心變數、鮑爾記者會指引為全週最大關鍵</td></tr>
+      <tr><td>醫療保健</td><td class="pct up">+0.30%</td><td class="tag up">上漲</td><td>10/26週一：防禦性類股技術性反彈+UnitedHealth/Eli Lilly/J&amp;J獲利回補、Merck等個股受惠醫藥併購題材、Fed降息預期下修對高評價類股為利空</td></tr>
+      <tr><td>工業</td><td class="pct up">+0.20%</td><td class="tag up">微漲</td><td>10/26週一：油價降溫減緩運輸子類成本壓力+航空股UAL/AAL/DAL回補、Boeing/Caterpillar隨Dow走升、全球貿易疑慮延續為結構性壓抑</td></tr>
+      <tr><td>原物料</td><td class="pct up">+0.10%</td><td class="tag up">微漲</td><td>10/26週一：美元指數小幅走弱+Fed升息預期下修為金屬價格支撐、Freeport-McMoRan/Nucor獲利回補、油價降溫未傳導至其他商品</td></tr>
+      <tr><td>不動產</td><td class="pct up">+0.80%</td><td class="tag up">上漲</td><td>10/26週一：10年期殖利率回落+Fed維持利率預期93%為REITs利多、Realty Income/American Tower技術性反彈、資料中心REITs(DLR/EQIX)為AI題材避風港+受Anthropic IPO激勵</td></tr>
+      <tr><td>公用事業</td><td class="pct up">+0.40%</td><td class="tag up">微漲</td><td>10/26週一：防禦類股技術性反彈+NextEra/Duke Energy獲利回補、Fed升息預期下修為高殖利率類股利多、資料中心電力需求續為中線題材</td></tr>
+    </tbody>
+  </table>
+  <ul class="law-list">
+    <li>10/26週一美股「成長股輪動」反轉續演：10檔GICS類股收紅+1檔收黑（能源-1.50%領跌 vs 科技+1.70%領漲+非必需消費+1.30%+不動產+0.80%+金融+0.50%+公用事業+0.40%+醫療保健+0.30%+工業+0.20%+原物料+0.10%+必需消費-0.20%+通訊服務-0.30%）、資金明確由能源輪回成長股+科技股主流回歸、Anthropic IPO激勵AI族群+油價降溫+Fed升息預期下修為核心背景、本週Fed FOMC 10/27-28+Microsoft/Alphabet(10/28)+Meta(10/29)+Apple/Amazon(10/30) Q3財報密集揭露為Nasdaq短線評價核心指標。</li>
+    <li>資訊科技/半導體板塊+1.70%領漲+SOXX費半+3%+NVDA +2.4%+MU +3%+台積電ADR +1.40%對台股電子權值股為10/27(週二)復市核心正向支撐：Anthropic送件IPO+上半年營收162.9億美元年增1,304%激勵AI軍備競賽預期、連假期間美股由跌轉漲為結構性轉折、台積電2,400元關卡10/27料將跳空突破+挑戰2,450-2,480元區間為大盤領漲核心、Microsoft/Alphabet雲端資本支出動向為後續指引、投信買超被動元件族群為資金輪動明確訊號+10/27復市AI族群反彈氛圍有望延伸至被動元件+電源管理+PCB族群。</li>
+  </ul>
+
+  <!-- ============ 五、日本（參考） ============ -->
+  <h2>五、日本（參考）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th></tr></thead>
+    <tbody>
+      <tr><td class="time">全日</td><td>日銀10/29-30政策會議倒數3天 市場預期本次維持利率不動 Fed+BOJ雙會議週登場</td><td class="src"><a class="src-link" href="https://www.vantagemarkets.com/market-news/nikkei-225-index-today-before-fed-boj-decisions-october-26-2026/">Vantage Markets</a></td><td>日銀10/29-30政策會議倒數3天為市場聚焦升息指引、Vantage報導預期本次維持不動+市場預估連續升息機率25-26%、日銀9/18已升息至1.25%為31年來最高、短期利率再升一碼至1.5%為下一步觀察、10月季度展望若上修通膨預測+連續升息可能性大增、Fed 10/27-28+BOJ 10/29-30雙會議週為亞幣與全球資產類別關鍵、植田總裁重申依經濟/物價/金融狀況持續升息。</td></tr>
+      <tr><td class="time">全日</td><td>日經225 10/26約收62,602點(-0.1%) 日圓156.79震盪 等待Fed+BOJ雙會議指引</td><td class="src"><a class="src-link" href="https://www.vantagemarkets.com/market-news/nikkei-225-index-today-before-fed-boj-decisions-october-26-2026/">Vantage Markets</a></td><td>日經225 10/26東京早盤小跌0.1%至62,602.86點、美元兌日圓從156.99微跌至156.79、日圓156-158區間續擁、Fed 10/27-28+BOJ 10/29-30雙會議週為日圓與日股關鍵、通膨黏滯+東京核心CPI 9月年增2.7%+除生鮮/能源指標達3%為13個月新高為日銀會議核心背景、連假期間亞幣整體走弱+日圓156-158區間為結構性觀察、10/27美股轉強氛圍有望帶動日股反彈。</td></tr>
+      <tr><td class="time">預期</td><td>日經225下週聚焦BOJ+美科技Q3財報 Advantest/東京威力科創為亞股共同主軸</td><td class="src"><a class="src-link" href="https://finance.yahoo.com/markets/stocks/articles/stock-market-news-oct-26-085200530.html">Yahoo Finance</a></td><td>日經225 10/26午後震盪整理+電子股隨SOXX費半連動反彈氛圍、本週日經225聚焦BOJ 10/29-30決策+美科技權值股Q3財報輪番揭露、Advantest/東京威力科創/鎧俠AI半導體股為盤面焦點+隨SOXX+3%連動為亞股共同主軸、村田減產部分MLCC料號為台廠(國巨/華新科)轉單效應持續動能、日系被動元件動向為台廠間接指引。（市場預期：Anthropic IPO激勵亞洲半導體股連動反彈）</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 六、香港（參考） ============ -->
+  <h2>六、香港（參考）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th></tr></thead>
+    <tbody>
+      <tr><td class="time">全日</td><td>恆生指數延續中國政策寬鬆預期 近期區間24,000-24,500點整理 等待Fed指引</td><td class="src"><a class="src-link" href="https://www.thestar.com.my/news/world/2026/10/16/hong-kong039s-hang-seng-index-closes-052-pct-higher">The Star</a></td><td>恆生指數延續中國政策寬鬆預期+十五五規劃定調+財政/貨幣政策續擁、近期區間維持24,000-24,500點整理、恆生科技指數延續AI/半導體/電動車三軸共振、北水持續流入港股為支撐、Fed 10/28 FOMC會議+人民幣匯率動向為關鍵變數、10/16恆生指數曾收24,186.83點(+0.52%)/恆生科技+1.16%為前期參考。</td></tr>
+      <tr><td class="time">預期</td><td>港股聚焦中國十一月經濟數據與美中貿易延續協議 政策寬鬆預期為核心支撐</td><td class="src"><a class="src-link" href="https://asiafinancial.com/thailand-in-1-5bn-solar-power-push-ccp-meets-in-beijing">Asia Financial</a></td><td>港股本週聚焦中國11月經濟數據+PMI/CPI/工業增加值陸續揭露、十五五規劃定調為中線題材+財政/貨幣政策寬鬆預期為結構性支撐、美中貿易延續協議為外資回流動能、人行續擁政策工具箱、Fed FOMC 10/28鮑爾記者會指引為美元指數與人民幣匯率關鍵、Anthropic IPO激勵AI族群氛圍有望帶動港股科技股連動反彈。</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 七、跨市場連動分析 ============ -->
+  <h2>七、跨市場連動分析</h2>
+  <ul class="law-list">
+    <li>美股→台股：連假期間美股由跌轉漲為10/27台股復市核心正向轉折：10/26 Dow +0.28%/S&P +0.70%/Nasdaq +0.82%+Anthropic送件IPO激勵AI族群+SOXX費半+3%+NVDA +2.4%+MU +3%+台積電ADR +1.40%、連2週跌勢終結+科技/非必需消費領漲+能源板塊降溫、台股10/27料將跳空開高300-500點挑戰46,500關卡、台積電2,400元關卡料將跳空突破+挑戰2,450-2,480元區間為大盤領漲核心。</li>
+    <li>匯率：Fed升息預期下修至93%機率維持利率+升息轉移至12/9會議為新興市場資金壓力減緩訊號、新台幣10/22收32.508元為連7貶、連假期間美元指數高檔震盪+日圓156-158區間+亞幣整體走弱、惟10/27 Fed FOMC前市場氛圍回暖+若鮑爾記者會偏鴿派有望觸發亞幣反彈、32.5-32.7元為新台幣10/27核心觀察、若貶破32.6元恐壓抑外資回流動能。</li>
+    <li>其他：Fed FOMC 10/27-28美東時間10/28揭曉+BOJ 10/29-30雙會議週為亞幣與全球資產類別關鍵、美科技權值股Q3財報密集揭露：Microsoft/Alphabet(10/28盤後)+Meta(10/29盤後)+Apple/Amazon(10/30盤後)、AI資本支出動向為台積電/AI伺服器供應鏈直接利多/利空指引、Anthropic IPO送件激勵AI軍備競賽預期為結構性利多、油價降溫+通膨壓力減緩為全球風險性資產氛圍回暖訊號、本週亞幣與全球股市節奏為核心。</li>
+    <li>跨區技術面：台股10/22失守季線46,207點+月線亦下穿轉空、10/27復市若跳空開高並站回季線為多方反攻訊號、台積電ADR +1.40%+Anthropic IPO+SOXX費半+3%為正向支撐、惟Fed FOMC+美科技Q3財報雙事件風險+外資期貨淨空單87,297口+10月累計提款逾8,200億元為結構性壓力、短線反彈不宜追高+國安基金第9次進駐為結構性支撐。</li>
+  </ul>
+
+  <!-- ============ 八、今日總覽 ============ -->
+  <h2>八、今日總覽</h2>
+  <div class="overview">
+    <div class="mood">整體氛圍：利多（連假期間美股由跌轉漲+Anthropic IPO激勵AI族群+台積電ADR +1.40%+SOXX費半+3%+Fed升息預期下修為93%機率維持利率，台股10/27復市料將跳空開高消化外資空單回補需求挑戰46,500關卡，惟Fed FOMC 10/27-28+美科技Q3財報密集揭露為全週變數）</div>
+    <ul class="law-list">
+      <li>台股關注重點：10/27(週二)復市為週首觀察點+料將跳空開高300-500點挑戰46,500關卡、台積電2,400元關卡料將跳空突破挑戰2,450-2,480元區間為大盤領漲核心、外資期貨淨空單87,297口+10月累計提款逾8,200億元空單回補需求為反彈動能。</li>
+      <li>台股關注重點：被動元件族群(國巨/華新科/禾伸堂等15檔觀察清單)續擁投信買超+月底作帳題材+村田減產轉單效應+MLCC漲價93%估為結構性利多、Anthropic IPO激勵AI供應鏈反彈氛圍有望延伸至被動元件+電源管理+PCB族群。</li>
+      <li>台股關注重點：國安基金第9次進駐於10/13啟動持續護盤+連假期間累積護盤籌碼+投信連10買為盤面支撐、45,500為前期國安基金重點防守區、若10/27跳空開高後震盪 國安基金進場需求可能降低。</li>
+      <li>美股關注重點：Fed FOMC 10/27-28美東時間10/28揭曉+Kalshi預測93%機率維持利率+鮑爾記者會指引為全週最大變數、Microsoft/Alphabet(10/28)+Meta(10/29)+Apple/Amazon(10/30) Q3財報密集揭露為Nasdaq短線評價核心指標。</li>
+      <li>美股關注重點：Anthropic送件IPO+上半年營收162.9億美元年增1,304%激勵AI軍備競賽預期+SOXX費半+3%為結構性利多、Tesla +5%+Meta -2%+科技權值股分化加劇、油價降溫+通膨壓力減緩為全球風險性資產氛圍回暖訊號。</li>
+      <li>風險提示：Fed鮑爾10/28記者會若意外偏鷹派恐觸發短線修正+外資期貨淨空單87,297口若未回補為壓力、美科技Q3財報若AI資本支出不如預期恐觸發Nasdaq修正、新台幣32.6元關卡攻防+日圓156-158區間+美中貿易延續協議為結構性變數。</li>
+      <li>風險提示：台股10/22失守季線46,207點+月線亦下穿轉空+技術面轉空為結構性壓力、10/27跳空開高後若無法站回季線為反彈力道有限訊號、短線反彈不宜追高+10月累計外資提款逾8,200億元+年初累計賣超突破2.19兆元為結構性壓力。</li>
+    </ul>
+  </div>
+
+  <footer class="brief-foot">
+    本簡報為資訊整理，非投資建議。「事實」與「市場預期／分析觀點」已於摘要中區分標示。<br>
+    自動產出於 2026/10/27 07:00（UTC+8）。
+  </footer>
+</body>
+</html>
