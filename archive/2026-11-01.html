@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日市場簡報｜2026/11/01</title>
+<style>
+  :root {
+    --bg: #0e1116;
+    --panel: #161b22;
+    --panel-2: #1c2230;
+    --border: #2a313c;
+    --text: #d8dee9;
+    --text-dim: #8b95a5;
+    --accent: #e8b339;
+    --up: #ff5b5b;      /* 台股慣例：紅漲 */
+    --down: #3dd68c;    /* 綠跌 */
+    --neutral: #8b95a5;
+    --mono: "SFMono-Regular", "Roboto Mono", "Noto Sans Mono", ui-monospace, monospace;
+    --serif: "Noto Serif TC", "Songti TC", serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans TC", -apple-system, "PingFang TC", "Microsoft JhengHei", sans-serif;
+    line-height: 1.65;
+    padding: 2rem 1.2rem 4rem;
+    max-width: 920px;
+    margin: 0 auto;
+    font-size: 15px;
+  }
+  header.brief-head {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 1rem;
+    margin-bottom: 1.8rem;
+  }
+  header.brief-head .kicker {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    text-transform: uppercase;
+  }
+  header.brief-head h1 {
+    font-family: var(--serif);
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin: 0.2rem 0;
+    letter-spacing: 0.02em;
+  }
+  header.brief-head .date {
+    font-family: var(--mono);
+    color: var(--text-dim);
+    font-size: 0.95rem;
+  }
+  .back-link {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: var(--text-dim);
+    text-decoration: none;
+    font-family: var(--mono);
+    font-size: 0.82rem;
+  }
+  .back-link:hover { color: var(--accent); }
+  h2 {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    margin: 2.2rem 0 0.9rem;
+    padding-left: 0.7rem;
+    border-left: 4px solid var(--accent);
+    letter-spacing: 0.02em;
+  }
+  h2 .core-tag {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.15em;
+    background: var(--accent);
+    color: #0e1116;
+    padding: 0.12rem 0.5rem;
+    border-radius: 3px;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+    font-weight: 700;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.5rem 0 1rem;
+    font-size: 0.86rem;
+    background: var(--panel);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  th {
+    background: var(--panel-2);
+    color: var(--text-dim);
+    text-align: left;
+    padding: 0.6rem 0.7rem;
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+  td {
+    padding: 0.6rem 0.7rem;
+    border-top: 1px solid var(--border);
+    vertical-align: top;
+  }
+  td.time, td.num { font-family: var(--mono); white-space: nowrap; }
+  .tag { font-weight: 700; font-family: var(--mono); font-size: 0.8rem; white-space: nowrap; }
+  .tag.up { color: var(--up); }
+  .tag.down { color: var(--down); }
+  .tag.neutral { color: var(--neutral); }
+  .num.up { color: var(--up); }
+  .num.down { color: var(--down); }
+  .index-table td.num, .index-table th:not(:first-child) { text-align: right; }
+  .index-table th:not(:first-child) { padding-right: 0.9rem; }
+  .index-table td.num { padding-right: 0.9rem; }
+  td.pct { font-family: var(--mono); text-align: right; white-space: nowrap; padding-right: 0.9rem; }
+  td.pct.up { color: var(--up); }
+  td.pct.down { color: var(--down); }
+  .law-list { list-style: none; padding: 0; }
+  .law-list li {
+    padding: 0.45rem 0 0.45rem 1.2rem;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .law-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+  .overview {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 6px;
+    padding: 1.1rem 1.3rem;
+    margin-top: 0.5rem;
+  }
+  .overview .mood { font-family: var(--mono); font-size: 0.95rem; margin-bottom: 0.6rem; }
+  footer.brief-foot {
+    margin-top: 3rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 0.78rem;
+    line-height: 1.8;
+  }
+  .src { color: var(--text-dim); font-size: 0.8rem; }
+  a.src-link { color: var(--text-dim); text-decoration: underline dotted; }
+  a.src-link:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+  <a href="../index.html" class="back-link">← 返回歷史總覽</a>
+  <header class="brief-head">
+    <div class="kicker">Daily Market Brief</div>
+    <h1>每日市場簡報</h1>
+    <div class="date">2026/11/01（UTC+8，週日）｜產出時間 2026/11/01 06:31</div>
+  </header>
+
+  <!-- ============ 一、台股焦點 ============ -->
+  <h2>一、台股焦點<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th><th>影響</th><th>受影響族群/標的</th></tr></thead>
+    <tbody>
+      <tr><td class="time">10/30 13:30</td><td>台股10/30崩跌1,156.5點收45,211.83點 失守半年線 單日跌幅-2.49%為10月單日最重跌幅</td><td class="src"><a class="src-link" href="https://money.udn.com/money/story/5607/9847003">聯合新聞網</a></td><td>台股10/30(週五)加權指數終場大跌1,156.5點(-2.49%)收45,211.83點+成交量8,777億元+盤中最低下探44,726.26點+失守半年線(約45,500點)+較前日10/29收46,368.33點進一步重挫、電子權值股全面走弱、櫃買指數跌4.42%、全月累計加權指數自10/6高點49,822點下跌至10/30的45,211點月跌幅約9.25%為台股「光輝10月」罕見崩跌。（市場預期：11/3週一是否跳空進一步測試45,000元關卡+國安基金第9次進駐防守重點位45,500已失守）</td><td class="tag down">利空</td><td>大盤、電子權值股、櫃買指數、台達電(2308)</td></tr>
+      <tr><td class="time">10/30 13:30</td><td>台達電(2308)跌停鎖1,335元(-9.79%) 盤中跌幅觸10%為10/30最慘權值股 AI估值修正氛圍下遭倒貨</td><td class="src"><a class="src-link" href="https://www.storm.mg/article/11177023">風傳媒</a></td><td>台達電(2308) 10/30以跌停板1,335元作收+重挫145元(-9.79%)+盤中跌幅接近10%、致茂等AI電源相關個股同步殺至跌停、電子權值股為10/30盤面「崩盤領頭羊」、Alphabet 10/28盤後重挫+Amazon 10/30盤後財報雙科技巨頭財報評價擔憂為結構性壓力、台達電10月單月重挫約34%+AI電源題材評價修正氛圍擴散。（市場預期：11/3若美股11/2收黑恐再探1,300元關卡+AI電源族群評價風險未解）</td><td class="tag down">利空</td><td>台達電(2308)、致茂(2360)、AI電源族群、電源管理IC</td></tr>
+      <tr><td class="time">10/30 13:30</td><td>外資10/30狂砍1,124億元為史上第七大賣超 10月累計提款9,943億為史上最狠月賣超紀錄</td><td class="src"><a class="src-link" href="https://businesstoday.com.tw/article/category/183008/post/202610300002">今周刊</a></td><td>外資10/30單日賣超1,124億元為台股史上第七大單日賣超紀錄、10月累計賣超約9,943億元為史上最狠月賣超紀錄、三大法人合計賣超1,398.44億元為10月單日最重賣壓+累計本週賣超1,875.06億元+10月以來三大法人合計提款1兆1,983.24億元、外資賣超前幾名含0050(主動統一台股增長)/國巨/台達電等ETF及個股、外資砍台積電/台達電就提款逾350億元+國巨單日砍逾1萬張。（市場預期：11/3若外資賣壓未解 大盤恐再測45,000關卡）</td><td class="tag down">利空</td><td>大盤、台積電(2330)、台達電(2308)、國巨(2327)、0050</td></tr>
+      <tr><td class="time">10/30 13:30</td><td>國巨(2327)重挫7.55%收502元 外資砍逾萬張 被動元件族群10/30同步崩跌</td><td class="src"><a class="src-link" href="https://tw.stock.yahoo.com/news/%E3%80%90follow%E6%B3%95%E4%BA%BA%E3%80%91%E5%A4%96%E8%B3%87%E5%8F%B2%E4%B8%8A%E7%AC%AC%E4%B8%83%E5%A4%A7%E8%B3%A3%E8%B6%85%EF%BC%81%E5%8F%B0%E7%A9%8D%E9%9B%BB%E5%8F%B0%E9%81%94%E9%9B%BB%E5%B0%B1%E6%8F%90%E6%AC%BE350%E5%84%84%E5%85%83%EF%BC%81%E5%86%8D%E7%A0%8D%E5%9C%8B%E5%B7%A8%E7%A0%B4%E8%90%AC%E5%BC%B5-0050%E6%B7%AA%E8%B3%A3%E8%B6%85%E7%8E%8B-090038484.html">Yahoo財經</a></td><td>國巨(2327) 10/30收502元下跌41元(-7.55%)+單日成交額223.09億元為被動元件族群10/30崩跌主角、外資10/30狂砍國巨逾1萬張為單日最重砍標的、被動元件族群10/30同步修正+MLCC漲價循環2026-2028題材未改但AI估值修正氛圍下評價壓力擴張、花旗目標價仍看1,500元+摩根士丹利估下半年單位售價調漲30-40%為中線利多但短線情緒抵銷。（市場預期：11/3若美股11/2反彈 國巨有望挑戰510-520元反彈 若未解則再探480-490元支撐）</td><td class="tag down">利空</td><td>國巨(2327)、華新科(2492)、禾伸堂(3026)、被動元件族群</td></tr>
+      <tr><td class="time">10/30 盤後</td><td>聯發科(2454) Q3營收1,680.58億 季增10.4%年增18.3% 10/30法說會後股價收3,915元(-3.21%)</td><td class="src"><a class="src-link" href="https://tw.stock.yahoo.com/news/%E5%85%AC%E5%91%8A-%E8%91%A3%E4%BA%8B%E6%9C%83%E6%B1%BA%E8%AD%B0%E8%82%A1%E5%88%A9%E5%88%86%E6%B4%BE-092647995.html">Yahoo股市</a></td><td>聯發科(2454) 10/30 Q3法說會揭示營收1,680.58億元+季增10.4%+年增18.3%為基本面亮眼、同日董事會決議股利分派公告、惟股價隨大盤重挫+收3,915元下跌130元(-3.21%)跌破4,000元關卡、天璣9500旗艦晶片+AI PC+Nvidia合作車用SoC為中線題材、Qualcomm/AMD AI晶片評價修正連動為結構性壓力。（市場預期：11/3若美股11/2反彈 聯發科有望挑戰4,000元關卡 否則再探3,850元支撐）</td><td class="tag down">利空</td><td>聯發科(2454)、IC設計族群、天璣9500供應鏈</td></tr>
+      <tr><td class="time">10/30 盤後</td><td>台積電ADR 10/30重挫5.95%至406.13美元 10/31台股休市 11/3週一恐承壓測試2,350元</td><td class="src"><a class="src-link" href="https://tw.stock.yahoo.com/news/%E5%8F%B0%E7%A9%8D%E9%9B%BBadr30%E6%97%A5%E4%B8%8B%E8%B7%8C25-68%E7%BE%8E%E5%85%83%E8%B7%8C%E5%B9%855-95-%E6%8A%98%E5%8F%B0%E8%82%A12638-06%E5%85%83-213603342.html">Yahoo財經</a></td><td>台積電ADR 10/30重挫25.68美元(-5.95%)收406.13美元+折合台股2,638.06元(以10/30匯率32.478計)、美股SOX費半10/30大跌7.2%為單日最重跌幅+Intel盤後因財測指引不佳重挫30%+Amazon財報營收/EPS雙失色、11/1-11/2台股例假休市+11/3(週一)復盤台積電ADR表現為關鍵指標、台積電10/30收2,370元(-45/-1.86%)已預先反映部分壓力。（市場預期：11/3台積電恐跳空開低測試2,350-2,370元關卡+若破2,350則下看2,300元支撐）</td><td class="tag down">利空</td><td>台積電(2330)、半導體供應鏈、SOX費半連動股</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 二、三大法人動向 ============ -->
+  <h2>二、三大法人動向<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>法人</th><th>買賣超(億元)</th><th>方向</th><th>備註</th></tr></thead>
+    <tbody>
+      <tr><td>外資</td><td class="num down">-1,124.00</td><td class="tag down">賣超</td><td>10/30數據、單日賣超1,124億元為台股史上第七大單日賣超紀錄、10月累計賣超約9,943億元為史上最狠月賣超紀錄+年初累計賣超突破2.28兆元、台指期淨空單續擴至9萬口以上為結構性空方壓力、外資砍台積電/台達電就提款逾350億元為10/30最重砍組合、國巨單日砍逾1萬張+0050(主動統一台股增長)為外資賣超王、面板友達/群創也遭外資賣超、Fed偏鷹+Alphabet盤後重挫+Amazon財報失色+Intel重挫30%+美科技財報評價擔憂為外資翻空核心驅動</td></tr>
+      <tr><td>投信</td><td class="num up">+239.93</td><td class="tag up">買超</td><td>10/30數據、連14買為盤面唯一護盤主力+單日買超量能顯著放大、累計買超突破1,340億元為結構性護盤、投信連日買超個股為「大人在顧」核心標的、月底作帳行情顯著加碼+持續鎖定中小型AI電子+被動元件族群中價位個股+面板題材個股、惟三大法人合計賣超1,398.44億元下 投信買盤量能仍不足以抵消外資賣壓、11/3若美股11/2收黑 投信連買力道恐承壓至連15買</td></tr>
+      <tr><td>自營商</td><td class="num down">-513.70</td><td class="tag down">賣超</td><td>10/30數據、避險部位大幅賣超(自行買賣-38.4+避險-475.3)反映大盤波動顯著升溫(盤中跌逾1,200點)、Fed偏鷹+Alphabet盤後重挫+Amazon財報失色+Intel重挫30%+美科技財報雙重壓力下自營商避險需求大增、較前日賣超215億擴張逾一倍為盤面壓力擴張訊號、11/1-11/2連假+11/3復盤若Apple財報優於預期 自營商避險部位有望減碼</td></tr>
+    </tbody>
+  </table>
+  <ul class="law-list">
+    <li>台股10/30大跌1,156.5點(-2.49%)收45,211.83點+失守半年線(約45,500點)+成交量8,777億元為量能萎縮+盤中最低下探44,726.26點、三大法人合計賣超1,398.44億元為10月單日最重賣壓(外資-1,124+投信+239.93+自營商-513.70)+外資賣超為史上第七大+10月累計提款9,943億元為史上最狠月賣超紀錄、台達電(2308)/致茂等AI電源個股殺至跌停為盤面「崩盤領頭羊」+台積電2,370元(-45)跌破2,400元關卡+2,350為下一支撐觀察區。</li>
+    <li>外資10/30賣超1,124億元為史上第七大單日賣超+10月累計賣超9,943億為史上最狠月賣超紀錄+台指期淨空單續擴至9萬口以上為結構性空方壓力、外資砍台積電/台達電就提款逾350億元+國巨單日砍逾1萬張+0050淪賣超王+面板友達/群創也遭外資賣超、Fed 10/28維持利率不變但10-2票分歧+2席主張升息為鷹派訊號+Alphabet盤後因SpaceX未實現損失重挫12%+Amazon 10/30盤後財報營收/EPS雙失色+Intel重挫30%+美科技財報評價擔憂為結構性變數。</li>
+    <li>投信連14買+累計買超突破1,340億元+單日買超239.93億元為10/30月底作帳行情顯著加碼+持續鎖定中小型AI電子+被動元件族群中價位個股(國巨/華新科/禾伸堂/奇力新/日電貿等)+面板題材個股、投信連日買超個股為「大人在顧」核心標的、惟三大法人合計賣超1,398.44億元下 投信買盤量能仍不足以抵消外資賣壓+11/1-11/2連假+11/3復盤續賣壓力為多方風險。</li>
+    <li>國安基金第9次進駐於10/13啟動+持續護盤為結構性支撐+10/30重挫1,156.5點後失守45,500(前期國安基金重點防守區)為多方失守訊號+國安基金進場需求有望進一步升溫+45,000整數關卡為11/3關鍵支撐+台積電2,370元跌破2,400元關卡後2,350為下一支撐觀察區；美股10/30三大指數同步重挫+SOX費半-7.2%+Nasdaq -2.86%+Nasdaq 10月為2025年3月以來最差單月表現+Fed偏鷹+美債殖利率回升為11/3台股壓力+Apple 11/2盤後財報+Microsoft/Alphabet/Amazon雙科技巨頭財報評價擔憂為結構性修正風險。</li>
+  </ul>
+
+  <!-- ============ 三、權值股觀察清單 ============ -->
+  <h2>三、權值股觀察清單<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>標的</th><th>漲跌</th><th>相關消息</th><th>影響</th></tr></thead>
+    <tbody>
+      <tr><td>台積電(2330)</td><td class="num down">-45 (-1.86% 收2,370，10/30)</td><td>10/30跌45元收2,370元跌破2,400元關卡+外資10/30持續倒貨為壓力、三大法人聯手調節+SOX費半10/30大跌7.2%+台積電ADR 10/30重挫5.95%至406.13美元+折合台股2,638.06元、法說Q4營收財測526-543億美元+2026資本支出600-640億美元為中線利多但短線情緒抵銷、Intel重挫30%+Amazon財報失色為結構性拖累、11/3復盤恐跳空測試2,350-2,370元關卡+若破2,350則下看2,300元支撐、Apple 11/2盤後財報為後續動能指引</td><td class="tag down">利空</td></tr>
+      <tr><td>聯發科(2454)</td><td class="num down">-130 (-3.21% 收3,915，10/30)</td><td>10/30跌130元收3,915元跌破4,000元關卡+Q3法說會營收1,680.58億季增10.4%年增18.3%為基本面亮眼但股價不領情、董事會決議股利分派、三大法人調節壓力下中小型AI族群同步承壓、天璣9500旗艦晶片+AI PC+Nvidia合作車用SoC為中線題材、Qualcomm/AMD AI晶片評價修正連動為結構性壓力、11/3若美股11/2反彈 有望挑戰4,000元關卡 否則再探3,850元支撐</td><td class="tag down">利空</td></tr>
+      <tr><td>鴻海(2317)</td><td class="num down">-2.5 (-1.01% 收245.5，10/30)</td><td>10/30跌2.5元收245.5元+跌幅相對抗跌於電子權值股、單日成交額81.77億元、Tesla連3日修正+SpaceX IPO未定+AI供應鏈情緒反轉為壓力、AI伺服器2026年出貨市佔逾40%為中線題材、Apple 11/2盤後財報+iPhone需求+AI硬體銷售為核心指引、Microsoft/Alphabet雙巨頭財報評價擔憂+Amazon財報失色為結構性修正壓力、11/3若Apple財報優於預期有望挑戰248元反彈</td><td class="tag down">利空</td></tr>
+      <tr><td>廣達(2382)</td><td class="num neutral">0 (持平 收318，10/30)</td><td>10/30收盤318元持平為10/30電子權值股罕見逆勢抗跌、Microsoft/Alphabet雲端資本支出續擴但稀釋利潤疑慮為壓力但基本面訂單能見度仍佳、Alphabet盤後重挫12%+Nasdaq 10月為2025年3月以來最差為結構性壓力、AI伺服器出貨能見度延伸至2027但評價先行修正、Amazon 10/30盤後AWS成長39%為核心指引但整體財報失色、2026年AI伺服器營收占比將達8成、11/3若美股續黑恐再探310-315元區間</td><td class="tag neutral">中性</td></tr>
+      <tr><td>台達電(2308)</td><td class="num down">-145 (-9.79% 收1,335，10/30)</td><td>10/30以跌停板1,335元作收+重挫145元(-9.79%)+盤中跌幅接近10%為10/30「崩盤領頭羊」、致茂等AI電源個股同步殺至跌停、外資砍台達電就提款逾90億元(占外資賣超約8%)、台達電10月單月重挫約34%+AI電源題材評價修正氛圍擴散、Alphabet盤後重挫+Amazon財報失色為AI資料中心評價壓力、11/3若美股11/2收黑恐再探1,300元關卡+若跌破則下看1,250元支撐+AI電源族群評價風險未解</td><td class="tag down">利空</td></tr>
+      <tr><td>國巨(2327)</td><td class="num down">-41 (-7.55% 收502，10/30)</td><td>10/30跌41元收502元為被動元件族群10/30崩跌主角+單日成交額223.09億元+外資10/30狂砍逾1萬張為單日最重砍標的、花旗目標價仍看1,500元+摩根士丹利估下半年單位售價調漲30-40%為中線利多但短線情緒抵銷、村田減產部分MLCC料號+台廠轉單效應持續、三星電機已率先對客戶調高2026 Q4報價、投信買超被動元件族群為支撐、11/3若美股11/2反彈 有望挑戰510-520元反彈 否則再探480-490元支撐</td><td class="tag down">利空</td></tr>
+      <tr><td>華新科(2492)</td><td class="num down">估-25 (估-7.29% 估收318，10/30)</td><td>10/30估隨國巨領跌被動元件族群同步重挫、國內MLCC指標大廠、受惠村田減產轉單+高階產品組合改善、BB ratio從1.2-1.3提升至1.3-1.4、AI相關營收占比可望達15-20%、投信連日買超護盤為支撐、Microsoft/Alphabet雲端資本支出續擴但評價擔憂為結構性壓力、11/3若美股11/2反彈 有望挑戰320元關卡</td><td class="tag down">利空</td></tr>
+      <tr><td>禾伸堂(3026)</td><td class="num down">估-60 (估-6.74% 估收830，10/30)</td><td>10/30估隨族群重挫、10月回檔整理後再承壓、法人目標價千元、被動元件族群中價位個股、MLCC漲價循環受惠標的、村田減產題材受惠（族群觀察）、投信連日買超為支撐、11/3若大盤跌破45,000恐再探820元支撐、月底作帳題材結束為11/3資金輪動指引</td><td class="tag down">利空</td></tr>
+      <tr><td>奇力新(2456)</td><td class="num down">估-6 (估-5.83% 估收97，10/30)</td><td>10/30估隨族群重挫、電感元件龍頭+資料中心PMIC相關、族群連動隨國巨走勢震盪、AI供電架構升級受惠標的、投信買超被動元件族群帶動（族群觀察）、Microsoft/Alphabet雲端資本支出續擴但稀釋利潤疑慮為壓力、Amazon財報失色為間接拖累、11/3隨族群修正氛圍</td><td class="tag down">利空</td></tr>
+      <tr><td>日電貿(3090)</td><td class="num down">估-4 (估-4.82% 估收79，10/30)</td><td>10/30估隨族群下挫、村田代理轉單受惠股、BOJ 10/30維持政策利率1.25%不變(8-1票)+Takata委員主張升至1.5%為鷹派分化訊號、日圓承壓154-156區間為間接變數、族群連動（族群觀察）、11/3若BOJ鷹派分化訊號持續 日圓承壓對台廠為間接利多</td><td class="tag down">利空</td></tr>
+      <tr><td>美磊(3068)</td><td class="num down">估-5 (估-5.15% 估收92.7，10/30)</td><td>10/30估隨族群下挫、電感元件次族群+族群連動隨國巨/華新科震盪、AI電源管理+資料中心需求為中線題材（族群觀察）、投信買超中小型被動元件為支撐、11/3挑戰92-95元區間+若AI族群續修正恐承壓至90元支撐、Amazon 10/30盤後AWS成長39%為間接指引但整體財報失色</td><td class="tag down">利空</td></tr>
+      <tr><td>凱美(5317)</td><td class="num down">估-3 (估-6.88% 估收40.6，10/30)</td><td>10/30估隨族群下挫、利基型電容廠+族群連動+MLCC漲價循環氛圍、投信買超中小型被動元件為支撐（族群觀察）、月底作帳題材結束、11/3隨大盤修正氛圍震盪</td><td class="tag down">利空</td></tr>
+      <tr><td>立隆電(2472)</td><td class="num down">估-2.5 (估-6.54% 估收35.7，10/30)</td><td>10/30估隨族群下挫、電解電容廠+族群連動+AI供電架構升級受惠+投信買超被動元件族群氛圍（族群觀察）、Microsoft/Alphabet Q3財報資料中心資本支出動向為間接觀察、Amazon財報失色為間接拖累、11/3隨族群修正氛圍</td><td class="tag down">利空</td></tr>
+      <tr><td>智寶(2375)</td><td class="num down">估-2 (估-6.11% 估收30.7，10/30)</td><td>10/30估隨族群下挫、電解電容廠+中國市場曝險+族群連動、港股10/30反彈1.46%為間接支撐（族群觀察）、十五五規劃定調為中線題材、11/3隨族群修正氛圍震盪</td><td class="tag down">利空</td></tr>
+      <tr><td>鈞寶(6155)</td><td class="num down">估-4.5 (估-6.92% 估收60.5，10/30)</td><td>10/30估隨族群修正、EMI/EMC元件商+族群連動+AI伺服器EMI防護需求提升為中線題材（族群觀察）、投信連日買超為支撐、Microsoft/Alphabet雲端資本支出續擴但評價擔憂為壓力+Amazon財報失色為間接拖累、11/3若美股11/2反彈 有望挑戰62元反彈</td><td class="tag down">利空</td></tr>
+      <tr><td>信昌電(6173)</td><td class="num down">估-9 (估-6.64% 估收126.5，10/30)</td><td>10/30估隨族群修正、7/27曾觸跌停後10月整理、被動元件族群中小型標的、鉭電容AI供電架構升級受惠、村田MLCC漲價帶動族群（族群觀察）、月底作帳題材結束、Alphabet盤後重挫+Amazon財報失色+AI估值修正氛圍為結構性壓力</td><td class="tag down">利空</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 四、美股焦點 ============ -->
+  <h2>四、美股焦點（可複委託操作）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th><th>影響</th><th>對台股連動</th></tr></thead>
+    <tbody>
+      <tr><td class="time">10/31 04:00</td><td>美股10/30三大指數同步重挫 Dow -1.09%+S&P -1.82%+Nasdaq -2.86% 10月Nasdaq為2025年3月以來最差單月</td><td class="src"><a class="src-link" href="https://finance.yahoo.com/markets/live/stock-market-today-friday-october-30-dow-sp-500-nasdaq-amazon-intel-ai-sell-off-191429143.html">Yahoo Finance</a></td><td>美股10/30(週五)三大指數同步重挫+Dow收51,770.31點(-572.25/-1.09%)+S&P 500收7,580.07點(-141.76/-1.82%)+Nasdaq Composite收25,437.00點(-741.86/-2.86%)、10月Nasdaq為2025年3月以來最差單月表現、SOX費半10/30重挫7.2%至10,688.80點為單日最重跌幅、Intel盤後因財測指引不佳重挫30%+Amazon財報營收/EPS雙失色為主要拖累、Alphabet盤後重挫+AI估值修正氛圍擴散+10/31美東為10月月底結算日。（市場預期：11/3週一台股復盤恐跳空開低500-800點+台積電2,350元關卡攻防為生命線）</td><td class="tag down">利空</td><td>11/3台股恐跳空開低500-800點+台積電2,350-2,370元關卡攻防+電子權值股為壓力核心+台達電/廣達/鴻海AI供應鏈連動</td></tr>
+      <tr><td class="time">10/30 盤後</td><td>Intel 10/30盤後重挫30% 財測指引不佳為單日最大拖累 10/30全日已跌逾28%</td><td class="src"><a class="src-link" href="https://www.stocktitan.net/articles/stock-market-today-live-october-30-2026">StockTitan</a></td><td>Intel(INTC) 10/30盤後因財測指引不佳重挫30%為單日最大拖累、全日已跌逾28%為幾十年來最差單日表現、SOX費半10/30重挫7.2%為單日最重跌幅、晶片股全面潰堤+AMD/Nvidia/Micron同步下挫、半導體估值修正氛圍擴散、Intel 18A量產進度/AI晶片策略/代工業務指引不佳為核心驅動。（市場預期：11/3台股半導體供應鏈恐受波及+台積電2,350元關卡攻防+記憶體/測試板塊壓力擴大）</td><td class="tag down">利空</td><td>Intel重挫30%+SOX費半-7.2%為11/3台股台積電/聯發科/記憶體/測試板塊明確短線利空</td></tr>
+      <tr><td class="time">10/30 盤後</td><td>Amazon Q3營收2,019億 AWS成長39%優於去年20% 但EPS 1.89美元低於共識 盤後承壓</td><td class="src"><a class="src-link" href="https://finance.yahoo.com/markets/stocks/articles/stock-market-today-oct-30-213502210.html">Yahoo Finance</a></td><td>Amazon(AMZN) 10/30盤後財報Q3營收2,019億美元+EPS 1.89美元均低於分析師共識、AWS營收年增39%遠優於去年同期20%為亮點、惟營收/EPS雙失色+AI資本支出續擴稀釋利潤疑慮加劇、Amazon 10/30收盤240.35美元(-1.41%)盤後進一步承壓、整體財報失色為Nasdaq 10/30重挫動力、Apple 11/2盤後財報為全週最後高潮(Portfolio Terminal估Apple市值已達5兆美元)。（市場預期：若Apple 11/2財報優於預期 將為11/3台股電子權值股反彈動能）</td><td class="tag down">利空</td><td>Amazon財報失色為11/3台股廣達(2382)/鴻海(2317) AI伺服器供應鏈結構性連動壓力+Apple財報為鴻海核心指引</td></tr>
+      <tr><td class="time">10/30 盤後</td><td>Alphabet 10/30續跌+SpaceX未實現損失拖累 Nasdaq 10月為2025年3月以來最差單月</td><td class="src"><a class="src-link" href="https://www.xtb.com/en/market-analysis/alphabet-disappoints-wall-street-despite-record-results-shares-plunge-over-8-and-test-300">XTB</a></td><td>Alphabet(GOOGL) 10/30續跌+較10/28盤後財報發布後累計跌約10%、Q3營收1,276億美元(+25% YoY)連13季雙位數成長+Google Cloud營收307億(+103% YoY)為亮點、但其他收支淨額-82億因SpaceX未實現投資損失致EPS僅2.12美元遠低於共識、單季Capex 514億+全年2026 Capex指引1,950-2,050億美元為結構性利多但資本支出稀釋利潤疑慮加劇、通訊服務板塊為10/30 11板塊最大拖累之一。（市場預期：AI軍備競賽延續但資本支出稀釋利潤疑慮將延續至Q4）</td><td class="tag down">利空</td><td>Alphabet續跌為11/3台股廣達(2382)/鴻海(2317)/台積電(2330) AI供應鏈結構性連動壓力</td></tr>
+      <tr><td class="time">10/30 盤後</td><td>BOJ 10/30維持政策利率1.25%不變 8-1票分歧 Takata委員主張升至1.5% ETF拋售加速至8,600億日圓/年</td><td class="src"><a class="src-link" href="https://www.riotimesonline.com/bank-of-japan-rate-decision-october-2026">Rio Times Online</a></td><td>BOJ 10/30政策會議揭曉決議+維持短期政策利率1.25%不變(前期9月已升息至1.25%為1990年來最快間隔)+投票結果8-1票分歧+Takata委員主張升至約1.5%為鷹派分化訊號、Outlook Report上修通膨預期+2027年物價展望2.6%、ETF拋售加速至8,600億日圓/年(帳面價值)自2027年1月啟動、日圓承壓154-156區間延續+12/18-19 BOJ會議升息預期活躍。（市場預期：BOJ 12月升息機率顯著升溫+日圓承壓154-156區間延續為台廠被動元件轉單效應中線利多）</td><td class="tag neutral">中性</td><td>BOJ鷹派分化+日圓承壓156區間為台股被動元件轉單效應(國巨/華新科/禾伸堂)+台積電日圓計價機械設備成本間接利多</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 四之二、美股指數與板塊動向 ============ -->
+  <h2>美股指數與板塊動向<span class="core-tag">CORE</span></h2>
+  <table class="index-table">
+    <thead><tr><th>指數</th><th>收盤</th><th>漲跌</th><th>漲跌幅</th></tr></thead>
+    <tbody>
+      <tr><td>道瓊工業指數</td><td class="num">51,770.31</td><td class="num down">-572.25</td><td class="pct down">-1.09%</td></tr>
+      <tr><td>S&P 500</td><td class="num">7,580.07</td><td class="num down">-141.76</td><td class="pct down">-1.82%</td></tr>
+      <tr><td>那斯達克綜合指數</td><td class="num">25,437.00</td><td class="num down">-741.86</td><td class="pct down">-2.86%</td></tr>
+      <tr><td>費城半導體指數(SOX)</td><td class="num">10,688.80</td><td class="num down">-828.80</td><td class="pct down">-7.20%</td></tr>
+    </tbody>
+  </table>
+  <table>
+    <thead><tr><th>板塊（GICS）</th><th>漲跌幅</th><th>表現</th><th>當日驅動/備註</th></tr></thead>
+    <tbody>
+      <tr><td>資訊科技</td><td class="pct down">-4.20%</td><td class="tag down">領跌</td><td>10/30(週五)：Intel重挫逾28%+SOX費半重挫7.2%為單日最重跌幅+Nvidia/AMD/Qualcomm/Micron AI族群同步潰堤、Alphabet續跌+Amazon財報失色為AI資本支出稀釋利潤疑慮加劇、Nasdaq -2.86%為2025年3月以來最差單月表現、資金由AI成長類股加速輪動至防禦類股、Apple 11/2盤後財報為後續指引</td></tr>
+      <tr><td>通訊服務</td><td class="pct down">-2.50%</td><td class="tag down">走弱</td><td>10/30(週五)：Alphabet續跌+SpaceX未實現損失拖累+Meta 10/29盤後財報延伸、Netflix獲利了結+通訊服務子類板塊整體承壓、資本支出稀釋利潤疑慮加劇為結構性修正、10月為S&P 500表現最差板塊(Schwab觀察)</td></tr>
+      <tr><td>非必需消費</td><td class="pct down">-1.80%</td><td class="tag down">走弱</td><td>10/30(週五)：Amazon財報失色+盤後進一步承壓+Tesla連3日修正、油價升溫+美9月PCE偏熱為消費景氣敏感板塊壓力、Fed升息預期支撐+美債殖利率回升為結構性壓力、Nike/Starbucks等個股承壓</td></tr>
+      <tr><td>必需消費</td><td class="pct up">+0.80%</td><td class="tag up">上漲</td><td>10/30(週五)：資金加速回防禦類股+Walmart/Costco/P&G獲利回補、油價升溫雖為成本利空但資金避險需求支撐、通膨黏滯+Fed升息預期支撐為板塊相對受惠(Yahoo recap評：資金獎勵現金流)</td></tr>
+      <tr><td>能源</td><td class="pct up">+1.20%</td><td class="tag up">領漲</td><td>10/30(週五)：10月S&P 500表現最佳板塊(Schwab觀察)+油價升溫延續+WTI/布蘭特承壓後回補、Exxon/Chevron Q3財報獲利穩健+美伊緊張氛圍續存為結構性支撐、OPEC+減產預期回升、中東局勢仍為結構性變數、能源與必需消費為10/30罕見逆勢上漲雙板塊</td></tr>
+      <tr><td>金融</td><td class="pct down">-1.00%</td><td class="tag down">走弱</td><td>10/30(週五)：Fed 10-2票分歧+升息預期支撐+10年期殖利率回升為銀行股利多但風險偏好大幅收斂為壓力、JPM/BAC/C獲利了結、整體隨大型指數下挫氛圍承壓</td></tr>
+      <tr><td>醫療保健</td><td class="pct up">+0.30%</td><td class="tag up">上漲</td><td>10/30(週五)：防禦性類股資金加速回補+UnitedHealth/Eli Lilly/J&amp;J獲利回補、Merck等個股受惠醫藥併購題材、Fed升息預期支撐為高評價類股利空但防禦需求強勁為正向支撐</td></tr>
+      <tr><td>工業</td><td class="pct down">-0.90%</td><td class="tag down">走弱</td><td>10/30(週五)：油價升溫+運輸子類成本壓力+航空股UAL/AAL/DAL承壓、Boeing/Caterpillar隨Dow下挫、全球貿易疑慮延續+Dow -1.09%為結構性壓抑</td></tr>
+      <tr><td>原物料</td><td class="pct down">-0.70%</td><td class="tag down">走弱</td><td>10/30(週五)：美元指數高檔震盪+Fed升息預期支撐為金屬價格壓力、Freeport-McMoRan/Nucor承壓、Dow下挫+工業金屬同步承壓、黃金小幅支撐為部分抵消</td></tr>
+      <tr><td>不動產</td><td class="pct down">-1.50%</td><td class="tag down">領跌</td><td>10/30(週五)：10年期殖利率回升+Fed升息預期支撐為REITs利空、Realty Income/American Tower承壓、資料中心REITs(DLR/EQIX)受Alphabet續跌+AI估值修正拖累、AI泡沫疑慮擴散為結構性壓力</td></tr>
+      <tr><td>公用事業</td><td class="pct down">-0.50%</td><td class="tag down">微跌</td><td>10/30(週五)：Fed升息預期支撐為高殖利率類股利空、NextEra/Duke Energy承壓、資料中心電力需求續為中線題材但AI估值修正氛圍下相對承壓</td></tr>
+    </tbody>
+  </table>
+  <ul class="law-list">
+    <li>10/30(週五)美股11板塊明確「K型分化」續演+資訊科技/不動產/通訊服務領跌 vs 能源/必需消費/醫療保健受惠防禦需求、Intel重挫逾28%+SOX費半重挫7.2%為單日最重跌幅+Nasdaq -2.86%為10月月跌幅達2025年3月以來最差單月表現、Fed 10/28維持利率不變但10-2票分歧+2席主張升息為鷹派訊號+美9月核心PCE數據偏熱+10年期公債殖利率回升為結構性壓力、Amazon財報失色+Alphabet續跌+AI資本支出稀釋利潤疑慮加劇、資金由AI成長類股加速輪動至防禦類股+10月S&P 500最佳板塊為能源(高油價支撐)最差板塊為通訊服務(Alphabet拖累)。</li>
+    <li>資訊科技/半導體板塊10/30(週五)同步潰堤+SOX費半重挫7.2%為單日最重跌幅+Intel重挫逾28%+Nvidia/AMD/Qualcomm/Micron AI族群連動潰堤+Amazon財報失色為AI供應鏈結構性壓力、對台股電子權值股為結構性連動利空：台積電(2330)直接受影響於11/3跳空開低壓力+2,350-2,370元關卡攻防為大盤生命線(ADR折合2,638.06元為中性指引)、聯發科(2454)受Qualcomm AI晶片修正連動+天璣9500旗艦晶片為中線題材、鴻海(2317)/廣達(2382)受Alphabet續跌+Amazon財報失色+AI資本支出稀釋利潤疑慮加劇為結構性拖累、被動元件族群(國巨/華新科/禾伸堂)雖受惠村田減產轉單效應延續但AI估值修正氛圍下承壓、Apple 11/2盤後財報優於預期為11/3台股電子權值股反彈動能的關鍵指引。</li>
+  </ul>
+
+  <!-- ============ 五、日本（參考） ============ -->
+  <h2>五、日本（參考）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th></tr></thead>
+    <tbody>
+      <tr><td class="time">10/30 15:00</td><td>日經225 10/30收63,290.11點 單日重挫1,369.36點(-2.12%) 盤中最低觸62,711.42點</td><td class="src"><a class="src-link" href="https://finance.yahoo.com/quote/%5EN225/">Yahoo Finance</a></td><td>日經225 10/30(週五)終場收63,290.11點(-1,369.36/-2.12%)+盤中最低觸62,711.42點+日內振幅達1,877點、日經/東證指數連動Fed 10/28偏鷹指引+美股10/29收黑+Alphabet盤後重挫12%+AI半導體估值修正氛圍擴散、Advantest/東京威力科創/鎧俠半導體股為單日最大拖累、BOJ 10/30政策會議Outlook Report上修通膨預期+2027年物價展望2.6%為鷹派分化訊號、村田/TDK等日系被動元件Q3財報穩健為台廠轉單效應中線利多。（市場預期：11/4週一日經恐承壓測試62,000點關卡+Advantest/東京威力科創/鎧俠連動SOX費半重挫7.2%為核心風險）</td></tr>
+      <tr><td class="time">10/30 12:00</td><td>BOJ 10/30維持政策利率1.25%不變 8-1票分歧 Takata委員主張升息至約1.5% ETF拋售加速至8,600億日圓/年</td><td class="src"><a class="src-link" href="https://investinglive.com/central-banks/boj-leaves-rates-unchanged-on-october-30-2026">InvestingLive</a></td><td>BOJ 10/30政策會議揭曉決議+維持短期政策利率1.25%不變(前期9月已升息至1.25%為1990年來最快間隔)+投票結果8-1票分歧+Takata委員主張升至約1.5%為鷹派分化訊號、Outlook Report上修通膨預期+2027年物價展望2.6%、ETF拋售加速至8,600億日圓/年(帳面價值)自2027年1月啟動為結構性利空日股但長期穩健訊號、日圓承壓154-156區間延續+12/18-19 BOJ會議升息預期活躍、Ueda若在記者會描述通膨「超越2%」將進一步推升12月升息預期。（市場預期：BOJ 12月升息機率顯著升溫+日圓承壓156區間延續）</td></tr>
+      <tr><td class="time">10/30 盤後</td><td>村田/TDK Q3財報穩健 MLCC減產題材延續 日圓承壓156區間 為台股被動元件族群中線利多</td><td class="src"><a class="src-link" href="https://www.murata.com/en-global/ir/library">Murata IR</a></td><td>村田(6981.JP)/TDK(6762.JP)等日系被動元件Q3財報穩健+減產部分MLCC料號題材續強+台廠(國巨/華新科/禾伸堂)轉單效應延續為中線利多、BOJ 10/30鷹派分化+日圓承壓154-156區間為日系被動元件競爭力相對承壓訊號+台廠相對有利、惟Alphabet續跌+Amazon財報失色+AI供應鏈情緒反轉+MLCC漲價循環雖未改但AI估值修正氛圍下評價壓力擴張。（市場預期：11/3台股被動元件族群復盤恐隨大盤修正但中線MLCC漲價循環2026-2028題材未改）</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 六、香港（參考） ============ -->
+  <h2>六、香港（參考）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th></tr></thead>
+    <tbody>
+      <tr><td class="time">10/30 16:00</td><td>恒生指數10/30收23,294.42點(+335.77/+1.46%) 消費/能源/航運股支撐 AI硬件股仍承壓</td><td class="src"><a class="src-link" href="https://www.ad-hoc-news.de/boerse/news/marktberichte/hang-seng-closes-1-46-prozent-higher-at-23-294-42-points/70436420">Ad-hoc News</a></td><td>恒生指數10/30(週五)終場收23,294.42點(+335.77/+1.46%)+重回23,000點上方、恒生中國企業指數收7,862.22點(+1.37%)、恒生科技指數收3,754.90點(+0.29%)、反彈主要受惠阿里巴巴/騰訊等科技權重股吸納買盤+消費股重新獲買+金融/消費/能源/航運股為支撐、惟AI硬件股持續承壓反映AI估值修正氛圍、恒生指數10月仍跌5.36%+恒生科技指數10月跌幅更大達11.73%為全月利空收尾。（市場預期：港股11/3延續技術性反彈但受美股10/30重挫壓抑）</td></tr>
+      <tr><td class="time">10/30 盤中</td><td>阿里巴巴/騰訊/聯想等科技權重股為恒生10/30反彈主力 消費股重新獲買</td><td class="src"><a class="src-link" href="https://www.businesstoday.com.my/2026/10/31/hong-kong-stocks-rebound-335-77-points-as-consumer-energy-shares-lift-hang-seng/">Business Today MY</a></td><td>阿里巴巴/騰訊/聯想等科技權重股為恒生10/30反彈主力+消費股/能源股/航運股重新獲買盤進場、惟AI硬件股持續承壓反映AI估值修正氛圍擴散自美股+十五五規劃及中美新談判進展為中線題材續存、港股10月整體跌幅較深為低基期反彈動能、11/3延續反彈但受美股10/30重挫壓抑為核心變數。（市場預期：11/3港股恐跳空開低受美股10/30壓抑+但估相對台股抗跌）</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 七、跨市場連動分析 ============ -->
+  <h2>七、跨市場連動分析</h2>
+  <ul class="law-list">
+    <li>【美股→台股】美股10/30三大指數同步重挫+Dow -1.09%+S&P -1.82%+Nasdaq -2.86%+SOX費半-7.2%為單日最重跌幅+Intel重挫逾28%+Amazon財報失色+Alphabet續跌+Nasdaq 10月為2025年3月以來最差單月表現，11/3(週一)台股復盤恐跳空開低500-800點+台積電ADR 10/30重挫5.95%至406.13美元折合台股2,638.06元為中性指引+2,350-2,370元關卡攻防為大盤生命線+45,000整數關卡為下一支撐觀察區+國安基金第9次進駐45,500失守為多方失守訊號；AI電源族群(台達電/致茂)+AI伺服器(廣達/鴻海)+記憶體/測試板塊壓力擴大為結構性拖累。</li>
+    <li>【匯率】Fed 10/28維持利率3.75-4.00%不變但10-2票分歧+2席主張升息為鷹派分化訊號+美9月核心PCE數據偏熱+10年期公債殖利率回升+Fed 12/9會議升息預期升至25-30%為美元指數高檔支撐+新台幣32.5-32.7元關卡攻防+BOJ 10/30維持政策利率1.25%不變(8-1票)+Takata委員主張升息至1.5%為鷹派分化訊號+日圓承壓154-156區間延續+BOJ 12/18-19會議升息預期活躍+外資賣超動能若延續短線加權指數再測44,500-45,000機率升高。</li>
+    <li>【AI供應鏈】Alphabet續跌+Amazon財報失色+Microsoft Azure 45%指引優於預期但資本支出續擴稀釋利潤疑慮加劇+Intel重挫逾28%+SOX費半-7.2%為AI估值修正氛圍擴散+Apple 11/2盤後財報為全週最後高潮(Portfolio Terminal估Apple市值已達5兆美元)+iPhone需求+AI硬體銷售為鴻海(2317)/廣達(2382)/台積電(2330)/聯發科(2454)核心指引+若Apple 11/2財報優於預期將為11/3台股電子權值股反彈動能、惟整體AI軍備競賽延續但資本支出稀釋利潤疑慮將延續至Q4+2027 Capex指引為後續結構性變數+被動元件族群(國巨/華新科/禾伸堂)雖受惠村田減產轉單效應延續但AI估值修正氛圍下承壓+MLCC漲價循環2026-2028題材未改為中線安全墊。</li>
+    <li>【地緣/原物料】油價10/30承壓後回補+WTI/布蘭特原油回穩+美伊緊張氛圍續存+OPEC+減產預期回升+中東局勢仍為結構性變數+10月S&P 500最佳板塊為能源(高油價支撐)+對台股航運/塑化/鋼鐵為間接利多+Nasdaq 10月為2025年3月以來最差單月表現+AI泡沫疑慮擴散為結構性修正風險；美元指數高檔震盪+金價小幅支撐為部分抵消+港股10/30反彈1.46%為間接支撐為台股參考訊號(但港股受台股復盤壓抑)。</li>
+  </ul>
+
+  <!-- ============ 八、今日總覽 ============ -->
+  <h2>八、今日總覽</h2>
+  <div class="overview">
+    <div class="mood">整體氛圍：利空</div>
+    <ul class="law-list">
+      <li>台股10/30(週五)崩跌1,156.5點(-2.49%)收45,211.83點+失守半年線(約45,500點)+盤中最低下探44,726.26點+成交量8,777億元+台達電(2308)跌停鎖1,335元+國巨(2327)重挫7.55%收502元+台積電(2330)跌破2,400元關卡收2,370元+外資史上第七大單日賣超1,124億元+10月累計賣超9,943億元為史上最狠月賣超紀錄+三大法人合計賣超1,398.44億元+投信連14買239.93億元為盤面唯一護盤但量能仍不足以抵消外資賣壓。</li>
+      <li>11/1-11/2台股例假休市+11/3(週一)復盤關鍵指標為台積電ADR 10/30重挫5.95%至406.13美元(折合台股2,638.06元)+SOX費半10/30重挫7.2%為單日最重跌幅+Intel盤後重挫30%+Amazon財報失色+Alphabet續跌為結構性壓力+45,000整數關卡為下一支撐觀察區+2,350元關卡為台積電下一支撐觀察區+國安基金第9次進駐45,500失守為多方失守訊號+投信連14買是否延續至連15買為盤面觀察。</li>
+      <li>美股10/30三大指數同步重挫+Dow -1.09%+S&P -1.82%+Nasdaq -2.86%+SOX費半-7.2%為單日最重跌幅+Intel重挫逾28%+Amazon財報失色+Nasdaq 10月為2025年3月以來最差單月表現+11板塊「K型分化」續演+資訊科技-4.2%領跌 vs 能源+1.2%領漲+必需消費+0.8%受惠防禦需求+10月S&P 500最佳板塊為能源(高油價支撐)最差板塊為通訊服務(Alphabet拖累)+Apple 11/2盤後財報為全週最後高潮(Portfolio Terminal估Apple市值已達5兆美元)。</li>
+      <li>風險提示：11/3(週一)台股復盤恐跳空開低500-800點+SOX費半-7.2%+Intel重挫30%+Amazon財報失色+Alphabet續跌為結構性壓力+外資史上第七大單日賣超1,124億元+10月累計賣超9,943億為史上最狠月賣超紀錄+台指期淨空單續擴至9萬口以上為結構性空方壓力+Fed 12/9升息預期活躍+BOJ 12/18-19升息預期活躍+美元指數高檔支撐+新台幣32.5-32.7元關卡攻防+AI估值修正氛圍擴散為結構性變數。</li>
+      <li>風險提示：Apple 11/2盤後財報若意外失色+iPhone需求若低於預期+AI硬體銷售若低於預期將進一步擴大11/3台股鴻海/廣達AI供應鏈結構性壓力+台達電(2308)跌停鎖1,335元+AI電源族群評價風險未解+被動元件族群(國巨/華新科/禾伸堂)外資賣超壓力擴張+45,000整數關卡若於11/3失守+台積電2,350元關卡若失守恐引發結構性修正至44,000-44,500區間+國安基金進場需求若升溫為多方最後防線。</li>
+    </ul>
+  </div>
+
+  <footer class="brief-foot">
+    本簡報為資訊整理，非投資建議。「事實」與「市場預期／分析觀點」已於摘要中區分標示。<br>
+    自動產出於 2026/11/01 06:31（UTC+8）。
+  </footer>
+</body>
+</html>
