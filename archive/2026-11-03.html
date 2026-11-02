@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日市場簡報｜2026/11/03</title>
+<style>
+  :root {
+    --bg: #0e1116;
+    --panel: #161b22;
+    --panel-2: #1c2230;
+    --border: #2a313c;
+    --text: #d8dee9;
+    --text-dim: #8b95a5;
+    --accent: #e8b339;
+    --up: #ff5b5b;      /* 台股慣例：紅漲 */
+    --down: #3dd68c;    /* 綠跌 */
+    --neutral: #8b95a5;
+    --mono: "SFMono-Regular", "Roboto Mono", "Noto Sans Mono", ui-monospace, monospace;
+    --serif: "Noto Serif TC", "Songti TC", serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans TC", -apple-system, "PingFang TC", "Microsoft JhengHei", sans-serif;
+    line-height: 1.65;
+    padding: 2rem 1.2rem 4rem;
+    max-width: 920px;
+    margin: 0 auto;
+    font-size: 15px;
+  }
+  header.brief-head {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 1rem;
+    margin-bottom: 1.8rem;
+  }
+  header.brief-head .kicker {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    text-transform: uppercase;
+  }
+  header.brief-head h1 {
+    font-family: var(--serif);
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin: 0.2rem 0;
+    letter-spacing: 0.02em;
+  }
+  header.brief-head .date {
+    font-family: var(--mono);
+    color: var(--text-dim);
+    font-size: 0.95rem;
+  }
+  .back-link {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: var(--text-dim);
+    text-decoration: none;
+    font-family: var(--mono);
+    font-size: 0.82rem;
+  }
+  .back-link:hover { color: var(--accent); }
+  h2 {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    margin: 2.2rem 0 0.9rem;
+    padding-left: 0.7rem;
+    border-left: 4px solid var(--accent);
+    letter-spacing: 0.02em;
+  }
+  h2 .core-tag {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.15em;
+    background: var(--accent);
+    color: #0e1116;
+    padding: 0.12rem 0.5rem;
+    border-radius: 3px;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+    font-weight: 700;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.5rem 0 1rem;
+    font-size: 0.86rem;
+    background: var(--panel);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  th {
+    background: var(--panel-2);
+    color: var(--text-dim);
+    text-align: left;
+    padding: 0.6rem 0.7rem;
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+  td {
+    padding: 0.6rem 0.7rem;
+    border-top: 1px solid var(--border);
+    vertical-align: top;
+  }
+  td.time, td.num { font-family: var(--mono); white-space: nowrap; }
+  .tag { font-weight: 700; font-family: var(--mono); font-size: 0.8rem; white-space: nowrap; }
+  .tag.up { color: var(--up); }
+  .tag.down { color: var(--down); }
+  .tag.neutral { color: var(--neutral); }
+  .num.up { color: var(--up); }
+  .num.down { color: var(--down); }
+  .index-table td.num, .index-table th:not(:first-child) { text-align: right; }
+  .index-table th:not(:first-child) { padding-right: 0.9rem; }
+  .index-table td.num { padding-right: 0.9rem; }
+  td.pct { font-family: var(--mono); text-align: right; white-space: nowrap; padding-right: 0.9rem; }
+  td.pct.up { color: var(--up); }
+  td.pct.down { color: var(--down); }
+  .law-list { list-style: none; padding: 0; }
+  .law-list li {
+    padding: 0.45rem 0 0.45rem 1.2rem;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .law-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+  .overview {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 6px;
+    padding: 1.1rem 1.3rem;
+    margin-top: 0.5rem;
+  }
+  .overview .mood { font-family: var(--mono); font-size: 0.95rem; margin-bottom: 0.6rem; }
+  footer.brief-foot {
+    margin-top: 3rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 0.78rem;
+    line-height: 1.8;
+  }
+  .src { color: var(--text-dim); font-size: 0.8rem; }
+  a.src-link { color: var(--text-dim); text-decoration: underline dotted; }
+  a.src-link:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+  <a href="../index.html" class="back-link">← 返回歷史總覽</a>
+  <header class="brief-head">
+    <div class="kicker">Daily Market Brief</div>
+    <h1>每日市場簡報</h1>
+    <div class="date">2026/11/03（UTC+8）｜產出時間 2026/11/03 07:00</div>
+  </header>
+
+  <!-- ============ 一、台股焦點 ============ -->
+  <h2>一、台股焦點<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th><th>影響</th><th>受影響族群/標的</th></tr></thead>
+    <tbody>
+            <tr><td class="time">11/02 13:30</td><td>台股11月開門失守45,000點 加權指數終場收44,920.14點(-291.69/-0.65%) 成交量7,588億元 盤中最低下探44,399.1點</td><td class="src"><a class="src-link" href="https://news.cnyes.com/news/id/6643843">鉅亨網</a></td><td>台股11/2(週一)11月首個交易日開低急殺逾800點+盤中最低下探44,399.1點後跌幅收斂、終場加權指數收44,920.14點(-291.69/-0.65%)+失守45,000點整數關卡+成交量萎縮至7,588.75億元、櫃買指數相對抗跌率先翻紅、聯發科/鴻海等IC設計與電子代工權值股逆勢上漲為盤面亮點、惟台積電(2330)跌破2,350元關卡壓力續存。（市場預期：11/3若美股11/2收黑恐再測44,500點支撐+國安基金第9次進駐持續護盤為結構性支撐）</td><td class="tag down">利空</td><td>大盤、台積電(2330)、半導體供應鏈</td></tr>
+      <tr><td class="time">11/02 13:30</td><td>外資11/2賣超735.21億元為連3日賣超 投信連15日買超361億為盤面唯一護盤 三大法人合計賣超526.92億</td><td class="src"><a class="src-link" href="https://newtalk.tw/news/view/2026-11-02/1068812">新頭殼</a></td><td>外資11/2(週一)賣超735.21億元為連3日賣超+10月累計賣超已突破1兆元為史上最狠月賣超紀錄、投信11/2買超361.17億元為連15日買超+月初作帳行情延續+持續鎖定中小型AI電子+被動元件族群中價位個股、自營商11/2賣超152.88億元+三大法人合計賣超526.92億元、外資賣超前五名為力積電/台積電/台新新光金/永豐金/光寶科、外資買超前五名為群創/鴻海/華航/友達/中鋼反映資金轉進傳產與景氣股。（市場預期：11/3若美股11/2收黑外資賣壓恐延續至連4賣+投信連買能否撐至連16買為關鍵）</td><td class="tag down">利空</td><td>大盤、傳產股、面板(群創/友達)、鋼鐵(中鋼)、航空(華航)</td></tr>
+      <tr><td class="time">11/02 13:30</td><td>資金輪動明顯 鴻海/面板/航空/傳產獲外資青睞 電子權值股承壓</td><td class="src"><a class="src-link" href="https://money.udn.com/money/story/5607/9852343">經濟日報</a></td><td>外資11/2賣超735億元但大舉買進十檔標的+涵蓋鴻海(2317)/華航(2610)/友達(2409)/群創(3481)/中鋼(2002)等傳產與景氣循環股為反映資金從AI成長股轉進至傳統景氣股的K型分化訊號、同日美股10/30(週五)11板塊K型分化續演+能源/必需消費相對受惠+資訊科技/通訊服務領跌為結構性連動、傳產輪動於11月為跨市場共振訊號+外資策略由AI主流轉向景氣復甦概念。（市場預期：11/3若美股11/2延續資金輪動 傳產族群有望延續強勢+景氣循環股為資金避風港）</td><td class="tag up">利多</td><td>鴻海(2317)、華航(2610)、友達(2409)、群創(3481)、中鋼(2002)、傳產族群</td></tr>
+      <tr><td class="time">11/02 盤後</td><td>被動元件族群11/2盤面分歧 禾伸堂一度跌停 國巨失守500元關卡 華新科跌逾6%</td><td class="src"><a class="src-link" href="https://statementdog.com/news/17250">財報狗</a></td><td>被動元件族群11/2(週一)走勢分歧偏弱+禾伸堂(3026)盤中一度跌停至637元(-8.63%)+華新科(2492)下跌約6.56%至356元+信昌電(6173)下跌5.73%至255元+國巨(2327)盤中失守500元關卡最低觸489元、惟午盤後買盤回補部分個股如九豪(6127)逆勢上漲+國巨最高反彈至510元、村田減產部分MLCC料號+台廠轉單效應延續+三星電機已率先對客戶調高2026 Q4報價為中線利多但短線情緒抵銷、投信連日買超被動元件族群為支撐。（市場預期：11/3若美股11/2反彈 被動元件族群有望技術性反彈+國巨挑戰510-520元 否則再探480-490元支撐）</td><td class="tag down">利空</td><td>國巨(2327)、華新科(2492)、禾伸堂(3026)、信昌電(6173)、被動元件族群</td></tr>
+      <tr><td class="time">11/03 06:30</td><td>美股11/2 Nasdaq續跌1.07%+SOX費半盤中跌3.37% 台指期夜盤崩917點 台股11/3盤前恐承壓測試44,000關卡</td><td class="src"><a class="src-link" href="https://www.setn.com/news/1932503">三立新聞</a></td><td>美股11/2(週一)Nasdaq收25,164.32點(-1.07%)+S&P 500收7,541.40點(-0.51%)+Dow逆勢上漲收51,983.98點(+0.41%)、SOX費城半導體指數盤中跌3.37%+盤後持續承壓反映科技股資金撤離延續、台指期夜盤11/2收44,433點(-867)或崩917點(各報差異)+台股11/3盤前面臨跳空開低壓力+44,000點整數關卡保衛戰啟動、Apple財報雖beat但中國營收不及預期盤後下跌+AI相關評價修正氛圍延續。（市場預期：11/3台股恐跳空開低500-800點+44,500-44,625點為關鍵支撐+國安基金進場需求升溫）</td><td class="tag down">利空</td><td>大盤、台積電(2330)、電子權值股、SOX費半連動股</td></tr>
+      <tr><td class="time">11/03 全日</td><td>市場聚焦11/3美國期中選舉投票日 AMD盤後財報為後續動能指引</td><td class="src"><a class="src-link" href="https://money.udn.com/money/story/5607/9853202">經濟日報</a></td><td>11/3(週二)全球市場聚焦兩大事件：(1)美國期中選舉投票日+Trump政府政策續行性+加州提案50(選區重劃)結果將影響美參眾兩院2026年中期政治平衡；(2)AMD盤後財報+市場預期Q3營收130.9億美元年增41.5%+調整後EPS 1.95美元+財測指引為AI晶片族群評價指引+若優於預期將帶動SOX費半技術性反彈。（市場預期：11/4台股恐跳空反映期中選舉與AMD財報結果+若雙變數偏多將大幅收斂11/3賣壓）</td><td class="tag neutral">中性</td><td>台積電(2330)、聯發科(2454)、AI供應鏈、SOX費半連動股</td></tr>
+      <tr><td class="time">11/02 盤後</td><td>國安基金第9次進駐持續護盤 累計進場金額約500-700億元 45,000點保衛戰為結構性支撐</td><td class="src"><a class="src-link" href="https://news.pts.org.tw/article/833863">公視新聞</a></td><td>國安基金第9次進駐於10/13啟動+持續護盤為結構性支撐+10/30重挫1,156.5點+11/2再跌291.69點累計重創下累計進場金額估約500-700億元、45,000點整數關卡為結構性支撐+若11/3跌破則下看44,500-44,625點技術支撐區、法人預期國安基金在美國期中選舉後(11/3)有望止穩+11月歷史統計入市勝率仍達60%以上為中線正向氛圍、惟外資連3日賣超共砍逾1,859億元+短線籌碼仍偏空為結構性壓力。（市場預期：11/3-11/4國安基金進場需求升溫+45,000整數關卡為多方生命線）</td><td class="tag up">利多</td><td>大盤、金融股、傳產股、國安基金護盤標的</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 二、三大法人動向 ============ -->
+  <h2>二、三大法人動向<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>法人</th><th>買賣超(億元)</th><th>方向</th><th>備註</th></tr></thead>
+    <tbody>
+            <tr><td>外資</td><td class="num down">-735.21</td><td class="tag down">賣超</td><td>11/2數據、單日賣超735.21億元為連3日賣超、10月累計賣超突破1兆元為史上最狠月賣超紀錄+年初累計賣超續擴至2.3兆元以上、外資賣超前五名為力積電/台積電/台新新光金/永豐金/光寶科、外資買超前十名涵蓋鴻海(2317)/華航(2610)/友達(2409)/群創(3481)/中鋼(2002)等傳產與景氣循環股+反映資金從AI成長股轉進至傳統景氣股的K型分化訊號、台指期淨空單11/2減少至89,379口反映短線空單部分回補但整體仍為結構性空方壓力、美股10/30+11/2雙重壓力下外資賣超結構短線難解</td></tr>
+      <tr><td>投信</td><td class="num up">+361.17</td><td class="tag up">買超</td><td>11/2數據、投信連15日買超+單日買超361.17億元為盤面唯一護盤主力+累計買超續擴+月初作帳行情延續+持續鎖定中小型AI電子+被動元件族群中價位個股(國巨/華新科/禾伸堂/奇力新/日電貿等)+面板題材個股、投信連日買超個股為「大人在顧」核心標的、惟三大法人合計賣超526.92億元下 投信買盤量能仍不足以抵消外資賣壓、11/3若美股11/2延續賣壓 投信連買力道能否撐至連16買為關鍵指標</td></tr>
+      <tr><td>自營商</td><td class="num down">-152.88</td><td class="tag down">賣超</td><td>11/2數據、避險部位賣超152.88億元反映大盤波動持續升溫但較10/30之513.70億大幅收斂、Fed偏鷹+Alphabet續跌+Amazon財報失色+Intel重挫30%+美科技財報雙重壓力下自營商避險需求延續、11/3若Apple盤後財報結果反應+AMD盤後財報預期為自營商避險部位調整關鍵+期中選舉投票日為結構性變數</td></tr>
+    </tbody>
+  </table>
+  <ul class="law-list">
+          <li>台股11/2(週一)重挫291.69點(-0.65%)收44,920.14點+失守45,000點整數關卡+成交量萎縮至7,588.75億元反映觀望氛圍+盤中最低下探44,399.1點、三大法人合計賣超526.92億元(外資-735.21+投信+361.17+自營商-152.88)較10/30的-1,398.44億顯著收斂+反映賣壓已部分釋放、惟外資連3日賣超共砍逾1,859億元+10月累計賣超突破1兆元為史上最狠月賣超紀錄+短線籌碼仍偏空。</li>
+      <li>外資11/2台指期淨空單降至89,379口+較10/30的9萬口以上部位結構性收斂+反映部分短線空單回補、惟整體仍為結構性空方壓力+外資賣超前五名為力積電/台積電/台新新光金/永豐金/光寶科+賣超結構由AI主流轉向金融與記憶體、外資買超前十名涵蓋鴻海/華航/友達/群創/中鋼等傳產與景氣循環股+反映資金從AI成長股轉進至傳統景氣股的K型分化訊號為美股10/30+11/2資金輪動的台股對應版本。</li>
+      <li>投信連15日買超+累計買超續擴+11/2單日買超361.17億元為盤面唯一護盤主力+月初作帳行情延續+持續鎖定中小型AI電子+被動元件族群中價位個股+面板題材個股+投信連日買超個股為「大人在顧」核心標的、惟三大法人合計賣超526.92億元下 投信買盤量能仍不足以抵消外資賣壓+11/3若美股11/2延續賣壓 投信連買力道能否撐至連16買為關鍵指標+Apple財報盤後反應+AMD盤後財報為結構性變數。</li>
+      <li>國安基金第9次進駐於10/13啟動+持續護盤為結構性支撐+10/30+11/2累計重挫1,448點後累計進場金額估約500-700億元+45,000整數關卡為多方生命線+若11/3跌破則下看44,500-44,625點技術支撐區；美股11/2三大指數分歧+Dow+0.41%反映景氣股受惠+Nasdaq -1.07%反映科技股資金撤離+SOX費半盤中跌3.37%為台股半導體供應鏈11/3壓力核心+Apple盤後財報中國營收不及預期+AMD 11/3盤後財報+美國期中選舉為結構性變數+國安基金進場需求升溫為11/3-11/4關鍵支撐。</li>
+  </ul>
+
+  <!-- ============ 三、權值股觀察清單 ============ -->
+  <h2>三、權值股觀察清單<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>標的</th><th>漲跌</th><th>相關消息</th><th>影響</th></tr></thead>
+    <tbody>
+            <tr><td>台積電(2330)</td><td class="num down">-40 (-1.69% 收2,330，11/2)</td><td>11/2跌40元收2,330元跌破2,350元關卡+外資11/2持續倒貨為壓力、SOX費半11/2盤中跌3.37%+美股科技股資金撤離為結構性拖累、ADR 11/2走弱為11/3跳空開低壓力、法說Q4營收財測526-543億美元+2026資本支出600-640億美元為中線利多但短線情緒抵銷、Apple財報雖beat但中國營收不及預期為間接利空、11/3恐再測2,300元關卡+若破則下看2,250元支撐、AMD 11/3盤後財報為後續動能指引</td><td class="tag down">利空</td></tr>
+      <tr><td>聯發科(2454)</td><td class="num up">+55 (+1.40% 收3,970，11/2)</td><td>11/2逆勢上漲55元收3,970元+重返4,000元關卡附近+為11/2盤面亮點、Q3營收1,680.58億季增10.4%年增18.3%為基本面亮眼+10/30法說會後股價壓力部分釋放、董事會決議股利分派、天璣9500旗艦晶片+AI PC+Nvidia合作車用SoC為中線題材、Qualcomm/AMD AI晶片評價修正連動為結構性壓力但本次相對抗跌、11/3若AMD盤後財報優於預期將帶動IC設計族群連動反彈、挑戰4,050元關卡</td><td class="tag up">利多</td></tr>
+      <tr><td>鴻海(2317)</td><td class="num up">+5.5 (+2.24% 收251，11/2)</td><td>11/2逆勢上漲5.5元收251元+外資11/2大舉買超為外資買超前五名、Apple財報雖營收/EPS雙beat但中國營收不及預期+iPhone需求+AI硬體銷售為核心指引+Apple新CEO John Ternus首次法說會為結構性觀察、AI伺服器2026年出貨市佔逾40%為中線題材+盤面資金從AI成長股轉進至電子代工與傳產景氣股+鴻海為此輪動主受惠股、11/3若美股11/2資金輪動延續 鴻海有望挑戰255元關卡+若Apple盤後反應轉正將進一步強化</td><td class="tag up">利多</td></tr>
+      <tr><td>廣達(2382)</td><td class="num neutral">估持平 (估收318，11/2)</td><td>11/2估隨大盤震盪+電子代工權值股資金輪動受惠、Microsoft/Alphabet/Amazon雲端資本支出續擴但稀釋利潤疑慮為結構性壓力、Alphabet續跌+Amazon財報失色為間接拖累、AI伺服器出貨能見度延伸至2027但評價先行修正、2026年AI伺服器營收占比將達8成、11/3若美股續黑恐再探310-315元區間+若SOX費半11/2收黑延續 評價壓力進一步擴張</td><td class="tag neutral">中性</td></tr>
+      <tr><td>國巨(2327)</td><td class="num down">估-10 (估-1.99% 估收492，11/2)</td><td>11/2盤中失守500元關卡+最低觸489元+午盤後反彈至510元+終場估收略低於500元+被動元件族群重挫主角、花旗目標價仍看1,500元+摩根士丹利估下半年單位售價調漲30-40%為中線利多但短線情緒抵銷、村田減產部分MLCC料號+台廠轉單效應持續、三星電機已率先對客戶調高2026 Q4報價、投信買超被動元件族群為支撐、11/3若美股11/2反彈 有望挑戰510-520元反彈 否則再探480-490元支撐</td><td class="tag down">利空</td></tr>
+      <tr><td>華新科(2492)</td><td class="num down">-25 (-6.56% 收356，11/2)</td><td>11/2下跌25元收356元為被動元件族群11/2重挫個股之一、國內MLCC指標大廠、受惠村田減產轉單+高階產品組合改善、BB ratio從1.2-1.3提升至1.3-1.4、AI相關營收占比可望達15-20%、投信連日買超護盤為支撐、Microsoft/Alphabet雲端資本支出續擴但評價擔憂為結構性壓力、11/3若美股11/2反彈 有望挑戰365元關卡+否則再探350元支撐</td><td class="tag down">利空</td></tr>
+      <tr><td>禾伸堂(3026)</td><td class="num down">估-60 (估-8.63% 估收637，11/2)</td><td>11/2盤中觸跌停至637元(-8.63%)為被動元件族群11/2跌幅最深個股、10月回檔整理後再承壓、法人目標價千元、被動元件族群中價位個股、MLCC漲價循環受惠標的、村田減產題材受惠+高階產品組合改善、投信連日買超為支撐、11/3若大盤跌破45,000恐再探620元支撐、月初作帳題材延續為11/3資金輪動指引</td><td class="tag down">利空</td></tr>
+      <tr><td>信昌電(6173)</td><td class="num down">-15 (-5.73% 收255，11/2)</td><td>11/2下跌15元收255元+被動元件族群中小型標的重挫、7/27曾觸跌停後10月整理+11/2延續調整、鉭電容AI供電架構升級受惠、村田MLCC漲價帶動族群、月初作帳題材延續、Alphabet盤後重挫+Amazon財報失色+AI估值修正氛圍為結構性壓力、11/3若大盤跌破45,000恐再探250元支撐</td><td class="tag down">利空</td></tr>
+      <tr><td>奇力新(2456)</td><td class="num down">估-6 (估-5.83% 估收97，11/2)</td><td>11/2估隨族群重挫、電感元件龍頭+資料中心PMIC相關、族群連動隨國巨走勢震盪、AI供電架構升級受惠標的、投信買超被動元件族群帶動（族群觀察）、Microsoft/Alphabet雲端資本支出續擴但稀釋利潤疑慮為壓力、Amazon財報失色為間接拖累、11/3隨族群修正氛圍</td><td class="tag down">利空</td></tr>
+      <tr><td>日電貿(3090)</td><td class="num down">估-4 (估-4.82% 估收79，11/2)</td><td>11/2估隨族群下挫、村田代理轉單受惠股、BOJ 10/30維持政策利率1.25%不變+Takata委員主張升至1.5%為鷹派分化訊號、日圓承壓157-158區間+12月升息預期為間接變數、族群連動（族群觀察）、11/3若BOJ鷹派分化訊號持續 日圓承壓對台廠為間接利多</td><td class="tag down">利空</td></tr>
+      <tr><td>美磊(3068)</td><td class="num down">估-5 (估-5.15% 估收92.7，11/2)</td><td>11/2估隨族群下挫、電感元件次族群+族群連動隨國巨/華新科震盪、AI電源管理+資料中心需求為中線題材（族群觀察）、投信買超中小型被動元件為支撐、11/3挑戰92-95元區間+若AI族群續修正恐承壓至90元支撐、Amazon 10/30盤後AWS成長39%為間接指引但整體財報失色</td><td class="tag down">利空</td></tr>
+      <tr><td>凱美(5317)</td><td class="num down">估-3 (估-6.88% 估收40.6，11/2)</td><td>11/2估隨族群下挫、利基型電容廠+族群連動+MLCC漲價循環氛圍、投信買超中小型被動元件為支撐（族群觀察）、月初作帳題材延續、11/3隨大盤修正氛圍震盪</td><td class="tag down">利空</td></tr>
+      <tr><td>九豪(6127)</td><td class="num up">估+3 (估+5.88% 估收54，11/2)</td><td>11/2逆勢上漲至54元+為被動元件族群11/2少數上漲個股+投信買超支撐+陶瓷電容利基市場受惠+族群連動反轉動能、月初作帳題材延續（族群觀察）、11/3若AMD財報優於預期+被動元件族群技術性反彈有望延續強勢</td><td class="tag up">利多</td></tr>
+      <tr><td>鈞寶(6155)</td><td class="num down">估-4 (估-6.14% 估收61，11/2)</td><td>11/2估隨族群修正、EMI/EMC元件商+族群連動+AI伺服器EMI防護需求提升為中線題材、投信連日買超為支撐、Microsoft/Alphabet雲端資本支出續擴但評價擔憂為壓力+Amazon財報失色為間接拖累、11/3若美股11/2反彈 有望挑戰63元反彈</td><td class="tag down">利空</td></tr>
+      <tr><td>立隆電(2472)</td><td class="num down">估-2 (估-5.24% 估收36.2，11/2)</td><td>11/2估隨族群下挫、電解電容廠+族群連動+AI供電架構升級受惠+投信買超被動元件族群氛圍（族群觀察）、Microsoft/Alphabet Q3財報資料中心資本支出動向為間接觀察、Amazon財報失色為間接拖累、11/3隨族群修正氛圍</td><td class="tag down">利空</td></tr>
+      <tr><td>智寶(2375)</td><td class="num down">估-1.5 (估-4.58% 估收31.2，11/2)</td><td>11/2估隨族群下挫、電解電容廠+中國市場曝險+族群連動、港股11/2收23,393.32點(+0.42%)為間接支撐（族群觀察）、十五五規劃定調為中線題材、11/3隨族群修正氛圍震盪</td><td class="tag down">利空</td></tr>
+      <tr><td>台達電(2308)</td><td class="num up">估+15 (估+1.12% 估收1,350，11/2)</td><td>11/2估技術性反彈15元至1,350元+10/30跌停鎖1,335元後11/2空頭回補+惟10月單月重挫約34%+AI電源題材評價修正氛圍擴散為結構性壓力、致茂等AI電源相關個股同步技術性反彈、Microsoft/Alphabet雙巨頭財報評價擔憂+Amazon財報失色為結構性修正風險、11/3若SOX費半11/2收黑延續 恐再探1,330元關卡+若反彈動能延續 挑戰1,380元</td><td class="tag up">利多</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 四、美股焦點 ============ -->
+  <h2>四、美股焦點（可複委託操作）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th><th>影響</th><th>對台股連動</th></tr></thead>
+    <tbody>
+            <tr><td class="time">11/03 05:00</td><td>美股11/2三大指數分歧 Dow +0.41%逆勢上漲+S&P -0.51%+Nasdaq -1.07% 油價暴跌7.63% 資金輪動至景氣股</td><td class="src"><a class="src-link" href="https://finance.yahoo.com/markets/live/stock-market-today-monday-november-2-dow-sp-500-nasdaq-091835095.html">Yahoo Finance</a></td><td>美股11/2(週一)三大指數分歧+Dow收51,983.98點(+213.67/+0.41%)+S&P 500收7,541.40點(-38.67/-0.51%)+Nasdaq Composite收25,164.32點(-271.68/-1.07%)、科技股續受賣壓(Nvidia盤中由漲轉跌)+資金輪動至景氣股+非必需消費/工業/金融/不動產板塊走強、油價WTI/布蘭特暴跌7.63%反映美伊和談希望+能源股承壓、年初至今S&P 500+10.2%+Dow +8.2%+Nasdaq +8.3%為2026年持續正報酬但近期波動加劇。（市場預期：11/3美國期中選舉+AMD盤後財報為當日最大變數+Nasdaq若續跌恐進一步壓抑台股）</td><td class="tag down">利空</td><td>11/3台股恐跳空開低500-800點+台積電(2330)+聯發科(2454)+SOX費半連動股為壓力核心+鴻海(2317)/傳產族群相對抗跌</td></tr>
+      <tr><td class="time">11/03 05:00</td><td>Apple(AAPL) Q4財報EPS $2.10+營收$114.48B雙beat 但中國營收不及預期 盤後下跌 新CEO John Ternus首次法說會</td><td class="src"><a class="src-link" href="https://finance.yahoo.com/markets/live/earnings-live-updates-apple-palantir-roku-and-more-212856249.html">Yahoo Finance</a></td><td>Apple(AAPL) 11/2盤後公布fiscal Q4財報+EPS $2.10(優於共識$1.98)+營收$114.48億美元(優於共識$113億)雙beat、惟大中華區營收不及預期+盤後股價下跌約2-3%、本次為新CEO John Ternus接棒Tim Cook首次法說會+iPhone 17系列銷售動能/中國市場復甦節奏/AI戰略細節為市場聚焦、Services營收續強+Vision Pro/AI iPhone路線圖為中線題材。（市場預期：Apple中國營收壓力傳導至鴻海/台積電+11/3台股電子代工族群恐承壓+iPhone供應鏈短線修正）</td><td class="tag down">利空</td><td>鴻海(2317)/台積電(2330)/大立光(3008)/鏡頭供應鏈/iPhone代工供應鏈結構性連動+中國區銷售壓力為台廠訂單短線利空</td></tr>
+      <tr><td class="time">11/03 05:00</td><td>Palantir(PLTR) Q3 EPS $0.44+營收$2.31B雙beat 上修全年指引 美商業銷售加速 盤後股價先前已跌逾6%反映預期</td><td class="src"><a class="src-link" href="https://www.investing.com/news/earnings/palantir-tech-earnings-beat-by-003-revenue-topped-estimates-4992743">Investing.com</a></td><td>Palantir(PLTR) 11/2盤後公布Q3財報+EPS $0.44(優於共識$0.4061)+營收$23.1億美元(優於共識$21.7-21.8億)雙beat+上修全年營收指引+美商業銷售加速為核心動能、惟盤後股價先前已跌逾6%反映市場高度預期+財報公布後盤後交易相對平淡、AI平台AIP與AI Factory延伸應用+國防/政府訂單續強為中線題材。（市場預期：Palantir上修指引為AI平台類股正向支撐但高評價已反映大部分利多+短線情緒指引有限）</td><td class="tag neutral">中性</td><td>Palantir AI平台類股連動+對台股廣達(2382)/鴻海(2317) AI伺服器供應鏈為正向氛圍指引但實質連動有限</td></tr>
+      <tr><td class="time">11/03 全日</td><td>美國期中選舉投票日 加州提案50(選區重劃) 2026年中期政治平衡為結構性變數</td><td class="src"><a class="src-link" href="https://tech-insider.org/apple-palantir-earnings-october-jobs-report-week-ahead-2026/">Tech Insider</a></td><td>11/3(週二)美國期中選舉投票日為2026年中期政治最大事件+加州提案50(選區重劃)結果將影響美參眾兩院2026年中期政治平衡+Trump政府政策續行性+貿易/移民/能源政策方向為市場聚焦、歷史統計期中選舉後美股60日內上漲機率達75%以上+波動收斂為中線正向氛圍、惟選舉結果意外性+共和/民主黨席次重分配為短線高波動變數、2025年10月政府停擺陰影未解為結構性風險。（市場預期：11/4期中選舉結果公布後美股恐大幅波動+台股11/5須留意跳空風險+若Trump勢力續穩將為景氣股利多+科技股評價壓力延續）</td><td class="tag neutral">中性</td><td>美國期中選舉結果將影響11/5台股跳空走向+若Trump勢力續穩將為鴻海(2317)/傳產族群利多+台積電(2330)美廠產能政策為結構性觀察</td></tr>
+      <tr><td class="time">11/04 盤後</td><td>AMD Q3財報11/3盤後公布 預期營收130.9億美元年增41.5%+調整後EPS 1.95美元 為AI晶片族群評價指引</td><td class="src"><a class="src-link" href="https://www.tipranks.com/news/apple-palantir-amd-the-72-hours-that-decide-the-ai-trade">TipRanks</a></td><td>AMD(超微)Q3財報將於11/3(週二)盤後公布+市場預期營收130.9億美元年增41.5%+調整後EPS 1.95美元+Instinct MI350/MI400 AI GPU放量+OpenAI/Oracle等雲端客戶訂單續強+Zen 6伺服器CPU路線圖為核心動能、惟10/30 Intel重挫30%+SOX費半10/30重挫7.2%+11/2盤中再跌3.37%為AI晶片族群短線情緒壓抑、若AMD財報優於預期+財測指引強勁+將為SOX費半技術性反彈動能+若不如預期將延續AI晶片族群修正。（市場預期：11/4美股恐大幅波動反映AMD財報+台股11/5須留意跳空風險+台積電(2330)/聯發科(2454)連動性高）</td><td class="tag neutral">中性</td><td>AMD財報結果將為11/5台股台積電(2330)/聯發科(2454)/廣達(2382)/鴻海(2317) AI供應鏈連動指引+SOX費半11/4走勢為核心觀察</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 四之二、美股指數與板塊動向 ============ -->
+  <h2>美股指數與板塊動向<span class="core-tag">CORE</span></h2>
+  <table class="index-table">
+    <thead><tr><th>指數</th><th>收盤</th><th>漲跌</th><th>漲跌幅</th></tr></thead>
+    <tbody>
+            <tr><td>道瓊工業指數</td><td class="num">51,983.98</td><td class="num up">+213.67</td><td class="pct up">+0.41%</td></tr>
+      <tr><td>S&P 500</td><td class="num">7,541.40</td><td class="num down">-38.67</td><td class="pct down">-0.51%</td></tr>
+      <tr><td>那斯達克綜合指數</td><td class="num">25,164.32</td><td class="num down">-271.68</td><td class="pct down">-1.07%</td></tr>
+      <tr><td>費城半導體指數(SOX)</td><td class="num">10,328.60</td><td class="num down">-360.20</td><td class="pct down">-3.37%</td></tr>
+    </tbody>
+  </table>
+  <table>
+    <thead><tr><th>板塊（GICS）</th><th>漲跌幅</th><th>表現</th><th>當日驅動/備註</th></tr></thead>
+    <tbody>
+            <tr><td>資訊科技</td><td class="pct down">-1.50%</td><td class="tag down">走弱</td><td>11/2(週一)：Nvidia盤中由漲轉跌拖累指數+Intel延續10/30重挫氛圍+Microsoft小幅承壓、SOX費半盤中跌3.37%+AI晶片族群評價修正氛圍延續、Apple盤後財報雖beat但中國營收不及預期為結構性拖累、AMD 11/3盤後財報為後續指引、資金自AI成長股輪動至景氣股為10月月底延續趨勢</td></tr>
+      <tr><td>通訊服務</td><td class="pct down">-0.80%</td><td class="tag down">走弱</td><td>11/2(週一)：Alphabet續跌反映SpaceX未實現投資損失+資本支出稀釋利潤疑慮延續、Meta/Netflix獲利了結、通訊服務子類板塊整體承壓、10月為S&P 500表現最差板塊(-9.9%)+11月月初延續承壓氛圍</td></tr>
+      <tr><td>非必需消費</td><td class="pct up">+2.40%</td><td class="tag up">領漲</td><td>11/2(週一)：資金從AI成長股大舉輪動至消費景氣股+Amazon盤中反彈部分修復前期跌幅+Tesla技術性反彈+Nike/Starbucks等個股獲買盤進場、油價暴跌7.63%反映美伊和談希望為消費需求成本利多、Home Depot/Lowe's等家居股受惠房市利率敏感度+Fed升息預期支撐為短線利多</td></tr>
+      <tr><td>必需消費</td><td class="pct up">+0.30%</td><td class="tag up">上漲</td><td>11/2(週一)：資金加速回防禦類股+Walmart/Costco/P&G溫和獲利回補、油價暴跌雖為成本利多但資金避險需求支撐、通膨黏滯+Fed升息預期支撐為板塊相對受惠、Procter &amp; Gamble/Kraft Heinz等食品大廠穩健</td></tr>
+      <tr><td>能源</td><td class="pct down">-3.20%</td><td class="tag down">領跌</td><td>11/2(週一)：油價WTI/布蘭特暴跌7.63%為板塊重挫核心驅動+反映美伊和談希望觸發+Exxon/Chevron獲利回吐+Occidental/Pioneer承壓、OPEC+減產預期鬆動+中東局勢緊張氛圍降溫、2026年10月為S&P 500表現最佳板塊(+13.8%)+11月月初獲利了結氛圍擴散、YTD仍為+59.7%為最佳板塊</td></tr>
+      <tr><td>金融</td><td class="pct up">+0.90%</td><td class="tag up">上漲</td><td>11/2(週一)：10年期殖利率回升+Fed升息預期支撐為銀行股利多+JPM/BAC/Citi/Wells Fargo獲買盤進場、保險股受惠利率上升為正向氛圍、資金自AI成長股輪動至景氣復甦股為結構性支撐、期中選舉後政策確定性為中線正向</td></tr>
+      <tr><td>醫療保健</td><td class="pct up">+0.50%</td><td class="tag up">上漲</td><td>11/2(週一)：防禦性類股資金持續回補+UnitedHealth/Eli Lilly/J&amp;J獲利回補、Merck等個股受惠醫藥併購題材續強、Fed升息預期支撐為高評價類股利空但防禦需求強勁為正向支撐、肥胖藥(GLP-1)題材續存</td></tr>
+      <tr><td>工業</td><td class="pct up">+1.10%</td><td class="tag up">上漲</td><td>11/2(週一)：油價暴跌為運輸子類成本利多+航空股UAL/AAL/DAL獲買盤回補、Boeing/Caterpillar隨Dow上漲+景氣復甦概念續強、資金自AI成長股輪動至景氣股為結構性支撐、Dow +0.41%為結構性正向氛圍</td></tr>
+      <tr><td>原物料</td><td class="pct up">+0.40%</td><td class="tag up">上漲</td><td>11/2(週一)：美元指數小幅走弱+黃金/銀價溫和支撐+Freeport-McMoRan/Nucor獲買盤進場、Dow+0.41%+工業金屬同步溫和回補、資金自AI成長股輪動至景氣復甦股為結構性支撐</td></tr>
+      <tr><td>不動產</td><td class="pct up">+0.60%</td><td class="tag up">上漲</td><td>11/2(週一)：資金自AI成長股輪動至利率敏感景氣股+Realty Income/American Tower獲買盤回補、資料中心REITs(DLR/EQIX)受AI估值修正拖累部分抵消、惟整體板塊受惠殖利率回落預期為結構性支撐</td></tr>
+      <tr><td>公用事業</td><td class="pct up">+0.20%</td><td class="tag up">微漲</td><td>11/2(週一)：Fed升息預期支撐為高殖利率類股利空但資金避險需求支撐+NextEra/Duke Energy溫和獲利回補、資料中心電力需求續為中線題材但AI估值修正氛圍下相對承壓</td></tr>
+    </tbody>
+  </table>
+  <ul class="law-list">
+          <li>11/2(週一)美股11板塊明確「K型分化」續演+非必需消費/工業/金融/不動產領漲 vs 能源/資訊科技/通訊服務領跌、油價暴跌7.63%反映美伊和談希望+能源股由10月領漲板塊(+13.8%)轉為11/2跌幅最深板塊、資金自AI成長股加速輪動至景氣股+Dow +0.41%vs Nasdaq -1.07%為此輪動的具體呈現、Fed升息預期支撐+10年期公債殖利率回升為結構性變數、Apple盤後財報中國營收不及預期+AMD 11/3盤後財報+美國期中選舉投票日為當日最大變數。</li>
+      <li>資訊科技/半導體板塊11/2(週一)續演調整+XLK科技ETF小幅承壓+SOX費半盤中跌3.37%+Nvidia盤中由漲轉跌+Intel延續10/30重挫氛圍、對台股電子權值股為結構性連動利空：台積電(2330) 11/2已跌破2,350元關卡+11/3恐再測2,300元關卡+若破則下看2,250元支撐、聯發科(2454) 11/2逆勢上漲+受惠AI PC+Nvidia合作車用SoC中線題材、鴻海(2317) 11/2受惠資金輪動+Apple盤後財報雖beat但中國營收不及預期為間接利空、廣達(2382)受Amazon財報失色+AI供應鏈評價修正為結構性拖累、被動元件族群(國巨/華新科/禾伸堂)雖受惠村田減產轉單效應延續但AI估值修正氛圍下承壓、AMD 11/3盤後財報結果將為11/5台股電子權值股跳空走向的關鍵指引。</li>
+  </ul>
+
+  <!-- ============ 五、日本（參考） ============ -->
+  <h2>五、日本（參考）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th></tr></thead>
+    <tbody>
+            <tr><td class="time">11/02 15:00</td><td>日經225 11/2收盤小幅上漲 連假後觀望氛圍濃厚 市場聚焦美股11/2走勢與BOJ 12月升息預期</td><td class="src"><a class="src-link" href="https://finance.yahoo.com/quote/%5EN225/">Yahoo Finance</a></td><td>日經225 11/2(週一)日本文化之日前連假交易後市場觀望氛圍濃厚+日經連動Fed偏鷹指引+美股10/30重挫雙重壓力下承壓、BOJ 10/30政策會議Outlook Report上修通膨預期+2027年物價展望2.6%為鷹派分化訊號、ETF拋售加速至8,600億日圓/年(帳面價值)自2027年1月啟動為結構性利空日股、Advantest/東京威力科創/鎧俠半導體股隨SOX費半10/30重挫7.2%為壓力核心、村田/TDK等日系被動元件Q3財報穩健為台廠轉單效應中線利多。（市場預期：11/3日經隨美股11/2走勢震盪+Apple財報中國營收壓力傳導至iPhone供應鏈）</td></tr>
+      <tr><td class="time">11/02 盤中</td><td>日圓兌美元11/2收157.5附近盤整 BOJ 12月升息預期活躍 市場聚焦11/3美國期中選舉</td><td class="src"><a class="src-link" href="https://udn.com/news/story/7239/9851221">聯合新聞網</a></td><td>日圓兌美元11/2(週一)在157.5價位狹幅盤整+單日波動收斂、BOJ 10/30維持政策利率1.25%不變(8-1票)+Takata委員主張升至1.5%為鷹派分化訊號+Ueda會後表示通膨「超越2%」為12月升息預期鋪路、12/18-19 BOJ會議升息預期活躍+升息一碼(至1.5%)為市場共識、惟美元指數高檔+Fed升息預期支撐+日圓難以獨強、市場聚焦11/3美國期中選舉對美元/日圓的影響。（市場預期：日圓承壓157-158區間延續為台廠被動元件轉單效應中線利多+台積電日圓計價機械設備成本間接利多）</td></tr>
+      <tr><td class="time">11/02 盤後</td><td>村田/TDK等日系被動元件Q3財報穩健 MLCC減產題材延續 日圓承壓157區間 為台股被動元件族群中線利多</td><td class="src"><a class="src-link" href="https://www.murata.com/en-global/ir/library">Murata IR</a></td><td>村田(6981.JP)/TDK(6762.JP)等日系被動元件Q3財報穩健+減產部分MLCC料號題材續強+台廠(國巨/華新科/禾伸堂)轉單效應延續為中線利多、BOJ 10/30鷹派分化+日圓承壓157-158區間為日系被動元件競爭力相對承壓訊號+台廠相對有利、三星電機已率先對客戶調高2026 Q4報價為全球性MLCC漲價循環確認訊號、惟Alphabet續跌+Amazon財報失色+AI供應鏈情緒反轉+MLCC漲價循環雖未改但AI估值修正氛圍下評價壓力擴張。（市場預期：11/3台股被動元件族群恐續承壓但中線MLCC漲價循環2026-2028題材未改）</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 六、香港（參考） ============ -->
+  <h2>六、香港（參考）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th></tr></thead>
+    <tbody>
+            <tr><td class="time">11/02 16:00</td><td>恒生指數11/2收23,393.32點(+98.90/+0.42%) 恒生科技指數+2.25% 傳媒股爆發 阿里/快手/小米齊漲</td><td class="src"><a class="src-link" href="https://21jingji.com/article/20261102/herald/8ecce231b108ccb696e98bd507b34f2b.html">21經濟網</a></td><td>恒生指數11/2(週一)終場收23,393.32點(+98.90/+0.42%)+主板成交2,048.4億港元、恒生科技指數收3,839.41點(+84.51/+2.25%)+國企指數收7,906.11點(+43.89/+0.56%)、傳媒板塊爆發+閱文集團漲逾15%為核心亮點、科網股多數上漲+小米(1810)/快手(1024)/阿里巴巴(9988)等權重股走高帶動指數、銀行/有色金屬/醫藥生物等走弱、十五五規劃題材延續+中美新談判進展為中線題材。（市場預期：港股11/3延續技術性反彈+但受美股11/2科技股續跌壓抑為核心變數）</td></tr>
+      <tr><td class="time">11/02 盤中</td><td>港股恒生科技11/2+2.25%為亞股11/2相對強勢 小米/阿里反彈強勁 中港資金流入延續</td><td class="src"><a class="src-link" href="https://k.sina.cn/article_1699432410_654b47da02001xlc0.html">新浪新聞</a></td><td>港股11/2恒生科技指數+2.25%為亞股11/2相對強勢指標+反映中港資金流入延續+科網股/新能源/生物製藥獲買盤進場、小米(1810)+阿里巴巴(9988)+快手(1024)/美團(3690)等權重股為反彈主力+南向資金11/2延續淨買超、惟台股11/2同期間重挫291.69點+日經/韓KOSPI連動Fed偏鷹指引+美股10/30重挫為亞股分歧氛圍、港股低基期+十五五規劃利多為結構性支撐。（市場預期：港股11/3續存反彈動能+但受美股11/2科技股續跌壓抑為結構性變數）</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 七、跨市場連動分析 ============ -->
+  <h2>七、跨市場連動分析</h2>
+  <ul class="law-list">
+          <li>【美股資金輪動傳導至台股】美股11/2(週一)三大指數分歧+Dow +0.41% vs Nasdaq -1.07%為資金自AI成長股加速輪動至景氣股的訊號、台股11/2同步呈現此輪動：外資11/2雖賣超735.21億但大舉買超鴻海(2317)/華航(2610)/友達(2409)/群創(3481)/中鋼(2002)等傳產與景氣循環股+電子代工權值股鴻海逆勢上漲+聯發科逆勢上漲為盤面亮點、11/3台股恐續演此輪動+台積電/廣達等AI供應鏈承壓 vs 鴻海/傳產族群相對抗跌。</li>
+      <li>【匯率與日圓承壓】日圓兌美元11/2收157.5附近盤整+BOJ 10/30維持政策利率1.25%(8-1票)+Takata委員主張升至1.5%為鷹派分化訊號+12月升息預期活躍、新台幣兌美元11/2小幅升值但整體仍偏弱為外資賣超+台股資金外流氛圍、日圓承壓延續為日系被動元件(村田/TDK)競爭力相對承壓+台廠(國巨/華新科/禾伸堂)轉單效應延續的中線利多、美國期中選舉後美元/日圓走向為結構性變數。</li>
+      <li>【油價暴跌與板塊傳導】油價WTI/布蘭特11/2(週一)暴跌7.63%反映美伊和談希望觸發+美股能源股由10月領漲板塊(+13.8%)轉為11/2跌幅最深(-3.20%)+運輸/航空/消費景氣股受惠成本下降為結構性受惠族群、對台股連動為塑化(台塑/南亞/台化)/航空(華航/長榮航)/傳產族群利多+惟中油等能源相關個股承壓、11/3台股11板塊K型分化續演。</li>
+      <li>【風險事件集中於11/3-11/5】11/3(週二)三大結構性事件：(1)美國期中選舉投票日為2026年中期政治最大變數+加州提案50(選區重劃)結果影響參眾兩院席次重分配；(2)AMD盤後財報為AI晶片族群評價指引+預期營收130.9億年增41.5%+若優於預期將為SOX費半技術性反彈動能；(3)台股11/3盤前面臨跳空開低壓力+台指期夜盤跌逾800點+44,500-44,625點為關鍵支撐、11/4-11/5台股恐大幅波動反映三大事件結果+國安基金進場需求升溫。</li>
+  </ul>
+
+  <!-- ============ 八、今日總覽 ============ -->
+  <h2>八、今日總覽</h2>
+  <div class="overview">
+    <div class="mood">整體氛圍：利空</div>
+    <ul class="law-list">
+            <li>【台股關注重點】11/3盤前面臨跳空開低壓力+台指期夜盤跌逾800點+44,500-44,625點為關鍵支撐+國安基金進場需求升溫為結構性支撐、45,000整數關卡失守後若11/3進一步跌破則下看44,000點關卡+台積電(2330)2,300元關卡攻防為大盤生命線。</li>
+      <li>【台股資金輪動】投信連15日買超361.17億為盤面唯一護盤主力+月初作帳行情延續、外資賣超結構由AI主流轉向金融與記憶體+買超結構轉向傳產與景氣循環股(鴻海/華航/友達/群創/中鋼)為資金自AI成長股輪動至景氣股的訊號+鴻海(2317)/聯發科(2454) 11/2逆勢上漲為此輪動的具體呈現。</li>
+      <li>【台股被動元件觀察】被動元件族群11/2走勢分歧偏弱+禾伸堂(3026)觸跌停+國巨(2327)失守500元+華新科(2492)跌逾6%、惟村田減產+台廠轉單+三星電機已率先對客戶調高2026 Q4報價為中線利多、投信連日買超為支撐+11/3若美股11/2反彈有望技術性回補。</li>
+      <li>【美股關注重點】美股11/2三大指數分歧+Dow +0.41% vs Nasdaq -1.07%反映資金自AI成長股輪動至景氣股+SOX費半盤中跌3.37%為台股半導體供應鏈11/3壓力核心、油價暴跌7.63%反映美伊和談希望+能源股由10月領漲(+13.8%)轉為11/2跌幅最深(-3.20%)+景氣股(非必需消費/工業/金融)獲資金進場。</li>
+      <li>【美股關注重點】Apple盤後財報EPS/營收雙beat但中國營收不及預期+盤後下跌約2-3%為鴻海/台積電iPhone供應鏈短線利空、Palantir Q3雙beat上修全年指引但盤後反應平淡、AMD 11/3盤後財報(預期營收130.9億+41.5% YoY)為AI晶片族群評價關鍵指引。</li>
+      <li>【風險提示一】11/3美國期中選舉投票日為2026年中期政治最大變數+加州提案50(選區重劃)影響參眾兩院席次重分配+期中選舉結果將引發11/4-11/5美股大幅波動+台股11/5須留意跳空風險、歷史統計期中選舉後美股60日內上漲機率達75%以上為中線正向氛圍但短線不確定性擴散。</li>
+      <li>【風險提示二】外資連3日賣超共砍逾1,859億元+10月累計賣超突破1兆元為史上最狠月賣超紀錄+短線籌碼結構仍偏空、台指期淨空單89,379口雖較10/30之9萬口以上部位結構性收斂但整體仍為結構性空方壓力+若美股11/2延續賣壓+11/3外資賣壓恐延續至連4賣。</li>
+    </ul>
+  </div>
+
+  <footer class="brief-foot">
+    本簡報為資訊整理，非投資建議。「事實」與「市場預期／分析觀點」已於摘要中區分標示。<br>
+    自動產出於 2026/11/03 07:00（UTC+8）。
+  </footer>
+</body>
+</html>
