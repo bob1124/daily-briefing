@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日市場簡報｜2026/11/06</title>
+<style>
+  :root {
+    --bg: #0e1116;
+    --panel: #161b22;
+    --panel-2: #1c2230;
+    --border: #2a313c;
+    --text: #d8dee9;
+    --text-dim: #8b95a5;
+    --accent: #e8b339;
+    --up: #ff5b5b;      /* 台股慣例：紅漲 */
+    --down: #3dd68c;    /* 綠跌 */
+    --neutral: #8b95a5;
+    --mono: "SFMono-Regular", "Roboto Mono", "Noto Sans Mono", ui-monospace, monospace;
+    --serif: "Noto Serif TC", "Songti TC", serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans TC", -apple-system, "PingFang TC", "Microsoft JhengHei", sans-serif;
+    line-height: 1.65;
+    padding: 2rem 1.2rem 4rem;
+    max-width: 920px;
+    margin: 0 auto;
+    font-size: 15px;
+  }
+  header.brief-head {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 1rem;
+    margin-bottom: 1.8rem;
+  }
+  header.brief-head .kicker {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    text-transform: uppercase;
+  }
+  header.brief-head h1 {
+    font-family: var(--serif);
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin: 0.2rem 0;
+    letter-spacing: 0.02em;
+  }
+  header.brief-head .date {
+    font-family: var(--mono);
+    color: var(--text-dim);
+    font-size: 0.95rem;
+  }
+  .back-link {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: var(--text-dim);
+    text-decoration: none;
+    font-family: var(--mono);
+    font-size: 0.82rem;
+  }
+  .back-link:hover { color: var(--accent); }
+  h2 {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    margin: 2.2rem 0 0.9rem;
+    padding-left: 0.7rem;
+    border-left: 4px solid var(--accent);
+    letter-spacing: 0.02em;
+  }
+  h2 .core-tag {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.15em;
+    background: var(--accent);
+    color: #0e1116;
+    padding: 0.12rem 0.5rem;
+    border-radius: 3px;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+    font-weight: 700;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.5rem 0 1rem;
+    font-size: 0.86rem;
+    background: var(--panel);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  th {
+    background: var(--panel-2);
+    color: var(--text-dim);
+    text-align: left;
+    padding: 0.6rem 0.7rem;
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+  td {
+    padding: 0.6rem 0.7rem;
+    border-top: 1px solid var(--border);
+    vertical-align: top;
+  }
+  td.time, td.num { font-family: var(--mono); white-space: nowrap; }
+  .tag { font-weight: 700; font-family: var(--mono); font-size: 0.8rem; white-space: nowrap; }
+  .tag.up { color: var(--up); }
+  .tag.down { color: var(--down); }
+  .tag.neutral { color: var(--neutral); }
+  .num.up { color: var(--up); }
+  .num.down { color: var(--down); }
+  .index-table td.num, .index-table th:not(:first-child) { text-align: right; }
+  .index-table th:not(:first-child) { padding-right: 0.9rem; }
+  .index-table td.num { padding-right: 0.9rem; }
+  td.pct { font-family: var(--mono); text-align: right; white-space: nowrap; padding-right: 0.9rem; }
+  td.pct.up { color: var(--up); }
+  td.pct.down { color: var(--down); }
+  .law-list { list-style: none; padding: 0; }
+  .law-list li {
+    padding: 0.45rem 0 0.45rem 1.2rem;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .law-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+  .overview {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 6px;
+    padding: 1.1rem 1.3rem;
+    margin-top: 0.5rem;
+  }
+  .overview .mood { font-family: var(--mono); font-size: 0.95rem; margin-bottom: 0.6rem; }
+  footer.brief-foot {
+    margin-top: 3rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 0.78rem;
+    line-height: 1.8;
+  }
+  .src { color: var(--text-dim); font-size: 0.8rem; }
+  a.src-link { color: var(--text-dim); text-decoration: underline dotted; }
+  a.src-link:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+  <a href="../index.html" class="back-link">← 返回歷史總覽</a>
+  <header class="brief-head">
+    <div class="kicker">Daily Market Brief</div>
+    <h1>每日市場簡報</h1>
+    <div class="date">2026/11/06（UTC+8）｜產出時間 2026/11/06 07:00</div>
+  </header>
+
+  <!-- ============ 一、台股焦點 ============ -->
+  <h2>一、台股焦點<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th><th>影響</th><th>受影響族群/標的</th></tr></thead>
+    <tbody>
+      <tr><td class="time">13:30</td><td>台股11/5崩跌1,374.19點(-3.20%)收41,574.72點 連6黑失守42,000大關</td><td class="src"><a class="src-link" href="https://www.nownews.com/news/6889653">NowNews</a></td><td>加權指數開低走低，盤中最低下探41,513.57點，為台股史上第13大收盤跌點，成交量9,260億元；下跌家數高達1,784家</td><td class="tag down">利空</td><td>加權指數、所有族群</td></tr>
+      <tr><td class="time">13:30</td><td>外資單日賣超1,024.61億元 史上第10大 連6賣累計6,144.7億元</td><td class="src"><a class="src-link" href="https://udn.com/news/story/7251/9860099">聯合新聞網</a></td><td>外資期貨淨空單擴大至95,651口逼近歷史高檔；外資賣超前列台玻、聯電，買超冠軍為華航</td><td class="tag down">利空</td><td>電子權值、金融</td></tr>
+      <tr><td class="time">13:30</td><td>50大權值股11檔跌停 台積電收2,240元(-0.88%)失守2,250元支撐</td><td class="src"><a class="src-link" href="https://udn.com/news/story/7251/9859380">UDN</a></td><td>台積電盤中曾反彈至2,285元，但賣壓隨後湧現最終收低20元，2,200元為下一心理關卡（市場預期：測試月線支撐）</td><td class="tag down">利空</td><td>台積電(2330)、權值股</td></tr>
+      <tr><td class="time">15:00</td><td>投信11/5逆勢買超225.32億元 連續護盤扮演唯一買方法人</td><td class="src"><a class="src-link" href="https://vocus.cc/article/6aec772cfd8978000186dbe8">Vocus 888機器人</a></td><td>三大法人合計賣超1,234.57億元，自營商賣超約435億元，投信為唯一正向買方（市場預期：投信接棒內資護盤）</td><td class="tag neutral">中性</td><td>投信、價值股</td></tr>
+      <tr><td class="time">全日</td><td>證交所罕見發聲：台股今年表現贏過亞股與費半 基本面穩健</td><td class="src"><a class="src-link" href="https://udn.com/news/story/7251/9859744">UDN</a></td><td>台灣證交所官方信心喊話，指台股2026年迄今表現仍優於亞股與費半指數，籲投資人勿恐慌（市場預期：為護盤鋪陳）</td><td class="tag neutral">中性</td><td>整體台股</td></tr>
+      <tr><td class="time">全日</td><td>市場聚焦美伊談判、融資維持率、國安基金是否進場三大變數</td><td class="src"><a class="src-link" href="https://tw.stock.yahoo.com/news/%E5%A4%96%E8%B3%87%E8%B3%A3%E8%B6%851024%E5%84%84%E5%8F%B2%E4%B8%8A%E7%AC%AC10%E5%A4%A7-%E5%8F%B0%E8%82%A1%E8%A7%80%E5%AF%9F%E8%9E%8D%E8%B3%87-%E7%BE%8E%E4%BC%8A%E8%AB%87%E5%88%A4-102459254.html">Yahoo 奇摩股市</a></td><td>永豐投顧指出，尚未見止穩訊號，散戶融資斷頭與外資空單續擴為最大風險（市場預期：國安基金本週可能召開例會）</td><td class="tag down">利空</td><td>融資股、中小型股</td></tr>
+      <tr><td class="time">全日</td><td>重新評估AI評價論點升溫 法人：基本面未惡化僅修正過度估值</td><td class="src"><a class="src-link" href="https://vocus.cc/article/6aec63c0fd89780001839bf6">Vocus</a></td><td>多位分析師認為本波修正反映全球對AI泡沫與產業獲利評價重定，台積電2奈米與CoWoS基本面不變（市場預期：Q4財報季為關鍵檢驗）</td><td class="tag neutral">中性</td><td>AI概念股、晶圓代工</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 二、三大法人動向 ============ -->
+  <h2>二、三大法人動向<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>法人</th><th>買賣超(億元)</th><th>方向</th><th>備註</th></tr></thead>
+    <tbody>
+      <tr><td>外資</td><td class="num down">-1,024.61</td><td class="tag down">賣超</td><td>史上第10大單日賣超，連6賣累計6,144.7億</td></tr>
+      <tr><td>投信</td><td class="num up">+225.32</td><td class="tag up">買超</td><td>逆勢買超，連續扮演唯一護盤法人</td></tr>
+      <tr><td>自營商</td><td class="num down">-435.28</td><td class="tag down">賣超</td><td>避險與自營部位同步減碼</td></tr>
+      <tr><td>三大法人合計</td><td class="num down">-1,234.57</td><td class="tag down">賣超</td><td>合計賣超金額再創本波修正新高</td></tr>
+    </tbody>
+  </table>
+  <ul class="law-list">
+    <li>外資期貨淨空單擴大至95,651口，逼近歷史新高區間，空頭動能仍強勁</li>
+    <li>外資連6賣累計6,144.7億元，持續由台積電、金融、傳產權值股撤出</li>
+    <li>投信單月內已連續十餘日買超護盤，但單日225億規模仍難抵外資賣壓</li>
+    <li>融資維持率續探低點，散戶信用斷頭風險升溫，為11/6盤中觀察重點</li>
+    <li>（市場預期：若外資期貨空單再擴大至10萬口，國安基金召開例會機率升高）</li>
+  </ul>
+
+  <!-- ============ 三、權值股觀察清單 ============ -->
+  <h2>三、權值股觀察清單<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>標的</th><th>漲跌</th><th>相關消息</th><th>影響</th></tr></thead>
+    <tbody>
+      <tr><td>台積電(2330)</td><td class="num down">-20元 (-0.88%)</td><td>盤中曾反彈至2,285元後翻黑，收2,240元失守2,250支撐；受隔夜費半SOX暴跌12.25%衝擊ADR同步重挫</td><td class="tag down">利空</td></tr>
+      <tr><td>聯發科(2454)</td><td class="num down">續弱</td><td>手機晶片族群受Qualcomm/Arm財報指引疲弱影響，聯發科與國際同業連動同步承壓</td><td class="tag down">利空</td></tr>
+      <tr><td>鴻海(2317)</td><td class="num down">續弱</td><td>AI伺服器ODM族群受Nvidia等權值股重挫拖累，短線情緒偏弱（市場預期：Q4出貨仍為正向）</td><td class="tag down">利空</td></tr>
+      <tr><td>廣達(2382)</td><td class="num down">續弱</td><td>AI伺服器概念股同步回檔，廣達雲端伺服器訂單能見度未變（市場預期：11月營收將見底回升）</td><td class="tag down">利空</td></tr>
+      <tr><td>國巨(2327)</td><td class="num down">續弱</td><td>被動元件族群龍頭，自高檔修正超過30%，外資目標價仍維持1,500元（市場預期：2027-2028供需緊俏將延續）</td><td class="tag down">利空</td></tr>
+      <tr><td>華新科(2492)</td><td class="num down">續弱</td><td>被動元件第二龍頭，B/B Ratio續升至1.3-1.4，但盤面壓力仍大</td><td class="tag down">利空</td></tr>
+      <tr><td>禾伸堂(3026)</td><td class="num down">續弱</td><td>被動元件中小型股，MLCC與貼片電阻訂單穩定（市場預期：Q4毛利率可望維持）</td><td class="tag down">利空</td></tr>
+      <tr><td>信昌電(6173)</td><td class="num down">續弱</td><td>被動元件相關族群，受族群修正影響（市場預期：技術面尚待築底）</td><td class="tag down">利空</td></tr>
+      <tr><td>華容(5328)</td><td class="num down">續弱</td><td>MLCC上游金屬粉末供應商，族群連動明顯</td><td class="tag down">利空</td></tr>
+      <tr><td>日電貿(3090)</td><td class="num down">續弱</td><td>被動元件通路商，受下游庫存去化影響</td><td class="tag down">利空</td></tr>
+      <tr><td>奇力新(2456)</td><td class="num down">續弱</td><td>電感器龍頭，受車用與AI伺服器雙題材支撐但短線修正</td><td class="tag down">利空</td></tr>
+      <tr><td>凱美(5317)</td><td class="num down">續弱</td><td>鋁質電解電容供應商，受族群情緒拖累</td><td class="tag down">利空</td></tr>
+      <tr><td>聚鼎(6224)</td><td class="num neutral">持平</td><td>PPTC過電流保護元件供應商，較不受主流被動元件修正影響</td><td class="tag neutral">中性</td></tr>
+      <tr><td>冠西電(2466)</td><td class="num down">續弱</td><td>光電子元件廠，族群連動偏弱</td><td class="tag down">利空</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 四、美股焦點 ============ -->
+  <h2>四、美股焦點（可複委託操作）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th><th>影響</th><th>對台股連動</th></tr></thead>
+    <tbody>
+      <tr><td class="time">05:00</td><td>美股11/5大崩盤 Nasdaq -5.52% 單日創2026年4月以來最大跌幅</td><td class="src"><a class="src-link" href="https://www.cnbc.com/2026/11/04/stock-market-today-live-updates.html">CNBC</a></td><td>道瓊大跌約1,800點，Nasdaq跌入修正區間，S&P 500單日蒸發市值約3兆美元（市場預期：短線超跌後有技術性反彈機會）</td><td class="tag down">利空</td><td>隔夜訊號強烈不利台股11/6開盤</td></tr>
+      <tr><td class="time">05:00</td><td>費半SOX暴跌12.25%至9,011.14 單日為2020年3月以來最慘</td><td class="src"><a class="src-link" href="https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-5-dow-sp-500-nasdaq-oil-rises-chip-stocks-141439950.html">Yahoo Finance</a></td><td>Nvidia、AMD、Micron、Broadcom齊跌，AI相關晶片股全面潰敗（市場預期：台積電ADR同步重挫，11/6台股電子股承壓）</td><td class="tag down">利空</td><td>台積電、聯發科、IC設計族群</td></tr>
+      <tr><td class="time">04:00</td><td>AI監管疑慮引爆賣壓 市場擔憂美國期中選舉後政策轉向</td><td class="src"><a class="src-link" href="https://nbcnews.com/business/markets/tech-stocks-plunge-ai-midterms-rcna607650">NBC News</a></td><td>期中選舉結果揭曉後，市場開始評估新國會對AI產業監管力道，Nvidia等權值股首當其衝（市場預期：AI相關Capex法案為下一觀察焦點）</td><td class="tag down">利空</td><td>AI伺服器ODM、半導體設備</td></tr>
+      <tr><td class="time">07:00</td><td>Qualcomm Q4 EPS指引低於預期 下修12% 盤後跌7%</td><td class="src"><a class="src-link" href="https://www.itiger.com/hans/news/2655333259"> Tiger Brokers</a></td><td>高通Q4 EPS指引區間2.05-2.25美元低於市場預期2.23美元，車用晶片營收16億美元創新高但難抵手機晶片疲弱（市場預期：聯發科同受拖累）</td><td class="tag down">利空</td><td>聯發科(2454)、IC設計</td></tr>
+      <tr><td class="time">全日</td><td>VIX恐慌指數飆升62.34%至26.90 創6個月新高</td><td class="src"><a class="src-link" href="https://investing.com/news/stock-market-news/us-stock-index-futures-steady-after-midterms-rally-5001919">Investing.com</a></td><td>CBOE波動率指數單日飆升62.34%，反映避險需求激增（市場預期：進入高波動區間，短線交易難度加大）</td><td class="tag down">利空</td><td>大盤系統性風險</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 四之二、美股指數與板塊動向 ============ -->
+  <h2>美股指數與板塊動向<span class="core-tag">CORE</span></h2>
+  <table class="index-table">
+    <thead><tr><th>指數</th><th>收盤</th><th>漲跌</th><th>漲跌幅</th></tr></thead>
+    <tbody>
+      <tr><td>道瓊工業指數</td><td class="num">51,523.00</td><td class="num down">-1,833.12</td><td class="pct down">-3.44%</td></tr>
+      <tr><td>S&P 500</td><td class="num">7,353.73</td><td class="num down">-335.46</td><td class="pct down">-4.36%</td></tr>
+      <tr><td>那斯達克綜合指數</td><td class="num">24,315.00</td><td class="num down">-1,420.59</td><td class="pct down">-5.52%</td></tr>
+      <tr><td>費城半導體指數(SOX)</td><td class="num">9,011.14</td><td class="num down">-1,257.46</td><td class="pct down">-12.25%</td></tr>
+    </tbody>
+  </table>
+  <table>
+    <thead><tr><th>板塊（GICS）</th><th>漲跌幅</th><th>表現</th><th>當日驅動/備註</th></tr></thead>
+    <tbody>
+      <tr><td>資訊科技</td><td class="pct down">-8.10%</td><td class="tag down">領跌</td><td>Nvidia、AMD、Micron、Broadcom齊跌，AI監管疑慮與Qualcomm/Arm財報指引疲弱雙重利空</td></tr>
+      <tr><td>通訊服務</td><td class="pct down">-0.50%</td><td class="tag down">抗跌</td><td>Meta、Alphabet相對抗跌，為當日唯一跌幅小於1%的大類股</td></tr>
+      <tr><td>非必需消費</td><td class="pct down">-3.50%</td><td class="tag down">領跌</td><td>Amazon、Tesla走弱，市場憂消費放緩</td></tr>
+      <tr><td>必需消費</td><td class="pct down">-1.20%</td><td class="tag down">持平</td><td>防禦性類股相對抗跌，資金避風港</td></tr>
+      <tr><td>能源</td><td class="pct down">-2.80%</td><td class="tag down">領跌</td><td>美伊談判進展使油價承壓，能源股受拖累</td></tr>
+      <tr><td>金融</td><td class="pct down">-3.00%</td><td class="tag down">領跌</td><td>風險性資產全面賣壓，JPM、GS齊跌</td></tr>
+      <tr><td>醫療保健</td><td class="pct down">-1.50%</td><td class="tag down">持平</td><td>防禦性類股，跌幅相對有限</td></tr>
+      <tr><td>工業</td><td class="pct down">-2.50%</td><td class="tag down">領跌</td><td>Caterpillar、BA等權值股同步走弱</td></tr>
+      <tr><td>原物料</td><td class="pct down">-2.20%</td><td class="tag down">領跌</td><td>原物料類股普跌，反映景氣與需求疑慮</td></tr>
+      <tr><td>不動產</td><td class="pct down">-1.80%</td><td class="tag down">持平</td><td>REITs類股受利率預期影響但跌幅有限</td></tr>
+      <tr><td>公用事業</td><td class="pct down">-1.00%</td><td class="tag down">抗跌</td><td>防禦性類股為當日跌幅最小類股之一</td></tr>
+    </tbody>
+  </table>
+  <ul class="law-list">
+    <li>當日板塊輪動由科技轉向防禦類股，資訊科技(-8.10%)與金融、工業、能源同步大跌，資金湧入必需消費、公用事業、醫療保健等防禦區塊</li>
+    <li>資訊科技板塊單日跌8.10%為2020年3月以來最大跌幅，費半SOX暴跌12.25%強烈不利台股電子權值股11/6開盤連動，台積電、聯發科、鴻海、廣達等預料受隔夜ADR賣壓拖累（市場預期：台積電ADR同步跌8-10%可能性高）</li>
+    <li>通訊服務板塊因Meta、Alphabet自身AI Capex與雲端訂單展望相對明朗，單日僅微跌0.50%為最抗跌類股</li>
+  </ul>
+
+  <!-- ============ 五、日本（參考） ============ -->
+  <h2>五、日本（參考）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th></tr></thead>
+    <tbody>
+      <tr><td class="time">14:30</td><td>日經225 11/5收盤走弱 隨全球AI估值疑慮與美伊談判震盪</td><td class="src"><a class="src-link" href="https://tradingeconomics.com/japan/stock-market/news/592658">Trading Economics</a></td><td>日經225在美股11/4的AI疑慮延續下走弱，SoftBank、Advantest等半導體相關族群同步承壓，與台股電子連動明顯</td></tr>
+      <tr><td class="time">全日</td><td>日圓兌美元維持157-158區間 日銀12月升息預期不變</td><td class="src"><a class="src-link" href="https://rate.bot.com.tw/xrt/quote/ltm/JPY/spot?Lang=zh-TW">台灣銀行</a></td><td>日圓短線震盪盤整，市場預期日銀將於12月會議再度升息25bps至1.5%（市場預期：匯率波動對出口商影響偏中性）</td></tr>
+      <tr><td class="time">全日</td><td>日本半導體設備股 Tokyo Electron、Lasertec 隨美股晶片股重挫</td><td class="src"><a class="src-link" href="https://www.heygotrade.com/en/news/asia-chip-ai-stocks-swing-sk-hynix-softbank-nikkei-nvidia-vs-tsmc/">HeyGotrade</a></td><td>日本半導體設備族群為全球AI資本支出重要受惠者，受美股11/5 SOX暴跌影響料承壓（市場預期：短線修正不改AI長期趨勢）</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 六、香港（參考） ============ -->
+  <h2>六、香港（參考）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th></tr></thead>
+    <tbody>
+      <tr><td class="time">16:00</td><td>恒生指數 11/5 走弱 科技股領跌隨全球AI估值重新評價</td><td class="src"><a class="src-link" href="https://www.itiger.com/news/1199126772">Tiger Brokers</a></td><td>恒生指數與恒生科技指數11/5同步走弱，騰訊、美團、小米受全球AI板塊修正影響（市場預期：中概股與台股電子連動性升高）</td></tr>
+      <tr><td class="time">全日</td><td>中國經濟數據疲弱 11月PMI續處榮枯線下</td><td class="src"><a class="src-link" href="https://finance.biggo.com/news/01c1da07-3a5b-4a8f-8adb-ecf8f803a7d6">BigGo Finance</a></td><td>中國製造業景氣仍待回溫，港股承壓；科技股受全球AI估值修正影響為主要賣壓來源</td></tr>
+      <tr><td class="time">全日</td><td>港股半導體相關 SMIC、華虹 隨費半重挫同步承壓</td><td class="src"><a class="src-link" href="https://finance.biggo.com/news/67e05d5f-0f4b-4a30-b38e-c2866b97e4ef">BigGo Finance</a></td><td>港股半導體供應鏈股票受費半SOX暴跌12.25%衝擊，中芯國際、華虹半導體預料跟隨回檔</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 七、跨市場連動分析 ============ -->
+  <h2>七、跨市場連動分析</h2>
+  <ul class="law-list">
+    <li>【美股→台股】隔夜費半SOX暴跌12.25%為2020年3月以來最慘，台積電ADR預料同步重挫8-10%，11/6台股電子權值股承壓機率極高；惟台股11/5已先行跌3.20%，部分利空已反映，重點觀察9:00開盤跳空缺口</li>
+    <li>【匯率】新台幣兌美元受外資連6賣累計6,144.7億衝擊可能續貶，惟央行預計進場調節；日圓維持157-158區間、日銀12月升息預期不變，匯率波動對台灣出口商影響中性</li>
+    <li>【其他】國際油價於美伊談判進展下承壓，能源股11/6隨之偏弱；短線SOX已跌至9,011.14距8,500關鍵支撐約500點，若台積電ADR跌深可能觸發國際買盤進場試底</li>
+    <li>【資金流向】VIX飆升62.34%至26.90為6個月新高，全球進入高波動區間，避險資金湧入美國長債與必需消費類股，風險資產與AI相關板塊面臨結構性檢驗（市場預期：Q4 Nvidia財報(11/19)將為重要轉折點）</li>
+  </ul>
+
+  <!-- ============ 八、今日總覽 ============ -->
+  <h2>八、今日總覽</h2>
+  <div class="overview">
+    <div class="mood">整體氛圍：利空</div>
+    <ul class="law-list">
+      <li>【台股】11/5連6黑失守42,000大關收41,574.72點(-3.20%)，外資單日賣超1,024.61億為史上第10大、連6賣累計6,144.7億，外資期貨淨空單95,651口逼近歷史新高，國安基金是否召開例會為本週最大焦點</li>
+      <li>【台股】11/6開盤恐續殺，惟SOX一夜大跌12.25%已過度反映悲觀，台積電2,250元支撐失守後下看2,200元心理關卡；投信連日護盤單日僅225億難抵外資賣壓，需觀察散戶融資維持率</li>
+      <li>【台股】被動元件國巨、華新科、禾伸堂等族群已自高檔修正30%以上，技術面接近築底區，惟族群情緒仍待消化；AI伺服器ODM鴻海、廣達、緯穎基本面未變但隨美股回檔</li>
+      <li>【美股】隔夜Dow -3.44%、S&P -4.36%、Nasdaq -5.52%、SOX -12.25%為2020年3月以來最慘單日，AI監管疑慮+Qualcomm/Arm財報指引疲弱+期中選舉後政策不確定性三重利空同步發酵</li>
+      <li>【美股】VIX飆升62.34%至26.90創6個月新高，短線超跌後有技術性反彈機會，但AI估值重定論點短期難消化；Nvidia財報(11/19)為下一重要轉折點</li>
+      <li>【風險提示】外資期貨淨空單逼近10萬口歷史高檔、融資維持率再探低、散戶信用斷頭壓力升溫為三大系統性風險；國安基金若進場為最強下檔支撐</li>
+      <li>【風險提示】全球AI估值重新評價論點恐持續發酵，台股電子權值股與ADR連動度極高，短線反彈仍需觀察美國科技股止穩訊號及台積電ADR是否收復2,250元關卡</li>
+    </ul>
+  </div>
+
+  <footer class="brief-foot">
+    本簡報為資訊整理，非投資建議。「事實」與「市場預期／分析觀點」已於摘要中區分標示。<br>
+    自動產出於 2026/11/06 07:00（UTC+8）。
+  </footer>
+</body>
+</html>
