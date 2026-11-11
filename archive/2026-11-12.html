@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日市場簡報｜2026/11/12</title>
+<style>
+  :root {
+    --bg: #0e1116;
+    --panel: #161b22;
+    --panel-2: #1c2230;
+    --border: #2a313c;
+    --text: #d8dee9;
+    --text-dim: #8b95a5;
+    --accent: #e8b339;
+    --up: #ff5b5b;      /* 台股慣例：紅漲 */
+    --down: #3dd68c;    /* 綠跌 */
+    --neutral: #8b95a5;
+    --mono: "SFMono-Regular", "Roboto Mono", "Noto Sans Mono", ui-monospace, monospace;
+    --serif: "Noto Serif TC", "Songti TC", serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans TC", -apple-system, "PingFang TC", "Microsoft JhengHei", sans-serif;
+    line-height: 1.65;
+    padding: 2rem 1.2rem 4rem;
+    max-width: 920px;
+    margin: 0 auto;
+    font-size: 15px;
+  }
+  header.brief-head {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 1rem;
+    margin-bottom: 1.8rem;
+  }
+  header.brief-head .kicker {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    text-transform: uppercase;
+  }
+  header.brief-head h1 {
+    font-family: var(--serif);
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin: 0.2rem 0;
+    letter-spacing: 0.02em;
+  }
+  header.brief-head .date {
+    font-family: var(--mono);
+    color: var(--text-dim);
+    font-size: 0.95rem;
+  }
+  .back-link {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: var(--text-dim);
+    text-decoration: none;
+    font-family: var(--mono);
+    font-size: 0.82rem;
+  }
+  .back-link:hover { color: var(--accent); }
+  h2 {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    margin: 2.2rem 0 0.9rem;
+    padding-left: 0.7rem;
+    border-left: 4px solid var(--accent);
+    letter-spacing: 0.02em;
+  }
+  h2 .core-tag {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.15em;
+    background: var(--accent);
+    color: #0e1116;
+    padding: 0.12rem 0.5rem;
+    border-radius: 3px;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+    font-weight: 700;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.5rem 0 1rem;
+    font-size: 0.86rem;
+    background: var(--panel);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  th {
+    background: var(--panel-2);
+    color: var(--text-dim);
+    text-align: left;
+    padding: 0.6rem 0.7rem;
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+  td {
+    padding: 0.6rem 0.7rem;
+    border-top: 1px solid var(--border);
+    vertical-align: top;
+  }
+  td.time, td.num { font-family: var(--mono); white-space: nowrap; }
+  .tag { font-weight: 700; font-family: var(--mono); font-size: 0.8rem; white-space: nowrap; }
+  .tag.up { color: var(--up); }
+  .tag.down { color: var(--down); }
+  .tag.neutral { color: var(--neutral); }
+  .num.up { color: var(--up); }
+  .num.down { color: var(--down); }
+  .index-table td.num, .index-table th:not(:first-child) { text-align: right; }
+  .index-table th:not(:first-child) { padding-right: 0.9rem; }
+  .index-table td.num { padding-right: 0.9rem; }
+  td.pct { font-family: var(--mono); text-align: right; white-space: nowrap; padding-right: 0.9rem; }
+  td.pct.up { color: var(--up); }
+  td.pct.down { color: var(--down); }
+  .law-list { list-style: none; padding: 0; }
+  .law-list li {
+    padding: 0.45rem 0 0.45rem 1.2rem;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .law-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+  .overview {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 6px;
+    padding: 1.1rem 1.3rem;
+    margin-top: 0.5rem;
+  }
+  .overview .mood { font-family: var(--mono); font-size: 0.95rem; margin-bottom: 0.6rem; }
+  footer.brief-foot {
+    margin-top: 3rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 0.78rem;
+    line-height: 1.8;
+  }
+  .src { color: var(--text-dim); font-size: 0.8rem; }
+  a.src-link { color: var(--text-dim); text-decoration: underline dotted; }
+  a.src-link:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+  <a href="../index.html" class="back-link">← 返回歷史總覽</a>
+  <header class="brief-head">
+    <div class="kicker">Daily Market Brief</div>
+    <h1>每日市場簡報</h1>
+    <div class="date">2026/11/12（UTC+8）｜產出時間 2026/11/12 06:30</div>
+  </header>
+
+  <!-- ============ 一、台股焦點 ============ -->
+  <h2>一、台股焦點<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th><th>影響</th><th>受影響族群/標的</th></tr></thead>
+    <tbody>
+      <tr><td class="time">13:30</td><td>台股11/11狂飆1,545.23點(+3.62%)收44,257.15點，史上第6大單日漲點，三日累漲逾4,555點</td><td class="src"><a class="src-link" href="https://cna.com.tw/news/afe/202611110143.aspx">中央社</a></td><td>加權指數11/11大漲1,545.23點(+3.62%)強勢收復4.4萬點大關，收在44,257.15點；為史上第6大單日收盤漲點；自11/6低點39,701.64點算起3個交易日累計反彈逾4,555點約11.5%；成交量約8,491.65億元較11/10 1兆45億元縮量（市場預期：技術性超跌反彈動能強勁但量能縮減暗示動能可能收斂）</td><td class="tag up">利多</td><td>加權指數/權值股</td></tr>
+      <tr><td class="time">13:30</td><td>台積電(2330)飆漲110元(+4.81%)收2,395元創新高，單日貢獻加權指數逾420點</td><td class="src"><a class="src-link" href="https://udn.com/news/story/7251/9871732">經濟日報</a></td><td>台積電11/11大漲110元(+4.81%)收2,395元創歷史新高；成為盤面權值股護盤主力；10月營收5,868.9億元創新高+ADR前日漲2.02%+董事會核准投資OpenAI/Anthropic各5億美元(合計10億美元)為催化（市場預期：挑戰2,400元整數關卡動能強勁，但短線需觀察量能配合）</td><td class="tag up">利多</td><td>台積電/晶圓代工供應鏈</td></tr>
+      <tr><td class="time">13:30</td><td>三大法人11/11終止連9賣轉買超202.56億元，投信連22買再加碼147.66億</td><td class="src"><a class="src-link" href="https://www.storm.mg/article/11180589">風傳媒</a></td><td>台股11/11三大法人合計買超202.56億元，終止連續9個交易日賣超；外資小幅賣超7.66億元為連10賣但賣壓大幅收斂(前日341億)；投信買超147.66億元連22買；自營商買超62.57億元(自行28.01億+避險34.56億)；外資賣壓明顯收斂為反彈動能強化訊號（市場預期：外資賣壓收斂為反彈確認重要訊號）</td><td class="tag up">利多</td><td>權值股/電子股</td></tr>
+      <tr><td class="time">13:30</td><td>聯發科(2454)盤中強勢，收3,990元漲160元(+4.18%)挑戰4,000元關卡</td><td class="src"><a class="src-link" href="https://cna.com.tw/news/afe/202611110143.aspx">中央社</a></td><td>聯發科11/11終場上漲160元(+4.18%)收3,990元，對加權指數貢獻約75點；ASIC Q4營收上修25億美元、天璣9500晶片放量基本面持續催化；券商預期挑戰4,000元關卡；為大盤反彈動能第二主力（市場預期：短線挑戰4,000元關卡與美股半導體動能延續性有關）</td><td class="tag up">利多</td><td>聯發科/ASIC族群</td></tr>
+      <tr><td class="time">13:30</td><td>PCB族群全面反攻11/11漲停潮重現，精測、旺矽攻漲停，金像電目標價調升至1,660元</td><td class="src"><a class="src-link" href="https://newtalk.tw/news/view/2026-11-11/1070499">Newtalk新聞</a></td><td>PCB族群11/11全面反攻11檔相關類股亮燈，精測、旺矽攻漲停；高階PCB/HDI 7檔全漲、2檔漲停，平均漲幅7.16%；金像電盤中攻上1,080元連3日漲停，高盛調升目標價至1,660元；AI伺服器+HDI/CCL題材雙重催化（市場預期：PCB族群為AI伺服器供應鏈主要受惠板塊）</td><td class="tag up">利多</td><td>PCB族群/AI伺服器</td></tr>
+      <tr><td class="time">13:30</td><td>被動元件族群11/11強勢，禾伸堂、信昌電、光頡攻漲停，國巨收424.5元</td><td class="src"><a class="src-link" href="https://www.ftnn.com.tw/news/594113">FTNN新聞網</a></td><td>被動元件族群11/11延續強勁反攻，禾伸堂(3026)盤中漲停561元、信昌電(6173)、光頡(3624)齊攻漲停；國巨(2327)收424.5元漲1.92%、華新科(2492)大漲逾5%；MLCC/電阻漲價題材+限空令+籌碼釋放後反彈動能續延（市場預期：短線反彈動能明確，但國巨目標價分歧832-1050元反映結構性疑慮）</td><td class="tag up">利多</td><td>被動元件族群</td></tr>
+      <tr><td class="time">13:30</td><td>鴻海(2317)小漲收242元，10月營收創史上單月新高1.3兆元年增45.73%</td><td class="src"><a class="src-link" href="https://ec.ltn.com.tw/article/breakingnews/5630561">自由財經</a></td><td>鴻海11/11小漲0.5元收242元；10月營收1.305兆元創史上單月新高、年增45.73%、月增+40%；1-10月累計營收8.97兆元年增40.4%；董座劉揚偉：AI伺服器市占40%明年升至45%+產能已訂滿至少1.5年；AI機櫃目標2.8萬櫃（市場預期：法人目標價327元，受大盤強勢拉抬但漲幅相對落後）</td><td class="tag up">利多</td><td>鴻海/AI伺服器</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 二、三大法人動向 ============ -->
+  <h2>二、三大法人動向<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>法人</th><th>買賣超(億元)</th><th>方向</th><th>備註</th></tr></thead>
+    <tbody>
+      <tr><td>外資</td><td class="num down">-7.66</td><td class="tag down">賣超</td><td>最近一交易日(11/11)資料；連10賣但賣壓自前日341.17億大幅收斂，賣壓幾近轉買；累計賣超逾8,305億；外資賣壓收斂為反彈動能最重要訊號</td></tr>
+      <tr><td>投信</td><td class="num up">+147.66</td><td class="tag up">買超</td><td>最近一交易日(11/11)資料；連22買累計逾4,250億；鎖定電子中大型股與ETF成分股；單日買超動能較前日368.29億收斂但延續強勁</td></tr>
+      <tr><td>自營商</td><td class="num up">+62.57</td><td class="tag up">買超</td><td>最近一交易日(11/11)資料；自行買賣+28.01億、避險+34.56億；大盤強彈避險需求轉為買盤；自前日175.36億賣超轉為買超</td></tr>
+    </tbody>
+  </table>
+  <ul class="law-list">
+    <li>11/11三大法人合計買超202.56億元終止連9賣轉為買超，外資賣壓自前日341億收斂至7.66億(連10賣但幾近轉買)+投信連22買147.66億+自營商62.57億買超；籌碼結構轉為正面為反彈動能確認重要訊號。</li>
+    <li>外資賣壓從11/7 900億→11/10 341億→11/11 7.66億呈遞減趨勢，顯示外資賣壓週期可能進入尾聲；三大法人買超202.56億為近週最大規模，反映市場氛圍明顯轉為樂觀。</li>
+    <li>投信連22日累計買超逾4,250億為盤面長期護盤主力，11/11買超147.66億較前日368.29億歷史第3大收斂，但仍為中大型買超水準；展現投信對台股中長期信心。</li>
+    <li>外資台指期淨空單雖未公布最新數字但前日已達103,473口歷史新高，外資期貨空方部位結構未解為最大結構性風險；今日需觀察期貨空單是否平倉。</li>
+    <li>融資餘額持續偏低(低於6,000億關卡)+國安基金+限空令三重護盤機制下散戶籌碼洗清+外資賣壓結構性收斂形成多方共振；惟量能縮減(8,492億 vs 前日1兆45億)暗示反彈動能可能需量能補位。</li>
+  </ul>
+
+  <!-- ============ 三、權值股觀察清單 ============ -->
+  <h2>三、權值股觀察清單<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>標的</th><th>漲跌</th><th>相關消息</th><th>影響</th></tr></thead>
+    <tbody>
+      <tr><td>台積電(2330)</td><td class="num up">收2,395 (+4.81%)</td><td>11/11大漲110元創歷史新高，單日貢獻加權指數逾420點；10月營收5,868.9億創新高+董事會核准投資OpenAI/Anthropic各5億美元+ADR 11/11續漲至$413.10~413.35約+4%；今日ADR動能有望延續支撐挑戰2,400元</td><td class="tag up">利多</td></tr>
+      <tr><td>聯發科(2454)</td><td class="num up">收3,990 (+4.18%)</td><td>11/11大漲160元挑戰4,000元關卡，對加權指數貢獻約75點；ASIC Q4營收上修25億美元+天璣9500晶片放量基本面催化；美股半導體11/11強勁反彈+SMH+6.3%為支撐</td><td class="tag up">利多</td></tr>
+      <tr><td>鴻海(2317)</td><td class="num up">收242 (+0.21%)</td><td>11/11小漲0.5元；10月營收1.305兆創新高年增45.73%+AI機櫃目標2.8萬櫃+AI伺服器市占40%明年升至45%；漲幅相對大盤落後但基本面仍強勁；法人目標價327元</td><td class="tag up">利多</td></tr>
+      <tr><td>廣達(2382)</td><td class="num up">強勢反彈</td><td>Nvidia 11/11反彈2-5%收$173.73+CoreWeave Q3營收年增168%財測上修至133億美元，重燃AI伺服器拉貨預期；NVIDIA GB200/GB300主力代工夥伴；美股半導體SMH+6.3%為台股電子AI股正向支撐</td><td class="tag up">利多</td></tr>
+      <tr><td>國巨*(2327)</td><td class="num up">收424.5 (+1.92%)</td><td>11/11續漲，被動元件龍頭；MLCC漲價題材+限空令延續催化；券商目標價分歧832-1,050元；成交量觀察重要</td><td class="tag up">利多</td></tr>
+      <tr><td>華新科(2492)</td><td class="num up">大漲+5%以上</td><td>11/11大漲逾5%，Q3營收創近8年單月新高44.44億年增42%；董座表示漲價勢在必行；為被動元件領頭羊之一；籌碼完全釋放後反攻動能延續</td><td class="tag up">利多</td></tr>
+      <tr><td>禾伸堂(3026)</td><td class="num up">盤中漲停561</td><td>11/11盤中攻漲停561元，成交2,990張；法說會表示期望Q4被動元件營收占比提升至38%；籌碼完全釋放後反攻動能強勁</td><td class="tag up">利多</td></tr>
+      <tr><td>信昌電(6173)</td><td class="num up">攻漲停</td><td>11/11攻漲停，前三季獲利年增228%為族群中基本面最強勁個股之一；族群龍頭共振+限空令續催化</td><td class="tag up">利多</td></tr>
+      <tr><td>光頡(3624)</td><td class="num up">攻漲停</td><td>11/11攻漲停，電阻族群與MLCC/電阻共振反攻；限空令後空單回補動能延續；族群連動反彈動能明確</td><td class="tag up">利多</td></tr>
+      <tr><td>立隆電(2472)</td><td class="num up">續反彈</td><td>電容廠連3日反攻為族群最強股之一；籌碼完全釋放後技術性反彈動能延續；跟隨族群龍頭動能</td><td class="tag up">利多</td></tr>
+      <tr><td>凱美(5317)</td><td class="num up">續反彈</td><td>被動元件通路/製造廠反攻動能明確；族群整體反彈氛圍下有基礎支撐；量能為關鍵</td><td class="tag up">利多</td></tr>
+      <tr><td>鈺邦(6449)</td><td class="num up">續反彈</td><td>固態電容廠由前期連7跌後反彈；族群殺尾段指標股籌碼釋放完全；延續動能觀察中</td><td class="tag neutral">中性</td></tr>
+      <tr><td>蜜望實(8043)</td><td class="num up">續反彈</td><td>被動元件通路商連動反彈；通路業績能見度優於製造端，反彈動能相對穩定</td><td class="tag up">利多</td></tr>
+      <tr><td>金山電(8042)</td><td class="num up">大漲+5%以上</td><td>11/11大漲逾5%，被動元件中小型股同步反攻；族群氛圍佳帶動延續反彈</td><td class="tag up">利多</td></tr>
+      <tr><td>鈞寶(6655)</td><td class="num up">大漲+5%以上</td><td>11/11大漲逾5%，被動元件中小型股反攻動能延續；族群整體上漲共振</td><td class="tag up">利多</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 四、美股焦點 ============ -->
+  <h2>四、美股焦點（可複委託操作）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th><th>影響</th><th>對台股連動</th></tr></thead>
+    <tbody>
+      <tr><td class="time">05:00</td><td>美股11/11三大指數全面反彈，Nasdaq大漲1.60%重返AI交易，S&P 500收7,619.38點</td><td class="src"><a class="src-link" href="https://finance.yahoo.com/markets/live/stock-market-today-wednesday-november-11-dow-sp-500-nasdaq-nvidia-treasurys-veterans-day-140638547.html">Yahoo Finance</a></td><td>美股11/11三大指數全面反彈，S&P 500收7,619.38點(+1.31%/+98.45)、Nasdaq收25,466.19點(+1.60%/+400.32)、Dow收52,486.49點(+0.48%/+254.60)；CoreWeave亮眼財報重燃AI交易熱度；Nasdaq成功抹除後選舉跌幅（市場預期：技術性反彈後回測前高機率升，CoreWeave Q3成為市場風向球）</td><td class="tag up">利多</td><td>台股電子權值股/AI伺服器</td></tr>
+      <tr><td class="time">21:00</td><td>CoreWeave Q3營收年增168%財測上修至133億美元，單日漲20%重燃AI基建熱度</td><td class="src"><a class="src-link" href="https://www.fool.com/coverage/stock-market-today/2026/11/11/stock-market-today-nov-11-nvidia-rebounds-as-coreweave-earnings-reignite-the-ai-trade/">Motley Fool</a></td><td>CoreWeave公布Q3營收36.61億美元年增168%+全年財測上修至130-133億美元+Q3毛利率超預期+融資計畫減輕；盤中股價飆20%；分析師表示該財報直接解決了AI交易賣壓最大疑慮；整體科技股11/11市值增加逾5,000億美元（市場預期：AI基建泡沫疑慮暫時解除，Nvidia Q3 11/17財報將為關鍵）</td><td class="tag up">利多</td><td>台股AI伺服器供應鏈/台積電/廣達/鴻海</td></tr>
+      <tr><td class="time">05:00</td><td>Nvidia反彈2-5%收$173.73，Micron(MU)飆漲13.2%，半導體SMH+6.3%</td><td class="src"><a class="src-link" href="https://finance.biggo.com/news/5f809b64-01e7-4105-8f47-266c3146c6fb">BigGo Finance</a></td><td>Nvidia 11/11反彈2-5%收$173.73，受CoreWeave財報帶動擺脫前2日跌勢；Micron(MU)飆漲13.2%、SMH(VanEck半導體ETF)飆漲6.3%、SOXX費半指數場中觸及10,631上揚逾4%；AMD等AI相關個股普漲（市場預期：AI交易動能再度轉強為台股電子權值股正向催化）</td><td class="tag up">利多</td><td>台股半導體/AI伺服器族群</td></tr>
+      <tr><td class="time">05:00</td><td>台積電ADR(TSM)11/11續漲約+4%至$413.10~413.35，雙日漲幅達6.2%</td><td class="src"><a class="src-link" href="https://news.cnyes.com/news/id/6659769">鉅亨網</a></td><td>台積電ADR 11/11續漲約+4%至$413.10~413.35創新高，兩日累計漲幅達6.2%；10月營收創新高+2奈米放量+董事會核准投資OpenAI/Anthropic各5億美元(合計10億美元)+明年2027資本支出核准409.3億美元為多重基本面催化；溢價現貨約15-16%（市場預期：ADR連動為今日台積電挑戰2,400元強勁支撐）</td><td class="tag up">利多</td><td>台積電/晶圓代工供應鏈</td></tr>
+      <tr><td class="time">05:00</td><td>Apple 11/11創歷史新高，科技股權值股普漲帶動大盤</td><td class="src"><a class="src-link" href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-11-2026">TheStreet</a></td><td>Apple 11/11收盤創歷史新高，科技股權值股普漲帶動大盤；Information Technology板塊漲幅+2.2%為當日最強板塊；AI硬體供應鏈情緒明顯轉樂觀；CPI衝擊效應已部分消化（市場預期：11/12美國PPI為下一數據變數，若維持溫和將強化反彈動能）</td><td class="tag up">利多</td><td>Apple供應鏈/鴻海/廣達</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 四之二、美股指數與板塊動向 ============ -->
+  <h2>美股指數與板塊動向<span class="core-tag">CORE</span></h2>
+  <table class="index-table">
+    <thead><tr><th>指數</th><th>收盤</th><th>漲跌</th><th>漲跌幅</th></tr></thead>
+    <tbody>
+      <tr><td>道瓊工業指數</td><td class="num">52,486.49</td><td class="num up">+254.60</td><td class="pct up">+0.48%</td></tr>
+      <tr><td>S&P 500</td><td class="num">7,619.38</td><td class="num up">+98.45</td><td class="pct up">+1.31%</td></tr>
+      <tr><td>那斯達克綜合指數</td><td class="num">25,466.19</td><td class="num up">+400.32</td><td class="pct up">+1.60%</td></tr>
+      <tr><td>費城半導體指數(SOX)</td><td class="num">約10,440</td><td class="num up">+約440</td><td class="pct up">+約4.4%</td></tr>
+    </tbody>
+  </table>
+  <table>
+    <thead><tr><th>板塊（GICS）</th><th>漲跌幅</th><th>表現</th><th>當日驅動/備註</th></tr></thead>
+    <tbody>
+      <tr><td>資訊科技</td><td class="pct up">+2.20%</td><td class="tag up">領漲</td><td>XLK單日大漲為11大類股最大漲幅；Nvidia+2-5%、Apple創新高、Micron+13.2%、SMH+6.3%；CoreWeave Q3超預期為AI交易再度點火</td></tr>
+      <tr><td>通訊服務</td><td class="pct up">+1.20%</td><td class="tag up">領漲</td><td>Alphabet、Meta等AI廣告股隨科技股反彈；AI基建需求再確認強化成長股情緒</td></tr>
+      <tr><td>非必需消費</td><td class="pct up">+0.95%</td><td class="tag up">領漲</td><td>Tesla與Amazon同步反彈；AI交易回溫+消費情緒改善雙重支撐；高貝塔消費股領漲</td></tr>
+      <tr><td>必需消費</td><td class="pct up">+0.25%</td><td class="tag up">漲幅溫和</td><td>防禦性板塊相對溫和跟漲，WMT/PG等權值股小幅上漲；反映市場風險偏好回升</td></tr>
+      <tr><td>能源</td><td class="pct up">+0.90%</td><td class="tag up">領漲</td><td>XLE溫和反彈，油價自低點回升；2026 YTD仍為標普最強板塊約+38%；原油價格企穩支撐</td></tr>
+      <tr><td>金融</td><td class="pct neutral">-0.04%</td><td class="tag neutral">持平</td><td>XLF近乎持平，前日利率敏感支撐效應減弱，大型銀行小幅回吐；10年期殖利率回落</td></tr>
+      <tr><td>醫療保健</td><td class="pct down">-0.84%</td><td class="tag down">領跌</td><td>XLV為11大類股中唯一收黑板塊；市場風險偏好回升下防禦股資金外流；製藥類股個別壓力明顯</td></tr>
+      <tr><td>工業</td><td class="pct up">+0.55%</td><td class="tag up">領漲</td><td>工業股11/11小幅反彈，國防與航太類股隨大盤回升；運輸類股因油價企穩相對穩健</td></tr>
+      <tr><td>原物料</td><td class="pct up">+0.40%</td><td class="tag up">漲幅溫和</td><td>XLB溫和反彈，化工與鋼鐵股小幅上漲；美元回落緩解商品類股估值壓力</td></tr>
+      <tr><td>不動產</td><td class="pct up">+0.30%</td><td class="tag up">漲幅溫和</td><td>XLRE溫和反彈，10年期殖利率回落有利REITs估值；利率敏感型板塊獲喘息</td></tr>
+      <tr><td>公用事業</td><td class="pct up">+0.20%</td><td class="tag up">漲幅溫和</td><td>XLU溫和反彈，利率壓力減輕；CPI衝擊消化後利率敏感板塊獲支撐</td></tr>
+    </tbody>
+  </table>
+  <ul class="law-list">
+    <li>11/11十一大類股中10檔收紅(醫療保健-0.84%為唯一收黑)，資訊科技(+2.20%)領漲+通訊服務(+1.20%)+非必需消費(+0.95%)/能源(+0.90%)等成長+週期類股普漲，顯示市場風險偏好明顯回升+板塊輪動由防禦轉為進攻；CPI衝擊效應已部分消化+CoreWeave Q3超預期點火AI交易為主因。</li>
+    <li>資訊科技(XLK)+2.20%、Nvidia+2-5%、Micron+13.2%、SMH+6.3%、台積電ADR+4%對台股電子權值股(台積電/聯發科/鴻海/廣達)與AI伺服器族群為今日盤初最強勁支撐；費半SOXX場中觸及10,631上揚逾4%確認半導體反彈動能；CoreWeave Q3營收年增168%+財測上修至133億美元直接解決AI基建泡沫疑慮，為台股AI供應鏈實質利多。</li>
+    <li>CPI超預期衝擊已部分消化，10年期殖利率回落+美元走弱為新興市場資金流入正向催化；11/12美國PPI為下一關鍵數據變數，若維持溫和將強化反彈動能；12/9 FOMC仍為結構性變數，Fed 12月升息機率仍逾90%但單月兩碼升息預期已有鬆動跡象。</li>
+  </ul>
+
+  <!-- ============ 五、日本（參考） ============ -->
+  <h2>五、日本（參考）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th></tr></thead>
+    <tbody>
+      <tr><td class="time">14:00</td><td>日經11/11連3日上漲收61,248.59點，漲789.01點(+1.31%)重返61K關卡</td><td class="src"><a class="src-link" href="https://www.ad-hoc-news.de/boerse/news/marktberichte/nikkei-225-closes-1-31-percent-higher-at-61-248-59/70491764">ad hoc news</a></td><td>日經平均11/11連3日上漲收61,248.59點，上漲789.01點(+1.31%)重返61,000點關卡；盤中最高達61,366.25點；受CoreWeave財報帶動的AI交易回溫催化；Advantest貢獻約378點、東京電子約135點、Ibiden近68點領漲；AI半導體供應鏈共振訊號明確（市場預期：日經連3日強勁反彈但結構性壓力仍需觀察）</td></tr>
+      <tr><td class="time">14:00</td><td>日本AI相關股11/11大漲，Advantest、東京電子領軍帶動日經指數</td><td class="src"><a class="src-link" href="https://www.ibtimes.com.au/nikkei-rises-ai-semiconductor-shares-rebound-1878386">IBTimes Australia</a></td><td>日經11/11由AI半導體相關股大幅反彈領軍，Advantest貢獻378點最多+東京電子+Ibiden為主力推手；SoftBank、Kioxia、SK海力士延續強勢；美國CoreWeave Q3超預期強化AI投資信心+台日半導體供應鏈情緒連動明確（市場預期：11/12日股可望延續強勢追隨美股+台股連袂上揚）</td></tr>
+      <tr><td class="time">全日</td><td>日圓兌美元11/11仍於157-158區間盤整，日銀12月升息預期觀望</td><td class="src"><a class="src-link" href="https://jp.investing.com/news/forex-news/article-1749228">Investing.com日本版</a></td><td>紐約外匯市場美元/日圓11/11維持157-158區間盤整，日銀12月18-19日升息預期仍活絡但隨美債殖利率回落略趨放緩；美國CPI效應部分消化+美元回軟有利新興市場資金回流（市場預期：美元/日圓有機會回落至156關卡但日銀升息預期仍為支撐）</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 六、香港（參考） ============ -->
+  <h2>六、香港（參考）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th></tr></thead>
+    <tbody>
+      <tr><td class="time">16:00</td><td>恒指11/11收24,315.92點下跌241點(-0.98%)，與台日股脫鉤走弱</td><td class="src"><a class="src-link" href="https://www.ad-hoc-news.de/boerse/news/marktberichte/hang-seng-closes-at-24-315-92-down-0-98-percent/70494407">ad hoc news</a></td><td>恒指11/11收24,315.92點下跌241點(-0.98%)，與台日股強勁反彈脫鉤走弱；科技與電動車股承壓為主因；恒生科技指數跌1.41%收4,027.06點；美國CPI效應+Fed升息預期對港股影響較台日更顯著（市場預期：中港股結構性壓力仍為主線，南向資金動向為反彈動能關鍵）</td></tr>
+      <tr><td class="time">16:00</td><td>香港科技與電動車股11/11承壓，SMIC逆勢漲3.7%為亮點</td><td class="src"><a class="src-link" href="https://www.thestandard.com.hk/finance/article/348184/Hang-Seng-closes-down-241-points-as-tech-and-EV-shares-weigh-SMIC-jumps-37">The Standard</a></td><td>恒指11/11跌241點，科技與EV股為最大拖累；惟SMIC(中芯國際)逆勢漲3.7%為板塊相對亮點；美團、京東等權值股承壓；電動車股普遍收黑；南向資金小幅淨賣出；大陸10月CPI溫和但未能支撐情緒（市場預期：港股11/12跟隨美股反彈與否仍需觀察，結構性壓力未減）</td></tr>
+      <tr><td class="time">16:00</td><td>港股半導體相關個股分化，PCB股隨台股連動反彈</td><td class="src"><a class="src-link" href="https://businessupturn.com/asia/east-asia/china/hang-seng-falls-on-wednesday-as-index-closes-near-session-low/">Business Upturn</a></td><td>香港上市半導體相關股11/11分化走勢，SMIC領漲但PCB、光通信等與台股連動個股亦有正向表現；惟整體港股受中國經濟結構性壓力與Fed升息預期雙重壓抑；連動效應較台日為弱（市場預期：港股結構性壓力仍為主線，短線跟漲動能有限）</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 七、跨市場連動分析 ============ -->
+  <h2>七、跨市場連動分析</h2>
+  <ul class="law-list">
+    <li><strong>美股→台股：</strong>美股11/11三大指數全面反彈(S&P+1.31%/Nasdaq+1.60%/Dow+0.48%)+半導體SMH+6.3%+Nvidia+2-5%+Micron+13.2%+台積電ADR+4%+Apple創新高；CoreWeave Q3超預期直接解決AI基建泡沫疑慮；今日台股電子權值股與AI伺服器族群有機會延續強勁反彈動能；台指期夜盤受美股正向支撐可望挑戰44,500關卡。</li>
+    <li><strong>CoreWeave Q3為最重要催化：</strong>CoreWeave Q3營收36.61億美元年增168%+全年財測上修至130-133億美元+Q3毛利率超預期+融資計畫減輕；單日科技股市值增加逾5,000億美元；分析師表示直接解決AI交易賣壓最大疑慮；Nvidia Q3 11/17財報將為下一關鍵催化；台股AI供應鏈(台積電/廣達/鴻海)最大受惠。</li>
+    <li><strong>匯率：</strong>美國CPI效應部分消化+10年期殖利率回落+美元走弱有利新興市場資金流入；新台幣續貶壓力有望緩解；日圓/美元157-158區間盤整上方壓力減輕；外資回補意願受匯率結構性壓力緩解強化為反彈動能正向支撐。</li>
+    <li><strong>台積電為台股雙重支撐：</strong>台積電11/11大漲110元創新高貢獻指數逾420點+ADR 11/11續漲至$413.10~413.35創新高；10月營收創新高+投資OpenAI/Anthropic+2027資本支出409.3億美元核准為多重基本面催化；溢價現貨約15-16%暗示今日仍有挑戰2,400元整數關卡動能，為台股最硬核支撐。</li>
+    <li><strong>關鍵數據日曆：</strong>11/12美國PPI+多家科技股Q3財報(重點CRWV已公布)、11/13零售銷售、11/14密西根消費者信心、11/17 Nvidia Q3財報、12/9 FOMC利率決議；若今日PPI維持溫和將強化反彈動能+確認Fed不會升息兩碼；反彈後第4交易日(今日)的持續性為中期關鍵；需觀察外資轉買與投信買盤是否持續。</li>
+  </ul>
+
+  <!-- ============ 八、今日總覽 ============ -->
+  <h2>八、今日總覽</h2>
+  <div class="overview">
+    <div class="mood">整體氛圍：利多</div>
+    <ul class="law-list">
+      <li><strong>台股關注重點(1)：</strong>台股11/11狂飆1,545.23點(+3.62%)收44,257.15點為史上第6大單日漲點，三日累漲逾4,555點約11.5%成功收復4.4萬點關卡；三大法人終止連9賣轉買超202.56億(外資賣壓收斂至7.66億+投信連22買147.66億+自營商62.57億)為結構性反彈確認訊號；今日為反彈第4日能否延續動能與量能(前日8,492億 vs 11/10 1兆)為關鍵觀察指標，重點挑戰44,500-45,000關卡。</li>
+      <li><strong>台股關注重點(2)：</strong>台積電(2330)11/11大漲110元(+4.81%)創歷史新高收2,395元貢獻指數逾420點+ADR 11/11續漲至$413.10~413.35創新高+董事會核准投資OpenAI/Anthropic各5億美元(合計10億)+2027資本支出409.3億美元核准；為台股今日雙重支撐可望挑戰2,400元關卡；聯發科(2454)挑戰4,000元+PCB族群金像電目標價調升至1,660元+被動元件(禾伸堂/信昌電/光頡等)強勢反攻多線齊漲。</li>
+      <li><strong>台股關注重點(3)：</strong>CoreWeave Q3營收年增168%+財測上修133億美元直接解決AI基建泡沫疑慮，台股AI供應鏈(台積電/廣達/鴻海)最大受惠；鴻海10月營收1.305兆創新高年增45.73%+AI機櫃目標2.8萬櫃為基本面強勁支撐；外資賣壓週期可能進入尾聲為中期反彈動能最重要訊號，惟外資台指期淨空單仍為結構性風險。</li>
+      <li><strong>美股關注重點：</strong>美股11/11三大指數全面反彈(S&P+1.31%/Nasdaq+1.60%/Dow+0.48%)創技術性反彈紀錄；半導體SMH+6.3%、Nvidia+2-5%、Micron+13.2%、Apple創新高為多線齊漲；CoreWeave Q3超預期為AI交易再度點火+科技股市值單日增加逾5,000億美元；11/12美國PPI為下一數據變數+11/17 Nvidia Q3財報為關鍵催化。</li>
+      <li><strong>風險提示(1)：</strong>台股3日累漲逾4,555點約11.5%+為史上第6大單日漲點，技術面短線超漲風險升+獲利了結賣壓逐步浮現；量能較11/10收斂約15%(8,492億 vs 1兆45億)暗示反彈動能可能需量能補位；外資台指期淨空單前日已達103,473口歷史新高仍為結構性壓力未解。</li>
+      <li><strong>風險提示(2)：</strong>Fed 12/9升息機率仍逾90%為中長期結構性壓力+11/12 PPI若超預期將重燃升息兩碼預期衝擊科技股估值+11/17 Nvidia Q3財報若不如預期將直接衝擊AI供應鏈；中港股11/11走弱(恒指-0.98%)顯示亞洲區域風險未全面轉正；高位震盪加劇機率升高需觀察外資期貨空單是否持續平倉。</li>
+    </ul>
+  </div>
+
+  <footer class="brief-foot">
+    本簡報為資訊整理，非投資建議。「事實」與「市場預期／分析觀點」已於摘要中區分標示。<br>
+    自動產出於 2026/11/12 06:30（UTC+8）。
+  </footer>
+</body>
+</html>
