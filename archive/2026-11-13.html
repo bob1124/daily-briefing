@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日市場簡報｜2026/11/13</title>
+<style>
+  :root {
+    --bg: #0e1116;
+    --panel: #161b22;
+    --panel-2: #1c2230;
+    --border: #2a313c;
+    --text: #d8dee9;
+    --text-dim: #8b95a5;
+    --accent: #e8b339;
+    --up: #ff5b5b;      /* 台股慣例：紅漲 */
+    --down: #3dd68c;    /* 綠跌 */
+    --neutral: #8b95a5;
+    --mono: "SFMono-Regular", "Roboto Mono", "Noto Sans Mono", ui-monospace, monospace;
+    --serif: "Noto Serif TC", "Songti TC", serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans TC", -apple-system, "PingFang TC", "Microsoft JhengHei", sans-serif;
+    line-height: 1.65;
+    padding: 2rem 1.2rem 4rem;
+    max-width: 920px;
+    margin: 0 auto;
+    font-size: 15px;
+  }
+  header.brief-head {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 1rem;
+    margin-bottom: 1.8rem;
+  }
+  header.brief-head .kicker {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    text-transform: uppercase;
+  }
+  header.brief-head h1 {
+    font-family: var(--serif);
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin: 0.2rem 0;
+    letter-spacing: 0.02em;
+  }
+  header.brief-head .date {
+    font-family: var(--mono);
+    color: var(--text-dim);
+    font-size: 0.95rem;
+  }
+  .back-link {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: var(--text-dim);
+    text-decoration: none;
+    font-family: var(--mono);
+    font-size: 0.82rem;
+  }
+  .back-link:hover { color: var(--accent); }
+  h2 {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    margin: 2.2rem 0 0.9rem;
+    padding-left: 0.7rem;
+    border-left: 4px solid var(--accent);
+    letter-spacing: 0.02em;
+  }
+  h2 .core-tag {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.15em;
+    background: var(--accent);
+    color: #0e1116;
+    padding: 0.12rem 0.5rem;
+    border-radius: 3px;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+    font-weight: 700;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.5rem 0 1rem;
+    font-size: 0.86rem;
+    background: var(--panel);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  th {
+    background: var(--panel-2);
+    color: var(--text-dim);
+    text-align: left;
+    padding: 0.6rem 0.7rem;
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+  td {
+    padding: 0.6rem 0.7rem;
+    border-top: 1px solid var(--border);
+    vertical-align: top;
+  }
+  td.time, td.num { font-family: var(--mono); white-space: nowrap; }
+  .tag { font-weight: 700; font-family: var(--mono); font-size: 0.8rem; white-space: nowrap; }
+  .tag.up { color: var(--up); }
+  .tag.down { color: var(--down); }
+  .tag.neutral { color: var(--neutral); }
+  .num.up { color: var(--up); }
+  .num.down { color: var(--down); }
+  .index-table td.num, .index-table th:not(:first-child) { text-align: right; }
+  .index-table th:not(:first-child) { padding-right: 0.9rem; }
+  .index-table td.num { padding-right: 0.9rem; }
+  td.pct { font-family: var(--mono); text-align: right; white-space: nowrap; padding-right: 0.9rem; }
+  td.pct.up { color: var(--up); }
+  td.pct.down { color: var(--down); }
+  .law-list { list-style: none; padding: 0; }
+  .law-list li {
+    padding: 0.45rem 0 0.45rem 1.2rem;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .law-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+  .overview {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 6px;
+    padding: 1.1rem 1.3rem;
+    margin-top: 0.5rem;
+  }
+  .overview .mood { font-family: var(--mono); font-size: 0.95rem; margin-bottom: 0.6rem; }
+  footer.brief-foot {
+    margin-top: 3rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 0.78rem;
+    line-height: 1.8;
+  }
+  .src { color: var(--text-dim); font-size: 0.8rem; }
+  a.src-link { color: var(--text-dim); text-decoration: underline dotted; }
+  a.src-link:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+  <a href="../index.html" class="back-link">← 返回歷史總覽</a>
+  <header class="brief-head">
+    <div class="kicker">Daily Market Brief</div>
+    <h1>每日市場簡報</h1>
+    <div class="date">2026/11/13（UTC+8）｜產出時間 2026/11/13 07:00</div>
+  </header>
+
+  <!-- ============ 一、台股焦點 ============ -->
+  <h2>一、台股焦點<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th><th>影響</th><th>受影響族群/標的</th></tr></thead>
+    <tbody>
+      <tr><td class="time">13:30</td><td>台股昨(11/12)重挫1,165.28點收43,091.87點跌幅2.63%失守44,000大關</td><td class="src"><a class="src-link" href="https://www.nownews.com/news/6891709">NOWnews</a></td><td>加權指數開盤跌76.69點後盤中曾衝44,525.24點再下探42,943.50點終場收43,091.87點+成交金額達1兆132.93億元+終止連4紅+3日累漲4,555點後首日拉回</td><td class="tag down">利空</td><td>加權指數/權值股</td></tr>
+      <tr><td class="time">13:30</td><td>輝達CEO黃仁勳傳辭職衝擊AI供應鏈 權值股承壓</td><td class="src"><a class="src-link" href="https://udn.com/news/story/7251/9873340">UDN</a></td><td>輝達董事會傳討論CEO黃仁勳人事異動+盤後重挫逾7%+引發台股AI供應鏈獲利了結賣壓+台積電收低55元跌至2,340元（市場預期：Q3財報11/17前觀望情緒升溫）</td><td class="tag down">利空</td><td>AI供應鏈/台積電/電子權值股</td></tr>
+      <tr><td class="time">14:30</td><td>三大法人合計買超51.6億元 外資連11賣但賣壓大幅收斂</td><td class="src"><a class="src-link" href="https://www.cna.com.tw/news/ahel/202611120202.aspx">中央社</a></td><td>外資賣超6.84億元(連11賣)+投信買超123.85億元(連23買)+自營商賣超65.41億元+三大法人合計買超51.6億元+外資賣壓從11/7 900億大幅收斂至個位數</td><td class="tag neutral">中性</td><td>籌碼面</td></tr>
+      <tr><td class="time">全日</td><td>台積電董事會通過Q3現金股利每股9元 創單季新高</td><td class="src"><a class="src-link" href="https://money.udn.com/money/story/5612/9870177">經濟日報</a></td><td>台積電Q3股利9元較Q2的7元調升2元+2027/3/11除息+4/8發放+Q3每股盈餘29.43元+配發率升至30.58%（市場預期：中長線股東回饋利多）</td><td class="tag up">利多</td><td>台積電/半導體</td></tr>
+      <tr><td class="time">全日</td><td>台積電首度跨足AI閉環投資 認購OpenAI與Anthropic股票</td><td class="src"><a class="src-link" href="https://udn.com/news/story/7251/9870912">UDN</a></td><td>台積電董事會核准約409.27億美元資本預算+規劃投資OpenAI與Anthropic（市場預期：綁定AI下游客戶強化長期需求）</td><td class="tag up">利多</td><td>台積電/AI生態系</td></tr>
+      <tr><td class="time">全日</td><td>外資期貨淨空單減少4,698口 空方力道暫緩</td><td class="src"><a class="src-link" href="https://vocus.cc/article/6af5a121fd8978000165d5b3">VOCUS</a></td><td>台股12日大跌1,165點但外資台指期淨空單單日減少4,698口+淨空單較前日逾10萬口回落至約98,775口（市場預期：空方回補但結構性空單仍存）</td><td class="tag neutral">中性</td><td>台指期/籌碼</td></tr>
+      <tr><td class="time">全日</td><td>外資賣超群創逾3萬張 台玻逆勢買超14萬張居冠</td><td class="src"><a class="src-link" href="https://www.cna.com.tw/news/afe/202611120299.aspx">中央社</a></td><td>外資11/12買超以台玻(1802)逾14萬張居首+賣超群創(3481)逾3萬張+台積電遭外資賣超約92億元（市場預期：資金由面板轉向傳產/防禦類股）</td><td class="tag neutral">中性</td><td>台玻/群創/面板</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 二、三大法人動向 ============ -->
+  <h2>二、三大法人動向<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>法人</th><th>買賣超(億元)</th><th>方向</th><th>備註</th></tr></thead>
+    <tbody>
+      <tr><td>外資</td><td class="num down">-6.84</td><td class="tag down">賣超</td><td>連11賣+累計逾8,300億+單日賣壓自11/7約900億大幅收斂近乎平盤</td></tr>
+      <tr><td>投信</td><td class="num up">+123.85</td><td class="tag up">買超</td><td>連23買+累計逾4,370億+持續扮演多方支撐角色</td></tr>
+      <tr><td>自營商</td><td class="num down">-65.41</td><td class="tag down">賣超</td><td>自行賣超29.80億+避險賣超35.61億+短線獲利了結</td></tr>
+      <tr><td>合計</td><td class="num up">+51.60</td><td class="tag up">買超</td><td>指數大跌1,165點但三大法人逆勢買超+投信獨力撐盤</td></tr>
+    </tbody>
+  </table>
+  <ul class="law-list">
+    <li>外資台指期淨空單單日減少4,698口+總淨空單約98,775口較11/10歷史新高103,473口回落+但仍為結構性壓力未解</li>
+    <li>近月台指期總未平倉113,812口較前日減少8,514口+籌碼呈現部分減碼跡象</li>
+    <li>外資賣超個股以群創(3481)逾3萬張最多+台積電遭外資賣超約92億元權值股承壓</li>
+    <li>外資11/12買超個股以台玻(1802)逾14萬張居冠+資金由電子轉向傳產/防禦類股輪動</li>
+    <li>投信連23買+累計逾4,370億為2026歷史同期最高+彰顯國內法人堅定看多</li>
+  </ul>
+
+  <!-- ============ 三、權值股觀察清單 ============ -->
+  <h2>三、權值股觀察清單<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>標的</th><th>漲跌</th><th>相關消息</th><th>影響</th></tr></thead>
+    <tbody>
+      <tr><td>台積電(2330)</td><td class="num down">-55</td><td>收2,340元(-2.30%)+董事會通過Q3股利9元創新高+認購OpenAI與Anthropic股票+Q3 EPS 29.43元+遭外資賣超約92億元</td><td class="tag down">利空</td></tr>
+      <tr><td>聯發科(2454)</td><td class="num down">~-50</td><td>盤中最高4,120元(+3.26%)挑戰4千關卡失敗+終場因大盤拖累由紅翻黑收低+ASIC族群題材仍為中期支撐</td><td class="tag down">利空</td></tr>
+      <tr><td>鴻海(2317)</td><td class="num down">-2</td><td>收240元(-0.83%)+相對抗跌+科技日(10/30)後AI伺服器機架週產能翻倍達2,000架+10月營收1.305兆創史上新高</td><td class="tag neutral">中性</td></tr>
+      <tr><td>廣達(2382)</td><td class="num down">-19.5</td><td>收278.5元(約-6.54%)+跌幅居AI伺服器族群之冠+輝達CEO爭議衝擊AI供應鏈獲利了結</td><td class="tag down">利空</td></tr>
+      <tr><td>國巨*(2327)</td><td class="num down">~-15</td><td>被動元件龍頭11/11大漲後12日高檔回吐+外資賣壓重返+近期股價區間410-425元震盪</td><td class="tag down">利空</td></tr>
+      <tr><td>華新科(2492)</td><td class="num down">~-10</td><td>Q3每股盈餘近去年全年+前3季EPS 9.66元創5年新高+短線漲多回檔</td><td class="tag down">利空</td></tr>
+      <tr><td>禾伸堂(3026)</td><td class="num down">~-20</td><td>11/11盤中漲停561元後回測+現增稀釋疑慮揮之不去+波動加劇</td><td class="tag down">利空</td></tr>
+      <tr><td>信昌電(6173)</td><td class="num down">~-8</td><td>11/11攻漲停後12日回檔+短線波動劇烈</td><td class="tag down">利空</td></tr>
+      <tr><td>光頡(3624)</td><td class="num down">~-7</td><td>11/11攻漲停後回吐+被動元件族群同步承壓</td><td class="tag down">利空</td></tr>
+      <tr><td>凱美(5317)</td><td class="num down">~-5</td><td>11/11反彈後12日回檔+短線獲利了結</td><td class="tag down">利空</td></tr>
+      <tr><td>立隆電(2472)</td><td class="num down">~-5</td><td>11/11續反彈後12日跟隨大盤回檔</td><td class="tag down">利空</td></tr>
+      <tr><td>金山電(8042)</td><td class="num down">~-5</td><td>11/11大漲+5%後12日回檔整理</td><td class="tag down">利空</td></tr>
+      <tr><td>鈞寶(6655)</td><td class="num down">~-5</td><td>11/11大漲+5%後12日高檔整理</td><td class="tag down">利空</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 四、美股焦點 ============ -->
+  <h2>四、美股焦點（可複委託操作）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th><th>影響</th><th>對台股連動</th></tr></thead>
+    <tbody>
+      <tr><td class="time">05:00</td><td>美股11/12三大指數收黑 Nvidia CEO黃仁勳辭職衝擊</td><td class="src"><a class="src-link" href="https://www.fool.com/coverage/stock-market-today/2026/11/12/stock-market-today-nov-12-nvidia-ceo-s-stunning-exit-sends-wall-street-lower-as-rivals-surge/">The Motley Fool</a></td><td>S&P 500收7,592(-0.35%)+Nasdaq收25,366(-0.39%)+Dow收52,297(-0.36%)+Nvidia收$166.19(-4.34%)盤中最大跌幅近14%+CFO將接任臨時CEO+11/17財報</td><td class="tag down">利空</td><td>台積電/AI供應鏈短線承壓</td></tr>
+      <tr><td class="time">05:00</td><td>Nvidia對手股大漲 AMD +7% 博通 +5%</td><td class="src"><a class="src-link" href="https://www.fxempire.com/forecasts/article/sp-500-and-nasdaq-tech-stocks-rebound-as-nvidia-rivals-amd-and-broadcom-rally-1644244">FX Empire</a></td><td>市場預期Nvidia領導層動盪為競爭對手帶來短期機會+AMD漲約7%+博通漲逾5%+AI晶片格局重整題材發酵（市場預期：ASIC族群受惠）</td><td class="tag up">利多</td><td>聯發科/世芯-KY/創意等ASIC族群</td></tr>
+      <tr><td class="time">05:00</td><td>美國能源類股領漲 油價走高</td><td class="src"><a class="src-link" href="https://www.kitco.com/news/off-the-wire/2026-11-12/sp-500-nasdaq-fall-nvidia-ceos-exit-rattles-ai-stocks">Kitco</a></td><td>能源類股11/12漲約+1.5%為當日表現最佳+原油價格跳升+市場風險偏好由AI科技轉向景氣循環股</td><td class="tag neutral">中性</td><td>與台股電子族群連動低</td></tr>
+      <tr><td class="time">全日</td><td>Fed 12月升息機率仍高 鷹派態度不變</td><td class="src"><a class="src-link" href="https://technews.tw/2026/10/29/fed-leaves-rates-unchanged-as-it-awaits-accumulation-of-more-information/">TechNews</a></td><td>Fed 12/8-9會議前市場預期升息機率約80%-92%+美國10月CPI超預期後鷹派壓力升溫+10年期美債殖利率仍處高檔（市場預期：成長股估值壓抑）</td><td class="tag down">利空</td><td>台股電子成長股估值承壓</td></tr>
+      <tr><td class="time">全日</td><td>Nvidia Q3財報11/17登場 市場屏息以待</td><td class="src"><a class="src-link" href="https://www.cnbc.com/investingclub/2026/11/12/jensen-huang-ceo-replacement-jim-cramer.html">CNBC</a></td><td>CEO變動後Nvidia Q3財報將成市場最大變數+法人關注資料中心需求展望+財測更新對台積電/鴻海/廣達AI供應鏈具決定性影響</td><td class="tag neutral">中性</td><td>台積電/廣達/鴻海等AI硬體族群</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 四之二、美股指數與板塊動向 ============ -->
+  <h2>美股指數與板塊動向<span class="core-tag">CORE</span></h2>
+  <table class="index-table">
+    <thead><tr><th>指數</th><th>收盤</th><th>漲跌</th><th>漲跌幅</th></tr></thead>
+    <tbody>
+      <tr><td>道瓊工業指數</td><td class="num">52,297.09</td><td class="num down">-189.40</td><td class="pct down">-0.36%</td></tr>
+      <tr><td>S&P 500</td><td class="num">7,592.40</td><td class="num down">-26.98</td><td class="pct down">-0.35%</td></tr>
+      <tr><td>那斯達克綜合指數</td><td class="num">25,366.09</td><td class="num down">-100.10</td><td class="pct down">-0.39%</td></tr>
+      <tr><td>費城半導體指數(SOX)</td><td class="num">10,264.50</td><td class="num down">-299.61</td><td class="pct down">-2.83%</td></tr>
+    </tbody>
+  </table>
+  <table>
+    <thead><tr><th>板塊（GICS）</th><th>漲跌幅</th><th>表現</th><th>當日驅動/備註</th></tr></thead>
+    <tbody>
+      <tr><td>資訊科技</td><td class="pct down">-1.30%</td><td class="tag down">領跌</td><td>Nvidia-4.34%為主要拖累+AI晶片股分化+半導體族群承壓</td></tr>
+      <tr><td>通訊服務</td><td class="pct up">+0.15%</td><td class="tag up">抗跌</td><td>Meta/Alphabet相對穩定+AI應用變現題材支撐</td></tr>
+      <tr><td>非必需消費</td><td class="pct up">+0.25%</td><td class="tag up">抗跌</td><td>消費動能偏穩+Amazon等權值股個別支撐</td></tr>
+      <tr><td>必需消費</td><td class="pct up">+0.30%</td><td class="tag up">抗跌</td><td>防禦性資金輪動進駐+Walmart/P&G等穩定</td></tr>
+      <tr><td>能源</td><td class="pct up">+1.50%</td><td class="tag up">領漲</td><td>原油價格跳升+Exxon/Chevron等權值股領漲+當日表現最佳板塊</td></tr>
+      <tr><td>金融</td><td class="pct down">-0.05%</td><td class="tag neutral">持平</td><td>殖利率上揚利多銀行股但整體震盪+大型銀行相對穩定</td></tr>
+      <tr><td>醫療保健</td><td class="pct down">-0.20%</td><td class="tag down">走弱</td><td>連日收黑+製藥族群賣壓未散</td></tr>
+      <tr><td>工業</td><td class="pct down">-0.60%</td><td class="tag down">走弱</td><td>景氣循環股承壓+運輸類股拉回</td></tr>
+      <tr><td>原物料</td><td class="pct down">-1.50%</td><td class="tag down">領跌</td><td>基本金屬價格回檔+Dow/DuPont等走弱+當日表現最差板塊</td></tr>
+      <tr><td>不動產</td><td class="pct up">+0.10%</td><td class="tag up">抗跌</td><td>REITs資金避險性流入+利率敏感性股微升</td></tr>
+      <tr><td>公用事業</td><td class="pct up">+0.50%</td><td class="tag up">抗跌</td><td>防禦性資金流入+AI資料中心用電題材長線支撐</td></tr>
+    </tbody>
+  </table>
+  <ul class="law-list">
+    <li>當日輪動方向：由資訊科技/原物料轉向能源/公用事業/必需消費+防禦性板塊占優+市場風險偏好自AI科技股撤出</li>
+    <li>資訊科技/半導體板塊對台股電子權值股連動研判：Nvidia -4.34%+SOX估約-2.83%+直接衝擊今日台積電/聯發科/廣達等AI供應鏈+台積電ADR估回落至約$395-400區間（11/11收413.35）換算約2,550元仍溢價現貨+短線為台股電子股主要壓力源</li>
+    <li>AMD +7%/博通 +5%等Nvidia對手強勢：為台股ASIC族群（聯發科、世芯-KY、創意、M31）相對有利+可能帶來板塊內輪動契機</li>
+    <li>能源板塊領漲：與台股電子族群連動弱+但油價走高可能利多塑化/航運等傳產輪動+如台塑/中鋼/長榮等</li>
+  </ul>
+
+  <!-- ============ 五、日本（參考） ============ -->
+  <h2>五、日本（參考）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th></tr></thead>
+    <tbody>
+      <tr><td class="time">14:00</td><td>日經11/12收60,819.36點-429.23(-0.70%)4日來首度回檔</td><td class="src"><a class="src-link" href="https://nikkei.com/article/DGXZQOFL1209S0S6A111C2000000">日本經濟新聞</a></td><td>連三日累漲逾3,800點後首度拉回+盤中曾下跌超600點+AI市場前景擔憂引發科技股獲利了結+東證指數小漲0.2%至3,937.33點</td></tr>
+      <tr><td class="time">全日</td><td>日圓貶至159.94近160大關 日本財務官警告匯率變動太快</td><td class="src"><a class="src-link" href="https://udn.com/news/story/6811/9873861">UDN</a></td><td>日圓兌美元11/12一度重貶0.8%至159.94逼近160大關+日本財務官三村淳表示匯率變動「太快」+市場警覺當局可能再出手干預（市場預期：短線干預風險升高）</td></tr>
+      <tr><td class="time">全日</td><td>日本AI半導體股獲利了結 Advantest領跌</td><td class="src"><a class="src-link" href="https://nikkei.com/article/DGXZQOFL1209S0S6A111C2000000">日本經濟新聞</a></td><td>連三日漲幅主力Advantest/東京電子/SK海力士等日股AI硬體共振降溫+短線超漲後整理（市場預期：與台股電子股連動明顯）</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 六、香港（參考） ============ -->
+  <h2>六、香港（參考）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th></tr></thead>
+    <tbody>
+      <tr><td class="time">16:00</td><td>恒指11/12收24,008.55點-307.37(-1.26%)險守24,000大關</td><td class="src"><a class="src-link" href="https://www.fx168news.com/express/fastnews/1467573">FX168</a></td><td>盤中最低見23,942.74點一度失守24,000點關口+收市險守+恒生科技指數跌2.36%收3,931.93點+國企指數跌1.4%至8,056.76點</td></tr>
+      <tr><td class="time">16:00</td><td>阿里巴巴重挫6.76% 騰訊跌2.64% 科技網股普跌</td><td class="src"><a class="src-link" href="https://portal.sina.com.hk/finance/sina/2026/11/12/1984859/">新浪香港</a></td><td>阿里巴巴領跌藍籌-6.76%+騰訊控股-2.64%+市場情緒受美國升息預期壓制+互聯網巨頭財報臨近觀望情緒升溫</td></tr>
+      <tr><td class="time">全日</td><td>光通信板塊大調整 AI硬體拖累科指</td><td class="src"><a class="src-link" href="https://www.21jingji.com/article/20261112/herald/f90d4cde195070ffb654f60f3026a20e.html">21經濟網</a></td><td>恒生科技指數下跌2.36%+光通信板塊調整+美國AI交易壓力透過Nvidia事件傳導至亞股+醫藥股與農產品股逆市上漲</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 七、跨市場連動分析 ============ -->
+  <h2>七、跨市場連動分析</h2>
+  <ul class="law-list">
+    <li>美股→台股：美股11/12三大指數收黑(S&P-0.35%/Nasdaq-0.39%/Dow-0.36%)+Nvidia-4.34%及CEO爭議衝擊AI信心+台積電ADR估回落至$395-400區間+SOX估-2.83%至約10,264+對台股電子權值股/AI供應鏈構成明確短線壓力+台積電/聯發科/廣達今日開盤恐承壓</li>
+    <li>美股板塊輪動：由資訊科技/原物料轉向能源/公用事業/必需消費+防禦性資金占優+此輪動若傳導至台股可能帶動塑化(台塑)、航運、金融(富邦金/國泰金)等傳產族群相對抗跌+電子族群回檔壓力仍大</li>
+    <li>匯率：日圓逼近160大關+日本當局干預風險升溫+美元指數可能短線高檔+新台幣續貶壓力仍存+外資匯出動能未解+但外資現股賣壓從11/7 900億收斂至11/12僅6.84億呈明顯趨緩</li>
+    <li>籌碼結構：外資期貨淨空單減少4,698口至約98,775口+從11/10歷史新高103,473口回落+結構性空方壓力略為紓緩但仍處高檔+投信連23買累計逾4,370億為最堅定多頭支撐</li>
+    <li>亞股連動：日經-0.70%+恒指-1.26%+恒生科技-2.36%+亞股電子/科技股普遍承壓+台股今日電子權值股面臨區域性賣壓傳導</li>
+    <li>關鍵催化：11/17 Nvidia Q3財報+台積電11月營收(月中公布)+Fed 12/8-9 FOMC+升息機率約80%-92%+美國10月PPI及零售銷售本週陸續公布</li>
+  </ul>
+
+  <!-- ============ 八、今日總覽 ============ -->
+  <h2>八、今日總覽</h2>
+  <div class="overview">
+    <div class="mood">整體氛圍：利空</div>
+    <ul class="law-list">
+      <li>【台股關注1】台股昨(11/12)重挫1,165點跌幅2.63%失守44K+3日累漲4,555點後首日拉回+今日觀察能否於43,000點附近獲得支撐+10日均線約43,200附近為多空關鍵</li>
+      <li>【台股關注2】電子權值股承壓：台積電(2340)、聯發科、廣達受美股Nvidia-4.34%及CEO爭議拖累+台積電ADR估回落至$395-400區間+今日開盤恐再承壓；惟台積電Q3股利9元+投資OpenAI/Anthropic為中長線利多</li>
+      <li>【台股關注3】被動元件/AI伺服器族群：11/11狂飆後的多頭動能遭遇挑戰+國巨/華新科/禾伸堂等族群回檔整理+今日觀察是否止穩為族群波段關鍵；投信連23買累計逾4,370億為最堅定多頭支撐</li>
+      <li>【美股關注1】Nvidia CEO黃仁勳辭職後台股AI供應鏈短線恐承壓+AMD/博通等對手強勁+ASIC族群(聯發科、世芯-KY、創意)相對受惠</li>
+      <li>【美股關注2】11/17 Nvidia Q3財報為下週最大變數+Fed 12/8-9 FOMC升息機率約80%-92%鷹派壓力+美國10月PPI及零售銷售本週陸續公布</li>
+      <li>【風險提示1】外資期貨淨空單仍約98,775口為結構性壓力+新台幣續貶逼近33+日圓逼近160亞幣普貶壓抑外資回補意願</li>
+      <li>【風險提示2】短線超漲獲利了結賣壓浮現+若今日跌破43,000點+反彈結構可能破壞轉為區間整理+重點關注43,091.87是否為此波反彈後的第一重要支撐</li>
+    </ul>
+  </div>
+
+  <footer class="brief-foot">
+    本簡報為資訊整理，非投資建議。「事實」與「市場預期／分析觀點」已於摘要中區分標示。<br>
+    自動產出於 2026/11/13 07:00（UTC+8）。
+  </footer>
+</body>
+</html>
