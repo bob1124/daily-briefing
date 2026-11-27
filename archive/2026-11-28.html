@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日市場簡報｜2026/11/28</title>
+<style>
+  :root {
+    --bg: #0e1116;
+    --panel: #161b22;
+    --panel-2: #1c2230;
+    --border: #2a313c;
+    --text: #d8dee9;
+    --text-dim: #8b95a5;
+    --accent: #e8b339;
+    --up: #ff5b5b;      /* 台股慣例：紅漲 */
+    --down: #3dd68c;    /* 綠跌 */
+    --neutral: #8b95a5;
+    --mono: "SFMono-Regular", "Roboto Mono", "Noto Sans Mono", ui-monospace, monospace;
+    --serif: "Noto Serif TC", "Songti TC", serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans TC", -apple-system, "PingFang TC", "Microsoft JhengHei", sans-serif;
+    line-height: 1.65;
+    padding: 2rem 1.2rem 4rem;
+    max-width: 920px;
+    margin: 0 auto;
+    font-size: 15px;
+  }
+  header.brief-head {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 1rem;
+    margin-bottom: 1.8rem;
+  }
+  header.brief-head .kicker {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    text-transform: uppercase;
+  }
+  header.brief-head h1 {
+    font-family: var(--serif);
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin: 0.2rem 0;
+    letter-spacing: 0.02em;
+  }
+  header.brief-head .date {
+    font-family: var(--mono);
+    color: var(--text-dim);
+    font-size: 0.95rem;
+  }
+  .back-link {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: var(--text-dim);
+    text-decoration: none;
+    font-family: var(--mono);
+    font-size: 0.82rem;
+  }
+  .back-link:hover { color: var(--accent); }
+  h2 {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    margin: 2.2rem 0 0.9rem;
+    padding-left: 0.7rem;
+    border-left: 4px solid var(--accent);
+    letter-spacing: 0.02em;
+  }
+  h2 .core-tag {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.15em;
+    background: var(--accent);
+    color: #0e1116;
+    padding: 0.12rem 0.5rem;
+    border-radius: 3px;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+    font-weight: 700;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.5rem 0 1rem;
+    font-size: 0.86rem;
+    background: var(--panel);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  th {
+    background: var(--panel-2);
+    color: var(--text-dim);
+    text-align: left;
+    padding: 0.6rem 0.7rem;
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+  td {
+    padding: 0.6rem 0.7rem;
+    border-top: 1px solid var(--border);
+    vertical-align: top;
+  }
+  td.time, td.num { font-family: var(--mono); white-space: nowrap; }
+  .tag { font-weight: 700; font-family: var(--mono); font-size: 0.8rem; white-space: nowrap; }
+  .tag.up { color: var(--up); }
+  .tag.down { color: var(--down); }
+  .tag.neutral { color: var(--neutral); }
+  .num.up { color: var(--up); }
+  .num.down { color: var(--down); }
+  .index-table td.num, .index-table th:not(:first-child) { text-align: right; }
+  .index-table th:not(:first-child) { padding-right: 0.9rem; }
+  .index-table td.num { padding-right: 0.9rem; }
+  td.pct { font-family: var(--mono); text-align: right; white-space: nowrap; padding-right: 0.9rem; }
+  td.pct.up { color: var(--up); }
+  td.pct.down { color: var(--down); }
+  .law-list { list-style: none; padding: 0; }
+  .law-list li {
+    padding: 0.45rem 0 0.45rem 1.2rem;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .law-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+  .overview {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 6px;
+    padding: 1.1rem 1.3rem;
+    margin-top: 0.5rem;
+  }
+  .overview .mood { font-family: var(--mono); font-size: 0.95rem; margin-bottom: 0.6rem; }
+  footer.brief-foot {
+    margin-top: 3rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 0.78rem;
+    line-height: 1.8;
+  }
+  .src { color: var(--text-dim); font-size: 0.8rem; }
+  a.src-link { color: var(--text-dim); text-decoration: underline dotted; }
+  a.src-link:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+  <a href="../index.html" class="back-link">← 返回歷史總覽</a>
+  <header class="brief-head">
+    <div class="kicker">Daily Market Brief</div>
+    <h1>每日市場簡報</h1>
+    <div class="date">2026/11/28（UTC+8）｜產出時間 2026/11/28 07:00</div>
+  </header>
+
+  <!-- ============ 一、台股焦點 ============ -->
+  <h2>一、台股焦點<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th><th>影響</th><th>受影響族群/標的</th></tr></thead>
+    <tbody>
+      <tr><td class="time">全日</td><td>台股尾盤翻紅收漲156點 成交量縮至6,660億</td><td class="src"><a class="src-link" href="https://www.cna.com.tw/news/afe/202611270105.aspx">中央社</a></td><td>加權指數11/27終場收39,308.08點（+156.27／+0.40%），開盤39,168.57、盤中低點38,890.53、高點39,495.41，成交值6,660.69億元；指數早盤一度跌破39,000點，台積電尾盤拉抬帶動指數翻紅，週線收紅勁揚3,274點。</td><td class="tag up">利多</td><td>大盤、台積電</td></tr>
+      <tr><td class="time">全日</td><td>台積電收2,180元上漲1.63% 單一權值撐盤主力</td><td class="src"><a class="src-link" href="https://www.cna.com.tw/news/afe/202611270105.aspx">中央社</a></td><td>台積電(2330)收2,180元（+35／+1.63%）為當日大盤主要支撐；聯發科(2454)收3,680元（-25／-0.67%）小跌、鴻海(2317)收219元（+2.5／+1.15%）、廣達(2382)收278元（-3／-1.07%）表現互見；台達電收1,125元（市場預期：台積電若能續站2,200元，有利指數挑戰4萬點）。</td><td class="tag up">利多</td><td>台積電、鴻海（權值股）</td></tr>
+      <tr><td class="time">全日</td><td>櫃買指數下跌1.4% 中小型股賣壓重 PCB、光通訊走弱</td><td class="src"><a class="src-link" href="https://news.cnyes.com/news/id/6673677">鉅亨網</a></td><td>櫃買指數收跌約1.4%，PCB、光通訊、散熱等中小型族群當日走弱，和前日大漲後的獲利了結賣壓有關；盤中權值股撐盤集中、個股分化加劇（市場預期：資金集中權值、中小型股承受選前觀望壓力）。</td><td class="tag down">利空</td><td>PCB、光通訊、散熱中小型股</td></tr>
+      <tr><td class="time">盤後</td><td>三大法人合計賣超213.04億 外資連10日賣超</td><td class="src"><a class="src-link" href="https://www.cna.com.tw/news/afe/202611270131.aspx">中央社</a></td><td>三大法人11/27合計賣超213.04億元；外資賣超296.28億元（連續10日賣超、累計5,004.71億元）、投信買超85.19億元、自營商賣超1.95億元；上櫃三大法人合計賣超13.31億元。</td><td class="tag down">利空</td><td>三大法人籌碼</td></tr>
+      <tr><td class="time">盤後</td><td>外資買超個股轉向傳產與老面孔 長榮/國泰金居冠</td><td class="src"><a class="src-link" href="https://money.udn.com/money/story/5607/9905969">經濟日報</a></td><td>外資買超個股前5大：長榮(2603)、國泰金(2882)、鴻海(2317)、南電(8046)、華碩(2357)；投信買超個股前5大：群聯(8299)、中華電(2412)、奇鋐(3017)、台積電(2330)、聯電(2303)；資金轉向航運、金融與非主流電子（市場預期：選前防禦性布局、電子輪動明顯）。</td><td class="tag neutral">中性</td><td>長榮、國泰金、南電、華碩</td></tr>
+      <tr><td class="time">全日</td><td>選前護盤氣氛濃 選舉前最後交易日量縮觀望</td><td class="src"><a class="src-link" href="https://finance.ettoday.net/news/3279446">ETtoday</a></td><td>11/27為2026縣市長選舉投票前最後一個交易日、11/28週六休市、下週一(11/30)開盤將反映選舉結果；美股感恩節休市無夜盤訊號，量能萎縮至6,660億、顯示市場採取觀望保守策略（市場預期：選後首日恐出現跳空缺口、須留意政策題材輪動）。</td><td class="tag neutral">中性</td><td>大盤、政策題材股</td></tr>
+      <tr><td class="time">盤後</td><td>週線收紅大漲3,274點 加權指數V反成立</td><td class="src"><a class="src-link" href="https://epochtimes.com/b5/26/11/27/n14896142.htm">大紀元</a></td><td>本週加權指數從前週低點強勁反攻，週線收漲3,274點、單週漲幅逾8.9%；從11/26的V型反彈956點（+2.50%）到11/27的量縮收紅156點，顯示技術面已完成跌深反彈、惟外資期貨淨空單仍創新高10.6萬口為中線壓力。</td><td class="tag up">利多</td><td>大盤、半導體、PCB</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 二、三大法人動向 ============ -->
+  <h2>二、三大法人動向<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>法人</th><th>買賣超(億元)</th><th>方向</th><th>備註</th></tr></thead>
+    <tbody>
+      <tr><td>外資及陸資</td><td class="num down">-296.28</td><td class="tag down">賣超</td><td>連續第10個交易日賣超，累計賣超5,004.71億元；單日金額自前日491億續減、賣壓邊際續收斂</td></tr>
+      <tr><td>投信</td><td class="num up">+85.19</td><td class="tag up">買超</td><td>連續買超但金額自前日230億大幅縮減至85億；護盤力道減弱、僅承接金控與科技權值股</td></tr>
+      <tr><td>自營商</td><td class="num down">-1.95</td><td class="tag down">賣超</td><td>自前日買超128億轉為小幅賣超、避險部位小減；禁空令下實質賣壓仍受限</td></tr>
+      <tr><td>三大法人合計</td><td class="num down">-213.04</td><td class="tag down">賣超</td><td>合計賣超金額自前日132.65億擴大至213.04億；外資賣壓減緩但投信護盤縮手，整體籌碼轉趨保守</td></tr>
+    </tbody>
+  </table>
+  <ul class="law-list">
+    <li>外資連續10日賣超累計5,004.71億元、單日金額再度縮減至296.28億（前日491億），賣壓邊際收斂；惟累計金額已突破5,000億大關、創近年單波最大賣超紀錄之一。</li>
+    <li>外資期貨淨空單延續10萬口以上歷史高檔區間、空單實質回補仍未啟動；期現貨操作分化顯示外資對台股後市中線仍採偏空布局，反彈動能持續性受質疑。</li>
+    <li>投信買超金額自前日230億縮至85億、護盤力道明顯減弱；投信主要買超集中於群聯(8299)、中華電(2412)、奇鋐(3017)、台積電(2330)、聯電(2303)等科技與通訊權值股。</li>
+    <li>外資買超個股轉向航運與金融類股：長榮(2603)、國泰金(2882)、鴻海(2317)、南電(8046)、華碩(2357)為前5大買超標的；顯示外資對電子主流族群仍採撤退策略、資金轉向防禦性非電子族群。</li>
+    <li>選前最後交易日量縮至6,660.69億元（前日8,174.67億）、較前日減少約18.5%；選舉結果不確定性與11/26大漲後獲利了結壓力使交投趨於保守，週一(11/30)開盤將反映選舉結果。</li>
+  </ul>
+
+  <!-- ============ 三、權值股觀察清單 ============ -->
+  <h2>三、權值股觀察清單<span class="core-tag">CORE</span></h2>
+  <table>
+    <thead><tr><th>標的</th><th>漲跌</th><th>相關消息</th><th>影響</th></tr></thead>
+    <tbody>
+      <tr><td>台積電(2330)</td><td class="num up">+35元 (2,180元, +1.63%)</td><td>尾盤拉抬為當日大盤主要支撐；美股11/27半日交易ADR表現強勢（SOX +4.69%）、投信持續承接；市場關注2,200元關鍵阻力能否突破</td><td class="tag up">利多</td></tr>
+      <tr><td>聯發科(2454)</td><td class="num down">-25元 (3,680元, -0.67%)</td><td>自前日3,705元小跌、AI ASIC與Google TPU評價暫無新訊息；外資賣超續存但量能減緩</td><td class="tag down">利空</td></tr>
+      <tr><td>鴻海(2317)</td><td class="num up">+2.5元 (219元, +1.15%)</td><td>自前日216.5元續漲、外資買超個股第3名；AI伺服器Q4出貨旺季題材續發酵、資金輪動至權值電子</td><td class="tag up">利多</td></tr>
+      <tr><td>廣達(2382)</td><td class="num down">-3元 (278元, -1.07%)</td><td>自前日281元回檔、AI伺服器ODM短線獲利了結；GB300出貨題材續存但個股漲多承壓</td><td class="tag down">利空</td></tr>
+      <tr><td>國巨(2327)</td><td class="num neutral">震盪整理</td><td>前日漲停強彈後高檔整理、被動元件龍頭短線震盪；MLCC漲價題材中線仍存</td><td class="tag neutral">中性</td></tr>
+      <tr><td>華新科(2492)</td><td class="num neutral">震盪整理</td><td>前日漲停後高檔震盪、MLCC族群短線獲利了結；市場等待Q4業績指引</td><td class="tag neutral">中性</td></tr>
+      <tr><td>禾伸堂(3026)</td><td class="num neutral">震盪整理</td><td>前日漲停強彈後盤整、Vera Rubin供應鏈題材中線仍受市場關注</td><td class="tag neutral">中性</td></tr>
+      <tr><td>信昌電(6173)</td><td class="num neutral">震盪整理</td><td>前日漲停強彈後盤整、AI電源升級題材續存；短線漲多獲利了結</td><td class="tag neutral">中性</td></tr>
+      <tr><td>金山電(8042)</td><td class="num neutral">震盪整理</td><td>前日強彈後高檔震盪、小型化被動元件族群短線獲利了結</td><td class="tag neutral">中性</td></tr>
+      <tr><td>蜜望實(8043)</td><td class="num neutral">震盪整理</td><td>前日強彈後盤整、被動元件代理商族群同步震盪整理</td><td class="tag neutral">中性</td></tr>
+      <tr><td>大毅(2478)</td><td class="num neutral">震盪整理</td><td>前日強漲後電阻廠族群短線整理、彈幅收斂</td><td class="tag neutral">中性</td></tr>
+      <tr><td>日電貿(3090)</td><td class="num neutral">震盪整理</td><td>被動元件代理商族群短線獲利了結、承接動能減緩</td><td class="tag neutral">中性</td></tr>
+      <tr><td>凱美(5317)</td><td class="num neutral">震盪整理</td><td>電解電容廠族群短線盤整、評價回升後進入震盪期</td><td class="tag neutral">中性</td></tr>
+      <tr><td>達方(8163)</td><td class="num neutral">震盪整理</td><td>電容與能源周邊族群短線盤整、漲幅收斂</td><td class="tag neutral">中性</td></tr>
+      <tr><td>台達電(2308)</td><td class="num up">(1,125元)</td><td>前日1,120元續漲、AI電源族群中長期成長題材續存；GB300與Vera Rubin題材續發酵</td><td class="tag up">利多</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 四、美股焦點 ============ -->
+  <h2>四、美股焦點（可複委託操作）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th><th>影響</th><th>對台股連動</th></tr></thead>
+    <tbody>
+      <tr><td class="time">11/27收盤</td><td>美股黑色星期五半日交易 三大指數全面收漲 本週寫2025年4月以來最佳</td><td class="src"><a class="src-link" href="https://www.fool.com/coverage/stock-market-today/2026/11/27/stock-market-today-nov-27-s-and-p-500-posts-best-week-in-19-months-as-ai-stocks-rebound/">The Motley Fool</a></td><td>美股11/27（感恩節翌日）半日交易、美東下午1時提前收盤；S&amp;P 500收7,297.49（+1.60%）、Nasdaq+2.31%、Dow+1.17%，S&amp;P 500單週漲約5.6%為2025年4月以來最佳週表現；Nasdaq週線+6.7%、Dow週線+5.5%（市場預期：AI估值跌深反彈、11月雖仍收跌但週線由空翻多）。</td><td class="tag up">利多</td><td>對台股連動利多：AI供應鏈評價修復、台積電ADR跌深反彈、下週一台股可望反映正向情緒</td></tr>
+      <tr><td class="time">11/27收盤</td><td>費半SOX暴漲4.69% 晶片股領軍反攻 SanDisk漲近16%</td><td class="src"><a class="src-link" href="https://finance.biggo.com/news/96a6dd9c-dfde-447d-9fba-83a4a62a0c21">BigGo Finance</a></td><td>費城半導體指數(SOX)11/27單日飆升4.69%、晶片族群強勢反攻；SanDisk漲15.96%、台積電ADR漲近3%領漲；資金集中AI與半導體類股跌深買盤進場（市場預期：AI泡沫疑慮暫緩、Nvidia、AMD等個股評價修復動能續強）。</td><td class="tag up">利多</td><td>對台股連動利多：SOX+4.69%強勢反彈直接利多下週一台積電(2330)現股續強、電子權值股有望全面接棒</td></tr>
+      <tr><td class="time">11/27收盤</td><td>S&amp;P 500十一大類股全面收紅 科技領漲、健保醫療最弱</td><td class="src"><a class="src-link" href="https://cappnotes.substack.com/p/closing-look-friday-november-27-2026">Capp Notes</a></td><td>S&amp;P 500十一大類股全部收紅、技術面廣度優異（上漲406檔對下跌94檔）；資訊科技+2.80%領漲、通訊服務與非必需消費同步強彈；健保、公用事業相對落後（市場預期：資金重返成長股、避險需求減緩）。</td><td class="tag up">利多</td><td>對台股連動利多：成長股回流預期有利台股電子權值股、資金輪動偏向AI族群</td></tr>
+      <tr><td class="time">11/27全日</td><td>黑色星期五零售消費旺季開跑 消費電子期待</td><td class="src"><a class="src-link" href="https://247wallst.com/investing/2026/11/27/stock-market-today-markets-off-to-a-strong-black-friday-start/">24/7 Wall St.</a></td><td>美國零售業迎來黑色星期五購物旺季、網路與實體銷售數據將於下週揭曉；消費電子、AI相關消費品預期為年度檔期熱門品項；市場關注Cyber Monday與感恩節週結果（市場預期：零售消費動能為下週消費類股主要催化劑）。</td><td class="tag up">利多</td><td>對台股連動利多：消費電子銷售優於預期將有利鴻海、廣達、台達電等OEM/ODM供應鏈</td></tr>
+      <tr><td class="time">11/27盤後</td><td>美債殖利率續居高檔 12月Fed會議倒數</td><td class="src"><a class="src-link" href="https://cestriancapitalresearch.com/the-real-meaning-of-thanksgiving-cestrian-daily-market-review-27-november-2026/">Cestrian Capital</a></td><td>10年期美債殖利率續於5.0%上下高檔震盪、短期內未見明顯修正；市場等待12/9 FOMC會議、CME FedWatch顯示升息1碼機率仍高達97%；股市反彈能否延續仍受殖利率壓制（市場預期：若殖利率回落至4.8%以下有利股市估值擴張）。</td><td class="tag down">利空</td><td>對台股連動利空：美債殖利率高檔壓制新興市場估值、新台幣續貶壓力仍存、但短線影響已被反映</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 四之二、美股指數與板塊動向 ============ -->
+  <h2>美股指數與板塊動向<span class="core-tag">CORE</span></h2>
+  <table class="index-table">
+    <thead><tr><th>指數</th><th>收盤</th><th>漲跌</th><th>漲跌幅</th></tr></thead>
+    <tbody>
+      <tr><td>道瓊工業指數</td><td class="num">50,774.47</td><td class="num up">+591.52</td><td class="pct up">+1.18%</td></tr>
+      <tr><td>S&amp;P 500</td><td class="num">7,297.49</td><td class="num up">+114.71</td><td class="pct up">+1.60%</td></tr>
+      <tr><td>那斯達克綜合指數</td><td class="num">24,129.50</td><td class="num up">+543.70</td><td class="pct up">+2.31%</td></tr>
+      <tr><td>費城半導體指數(SOX)</td><td class="num">9,186.49</td><td class="num up">+411.63</td><td class="pct up">+4.69%</td></tr>
+    </tbody>
+  </table>
+  <table>
+    <thead><tr><th>板塊（GICS）</th><th>漲跌幅</th><th>表現</th><th>當日驅動/備註</th></tr></thead>
+    <tbody>
+      <tr><td>資訊科技</td><td class="pct up">約+2.80%</td><td class="tag up">領漲</td><td>當日最強板塊、SOX費半+4.69%領漲；SanDisk +15.96%、半導體、AI、軟體族群全面強彈、資金重返成長股</td></tr>
+      <tr><td>通訊服務</td><td class="pct up">約+2.00%</td><td class="tag up">領漲</td><td>Meta、Alphabet、Netflix同步反彈；跌深科技股接棒走強、資金輪動利多</td></tr>
+      <tr><td>非必需消費</td><td class="pct up">約+1.80%</td><td class="tag up">領漲</td><td>Tesla、AMZN大漲、黑色星期五零售旺季題材利多；消費動能回溫、估值修復明顯</td></tr>
+      <tr><td>必需消費</td><td class="pct up">約+0.80%</td><td class="tag up">上漲</td><td>WMT、PG、COST等防禦類股續強、消費旺季題材共同受惠但漲幅較小</td></tr>
+      <tr><td>能源</td><td class="pct up">約+1.26%</td><td class="tag up">上漲</td><td>油價回升支撐XLE表現、XOM、CVX同步上揚；地緣風險題材仍存</td></tr>
+      <tr><td>金融</td><td class="pct up">約+1.19%</td><td class="tag up">上漲</td><td>殖利率曲線陡化支撐銀行股利差、JPM、BAC、GS續強；Fed升息預期支撐淨利差擴張</td></tr>
+      <tr><td>醫療保健</td><td class="pct up">約+0.29%</td><td class="tag up">漲幅最小</td><td>當日最弱板塊、UNH、PFE、JNJ漲幅有限；防禦股風光不再、資金輪出</td></tr>
+      <tr><td>工業</td><td class="pct up">約+1.20%</td><td class="tag up">上漲</td><td>基建、國防、航空類股普漲、CAT、BA、GE穩健；傳產族群延續強勢</td></tr>
+      <tr><td>原物料</td><td class="pct up">約+0.90%</td><td class="tag up">上漲</td><td>金屬與化工同步走揚、資金輪動後漲幅收斂；FCX、NEM等金屬股持穩</td></tr>
+      <tr><td>不動產</td><td class="pct up">約+0.85%</td><td class="tag up">上漲</td><td>REITs走揚、但受殖利率高檔壓制漲幅有限；AMT、PLD中線評價仍需觀察</td></tr>
+      <tr><td>公用事業</td><td class="pct up">約+0.50%</td><td class="tag up">上漲</td><td>防禦類股漲幅最小、XLU表現平淡；資金撤出轉向成長股趨勢明顯</td></tr>
+    </tbody>
+  </table>
+  <ul class="law-list">
+    <li>當日板塊輪動呈「成長股全面大反攻」格局：S&amp;P 500十一大類股全部收漲，資訊科技+2.80%、通訊服務+2.00%、非必需消費+1.80%包辦前三強，防禦股（醫療+0.29%、公用+0.50%、必需消費+0.80%）相對落後；市場寬度優異（406漲vs 94跌）、技術面已確認階段性V反成立。</li>
+    <li>資訊科技板塊+2.80%領漲、SOX費半暴漲4.69%、SanDisk暴漲15.96%、台積電ADR漲近3%，對台股電子權值股連動高度利多；下週一(11/30)台股有望跳空開高、台積電現股(2330)有機會挑戰2,200元關鍵阻力並進一步挑戰2,250~2,300元區間，電子權值股有望全面接棒撐盤帶動加權指數挑戰4萬點。</li>
+    <li>美股本週S&amp;P 500單週漲約5.6%為2025年4月以來最佳週表現、Nasdaq +6.7%、Dow +5.5%，顯示AI泡沫疑慮暫緩、但月線S&amp;P 500仍跌約3.7%（11月累跌）；若12/9 FOMC升息1碼如期落地（97%機率）、股市短線反彈能否續攻需看殖利率是否回落至5%以下。</li>
+  </ul>
+
+  <!-- ============ 五、日本（參考） ============ -->
+  <h2>五、日本（參考）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th></tr></thead>
+    <tbody>
+      <tr><td class="time">收盤</td><td>日經225收58,711點 單日大漲2.1% AI半導體領漲</td><td class="src"><a class="src-link" href="https://squawknews.com/news/988547-asian-markets-close-higher-nikkei-225-2-11-hang-seng-3-29-shanghai-composite-3-74-kosp">Squawk News</a></td><td>日經225終場收58,711.11（+1,211.95／+2.11%）、承接11/26反彈動能續強勢走升；AI、半導體族群集體領漲，愛德萬測試、東京威力科創、迪思科等晶片設備股為當日主要漲幅來源（市場預期：日股AI供應鏈與美股同步修復、下週走勢關鍵在美股半日交易結果）。</td></tr>
+      <tr><td class="time">全日</td><td>日圓159區間震盪 日銀12月升息預期續存</td><td class="src"><a class="src-link" href="https://finance.yahoo.com/quote/%5EN225/">Yahoo Finance</a></td><td>美元兌日圓盤中於159.2~159.8區間震盪、相對穩定；市場關注日銀下一次政策會議（預計12月中）動向、植田總裁近日談話偏鷹派；CME期貨市場顯示日銀12月升息至1.00%機率逾60%（市場預期：若日銀12月升息、日圓有望挑戰158區間、台幣連動走升壓力減緩）。</td></tr>
+      <tr><td class="time">全日</td><td>日股AI/半導體股續強 與台股供應鏈連動</td><td class="src"><a class="src-link" href="https://cookcountychronicle.com/article/asian-markets-climb-as-u-s-prepares-to-reopen-after-thanksgiving/">Cook County Chronicle</a></td><td>日股AI、半導體類股承接前日動能續強、與台股PCB、被動元件以及南韓三星電子、SK海力士同步修復；亞洲AI供應鏈同步觸底反彈、顯示「亞洲科技股寒冬」已出現轉折訊號、下週美股開盤將決定延續性。</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 六、香港（參考） ============ -->
+  <h2>六、香港（參考）</h2>
+  <table>
+    <thead><tr><th>時間</th><th>事件</th><th>來源</th><th>摘要</th></tr></thead>
+    <tbody>
+      <tr><td class="time">收盤</td><td>恒指收22,694點 單日大漲2.1% 恒科+3.29%陸港科技反攻</td><td class="src"><a class="src-link" href="https://squawknews.com/news/988547-asian-markets-close-higher-nikkei-225-2-11-hang-seng-3-29-shanghai-composite-3-74-kosp">Squawk News</a></td><td>恒生指數終場收22,694.77（+467.89／+2.11%）、延續11/26反攻動能；恒生科技指數大漲3.29%、上證指數+3.74%、KOSPI +4.34%，亞太科技股集體強彈領漲；內銀股、AI大模型與PCB板塊同步走高（市場預期：陸港AI估值修復動能持續擴散、下週關注11月PMI數據）。</td></tr>
+      <tr><td class="time">午盤</td><td>陸股A股大漲 上證指數暴漲3.74% 資金重返中港市場</td><td class="src"><a class="src-link" href="https://finance.ftvnews.com.tw/news/detail/2026B26W0040">民視財經</a></td><td>A股11/27爆量上漲、上證指數大漲3.74%、深證成指與創業板漲幅更強；AI、晶片、半導體概念股集體領漲、北向資金淨流入超500億人民幣；中國經濟10月官方PMI數據11/30揭曉在即，市場提前預期回暖（市場預期：中國政策寬鬆與AI硬體需求回升雙動能支撐）。</td></tr>
+      <tr><td class="time">全日</td><td>陸港半導體股續強 AI大模型與GPU晶片同步反攻</td><td class="src"><a class="src-link" href="https://cookcountychronicle.com/article/asian-markets-climb-as-u-s-prepares-to-reopen-after-thanksgiving/">Cook County Chronicle</a></td><td>陸港半導體、GPU晶片、PCB板塊延續11/26動能續強、壁仞科技、華虹宏力、天數智芯承接前日反彈持續走升；美股夜盤AI股強彈預期為主要催化劑、恒科指數+3.29%為當日最強亞洲板塊（市場預期：中美科技摩擦短線消化、AI供應鏈同步回升）。</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ============ 七、跨市場連動分析 ============ -->
+  <h2>七、跨市場連動分析</h2>
+  <ul class="law-list">
+    <li>美股→台股：美股11/27半日交易三大指數全面強漲，S&amp;P 500 +1.60%、Nasdaq +2.31%、SOX +4.69%、Dow +1.17%，S&amp;P 500單週漲5.6%為2025年4月以來最佳；下週一(11/30)台股有望跳空開高、台積電(2330)有機會挑戰2,200元關鍵阻力、電子權值股全面接棒帶動加權指數挑戰4萬點整數大關。</li>
+    <li>亞股連動：日經225 +2.11%、恒指+2.11%、恒科+3.29%、上證+3.74%、KOSPI +4.34%、台股+0.40%，亞太科技股同步強彈；台股受選前觀望與量能稀薄影響漲幅相對落後，但下週選舉結果揭曉後有機會補漲、追上亞太同儕；AI供應鏈同步修復動能擴散、陸港GPU晶片與台股PCB、被動元件呈現同步觸底反彈格局。</li>
+    <li>匯率與資金面：日圓159區間震盪、日銀12月升息預期續存；新台幣11/27續受外資賣壓影響於33元上下震盪、外資雖連10賣但部分匯入支撐；美債殖利率續居5%高檔、美元指數強勢壓制亞幣；若12/9 FOMC升息1碼如期落地（97%機率）、新台幣可能再現匯價壓力。</li>
+    <li>籌碼面：外資現貨賣超296.28億（連10日累計5,004.71億）、金額續收斂但累計金額已突破5,000億大關；外資期貨淨空單延續10萬口以上歷史高檔；美股反彈若延續至下週一將有助於外資空單回補、台股反彈動能有望進一步擴散。</li>
+    <li>選舉與政策風險：11/28（週六）2026年縣市長選舉投票日、週一(11/30)台股開盤將反映選舉結果；若執政黨保住多數席次、政策延續性利多半導體與AI族群；若在野黨大勝、短線可能出現政策不確定性賣壓；須關注選後股市跳空缺口與類股輪動方向。</li>
+  </ul>
+
+  <!-- ============ 八、今日總覽 ============ -->
+  <h2>八、今日總覽</h2>
+  <div class="overview">
+    <div class="mood">整體氛圍：利多（美股本週大漲+SOX暴漲4.69%+亞太科技股全面V反、選舉前量縮觀望、下週有望跳空開高挑戰4萬點）</div>
+    <ul class="law-list">
+      <li><strong>台股關注重點1</strong>：加權指數11/27收39,308.08點（+156.27／+0.40%）、成交縮量至6,660.69億（前日8,174.67億）；台積電(2330)尾盤拉抬收2,180元（+1.63%）為單一權值撐盤主力、鴻海(2317)收219元（+1.15%）、聯發科(2454)收3,680元（-0.67%）互見，櫃買指數-1.4%中小型股賣壓明顯。</li>
+      <li><strong>台股關注重點2</strong>：三大法人合計賣超213.04億（外資-296.28連10賣累計5,004.71億、投信+85.19億縮手、自營-1.95億轉賣）、外資期貨淨空單仍居10萬口以上歷史高檔；外資買超轉向長榮/國泰金/鴻海/南電/華碩等防禦性與航運金融標的。</li>
+      <li><strong>台股關注重點3</strong>：11/28（週六）2026縣市長選舉投票日、11/30（週一）開盤將反映選舉結果；11/27為選前最後交易日量縮觀望、週線仍收漲3,274點技術面V反成立；關注台積電2,200元關鍵阻力與加權指數挑戰4萬點大關。</li>
+      <li><strong>美股關注重點1</strong>：美股11/27黑色星期五半日交易三大指數全面強漲、S&amp;P 500 +1.60%收7,297.49、Nasdaq +2.31%、SOX暴漲+4.69%、Dow +1.17%；S&amp;P 500單週漲約5.6%為2025年4月以來最佳週表現；S&amp;P 500十一大類股全部收漲、資訊科技+2.80%領漲、SanDisk +15.96%。</li>
+      <li><strong>美股關注重點2</strong>：10年美債殖利率續居5%高檔、CME FedWatch顯示12/9 FOMC升息1碼機率仍達97%；AI估值跌深反彈動能強勁、台積電ADR漲近3%，下週一台股台積電現股有望跳空開高、電子權值股全面接棒帶動大盤挑戰40,000點。</li>
+      <li><strong>風險提示1</strong>：外資期貨淨空單延續10萬口以上歷史高檔、累計現貨賣超突破5,000億大關、空單實質回補前反彈持續性仍受質疑；投信護盤力道從230億縮至85億顯示護盤資金邊際減緩。</li>
+      <li><strong>風險提示2</strong>：11/28縣市長選舉結果不確定性、週一(11/30)跳空缺口方向難料；Fed 12月升息預期97%、美元走強若延續將再壓台幣；中國11/30官方PMI數據揭曉、12/9 FOMC會議為下週最大風險事件。</li>
+    </ul>
+  </div>
+
+  <footer class="brief-foot">
+    本簡報為資訊整理，非投資建議。「事實」與「市場預期／分析觀點」已於摘要中區分標示。<br>
+    自動產出於 2026/11/28 07:00（UTC+8）。
+  </footer>
+</body>
+</html>
